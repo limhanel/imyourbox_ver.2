@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/*---전체 디자인---*/
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
+body {
+  font-family: "Roboto";
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+p,
+span {
+  text-decoration: none;
+  font-family: "Roboto";
+  color: #333;
+}
+
+/*---전체 컬러 디자인---*/
+/*---전체 버튼 디자인---*/
+/*---- 폰트사이즈 변경 ---*/
+/*----헤더영역 세팅---*/
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+#header::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.logo {
+  text-align: center;
+  width: 130px;
+  display: inline-block;
+}
+.logo a {
+  font-size: 0;
+  text-indent: -9999px;
+}
+.logo a img {
+  width: 100%;
+}
+
+.header--gnb {
+  float: right;
+}
+
+ul.gnb {
+  display: inline-block;
+}
+ul.gnb li {
+  float: left;
+}
+ul.gnb li a {
+  font-weight: 500;
+}
+ul.gnb li.gnb-menu {
+  margin: 0 15px;
+  padding-top: 10px;
+}
+ul.gnb li.button {
+  margin: 0 5px;
+  box-sizing: border-box;
+}
+
+/*---------- container공통영역 ----------*/
+.inner {
+  margin: 0 auto;
+}
+
+.button-type1 {
+  padding: 0.6em 1.5em;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  color: white;
+  background-color: #ff7a22;
+  border-radius: 20px;
+}
+.button-type1 a {
+  color: white;
+}
+.button-type1:hover {
+  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  color: #ff7a22 !important;
+  border: 1px solid #ff7a22;
+  box-sizing: border-box;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.button-type2 {
+  font-size: 30px;
+  padding: 0.6em 1.5em;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  background-color: #fff;
+  color: #ff7a22;
+  border-radius: 20px;
+  border: 1px solid #ff7a22;
+}
+.button-type2:hover {
+  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  background-color: #ff7a22;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+}
+.button-type2 p {
+  font-size: 15px;
+}
+
+.cont-box {
+  margin: 0 auto;
+}
+.cont-box .button {
+  float: left;
+  margin: 0 2em;
+  padding: 2em;
+}
+.cont-box p {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.cont-padding {
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.2em;
+}
+
+footer {
+  padding: 80px 0;
+  background-color: #2F2F2F;
+}
+footer .footer-logo {
+  width: 160px;
+}
+footer .footer-logo img {
+  width: 100%;
+}
+footer a,
+footer p,
+footer span {
+  color: #DEDEDE;
+}
+footer ul.use {
+  width: 100%;
+}
+footer ul.use li {
+  float: left;
+  margin: 0 20px;
+}/*# sourceMappingURL=all-html.css.map */

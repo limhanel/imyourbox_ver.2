@@ -1,0 +1,210 @@
+/*---전체 디자인---*/
+
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
+body {
+    font-family: 'Roboto';
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+@mixin initial-type {
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: #333;
+}
+
+a,
+p,
+span {
+    @include initial-type;
+}
+
+$cont-padding:80px 0;
+
+/*---전체 컬러 디자인---*/
+
+$main-color: #ff7a22;
+$sub-color:#FF881A;
+$gray-color:#DEDEDE;
+$dark-color:#2F2F2F;
+$font-dark: #444;
+$font-white :blue;
+$font-red: red;
+$font-hell0: green;
+
+/*---전체 버튼 디자인---*/
+
+@mixin button-type1 {
+    a {
+        color: white;
+    }
+    padding: 0.6em 1.5em;
+    transition: all 0.3s ease 0s;
+    font-weight: 600;
+    color: white;
+    background-color: $main-color;
+    border-radius: 20px;
+    &:hover {
+        box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+        color: $main-color !important;
+        border: 1px solid $main-color;
+        box-sizing: border-box;
+        background-color: #fff;
+        cursor: pointer;
+    }
+}
+
+@mixin button-type2 {
+    font-size: $fs-large;
+    padding: 0.6em 1.5em;
+    transition: all 0.3s ease 0s;
+    font-weight: 600;
+    background-color: #fff;
+    color: $main-color;
+    border-radius: 20px;
+    border: 1px solid $main-color;
+    &:hover {
+        box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+        background-color: $main-color;
+        box-sizing: border-box;
+        color: #fff;
+        cursor: pointer;
+    }
+    & p {
+        font-size: $fs-small;
+    }
+}
+
+
+/*---- 폰트사이즈 변경 ---*/
+
+$fs-small:15px;
+//작은 설명텍스트//
+$fs-medium:20px;
+//본문 기본크기//
+$fs-large:30px;
+//강조텍스트 크기//
+$fs-x-large:40px;
+//cont 제목크기//
+$fs-2x-large:50px;
+//캐러셀 강조텍스트//
+
+/*----헤더영역 세팅---*/
+
+#header {
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    padding: 10px 20px;
+    &::after {
+        clear: both;
+        content: '';
+        display: block;
+    }
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    text-align: center;
+    width: 130px;
+    display: inline-block;
+    a {
+        font-size: 0;
+        text-indent: -9999px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.header--gnb {
+    float: right;
+}
+
+ul.gnb {
+    display: inline-block;
+    li {
+        float: left;
+        a {
+            font-weight: 500;
+        }
+        &.gnb-menu {
+            margin: 0 15px;
+            padding-top: 10px;
+        }
+        &.button {
+            margin: 0 5px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+
+/*---------- container공통영역 ----------*/
+
+.inner {
+    margin: 0 auto;
+}
+
+.button-type1 {
+    @include button-type1
+}
+
+.button-type2 {
+    @include button-type2
+}
+
+.cont-box {
+    margin: 0 auto;
+    .button {
+        float: left;
+        margin: 0 2em;
+        padding: 2em;
+    }
+    p {
+        margin-bottom: 15px;
+        font-size: $fs-small;
+    }
+}
+
+.cont-padding {
+    padding: $cont-padding;
+}
+
+h2 {
+    font-size: $fs-2x-large;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.2em;
+}
+
+footer {
+    padding: $cont-padding;
+    .footer-logo {
+        width: 160px;
+        img {
+            width: 100%;
+        }
+    }
+    background-color: $dark-color;
+    a,
+    p,
+    span {
+        color: $gray-color
+    }
+    ul.use {
+        width: 100%;
+        li {
+            float: left;
+            margin: 0 20px;
+        }
+    }
+}
