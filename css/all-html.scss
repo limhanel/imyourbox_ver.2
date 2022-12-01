@@ -26,7 +26,30 @@ span {
     @include initial-type;
 }
 
+
+/*---- 폰트사이즈 변경 ---*/
+
+$fs-small:16px;
+//작은 설명텍스트//
+$fs-medium:20px;
+//본문 기본크기//
+$fs-large:25px;
+//강조텍스트 크기//
+$fs-x-large:40px;
+//cont 제목크기//
+$fs-2x-large:50px;
+//캐러셀 강조텍스트//
+
+/*---- 간격/애니메이션 세팅 ---*/
+
 $cont-padding:80px 0;
+$animation :all 0.3s ease 0s;
+@mixin float-clear {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 
 /*---전체 컬러 디자인---*/
 
@@ -45,18 +68,19 @@ $font-hell0: green;
     a {
         color: white;
     }
+    a:hover {
+        color: $main-color
+    }
     padding: 0.6em 1.5em;
-    transition: all 0.3s ease 0s;
+    transition: $animation;
     font-weight: 600;
-    color: white;
     background-color: $main-color;
     border-radius: 20px;
     &:hover {
         box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
-        color: $main-color !important;
         border: 1px solid $main-color;
         box-sizing: border-box;
-        background-color: #fff;
+        background-color: white;
         cursor: pointer;
     }
 }
@@ -64,9 +88,9 @@ $font-hell0: green;
 @mixin button-type2 {
     font-size: $fs-large;
     padding: 0.6em 1.5em;
-    transition: all 0.3s ease 0s;
+    transition: $animation;
     font-weight: 600;
-    background-color: #fff;
+    background-color: white;
     color: $main-color;
     border-radius: 20px;
     border: 1px solid $main-color;
@@ -74,27 +98,20 @@ $font-hell0: green;
         box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
         background-color: $main-color;
         box-sizing: border-box;
-        color: #fff;
+        color: white;
         cursor: pointer;
+        transition: $animation;
+        p {
+            color: white;
+            transition: $animation;
+        }
     }
     & p {
         font-size: $fs-small;
+        color: $font-dark;
     }
 }
 
-
-/*---- 폰트사이즈 변경 ---*/
-
-$fs-small:15px;
-//작은 설명텍스트//
-$fs-medium:20px;
-//본문 기본크기//
-$fs-large:30px;
-//강조텍스트 크기//
-$fs-x-large:40px;
-//cont 제목크기//
-$fs-2x-large:50px;
-//캐러셀 강조텍스트//
 
 /*----헤더영역 세팅---*/
 
@@ -104,9 +121,7 @@ $fs-2x-large:50px;
     z-index: 99999;
     padding: 10px 20px;
     &::after {
-        clear: both;
-        content: '';
-        display: block;
+        @include float-clear
     }
     display: flex;
     justify-content: space-between;
@@ -188,23 +203,39 @@ h2 {
 
 footer {
     padding: $cont-padding;
-    .footer-logo {
-        width: 160px;
-        img {
-            width: 100%;
-        }
-    }
     background-color: $dark-color;
     a,
     p,
     span {
-        color: $gray-color
+        color: $gray-color;
+        line-height: 1.5;
     }
-    ul.use {
-        width: 100%;
-        li {
-            float: left;
-            margin: 0 20px;
+    .footer-logo {
+        width: 200px;
+        float: left;
+        img {
+            width: 100%;
         }
+    }
+    .logo-div {
+        width: 100%;
+        &::after {
+            @include float-clear
+        }
+    }
+    .call {
+        float: right;
+        padding-top: 28px;
+        font-size: $fs-large;
+    }
+    li {
+        float: left;
+        margin: 0 20px;
+    }
+    .contact>div {
+        padding: 2em 0;
+    }
+    .contact-text1 {
+        border-bottom: 1px solid $gray-color;
     }
 }

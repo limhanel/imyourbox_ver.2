@@ -22,9 +22,10 @@ span {
   color: #333;
 }
 
+/*---- 폰트사이즈 변경 ---*/
+/*---- 간격/애니메이션 세팅 ---*/
 /*---전체 컬러 디자인---*/
 /*---전체 버튼 디자인---*/
-/*---- 폰트사이즈 변경 ---*/
 /*----헤더영역 세팅---*/
 #header {
   position: fixed;
@@ -35,9 +36,9 @@ span {
   justify-content: space-between;
 }
 #header::after {
-  clear: both;
   content: "";
   display: block;
+  clear: both;
 }
 
 .logo {
@@ -84,28 +85,29 @@ ul.gnb li.button {
   padding: 0.6em 1.5em;
   transition: all 0.3s ease 0s;
   font-weight: 600;
-  color: white;
   background-color: #ff7a22;
   border-radius: 20px;
 }
 .button-type1 a {
   color: white;
 }
+.button-type1 a:hover {
+  color: #ff7a22;
+}
 .button-type1:hover {
   box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
-  color: #ff7a22 !important;
   border: 1px solid #ff7a22;
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: white;
   cursor: pointer;
 }
 
 .button-type2 {
-  font-size: 30px;
+  font-size: 25px;
   padding: 0.6em 1.5em;
   transition: all 0.3s ease 0s;
   font-weight: 600;
-  background-color: #fff;
+  background-color: white;
   color: #ff7a22;
   border-radius: 20px;
   border: 1px solid #ff7a22;
@@ -114,11 +116,17 @@ ul.gnb li.button {
   box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
   background-color: #ff7a22;
   box-sizing: border-box;
-  color: #fff;
+  color: white;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.button-type2:hover p {
+  color: white;
+  transition: all 0.3s ease 0s;
 }
 .button-type2 p {
-  font-size: 15px;
+  font-size: 16px;
+  color: #444;
 }
 
 .cont-box {
@@ -131,7 +139,7 @@ ul.gnb li.button {
 }
 .cont-box p {
   margin-bottom: 15px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .cont-padding {
@@ -149,21 +157,39 @@ footer {
   padding: 80px 0;
   background-color: #2F2F2F;
 }
-footer .footer-logo {
-  width: 160px;
-}
-footer .footer-logo img {
-  width: 100%;
-}
 footer a,
 footer p,
 footer span {
   color: #DEDEDE;
+  line-height: 1.5;
 }
-footer ul.use {
+footer .footer-logo {
+  width: 200px;
+  float: left;
+}
+footer .footer-logo img {
   width: 100%;
 }
-footer ul.use li {
+footer .logo-div {
+  width: 100%;
+}
+footer .logo-div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+footer .call {
+  float: right;
+  padding-top: 28px;
+  font-size: 25px;
+}
+footer li {
   float: left;
   margin: 0 20px;
+}
+footer .contact > div {
+  padding: 2em 0;
+}
+footer .contact-text1 {
+  border-bottom: 1px solid #DEDEDE;
 }/*# sourceMappingURL=all-html.css.map */
