@@ -154,7 +154,7 @@ h2 {
 }
 
 footer {
-  padding: 80px 0;
+  padding: 30px 0;
   background-color: #2F2F2F;
 }
 footer a,
@@ -170,10 +170,12 @@ footer .footer-logo {
 footer .footer-logo img {
   width: 100%;
 }
-footer .logo-div {
+footer .logo-div,
+footer .use-div {
   width: 100%;
 }
-footer .logo-div::after {
+footer .logo-div::after,
+footer .use-div::after {
   content: "";
   display: block;
   clear: both;
@@ -183,13 +185,23 @@ footer .call {
   padding-top: 28px;
   font-size: 25px;
 }
-footer li {
+footer ul.use {
   float: left;
-  margin: 0 20px;
+}
+footer ul.sns {
+  float: right;
+}
+footer ul li {
+  float: left;
+  margin-right: 30px;
 }
 footer .contact > div {
   padding: 2em 0;
 }
-footer .contact-text1 {
-  border-bottom: 1px solid #DEDEDE;
+footer .contact-text2 {
+  border-top: 1px solid #DEDEDE;
+  opacity: 0.6;
+}
+footer .contact-text2 i {
+  padding-left: 6px;
 }/*# sourceMappingURL=all-html.css.map */
