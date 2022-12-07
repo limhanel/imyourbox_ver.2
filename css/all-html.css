@@ -131,6 +131,9 @@ ul.gnb li.button {
 
 .cont-box {
   margin: 0 auto;
+  content: "";
+  display: block;
+  clear: both;
 }
 .cont-box .button {
   float: left;
@@ -151,6 +154,12 @@ h2 {
   font-weight: 600;
   margin-bottom: 30px;
   line-height: 1.2em;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.2em;
+  font-weight: 600;
 }
 
 footer {
