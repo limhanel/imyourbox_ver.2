@@ -1,4 +1,26 @@
+@charset "UTF-8";
+/*---전체 컬러 디자인---*/
+.cont1 .button {
+  padding: 2em;
+}
+
+.cont6 .button,
+.cont5 .button {
+  margin-top: 20px;
+  width: 300px;
+  margin-left: calc(50vw - 150px);
+  text-align: center;
+  padding: 12px 0;
+}
+.cont6 .button i,
+.cont5 .button i {
+  margin-left: 20px;
+}
+
 .cont3 {
-  background-color: #FF881A;
-  margin: 50px 0;
+  background-color: #ff7a22;
+}
+
+.cont6 {
+  background-color: rgb(236, 236, 236);
 }/*# sourceMappingURL=index.css.map */

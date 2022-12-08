@@ -17,7 +17,7 @@
         <link rel="shortcut icon" href="images/imyourbox.ico" />
 
         <!-- 폰트어썸 -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b662cbe3c5.js" crossorigin="anonymous"></script>
 
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
@@ -88,48 +88,50 @@
 
                     </div>
 
-                    <input type="checkbox" id="menuicon">
-                    <label for="menuicon">
-            <span></span>
-            <span></span>
-            <span></span>            
-            </label>
+                    <div class="mobile">
+                        <input type="checkbox" id="menuicon">
+                        <label for="menuicon">
+                    <span class="mobile"></span>
+                    <span class="mobile"></span>
+                    <span class="mobile"></span>
+                    </label>
 
-                    <!-- <div class="sidebar">
-                        <p>MENU</p>
-                        <ul class="gnb">
-                            <li>
-                                <a href="enquiry.html">간편문의</a>
-                            </li>
-                            <li>
-                                <a href="estimate.html">예상견적</a>
-                            </li>
-                            <li>
-                                <a href="service.html">SERVICE</a>
-                            </li>
-                            <li>
-                                <a href="introduction.html">회사소개</a>
-                            </li>
-                            <li>
-                                <a href="http://222.231.61.51/" target="_blank">WMS</a>
-                            </li>
-                        </ul> -->
-                    <!-- gnb mobile-->
-                    <!-- <ul class="sns">
-                        <li>
-                            <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
-                        </li>
-                        <li>
-                            <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x" ></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x" ></i></a>
-                        </li>
-                    </ul> -->
-                    <!--sns-->
-                    <!-- </div> -->
+                        <div class="sidebar">
+                            <ul class="gnb">
+                                <li>
+                                    <a href="enquiry.html">간편문의</a>
+                                </li>
+                                <li>
+                                    <a href="estimate.html">예상견적</a>
+                                </li>
+                                <li>
+                                    <a href="service.html">SERVICE</a>
+                                </li>
+                                <li>
+                                    <a href="introduction.html">회사소개</a>
+                                </li>
+                                <li>
+                                    <a href="http://222.231.61.51/" target="_blank">WMS</a>
+                                </li>
+                            </ul>
 
-                    <!-- <p>adlkdsajkljskalddjal</p> -->
+                            <!-- gnb mobile-->
+
+                            <ul class="sns">
+                                <li>
+                                    <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x" ></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x" ></i></a>
+                                </li>
+                            </ul>
+                            <!--sns-->
+                        </div>
+                    </div>
+                    <!--mobile-->
 
                 </div>
                 <!--inner-->
@@ -190,6 +192,7 @@
                 <div class="cont5">
                     <div class="cont--inner">
                         <h3>내 물건 보관부터 배송까지<br>간편하게 견적 내고 싶다면!</h3>
+                        <div class="button button-type1"><a onclick=" ">예상견적 보러가기<i class="fa-solid fa-arrow-right fa-lg"></i></a></div>
                     </div>
                     <!--cont--inner-->
                 </div>
@@ -204,67 +207,69 @@
 
                         <section id="stepfour" class="secton">
                             <div class="section__container">
-                                <!-- <div class="liner"></div>  -->
-                                <div class="cont--inner">
-                                    <h3>우리회사의 Fulfillment 고민,<br> 13년차 전문가와 상담하세요</h3>
-                                </div>
-                                <div class="stepFour__wrapper">
-                                    <div class="detail__container stepFour__container first__detail__container">
-                                        <div class="stepone__category companyNameWrapper">
-                                            <span class="stepone__category-title">업체명 *</span>
+                                <div class="half-vw">
+                                    <div class="stepFour__wrapper">
+                                        <div class="detail__container stepFour__container first__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">업체명 *</span>
+                                            </div>
+                                            <div class="stepfour__detail__input__container">
+                                                <input type="input" class="simple__input simple_customer_company" placeholder="   회사명"></input>
+                                            </div>
                                         </div>
-                                        <div class="stepfour__detail__input__container">
-                                            <input type="input" class="simple__input simple_customer_company" placeholder="   회사명"></input>
-                                        </div>
-                                    </div>
-                                    <div class="detail__container stepFour__container second__detail__container">
-                                        <div class="stepone__category companyNameWrapper">
-                                            <span class="stepone__category-title">연락처 *</span>
-                                        </div>
-                                        <div class="detail__input__container stepfour__detail__input__container">
-                                            <input type="number" class="simple__input simple_customer_phone" placeholder="   핸드폰번호"></input>
+                                        <div class="detail__container stepFour__container second__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">연락처 *</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container">
+                                                <input type="number" class="simple__input simple_customer_phone" placeholder="   핸드폰번호"></input>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="stepFour__wrapper">
-                                    <div class="detail__container stepFour__container first__detail__container">
-                                        <div class="stepone__category companyNameWrapper">
-                                            <span class="stepone__category-title">이메일 *</span>
+                                    <div class="stepFour__wrapper">
+                                        <div class="detail__container stepFour__container first__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">이메일 *</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container">
+                                                <input type="input" class="simple__input simple_customer_email" placeholder="   Email"></input>
+                                                <h3 id="simpe__emailCheck"></h3>
+                                            </div>
                                         </div>
-                                        <div class="detail__input__container stepfour__detail__input__container">
-                                            <input type="input" class="simple__input simple_customer_email" placeholder="   Email"></input>
-                                            <h3 id="simpe__emailCheck"></h3>
-                                        </div>
-                                    </div>
-                                    <div class="detail__container stepFour__container second__detail__container">
-                                        <div class="stepone__category companyNameWrapper">
-                                            <span class="stepone__category-title">담당자 성함*</span>
-                                        </div>
-                                        <div class="detail__input__container stepfour__detail__input__container">
-                                            <input type="input" class="simple__input simple_customer_manager_name" placeholder="   담당자명"></input>
+                                        <div class="detail__container stepFour__container second__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">담당자 성함*</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container">
+                                                <input type="input" class="simple__input simple_customer_manager_name" placeholder="   담당자명"></input>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!--half-vw-->
 
-                                <div class="detail__container memo__container">
+                                <div class="detail__container memo__container half-vw">
                                     <div class="stepone__category companyNameWrapper">
                                         <span class="stepone__category-title">상담 내용 </span>
                                     </div>
                                     <div class="memo__input__container">
-                                        <textarea class="simple__textarea simple_customer_memo" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보를 입력해주세요."></textarea>
+                                        <textarea class="simple__textarea simple_customer_memo simple__input" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보를 입력해주세요."></textarea>
 
                                     </div>
                                 </div>
+
                                 <div class="stepone__category endfour__container">
                                     <div class="last__checkbox simpleOrder__checkbox">
-                                        <input id="simpleOrder__permission" type="checkbox">
-                                        <label for="simpleOrder__permission"><span>개인정보 수집 및 이용목적에 동의합니다.
-                                                입력해주신 개인정보는 문의/상담 목적으로 사용되며 사용 후 즉시 폐기됩니다.</span></label>
-                                    </div>
 
+                                        <input id="simpleOrder__permission" class="checkbox" type="checkbox">
+                                        <label for="simpleOrder__permission"><span>개인정보 수집 및 이용목적에 동의합니다.<br>
+                                                입력해주신 개인정보는 문의/상담 목적으로 사용되며 사용 후 즉시 폐기됩니다.</span></label>
+
+                                        <div class="button button-type1"><a id=" gtagSimpleOrder " class=" callSimpleOrderBtn " onclick=" ">문의신청</a></div>
+                                    </div>
                                 </div>
 
-                                <a id="gtagSimpleOrder" class="button callSimpleOrderBtn" onclick="">문의신청</a>
+
                             </div>
                             <!--section__container-->
                         </section>
@@ -282,35 +287,35 @@
 
 
 
-        <footer id="footer cont-padding">
-            <div class="inner">
-                <div class="cont--inner">
-                    <div class="logo-div">
-                        <div class="footer-logo">
-                            <img src="images/logo_white.png" alt="footerlogo">
+        <footer id="footer cont-padding ">
+            <div class="inner ">
+                <div class="cont--inner ">
+                    <div class="logo-div ">
+                        <div class="footer-logo ">
+                            <img src="images/logo_white.png " alt="footerlogo ">
                         </div>
                         <!--footer-logo-->
-                        <p class="call"><i class="fas fa-phone-alt"></i> 02-853-7374</p>
+                        <p class="call"><i class="fas fa-phone-alt fa-xs"></i> 02-853-7374</p>
 
                     </div>
                     <!--logo-div-->
 
-                    <div class="contact">
-                        <div class="contact-text1">
+                    <div class="contact ">
+                        <div class="contact-text1 ">
 
-                            <span class="company" style="font-weight:bold;">&#40;주&#41;아임유어박스</span><br>
+                            <span class="company " style="font-weight:bold; ">&#40;주&#41;아임유어박스</span><br>
                             <p>imurbox&#64;imyourbox.com</p>
                             <span>사업자등록번호 126-86-03002</span>
                             <span>ㅣ 대표이사 임우택</span>
 
                             <p>
-                                [08593] 서울특별시 금천구 가산디지털로 1길 165,403호(가산동, 가산비즈니스센터)
+                                [08593] 서울특별시 금천구 가산디지털로 1길 165,403호 (가산동, 가산비즈니스센터)
                             </p>
                         </div>
                         <!--contact-text1-->
-                        <div class="contact-text2">
-                            <a href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/Imyourbox.pdf" alt=소개서 target="blank">
-                                <p class="service-download">서비스 소개서 다운로드<i class="fas fa-caret-square-down"></i></p>
+                        <div class="contact-text2 ">
+                            <a href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/Imyourbox.pdf " alt=소개서 target="blank ">
+                                <p class="service-download ">서비스 소개서 다운로드<i class="fa-solid fa-download"></i></p>
                             </a>
                             <p>
                                 Copyright &copy; 2019 I’m your box Inc. All Rights Reserved.
@@ -321,22 +326,22 @@
                     </div>
                     <!-- contact -->
 
-                    <div class="use-div">
-                        <ul class="use">
-                            <li><a href="access.html">이용약관</a></li>
-                            <li><a href="access2.html" class="bold">개인정보처리방침</a></li>
-                            <li><a href="contact.html">오시는길</a></li>
+                    <div class="use-div ">
+                        <ul class="use ">
+                            <li><a href="access.html ">이용약관</a></li>
+                            <li><a href="access2.html " class="bold ">개인정보처리방침</a></li>
+                            <li><a href="contact.html ">오시는길</a></li>
                         </ul>
                         <!--use-->
-                        <ul class="sns">
+                        <ul class="sns ">
                             <li>
-                                <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></sa>
+                                <a href="https://www.facebook.com/Imyourbox " target="_blank "><i class="fab fa-facebook-f fa-2x "></i></sa>
                             </li>
                             <li>
-                                <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x"></i></a>
+                                <a href="https://blog.naver.com/imyourbox " target="_blank "><i class="fab fa-blogger-b fa-2x "></i></a>
                             </li>
                             <li>
-                                <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                                <a href="https://www.instagram.com/imyourbox " target="_blank "><i class="fab fa-instagram fa-2x "></i></a>
                             </li>
                         </ul>
                         <!--sns-->
@@ -380,17 +385,17 @@
                 }
             };
 
-            new numberCounter("counter1", 70);
-            new numberCounter("counter2", 99);
-            new numberCounter("counter3", 80);
+            new numberCounter("counter1 ", 70);
+            new numberCounter("counter2 ", 99);
+            new numberCounter("counter3 ", 80);
         </script>
 
-        <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-        <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
-        <script type="text/javascript">
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js " type="text/javascript "></script>
+        <script src="js/slick.js " type="text/javascript " charset="utf-8 "></script>
+        <script type="text/javascript ">
             $(document).on('ready', function() {
 
-                $(".regular").slick({
+                $(".regular ").slick({
                     dots: true,
                     infinite: true,
                     slidesToShow: 3,

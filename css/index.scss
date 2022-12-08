@@ -1,5 +1,35 @@
-$main-color: #FF881A;
+/*---전체 컬러 디자인---*/
+
+$main-color: #ff7a22;
+$sub-color:#FF881A;
+$gray-color:#E5E5E5;
+$dark-color:#2F2F2F;
+$font-dark: #444;
+$font-white :blue;
+$font-red: red;
+$font-hell0: green;
+.cont1 {
+    .button {
+        padding: 2em;
+    }
+}
+
+.cont6 .button,
+.cont5 .button {
+    margin-top: 20px;
+    width: 300px;
+    margin-left: calc(50vw - 150px);
+    text-align: center;
+    padding: 12px 0;
+    i {
+        margin-left: 20px;
+    }
+}
+
 .cont3 {
     background-color: $main-color;
-    margin: 50px 0;
+}
+
+.cont6 {
+    background-color: rgb(236, 236, 236);
 }

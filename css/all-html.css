@@ -26,14 +26,18 @@ span {
 /*---- 간격/애니메이션 세팅 ---*/
 /*---전체 컬러 디자인---*/
 /*---전체 버튼 디자인---*/
+/*--모바일 세팅--*/
 /*----헤더영역 세팅---*/
 #header {
+  width: 100vw;
   position: fixed;
   top: 0;
   z-index: 99999;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 3px rgba(47, 47, 47, 0.151);
 }
 #header::after {
   content: "";
@@ -57,30 +61,143 @@ span {
 .header--gnb {
   float: right;
 }
-
-ul.gnb {
+.header--gnb ul {
   display: inline-block;
 }
-ul.gnb li {
+.header--gnb ul li {
   float: left;
 }
-ul.gnb li a {
+.header--gnb ul li a {
   font-weight: 500;
 }
-ul.gnb li.gnb-menu {
+.header--gnb ul li.gnb-menu {
   margin: 0 15px;
   padding-top: 10px;
 }
-ul.gnb li.button {
+.header--gnb ul li.button {
   margin: 0 5px;
   box-sizing: border-box;
 }
 
-/*---------- container공통영역 ----------*/
-.inner {
-  margin: 0 auto;
+input[id=menuicon] {
+  display: none;
+}
+input[id=menuicon] + label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+input[id=menuicon] + label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 30px;
+  background: #f18b24;
+  transition: all 0.35s;
+}
+input[id=menuicon] + label span:nth-child(1) {
+  top: 0;
+}
+input[id=menuicon] + label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+input[id=menuicon] + label span:nth-child(3) {
+  bottom: 0;
+}
+input[id=menuicon]:checked + label {
+  z-index: 2;
+  right: 260px;
+}
+input[id=menuicon]:checked + label span {
+  background: #333;
+}
+input[id=menuicon]:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+input[id=menuicon]:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+input[id=menuicon]:checked + label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+input[id=menuicon]:checked + label span + div {
+  right: 0;
 }
 
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background: #222;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transition: all 0.35s;
+}
+
+.sidebar p {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #f18b24;
+}
+
+.sidebar ul.gnb li {
+  border-bottom: solid 1px #777;
+}
+
+.sidebar ul.gnb li:hover {
+  background-color: #f18b24;
+}
+
+.sidebar ul.gnb li a {
+  display: inline-block;
+  color: #fff;
+  padding: 15px;
+  font-size: 1em;
+}
+
+.sidebar ul.sns {
+  width: 100%;
+  margin: 14.5px 30px;
+  text-align: center;
+}
+
+.sidebar ul.sns:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.sidebar .sns li {
+  float: left;
+  margin: 0 20px;
+}
+
+#footer ul.sns li {
+  margin: 0 15px;
+}
+
+.sidebar ul.sns li a {
+  font-size: 0.3;
+  color: #ccc;
+}
+
+.sidebar ul.sns li a:hover {
+  color: #f18b24;
+}
+
+/*---------- container공통영역 ----------*/
+/*---------- 버튼디자인 ----------*/
 .button-type1 {
   padding: 0.6em 1.5em;
   transition: all 0.3s ease 0s;
@@ -91,15 +208,14 @@ ul.gnb li.button {
 .button-type1 a {
   color: white;
 }
-.button-type1 a:hover {
-  color: #ff7a22;
-}
 .button-type1:hover {
   box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
   border: 1px solid #ff7a22;
-  box-sizing: border-box;
   background-color: white;
   cursor: pointer;
+}
+.button-type1:hover a {
+  color: #ff7a22;
 }
 
 .button-type2 {
@@ -115,7 +231,6 @@ ul.gnb li.button {
 .button-type2:hover {
   box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
   background-color: #ff7a22;
-  box-sizing: border-box;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -129,6 +244,43 @@ ul.gnb li.button {
   color: #444;
 }
 
+/*---------- input 디자인----------*/
+.section__container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.half-vw {
+  width: 45%;
+  margin: 0 2.5%;
+  float: left;
+}
+
+.simple__input {
+  width: 100%;
+  font-size: 15px;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 5px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #707070;
+  border-radius: 10px;
+  outline: none;
+}
+
+.inner {
+  margin: 0 auto;
+}
+
 .cont-box {
   margin: 0 auto;
   content: "";
@@ -137,8 +289,6 @@ ul.gnb li.button {
 }
 .cont-box .button {
   float: left;
-  margin: 0 2em;
-  padding: 2em;
 }
 .cont-box p {
   margin-bottom: 15px;
@@ -146,6 +296,9 @@ ul.gnb li.button {
 }
 
 .cont-padding {
+  padding: 80px 0;
+}
+.cont-padding > div {
   padding: 80px 0;
 }
 
@@ -169,7 +322,7 @@ footer {
 footer a,
 footer p,
 footer span {
-  color: #DEDEDE;
+  color: #E5E5E5;
   line-height: 1.5;
 }
 footer .footer-logo {
@@ -208,7 +361,7 @@ footer .contact > div {
   padding: 2em 0;
 }
 footer .contact-text2 {
-  border-top: 1px solid #DEDEDE;
+  border-top: 1px solid #E5E5E5;
   opacity: 0.6;
 }
 footer .contact-text2 i {

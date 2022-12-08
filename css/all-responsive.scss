@@ -1,13 +1,30 @@
-@media screen and (min-width:0px) and (max-width:1023px) {
+/*--------- 모바일 반응형 --------*/
+
+@media screen and (min-width:0px) and (max-width:1079px) {
     .cont--inner {
-        width: 94vw;
-        padding: 0 3%;
+        width: 90%;
+        margin: 0 5%;
+    }
+    .mobile {
+        display: block;
+    }
+    .pc {
+        display: none;
     }
 }
 
-@media screen and (min-width:1024px) {
+
+/*--------- PC 반응형 --------*/
+
+@media screen and (min-width:1080px) {
     .cont--inner {
-        width: 95vw;
-        padding: 0 2.5%;
+        width: 1080px;
+        margin: 0 auto;
+    }
+    .mobile {
+        display: none;
+    }
+    .pc {
+        display: block;
     }
 }
