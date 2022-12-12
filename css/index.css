@@ -1,24 +1,410 @@
 @charset "UTF-8";
+/*--전체 디자인 css include--*/ /*---전체 디자인---*/
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
+body {
+  font-family: "Roboto";
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+p,
+span {
+  text-decoration: none;
+  font-family: "Roboto";
+  color: #333;
+}
+
+/*---- 폰트사이즈 변경 ---*/
+/*---- 간격/애니메이션 세팅 ---*/
 /*---전체 컬러 디자인---*/
+/*---전체 버튼 디자인---*/
+/*--모바일 세팅--*/
+/*----헤더영역 세팅---*/
+#header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  z-index: 99999;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px 3px rgba(47, 47, 47, 0.151);
+}
+#header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.logo {
+  text-align: center;
+  width: 130px;
+  display: inline-block;
+}
+.logo a {
+  font-size: 0;
+  text-indent: -9999px;
+}
+.logo a img {
+  width: 100%;
+}
+
+.header--gnb {
+  float: right;
+}
+.header--gnb ul {
+  display: inline-block;
+}
+.header--gnb ul li {
+  float: left;
+}
+.header--gnb ul li a {
+  font-weight: 500;
+}
+.header--gnb ul li.gnb-menu {
+  margin: 0 15px;
+  padding-top: 10px;
+}
+.header--gnb ul li.button {
+  margin: 0 5px;
+  box-sizing: border-box;
+}
+
+input[id=menuicon] {
+  display: none;
+}
+input[id=menuicon] + label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  transition: all 0.35s;
+  cursor: pointer;
+}
+input[id=menuicon] + label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 30px;
+  background: #f18b24;
+  transition: all 0.35s;
+}
+input[id=menuicon] + label span:nth-child(1) {
+  top: 0;
+}
+input[id=menuicon] + label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+input[id=menuicon] + label span:nth-child(3) {
+  bottom: 0;
+}
+input[id=menuicon]:checked + label {
+  z-index: 2;
+  right: 260px;
+}
+input[id=menuicon]:checked + label span {
+  background: #333;
+}
+input[id=menuicon]:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+input[id=menuicon]:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+input[id=menuicon]:checked + label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+input[id=menuicon]:checked + label span + div {
+  right: 0;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100%;
+  background: #222;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  transition: all 0.35s;
+}
+.sidebar p {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 15px 0;
+  color: #f18b24;
+}
+.sidebar ul.gnb li {
+  border-bottom: solid 1px #777;
+}
+.sidebar ul.gnb li:hover {
+  background-color: #f18b24;
+}
+.sidebar ul.gnb li a {
+  display: inline-block;
+  color: #fff;
+  padding: 15px;
+  font-size: 1em;
+}
+.sidebar ul.sns {
+  width: 100%;
+  margin: 14.5px 30px;
+  text-align: center;
+}
+.sidebar ul.sns:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+.sidebar ul.sns li {
+  float: left;
+  margin: 0 20px;
+}
+.sidebar ul.sns li a {
+  font-size: 0.3;
+  color: #ccc;
+}
+.sidebar ul.sns li a:hover {
+  color: #f18b24;
+}
+
+#footer ul.sns li {
+  margin: 0 15px;
+}
+
+/*---------- container공통영역 ----------*/
+/*---------- 버튼디자인 ----------*/
+.button-type1 {
+  padding: 0.6em 1.5em;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  background-color: #ff7a22;
+  border-radius: 20px;
+}
+.button-type1 a {
+  color: white;
+}
+.button-type1:hover {
+  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  border: 1px solid #ff7a22;
+  background-color: white;
+  cursor: pointer;
+}
+.button-type1:hover a {
+  color: #ff7a22;
+}
+
+.button-type2 {
+  font-size: 25px;
+  padding: 0.6em 1.5em;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  background-color: white;
+  color: #ff7a22;
+  border-radius: 20px;
+  border: 1px solid #ff7a22;
+}
+.button-type2:hover {
+  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  background-color: #ff7a22;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.button-type2:hover p {
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+.button-type2 p {
+  font-size: 16px;
+  color: #444;
+}
+
+/*---------- input 디자인----------*/
+.section__container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.half-vw {
+  width: 45%;
+  margin: 0 2.5%;
+  float: left;
+}
+
+.simple__input {
+  width: 100%;
+  font-size: 15px;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 5px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #707070;
+  border-radius: 10px;
+  outline: none;
+}
+
+.inner {
+  margin: 0 auto;
+}
+
+.cont-box {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  clear: both;
+}
+.cont-box .button {
+  float: left;
+}
+.cont-box p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.cont-padding {
+  padding: 80px 0;
+}
+.cont-padding > div {
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.2em;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+footer {
+  padding: 30px 0;
+  background-color: #2F2F2F;
+}
+footer a,
+footer p,
+footer span {
+  color: #E5E5E5;
+  line-height: 1.5;
+}
+footer .footer-logo {
+  width: 200px;
+  float: left;
+}
+footer .footer-logo img {
+  width: 100%;
+}
+footer .logo-div,
+footer .use-div {
+  width: 100%;
+}
+footer .logo-div::after,
+footer .use-div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+footer .call {
+  float: right;
+  padding-top: 28px;
+  font-size: 25px;
+}
+footer ul.use {
+  float: left;
+}
+footer ul.sns {
+  float: right;
+}
+footer ul li {
+  float: left;
+  margin-right: 30px;
+}
+footer .contact > div {
+  padding: 2em 0;
+}
+footer .contact-text2 {
+  border-top: 1px solid #E5E5E5;
+  opacity: 0.6;
+}
+footer .contact-text2 i {
+  padding-left: 6px;
+}
+
+/*--index 디자인 css--*/
 .cont1 .button {
   padding: 2em;
+  width: 280px;
+  margin-left: calc(50% - 382px);
+}
+
+.cont2 .system > a {
+  color: #fff;
+}
+
+.cont3 {
+  background-color: #ff7a22;
+}
+.cont3::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.cont3 .service-part {
+  width: calc(33.3% - 30px);
+  height: 300px;
+  float: left;
+  margin: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  border: 1px solid #222;
+  border-radius: 10px;
+  padding: 15px 0;
+}
+.cont3 .service-part a {
+  color: #fff;
 }
 
 .cont6 .button,
 .cont5 .button {
   margin-top: 20px;
   width: 300px;
-  margin-left: calc(50vw - 150px);
+  margin-left: calc(50% - 150px);
   text-align: center;
   padding: 12px 0;
 }
 .cont6 .button i,
 .cont5 .button i {
   margin-left: 20px;
-}
-
-.cont3 {
-  background-color: #ff7a22;
 }
 
 .cont6 {

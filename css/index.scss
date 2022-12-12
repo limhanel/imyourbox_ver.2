@@ -1,33 +1,60 @@
-/*---전체 컬러 디자인---*/
+/*--전체 디자인 css include--*/
 
-$main-color: #ff7a22;
-$sub-color:#FF881A;
-$gray-color:#E5E5E5;
-$dark-color:#2F2F2F;
-$font-dark: #444;
-$font-white :blue;
-$font-red: red;
-$font-hell0: green;
+@import 'all-html';
+
+/*--index 디자인 css--*/
+
 .cont1 {
     .button {
         padding: 2em;
+        width: 280px;
+        margin-left: calc(50% - 382px);
     }
 }
 
-.cont6 .button,
-.cont5 .button {
-    margin-top: 20px;
-    width: 300px;
-    margin-left: calc(50vw - 150px);
-    text-align: center;
-    padding: 12px 0;
-    i {
-        margin-left: 20px;
+.cont2 {
+    .system>a {
+        color: #fff;
     }
 }
 
 .cont3 {
     background-color: $main-color;
+    &::after {
+        @include float-clear;
+    }
+    .service-part {
+        width: calc(33.3% - 30px);
+        height: 300px;
+        float: left;
+        margin: 15px;
+        box-sizing: border-box;
+        text-align: center;
+        border: 1px solid #222;
+        border-radius: 10px;
+        padding: 15px 0;
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.cont4 {}
+
+.cont5 {}
+
+.cont6 {}
+
+.cont6 .button,
+.cont5 .button {
+    margin-top: 20px;
+    width: 300px;
+    margin-left: calc(50% - 150px);
+    text-align: center;
+    padding: 12px 0;
+    i {
+        margin-left: 20px;
+    }
 }
 
 .cont6 {

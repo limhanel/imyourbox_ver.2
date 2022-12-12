@@ -232,58 +232,49 @@ input[id="menuicon"] {
     right: 0;
     z-index: 1;
     transition: all .35s;
-}
-
-.sidebar p {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 15px 0;
-    color: #f18b24;
-}
-
-.sidebar ul.gnb li {
-    border-bottom: solid 1px #777;
-}
-
-.sidebar ul.gnb li:hover {
-    background-color: #f18b24;
-}
-
-.sidebar ul.gnb li a {
-    display: inline-block;
-    color: #fff;
-    padding: 15px;
-    font-size: 1.0em;
-}
-
-.sidebar ul.sns {
-    width: 100%;
-    margin: 14.5px 30px;
-    text-align: center;
-}
-
-.sidebar ul.sns:after {
-    clear: both;
-    content: '';
-    display: block;
-}
-
-.sidebar .sns li {
-    float: left;
-    margin: 0 20px;
+    p {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 15px 0;
+        color: #f18b24;
+    }
+    ul.gnb li {
+        border-bottom: solid 1px #777;
+        &:hover {
+            background-color: #f18b24;
+        }
+        a {
+            display: inline-block;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.0em;
+        }
+    }
+    ul.sns {
+        width: 100%;
+        margin: 14.5px 30px;
+        text-align: center;
+        &:after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+        li {
+            float: left;
+            margin: 0 20px;
+            a {
+                font-size: 0.3;
+                color: #ccc;
+                &:hover {
+                    color: #f18b24;
+                }
+            }
+        }
+    }
 }
 
 #footer ul.sns li {
     margin: 0 15px;
-}
-
-.sidebar ul.sns li a {
-    font-size: 0.3;
-    color: #ccc;
-}
-
-.sidebar ul.sns li a:hover {
-    color: #f18b24;
 }
 
 
@@ -377,6 +368,7 @@ h3 {
     font-size: 28px;
     line-height: 1.2em;
     font-weight: 600;
+    margin-bottom: 40px;
 }
 
 footer {

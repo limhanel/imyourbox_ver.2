@@ -143,57 +143,48 @@ input[id=menuicon]:checked + label span + div {
   z-index: 1;
   transition: all 0.35s;
 }
-
 .sidebar p {
   text-align: center;
   font-size: 1.5em;
   margin: 15px 0;
   color: #f18b24;
 }
-
 .sidebar ul.gnb li {
   border-bottom: solid 1px #777;
 }
-
 .sidebar ul.gnb li:hover {
   background-color: #f18b24;
 }
-
 .sidebar ul.gnb li a {
   display: inline-block;
   color: #fff;
   padding: 15px;
   font-size: 1em;
 }
-
 .sidebar ul.sns {
   width: 100%;
   margin: 14.5px 30px;
   text-align: center;
 }
-
 .sidebar ul.sns:after {
   clear: both;
   content: "";
   display: block;
 }
-
-.sidebar .sns li {
+.sidebar ul.sns li {
   float: left;
   margin: 0 20px;
 }
-
-#footer ul.sns li {
-  margin: 0 15px;
-}
-
 .sidebar ul.sns li a {
   font-size: 0.3;
   color: #ccc;
 }
-
 .sidebar ul.sns li a:hover {
   color: #f18b24;
+}
+
+#footer ul.sns li {
+  margin: 0 15px;
 }
 
 /*---------- container공통영역 ----------*/
@@ -313,6 +304,7 @@ h3 {
   font-size: 28px;
   line-height: 1.2em;
   font-weight: 600;
+  margin-bottom: 40px;
 }
 
 footer {
