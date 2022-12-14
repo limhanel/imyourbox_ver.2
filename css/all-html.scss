@@ -42,8 +42,8 @@ $fs-2x-large:50px;
 
 /*---- 간격/애니메이션 세팅 ---*/
 
-$cont-padding:80px 0;
-$cont-margin:50px 0;
+// $cont-padding:20px 0;
+$cont-margin:30px 0;
 $animation :all 0.3s ease 0s;
 @mixin float-clear {
     content: '';
@@ -129,10 +129,10 @@ $font-hell0: green;
     display: flex;
     justify-content: space-between;
     background-color: #fff;
-    box-shadow: 1px 1px 3px 3px rgba(47,
-    47,
-    47,
-    0.151);
+    box-shadow: 1px 1px 3px 3px rgba(0,
+    0,
+    0,
+    0.247);
 }
 
 .logo {
@@ -318,14 +318,15 @@ input[id="menuicon"] {
     background-color: #fff;
 }
 
-// .checkbox {
-//     border: 1px solid $main-color;
-//     width: 20px;
-//     border-radius: 10px;
-//     outline: none;
-//     padding: 10px 5px;
-//     background-color: #fff;
-// }
+.checkbox {
+    border: 1px solid $main-color;
+    width: 20px;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 5px;
+    background-color: #fff;
+}
+
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
@@ -347,13 +348,6 @@ input[type="checkbox"] {
     p {
         margin-bottom: 15px;
         font-size: $fs-small;
-    }
-}
-
-.cont-padding {
-    padding: $cont-padding;
-    &>div {
-        padding: $cont-padding;
     }
 }
 

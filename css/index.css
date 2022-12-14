@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/*--전체 디자인 css include--*/ /*---전체 디자인---*/
+/*---전체 디자인---*/
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
 body {
   font-family: "Roboto";
@@ -37,7 +37,7 @@ span {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  box-shadow: 1px 1px 3px 3px rgba(47, 47, 47, 0.151);
+  box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.247);
 }
 #header::after {
   content: "";
@@ -260,6 +260,15 @@ input[id=menuicon]:checked + label span + div {
   background-color: #fff;
 }
 
+.checkbox {
+  border: 1px solid #ff7a22;
+  width: 20px;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 5px;
+  background-color: #fff;
+}
+
 input[type=checkbox] {
   width: 20px;
   height: 20px;
@@ -284,13 +293,6 @@ input[type=checkbox] {
 .cont-box p {
   margin-bottom: 15px;
   font-size: 16px;
-}
-
-.cont-padding {
-  padding: 80px 0;
-}
-.cont-padding > div {
-  padding: 80px 0;
 }
 
 h2 {
@@ -361,10 +363,20 @@ footer .contact-text2 i {
 }
 
 /*--index 디자인 css--*/
-.cont1 .button {
-  padding: 2em;
-  width: 280px;
-  margin-left: calc(50% - 382px);
+.cont1 {
+  margin-top: 50px;
+  position: relative;
+}
+.cont1 .cont--inner .cont1-text {
+  position: absolute;
+  top: -600px;
+  width: 100%;
+}
+.cont1 .cont--inner .cont1-text .button {
+  padding: 2em 1em;
+  width: 40%;
+  margin: 5%;
+  box-sizing: border-box;
 }
 
 .cont2 .system > a {
@@ -394,6 +406,43 @@ footer .contact-text2 i {
   color: #fff;
 }
 
+.cont5 .button {
+  padding-top: 100px;
+}
+.cont5 .consumer p {
+  line-height: 1.3;
+}
+.cont5 .consumer p.strong {
+  font-size: 1.8em;
+  margin-bottom: 5%;
+  margin-top: 30%;
+}
+.cont5 .consumer .left {
+  float: left;
+}
+.cont5 .consumer .right {
+  float: right;
+}
+.cont5 .consumer .box {
+  padding-top: 60px;
+}
+.cont5 .consumer .box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.cont5 .consumer .box img {
+  width: 100%;
+}
+.cont5 .consumer .box div {
+  width: 48%;
+}
+.cont5 .consumer .box div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .cont6 .button,
 .cont5 .button {
   margin-top: 20px;
@@ -409,4 +458,85 @@ footer .contact-text2 i {
 
 .cont6 {
   background-color: rgb(236, 236, 236);
+}
+.cont6 .stepone__category {
+  width: 100%;
+  display: block;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100vw;
+}
+.slideshow-container::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.slideshow-container img {
+  width: 100vw;
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slideshow-container .cont--inner {
+  position: relative;
+  position: relative;
+  margin: auto;
+}
+.slideshow-container .cont--inner h3 {
+  position: absolute;
+  margin: 30px 10px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.slideshow-container .cont--inner .arrow-button {
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #ff7a22;
+  border: 2px solid #ff7a22;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+}
+.slideshow-container .cont--inner .arrow-button:hover {
+  background-color: rgba(255, 102, 0, 0.664);
+  color: #fff;
+  border: 2px solid #fff;
+}
+.slideshow-container .cont--inner .next,
+.slideshow-container .cont--inner .main-next {
+  right: 0;
+}
+
+/* effect */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=index.css.map */

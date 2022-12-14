@@ -37,7 +37,7 @@ span {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  box-shadow: 1px 1px 3px 3px rgba(47, 47, 47, 0.151);
+  box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.247);
 }
 #header::after {
   content: "";
@@ -260,6 +260,15 @@ input[id=menuicon]:checked + label span + div {
   background-color: #fff;
 }
 
+.checkbox {
+  border: 1px solid #ff7a22;
+  width: 20px;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 5px;
+  background-color: #fff;
+}
+
 input[type=checkbox] {
   width: 20px;
   height: 20px;
@@ -284,13 +293,6 @@ input[type=checkbox] {
 .cont-box p {
   margin-bottom: 15px;
   font-size: 16px;
-}
-
-.cont-padding {
-  padding: 80px 0;
-}
-.cont-padding > div {
-  padding: 80px 0;
 }
 
 h2 {

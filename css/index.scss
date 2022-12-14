@@ -1,14 +1,22 @@
-/*--전체 디자인 css include--*/
-
 @import 'all-html';
 
 /*--index 디자인 css--*/
 
 .cont1 {
-    .button {
-        padding: 2em;
-        width: 280px;
-        margin-left: calc(50% - 382px);
+    margin-top: 50px;
+    position: relative;
+    .cont--inner {
+        .cont1-text {
+            position: absolute;
+            top: -600px;
+            width: 100%;
+            .button {
+                padding: 2em 1em;
+                width: 40%;
+                margin: 5%;
+                box-sizing: border-box;
+            }
+        }
     }
 }
 
@@ -39,11 +47,42 @@
     }
 }
 
-.cont4 {}
-
-.cont5 {}
-
-.cont6 {}
+.cont5 {
+    .button {
+        padding-top: 100px;
+    }
+    .consumer {
+        p {
+            line-height: 1.3;
+            &.strong {
+                font-size: 1.8em;
+                margin-bottom: 5%;
+                margin-top: 30%;
+            }
+        }
+        .left {
+            float: left;
+        }
+        .right {
+            float: right;
+        }
+        .box {
+            &::after {
+                @include float-clear;
+            }
+            padding-top: 60px;
+            img {
+                width: 100%;
+            }
+            div {
+                width: 48%;
+                &::after {
+                    @include float-clear;
+                }
+            }
+        }
+    }
+}
 
 .cont6 .button,
 .cont5 .button {
@@ -59,4 +98,87 @@
 
 .cont6 {
     background-color: rgb(236, 236, 236);
+    .stepone__category {
+        width: 100%;
+        display: block;
+    }
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+    &::after {
+        @include float-clear;
+    }
+    width:100vw;
+    img {
+        width: 100vw;
+        height: 800px;
+        object-fit: cover;
+    }
+    .cont--inner {
+        position: relative;
+        h3 {
+            position: absolute;
+            margin: 30px 10px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+        }
+        .arrow-button {
+            cursor: pointer;
+            position: absolute;
+            bottom: 30px;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: $main-color;
+            border: 2px solid $main-color;
+            background-color: rgba(255, 255, 255, 0.8);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            &:hover {
+                background-color: rgba(255, 102, 0, 0.664);
+                color: #fff;
+                border: 2px solid #fff;
+            }
+        }
+        .next,
+        .main-next {
+            right: 0;
+        }
+        position: relative;
+        margin: auto;
+    }
+}
+
+
+/* effect */
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
