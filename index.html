@@ -426,7 +426,7 @@
 
         <script type="text/javascript ">
             $(document).ready(function() {
-                $(".main-slider ").not(".active").hide();
+                $(".main-slider").not(".active").hide();
                 setInterval(nextSlide, 4000);
             });
 
@@ -434,7 +434,7 @@
                 $(".main-slider").hide();
                 var allSlide = $(".cont4-slider");
                 var currentIndex = 0;
-                $(".main-slider ").each(function(index, item) {
+                $(".main-slider").each(function(index, item) {
                     if ($(this).hasClass("active")) {
                         currentIndex = index;
                     }
