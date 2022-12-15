@@ -42,6 +42,12 @@ span {
 
 /*---전체 컬러 디자인---*/
 /*---전체 버튼 디자인---*/
+input[type=textarea],
+input[type=input] {
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 10px;
+}
+
 /*--모바일 세팅--*/
 /*----헤더영역 세팅---*/
 #header {
@@ -210,6 +216,7 @@ input[id=menuicon]:checked + label span + div {
   transition: all 0.3s ease 0s;
   font-weight: 600;
   background-color: #ff7a22;
+  border: 1px solid #ff7a22;
   border-radius: 20px;
 }
 .button-type1 a {
@@ -266,9 +273,6 @@ input[id=menuicon]:checked + label span + div {
 .simple__input {
   width: 100%;
   font-size: 15px;
-  border: 1px solid rgb(197, 197, 197);
-  border-radius: 10px;
-  outline: none;
   padding: 10px 5px;
   margin-top: 6px;
   margin-bottom: 15px;
@@ -398,6 +402,9 @@ footer .contact-text2 i {
 .cont2 .system > a {
   color: #fff;
 }
+.cont2 .system > a:hover {
+  color: #ff7a22;
+}
 
 .cont3 {
   background-color: #ff7a22;
@@ -485,9 +492,8 @@ footer .contact-text2 i {
 .cont6 {
   background-color: rgb(236, 236, 236);
 }
-.cont6 .stepone__category {
-  width: 100%;
-  display: block;
+.cont6 .simple__textarea {
+  height: 245px;
 }
 
 /* Slideshow container */

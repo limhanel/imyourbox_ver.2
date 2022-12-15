@@ -24,6 +24,9 @@
 .cont2 {
     .system>a {
         color: #fff;
+        &:hover {
+            color: $main-color
+        }
     }
 }
 
@@ -111,9 +114,8 @@
 
 .cont6 {
     background-color: rgb(236, 236, 236);
-    .stepone__category {
-        width: 100%;
-        display: block;
+    .simple__textarea {
+        height: 245px;
     }
 }
 
