@@ -399,11 +399,32 @@ footer .contact-text2 i {
   box-shadow: 0px 5px 5px rgba(73, 45, 13, 0.432);
 }
 
-.cont2 .system > a {
+.cont2::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.cont2 .system {
+  border: 2px solid #ff7a22;
+  border-radius: 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 218, 196, 0.233);
+}
+.cont2 .system img {
+  width: 80%;
+  margin: 0 10%;
+}
+.cont2 .system a {
+  float: right;
+  margin: 5%;
   color: #fff;
 }
-.cont2 .system > a:hover {
+.cont2 .system a:hover {
   color: #ff7a22;
+}
+.cont2 .system p {
+  width: 90%;
+  margin: 5%;
 }
 
 .cont3 {

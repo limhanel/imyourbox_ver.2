@@ -101,12 +101,14 @@
 
                         <div class="system half-vw">
                             <a class="button-type1">OMS 사용하기</a>
+                            <img src="images/auto-system01.svg">
                             <p><span>OMS 시스템</span>주문내역, 결제확인, 반품 등 모든 주문을 관리하는 총괄 주문관리 시스템</p>
 
                         </div>
                         <div class="system half-vw">
                             <a class="button-type1">WMS 사용하기</a>
-                            <p><span>WMS 시스템</span>배송정확도 99.9%로 물류 전과정의 주문통합관리를 통한 자동화 시스템</p>
+                            <img src="images/auto-system02.svg">
+                            <p class="half-vw"><span>WMS 시스템</span>배송정확도 99.9%로 물류 전과정의 주문통합관리를 통한 자동화 시스템</p>
                         </div>
                     </div>
                     <!--cont--inner-->
@@ -369,60 +371,6 @@
             new numberCounter("counter3", 80);
         </script>
 
-        <!-- <script type="text/javascript">
-            $(document).ready(function() {
-                $(".cont4-slider").not(".active").hide();
-                setInterval(nextSlide, 4000);
-            });
-
-            function prevSlide() {
-                $(".cont4-slider").hide();
-                var allSlide = $(".cont4-slider");
-                var currentIndex = 0;
-                $(".cont4-slider").each(function(index, item) {
-                    if ($(this).hasClass("active")) {
-                        currentIndex = index;
-                    }
-                });
-
-                var newIndex = 0;
-                if (currentIndex <= 0) {
-                    newIndex = allSlide.length - 1;
-                } else {
-                    newIndex = currentIndex - 1;
-                }
-
-                $(".cont4-slider").removeClass("active");
-                $(".cont4-slider").eq(newIndex).addClass("active");
-                $(".cont4-slider").eq(newIndex).show();
-
-            }
-
-            function nextSlide() {
-                $(".cont4-slider").hide();
-                var allSlide = $(".cont4-slider");
-                var currentIndex = 0;
-
-                $(".cont4-slider").each(function(index, item) {
-                    if ($(this).hasClass("active")) {
-                        currentIndex = index;
-                    }
-                });
-
-                var newIndex = 0;
-
-                if (currentIndex >= allSlide.length - 1) {
-                    newIndex = 0;
-                } else {
-                    newIndex = currentIndex + 1;
-                }
-
-                $(".cont4-slider").removeClass("active");
-                $(".cont4-slider").eq(newIndex).addClass("active");
-                $(".cont4-slider").eq(newIndex).show();
-
-            }
-        </script> -->
 
         <script type="text/javascript">
             $(document).ready(function() {
@@ -478,17 +426,19 @@
 
             }
         </script>
+
+
         <script type="text/javascript">
             $(document).ready(function() {
-                $(".cont4-slider").not(".active").hide();
-                setInterval(nextSlide, 4000);
+                $(".main-slider").not(".active").hide();
+                setInterval(nextMainSlide, 4000);
             });
 
-            function prevSlide() {
-                $(".cont4-slider").hide();
-                var allSlide = $(".cont4-slider");
+            function prevMainSlide() {
+                $(".main-slider").hide();
+                var allSlide = $(".main-slider");
                 var currentIndex = 0;
-                $(".cont4-slider").each(function(index, item) {
+                $(".main-slider").each(function(index, item) {
                     if ($(this).hasClass("active")) {
                         currentIndex = index;
                     }
@@ -501,18 +451,18 @@
                     newIndex = currentIndex - 1;
                 }
 
-                $(".cont4-slider").removeClass("active");
-                $(".cont4-slider").eq(newIndex).addClass("active");
-                $(".cont4-slider").eq(newIndex).show();
+                $(".main-slider").removeClass("active");
+                $(".main-slider").eq(newIndex).addClass("active");
+                $(".main-slider").eq(newIndex).show();
 
             }
 
-            function nextSlide() {
-                $(".cont4-slider").hide();
-                var allSlide = $(".cont4-slider");
+            function nextMainSlide() {
+                $(".main-slider").hide();
+                var allSlide = $(".main-slider");
                 var currentIndex = 0;
 
-                $(".cont4-slider").each(function(index, item) {
+                $(".main-slider").each(function(index, item) {
                     if ($(this).hasClass("active")) {
                         currentIndex = index;
                     }
@@ -526,9 +476,9 @@
                     newIndex = currentIndex + 1;
                 }
 
-                $(".cont4-slider").removeClass("active");
-                $(".cont4-slider").eq(newIndex).addClass("active");
-                $(".cont4-slider").eq(newIndex).show();
+                $(".main-slider").removeClass("active");
+                $(".main-slider").eq(newIndex).addClass("active");
+                $(".main-slider").eq(newIndex).show();
 
             }
         </script>
