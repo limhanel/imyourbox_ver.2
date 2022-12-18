@@ -15,7 +15,11 @@
     .pc {
         display: none;
     }
-
+    .half-vw {
+        width: 95%;
+        margin: initial;
+        float: left;
+    }
 }
 
 
@@ -34,5 +38,10 @@
     }
     input[id="menuicon"]+label {
         display: none;
+    }
+    .half-vw {
+        width: 45%;
+        margin: 0 2.5%;
+        float: left;
     }
 }

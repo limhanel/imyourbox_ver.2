@@ -181,7 +181,7 @@ input[id=menuicon]:checked + label span + div {
 }
 .sidebar ul.gnb li a {
   display: inline-block;
-  color: #fff;
+  color: #333;
   padding: 15px;
   font-size: 1em;
 }
