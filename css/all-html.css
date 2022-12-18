@@ -120,7 +120,7 @@ input[id=menuicon] + label span {
   width: 100%;
   height: 3px;
   border-radius: 30px;
-  background: #f18b24;
+  background: #ff7a22;
   transition: all 0.35s;
 }
 input[id=menuicon] + label span:nth-child(1) {
@@ -159,7 +159,7 @@ input[id=menuicon]:checked + label span + div {
   display: none;
   width: 250px;
   height: 100%;
-  background: rgb(255, 12, 12);
+  background: #fff !important;
   position: fixed;
   top: 0;
   right: 0;
@@ -171,17 +171,17 @@ input[id=menuicon]:checked + label span + div {
   text-align: center;
   font-size: 1.5em;
   margin: 15px 0;
-  color: #f18b24;
+  color: #ff7a22;
 }
 .sidebar ul.gnb li {
-  border-bottom: solid 1px #777;
+  border-bottom: solid 1px #333;
 }
 .sidebar ul.gnb li:hover {
-  background-color: #f18b24;
+  background-color: #ff7a22;
 }
 .sidebar ul.gnb li a {
   display: inline-block;
-  color: #fff;
+  color: #333;
   padding: 15px;
   font-size: 1em;
 }
@@ -201,10 +201,10 @@ input[id=menuicon]:checked + label span + div {
 }
 .sidebar ul.sns li a {
   font-size: 0.3;
-  color: #ccc;
+  color: #333;
 }
 .sidebar ul.sns li a:hover {
-  color: #f18b24;
+  color: #ff7a22;
 }
 
 #footer ul.sns li {
