@@ -91,14 +91,14 @@
                 </div>
 
                 <div class="mobile">
-                    <input type="checkbox" id="menuicon">
+                    <input type="checkbox" id="menuicon" onclick="dis()">
                     <label for="menuicon">
             <span class="mobile"></span>
             <span class="mobile"></span>
             <span class="mobile"></span>
             </label>
 
-                    <!-- <div class="sidebar">
+                    <div class="sidebar">
                         <ul class="gnb">
                             <li>
                                 <a href="enquiry.html">간편문의</a>
@@ -115,11 +115,11 @@
                             <li>
                                 <a href="http://222.231.61.51/" target="_blank">WMS</a>
                             </li>
-                        </ul> -->
+                        </ul>
 
-                    <!-- gnb mobile-->
+                        <!-- gnb mobile-->
 
-                    <!-- <ul class="sns">
+                        <ul class="sns">
                             <li>
                                 <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
                             </li>
@@ -129,18 +129,28 @@
                             <li>
                                 <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x" ></i></a>
                             </li>
-                        </ul> -->
-                    <!--sns-->
+                        </ul>
+                        <!--sns-->
+                    </div>
                 </div>
+                <!--mobile-->
+
             </div>
-            <!--mobile-->
+            <!--inner-->
 
+            <!--no-->
+        </header>
     </div>
-    <!--inner-->
-
-    <!--no-->
-    </header>
-    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        function dis() {
+            if ($('.sidebar').css('display') == 'none') {
+                $('.sidebar').show();
+            } else {
+                $('.sidebar').hide();
+            }
+        }
+    </script>
 </body>
 
 

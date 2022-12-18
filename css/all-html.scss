@@ -1,422 +1,440 @@
-    /*---전체 디자인---*/
-    
-    @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
-    body {
-        font-family: 'Roboto';
+/*---전체 디자인---*/
+
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
+body {
+    font-family: 'Roboto';
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+@mixin initial-type {
+    text-decoration: none;
+    font-family: 'Roboto';
+    color: #333;
+}
+
+a,
+p,
+span {
+    @include initial-type;
+}
+
+
+/*---- 폰트사이즈 변경 ---*/
+
+$fs-small:16px;
+//작은 설명텍스트//
+$fs-medium:20px;
+//본문 기본크기//
+$fs-large:25px;
+//강조텍스트 크기//
+$fs-x-large:40px;
+//cont 제목크기//
+$fs-2x-large:50px;
+//캐러셀 강조텍스트//
+
+/*---- 간격/애니메이션 세팅 ---*/
+
+// $cont-padding:20px 0;
+// $cont-margin:30px 0;
+$animation :all 0.3s ease 0s;
+@mixin float-clear {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.cont2,
+.cont3,
+.cont5,
+.cont6,
+.cont7,
+.cont8,
+.cont9,
+.cont10 {
+    padding: 120px 0;
+}
+
+.cont1,
+.cont4 {
+    padding: 0;
+}
+
+
+/*---전체 컬러 디자인---*/
+
+$main-color: #ff7a22;
+$sub-color:#FF881A;
+$gray-color:#E5E5E5;
+$dark-color:#2F2F2F;
+$font-dark: #444;
+$font-white :blue;
+$font-red: red;
+$font-hell0: green;
+
+/*---전체 버튼 디자인---*/
+
+@mixin button-type1 {
+    a {
+        color: white;
     }
-    
+    padding: 0.6em 1.5em;
+    transition: $animation;
+    font-weight: 600;
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    border-radius: 20px;
+    &:hover {
+        box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+        border: 1px solid $main-color;
+        background-color: white;
+        cursor: pointer;
+        a {
+            color: $main-color
+        }
+    }
+}
+
+@mixin button-type2 {
+    font-size: $fs-large;
+    padding: 0.6em 1.5em;
+    transition: $animation;
+    font-weight: 600;
+    background-color: white;
+    color: $main-color;
+    border-radius: 20px;
+    // border: 1px solid $main-color;
+    &:hover {
+        box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+        background-color: $main-color;
+        color: white;
+        cursor: pointer;
+        transition: $animation;
+        p {
+            color: white;
+            transition: $animation;
+        }
+    }
+    & p {
+        font-size: $fs-small;
+        color: $font-dark;
+    }
+}
+
+input[type="textarea"],
+input[type="input"] {
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 10px;
+}
+
+
+/*--모바일 세팅--*/
+
+
+/*----헤더영역 세팅---*/
+
+#header {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+    padding: 10px 20px;
+    &::after {
+        @include float-clear
+    }
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px 3px rgba(0,
+    0,
+    0,
+    0.247);
+}
+
+.logo {
+    text-align: center;
+    width: 130px;
+    display: inline-block;
+    a {
+        font-size: 0;
+        text-indent: -9999px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.header--gnb {
+    float: right;
     ul {
-        list-style: none;
-        padding-left: 0px;
+        display: inline-block;
+        li {
+            float: left;
+            a {
+                font-weight: 500;
+            }
+            &.gnb-menu {
+                margin: 0 15px;
+                padding-top: 10px;
+            }
+            &.button {
+                margin: 0 5px;
+                box-sizing: border-box;
+            }
+        }
     }
-    
-    li {
-        list-style: none;
+}
+
+input[id="menuicon"] {
+    display: none;
+    &+label {
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: fixed;
+        right: 15px;
+        top: 15px;
+        transition: all .35s;
+        cursor: pointer;
+        span {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            border-radius: 30px;
+            background: #f18b24;
+            transition: all .35s;
+            &:nth-child(1) {
+                top: 0;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            &:nth-child(3) {
+                bottom: 0;
+            }
+        }
     }
-    
-    @mixin initial-type {
-        text-decoration: none;
-        font-family: 'Roboto';
-        color: #333;
+    &:checked+label {
+        z-index: 2;
+        right: 260px;
+        span {
+            background: #333;
+            &:nth-child(1) {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                bottom: 50%;
+                transform: translateY(50%) rotate(-45deg);
+            }
+            &+div {
+                right: 0;
+            }
+        }
     }
-    
+}
+
+.sidebar {
+    display: none;
+    width: 250px;
+    height: 100%;
+    background: rgb(255, 12, 12);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    transition: all .35s;
+    box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+    p {
+        text-align: center;
+        font-size: 1.5em;
+        margin: 15px 0;
+        color: #f18b24;
+    }
+    ul.gnb li {
+        border-bottom: solid 1px #777;
+        &:hover {
+            background-color: #f18b24;
+        }
+        a {
+            display: inline-block;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.0em;
+        }
+    }
+    ul.sns {
+        width: 100%;
+        margin: 14.5px 30px;
+        text-align: center;
+        &:after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+        li {
+            float: left;
+            margin: 0 20px;
+            a {
+                font-size: 0.3;
+                color: #ccc;
+                &:hover {
+                    color: #f18b24;
+                }
+            }
+        }
+    }
+}
+
+#footer ul.sns li {
+    margin: 0 15px;
+}
+
+
+/*---------- container공통영역 ----------*/
+
+
+/*---------- 버튼디자인 ----------*/
+
+.button-type1 {
+    @include button-type1
+}
+
+.button-type2 {
+    @include button-type2
+}
+
+
+/*---------- input 디자인----------*/
+
+.section__container {
+    &::after {
+        @include float-clear
+    }
+}
+
+.half-vw {
+    width: 45%;
+    margin: 0 2.5%;
+    float: left;
+}
+
+.simple__input {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 5px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.checkbox {
+    border: 1px solid $main-color;
+    width: 20px;
+    border-radius: 10px;
+    outline: none;
+    padding: 10px 5px;
+    background-color: #fff;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 3px solid #707070;
+    border-radius: 10px;
+    outline: none;
+}
+
+.inner {
+    margin: 0 auto;
+}
+
+.cont-box {
+    margin: 0 auto;
+    @include float-clear;
+    .button {
+        float: left;
+    }
+    p {
+        margin-bottom: 15px;
+        font-size: $fs-small;
+    }
+}
+
+h2 {
+    font-size: $fs-2x-large;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.2em;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+footer {
+    padding: 30px 0;
+    background-color: $dark-color;
     a,
     p,
     span {
-        @include initial-type;
+        color: $gray-color;
+        line-height: 1.5;
     }
-    /*---- 폰트사이즈 변경 ---*/
-    
-    $fs-small:16px;
-    //작은 설명텍스트//
-    $fs-medium:20px;
-    //본문 기본크기//
-    $fs-large:25px;
-    //강조텍스트 크기//
-    $fs-x-large:40px;
-    //cont 제목크기//
-    $fs-2x-large:50px;
-    //캐러셀 강조텍스트//
-    /*---- 간격/애니메이션 세팅 ---*/
-    
-    // $cont-padding:20px 0;
-    // $cont-margin:30px 0;
-    $animation :all 0.3s ease 0s;
-    @mixin float-clear {
-        content: '';
-        display: block;
-        clear: both;
-    }
-    
-    .cont2,
-    .cont3,
-    .cont5,
-    .cont6,
-    .cont7,
-    .cont8,
-    .cont9,
-    .cont10 {
-        padding: 120px 0;
-    }
-    
-    .cont1,
-    .cont4 {
-        padding: 0;
-    }
-    /*---전체 컬러 디자인---*/
-    
-    $main-color: #ff7a22;
-    $sub-color:#FF881A;
-    $gray-color:#E5E5E5;
-    $dark-color:#2F2F2F;
-    $font-dark: #444;
-    $font-white :blue;
-    $font-red: red;
-    $font-hell0: green;
-    /*---전체 버튼 디자인---*/
-    
-    @mixin button-type1 {
-        a {
-            color: white;
-        }
-        padding: 0.6em 1.5em;
-        transition: $animation;
-        font-weight: 600;
-        background-color: $main-color;
-        border: 1px solid $main-color;
-        border-radius: 20px;
-        &:hover {
-            box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
-            border: 1px solid $main-color;
-            background-color: white;
-            cursor: pointer;
-            a {
-                color: $main-color
-            }
-        }
-    }
-    
-    @mixin button-type2 {
-        font-size: $fs-large;
-        padding: 0.6em 1.5em;
-        transition: $animation;
-        font-weight: 600;
-        background-color: white;
-        color: $main-color;
-        border-radius: 20px;
-        // border: 1px solid $main-color;
-        &:hover {
-            box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
-            background-color: $main-color;
-            color: white;
-            cursor: pointer;
-            transition: $animation;
-            p {
-                color: white;
-                transition: $animation;
-            }
-        }
-        & p {
-            font-size: $fs-small;
-            color: $font-dark;
-        }
-    }
-    
-    input[type="textarea"],
-    input[type="input"] {
-        border: 1px solid rgb(197, 197, 197);
-        border-radius: 10px;
-    }
-    /*--모바일 세팅--*/
-    /*----헤더영역 세팅---*/
-    
-    #header {
-        width: 100vw;
-        position: fixed;
-        top: 0;
-        z-index: 99999;
-        padding: 10px 20px;
-        &::after {
-            @include float-clear
-        }
-        display: flex;
-        justify-content: space-between;
-        background-color: #fff;
-        box-shadow: 1px 1px 3px 3px rgba(0,
-        0,
-        0,
-        0.247);
-    }
-    
-    .logo {
-        text-align: center;
-        width: 130px;
-        display: inline-block;
-        a {
-            font-size: 0;
-            text-indent: -9999px;
-            img {
-                width: 100%;
-            }
-        }
-    }
-    
-    .header--gnb {
-        float: right;
-        ul {
-            display: inline-block;
-            li {
-                float: left;
-                a {
-                    font-weight: 500;
-                }
-                &.gnb-menu {
-                    margin: 0 15px;
-                    padding-top: 10px;
-                }
-                &.button {
-                    margin: 0 5px;
-                    box-sizing: border-box;
-                }
-            }
-        }
-    }
-    
-    input[id="menuicon"] {
-        display: none;
-        &+label {
-            display: block;
-            width: 20px;
-            height: 20px;
-            position: fixed;
-            right: 15px;
-            top: 15px;
-            transition: all .35s;
-            cursor: pointer;
-            span {
-                display: block;
-                position: absolute;
-                width: 100%;
-                height: 3px;
-                border-radius: 30px;
-                background: #f18b24;
-                transition: all .35s;
-                &:nth-child(1) {
-                    top: 0;
-                }
-                &:nth-child(2) {
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                &:nth-child(3) {
-                    bottom: 0;
-                }
-            }
-        }
-        &:checked+label {
-            z-index: 2;
-            right: 260px;
-            span {
-                background: #333;
-                &:nth-child(1) {
-                    top: 50%;
-                    transform: translateY(-50%) rotate(45deg);
-                }
-                &:nth-child(2) {
-                    opacity: 0;
-                }
-                &:nth-child(3) {
-                    bottom: 50%;
-                    transform: translateY(50%) rotate(-45deg);
-                }
-                &+div {
-                    right: 0;
-                }
-            }
-        }
-    }
-    
-    .sidebar {
-        width: 250px;
-        height: 100%;
-        background: #222;
-        position: fixed;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        transition: all .35s;
-        p {
-            text-align: center;
-            font-size: 1.5em;
-            margin: 15px 0;
-            color: #f18b24;
-        }
-        ul.gnb li {
-            border-bottom: solid 1px #777;
-            &:hover {
-                background-color: #f18b24;
-            }
-            a {
-                display: inline-block;
-                color: #fff;
-                padding: 15px;
-                font-size: 1.0em;
-            }
-        }
-        ul.sns {
-            width: 100%;
-            margin: 14.5px 30px;
-            text-align: center;
-            &:after {
-                clear: both;
-                content: '';
-                display: block;
-            }
-            li {
-                float: left;
-                margin: 0 20px;
-                a {
-                    font-size: 0.3;
-                    color: #ccc;
-                    &:hover {
-                        color: #f18b24;
-                    }
-                }
-            }
-        }
-    }
-    
-    #footer ul.sns li {
-        margin: 0 15px;
-    }
-    /*---------- container공통영역 ----------*/
-    /*---------- 버튼디자인 ----------*/
-    
-    .button-type1 {
-        @include button-type1
-    }
-    
-    .button-type2 {
-        @include button-type2
-    }
-    /*---------- input 디자인----------*/
-    
-    .section__container {
-        &::after {
-            @include float-clear
-        }
-    }
-    
-    .half-vw {
-        width: 45%;
-        margin: 0 2.5%;
+    .footer-logo {
+        width: 200px;
         float: left;
-    }
-    
-    .simple__input {
-        width: 100%;
-        font-size: 15px;
-        padding: 10px 5px;
-        margin-top: 6px;
-        margin-bottom: 15px;
-        background-color: #fff;
-    }
-    
-    .checkbox {
-        border: 1px solid $main-color;
-        width: 20px;
-        border-radius: 10px;
-        outline: none;
-        padding: 10px 5px;
-        background-color: #fff;
-    }
-    
-    input[type="checkbox"] {
-        width: 20px;
-        height: 20px;
-        border: 3px solid #707070;
-        border-radius: 10px;
-        outline: none;
-    }
-    
-    .inner {
-        margin: 0 auto;
-    }
-    
-    .cont-box {
-        margin: 0 auto;
-        @include float-clear;
-        .button {
-            float: left;
-        }
-        p {
-            margin-bottom: 15px;
-            font-size: $fs-small;
-        }
-    }
-    
-    h2 {
-        font-size: $fs-2x-large;
-        font-weight: 600;
-        margin-bottom: 30px;
-        line-height: 1.2em;
-    }
-    
-    h3 {
-        font-size: 28px;
-        line-height: 1.2em;
-        font-weight: 600;
-        margin-bottom: 40px;
-    }
-    
-    footer {
-        padding: 30px 0;
-        background-color: $dark-color;
-        a,
-        p,
-        span {
-            color: $gray-color;
-            line-height: 1.5;
-        }
-        .footer-logo {
-            width: 200px;
-            float: left;
-            img {
-                width: 100%;
-            }
-        }
-        .logo-div,
-        .use-div {
+        img {
             width: 100%;
-            &::after {
-                @include float-clear
-            }
-        }
-        .call {
-            float: right;
-            padding-top: 28px;
-            font-size: $fs-large;
-        }
-        ul {
-            &.use {
-                float: left;
-            }
-            &.sns {
-                float: right;
-            }
-            li {
-                float: left;
-                margin-right: 30px;
-            }
-        }
-        .contact>div {
-            padding: 2em 0;
-        }
-        .contact-text2 {
-            border-top: 1px solid $gray-color;
-            opacity: 0.6;
-            i {
-                padding-left: 6px;
-            }
         }
     }
+    .logo-div,
+    .use-div {
+        width: 100%;
+        &::after {
+            @include float-clear
+        }
+    }
+    .call {
+        float: right;
+        padding-top: 28px;
+        font-size: $fs-large;
+    }
+    ul {
+        &.use {
+            float: left;
+        }
+        &.sns {
+            float: right;
+        }
+        li {
+            float: left;
+            margin-right: 30px;
+        }
+    }
+    .contact>div {
+        padding: 2em 0;
+    }
+    .contact-text2 {
+        border-top: 1px solid $gray-color;
+        opacity: 0.6;
+        i {
+            padding-left: 6px;
+        }
+    }
+}

@@ -15,6 +15,9 @@
     .pc {
         display: none;
     }
+    .sidebar {
+        display: none;
+    }
 }
 
 
@@ -30,5 +33,11 @@
     }
     .pc {
         display: block;
+    }
+    input[id="menuicon"]+label {
+        display: none;
+    }
+    .sidebar {
+        display: none;
     }
 }
