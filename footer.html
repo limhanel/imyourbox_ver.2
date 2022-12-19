@@ -37,21 +37,20 @@
         <script type="text/javascript">
             jQuery(function($) {
                 var ticker = function() {
-                    timer = setTimeout(function() {
-                        $('#ticker li:first').animate({
-                            marginTop: '-40px',
-                            color: 'black'
+                        timer = setTimeout(function() {
+                            marginTop: '-40px';
+                            color: 'black';
                         }, 400, function() {
                             $(this).detach().appendTo('ul#ticker').removeAttr('style');
                         });
                         ticker();
-                    }, 2000);
-                };
-
-                ticker();
-
+                    },
+                    (2000);
             });
+
+            ticker();
         </script>
+
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
         <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </head>
