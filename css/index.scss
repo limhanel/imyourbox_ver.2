@@ -26,7 +26,7 @@
         @include float-clear;
     }
     .system {
-        border: 2px solid $main-color;
+        box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
         border-radius: 20px;
         box-sizing: border-box;
         background-color: rgba(255, 218, 196, 0.233);

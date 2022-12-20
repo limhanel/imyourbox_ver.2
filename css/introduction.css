@@ -24,6 +24,10 @@ span {
 
 /*---- 폰트사이즈 변경 ---*/
 /*---- 간격/애니메이션 세팅 ---*/
+.cont1 {
+  margin-top: 55px;
+}
+
 .cont2,
 .cont3,
 .cont5,
@@ -35,7 +39,6 @@ span {
   padding: 120px 0;
 }
 
-.cont1,
 .cont4 {
   padding: 0;
 }
@@ -165,7 +168,7 @@ input[id=menuicon]:checked + label span + div {
   right: 0;
   z-index: 1;
   transition: all 0.35s;
-  box-shadow: 3px 3px 3px rgba(92, 55, 13, 0.39);
+  box-shadow: 10px 0px 0px rgba(92, 55, 13, 0.39);
 }
 .sidebar p {
   text-align: center;
@@ -174,10 +177,13 @@ input[id=menuicon]:checked + label span + div {
   color: #ff7a22;
 }
 .sidebar ul.gnb li {
-  border-bottom: solid 1px #333;
+  border-bottom: solid 1px rgb(160, 160, 160);
 }
 .sidebar ul.gnb li:hover {
   background-color: #ff7a22;
+}
+.sidebar ul.gnb li:hover a {
+  color: #fff;
 }
 .sidebar ul.gnb li a {
   display: inline-block;
@@ -385,4 +391,78 @@ footer .contact-text2 i {
   padding-left: 6px;
 }
 
-/*--intriduction 디자인 css--*//*# sourceMappingURL=introduction.css.map */
+/*--intriduction 디자인 css--*/
+.cont1 {
+  background-image: url("../images/history-image.png");
+  background-repeat: no-repeat;
+  background-size: 500px;
+  background-position: right bottom;
+}
+.cont1 .cont--inner {
+  background-size: contain;
+}
+.cont1 h3 {
+  margin-top: 130px;
+}
+.cont1 .history-time {
+  font-size: 25px;
+}
+.cont1 .history {
+  margin-left: 150px;
+}
+.cont1 .history h4 {
+  margin: 0 20px;
+  color: #ff7a22;
+  font-size: 20px;
+  float: left;
+  position: relative;
+}
+.cont1 .history h4::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 50%;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  transform: translateY(-50%);
+  border: 7px solid #ff7a22;
+  box-sizing: border-box;
+}
+.cont1 .history div {
+  position: relative;
+  padding: 0 0 0 20px;
+}
+.cont1 .history div::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 0;
+  height: 100%;
+  border-left: 2px solid #ccc;
+}
+.cont1 .history div:first-child::before {
+  top: 10px;
+  height: calc(100% - 10px);
+}
+.cont1 .history div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.cont1 .history ol {
+  padding: 20px 0 74px;
+  float: left;
+}
+.cont1 .history ol li {
+  color: #333;
+  line-height: 30px;
+}
+.cont1 .history ol li p span {
+  margin-right: 20px;
+}
+
+.cont2 .map-size {
+  width: 50%;
+  height: 400px;
+}/*# sourceMappingURL=introduction.css.map */

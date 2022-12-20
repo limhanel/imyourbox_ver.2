@@ -3,3 +3,80 @@
 @import 'all-html';
 
 /*--intriduction 디자인 css--*/
+
+.cont1 {
+    background-image: url('../images/history-image.png');
+    background-repeat: no-repeat;
+    background-size: 500px;
+    background-position: right bottom;
+    .cont--inner {
+        background-size: contain;
+    }
+    h3 {
+        margin-top: 130px;
+    }
+    .history-time {
+        font-size: $fs-large;
+    }
+    .history {
+        margin-left: 150px;
+        h4 {
+            margin: 0 20px;
+            color: $main-color;
+            font-size: $fs-medium;
+            float: left;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -39px;
+                top: 50%;
+                width: 13px;
+                height: 13px;
+                border-radius: 100%;
+                transform: translateY(-50%);
+                border: 7px solid $main-color;
+                box-sizing: border-box;
+            }
+        }
+        div {
+            position: relative;
+            padding: 0 0 0 20px;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 7px;
+                top: 0;
+                height: 100%;
+                border-left: 2px solid #ccc;
+            }
+            &:first-child::before {
+                top: 10px;
+                height: calc(100% - 10px);
+            }
+            &::after {
+                @include float-clear;
+            }
+        }
+        ol {
+            padding: 20px 0 74px;
+            float: left;
+            li {
+                color: #333;
+                line-height: 30px;
+                p {
+                    span {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cont2 {
+    .map-size {
+        width: 50%;
+        height: 400px;
+    }
+}

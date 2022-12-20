@@ -54,31 +54,133 @@
         </script>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
         <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+
     </head>
 
     <body>
         <div id="container">
             <div data-include1="header-html" id="header-html"></div>
 
-            <!-- id : container -->
-            <div data-include2="footer-html" id="footer-html"></div>
-            <!--footer 영역-->
+            <div class="cont1">
+                <div class="cont--inner">
+                    <h3>이커머스 물류의 시작,<br>
+                        <span style="color:#ff7a22">아임유어박스 </span>로부터</h3>
+                    <p class="history-time">2018 - 현재</p>
+                    <div class="history">
+                        <div>
+                            <h4>2022</h4>
+                            <ol>
+                                <li>
+                                    <p><span>08</span>(주)아임유어박스 법인 설립</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4>2021</h4>
+                            <ol>
+                                <li>
+                                    <p><span>03</span>약 1,000평 규모의 신규 물류센터 오픈</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4>2020</h4>
+                            <ol>
+                                <li>
+                                    <p><span>12</span>3PL 물류대행 계약업체 110개 돌파</p>
+                                </li>
+                                <li>
+                                    <p><span>05</span>다품종 다량출고를 위한 DAS도입</p>
+                                </li>
+                                <li>
+                                    <p><span>02</span>서울 사무실 확장이전 (가산디지털단지)</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4>2019</h4>
+                            <ol>
+                                <li>
+                                    <p><span>12</span>3PL 물류대행 계약업체 40개 돌파</p>
+                                </li>
+                                <li>
+                                    <p><span>02</span>'아임유어박스'서비스명 변경/서울사무실 개소</p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4>2018</h4>
+                            <ol>
+                                <li>
+                                    <p><span>12</span>나투어리베 외 24개 업체 물류대행 진행</p>
+                                </li>
+                                <li>
+                                    <p><span>01</span>일사천리(소호몰) 물류대행 서비스 런칭</p>
+                                </li>
+                            </ol>
+                        </div>
+
+                    </div>
+                    <!--history-->
+                </div>
+                <!--cont--inner-->
+            </div>
+            <!--cont1-->
+            <div class="cont2">
+                <div class="cont--inner">
+                    <h3 style="color:#ff7a22">CONTACT</h3>
+                    <h3>찾아오시는 길</h3>
 
 
-            <script>
-                $(function() {
-                    var includes1 = $('[data-include1="header-html"]');
-                    var includes2 = $('[data-include2="footer-html"]');
-                    jQuery.each(includes1, function() {
-                        $(this).load('header.html');
-                    });
-                    jQuery.each(includes2, function() {
-                        $(this).load('footer.html');
-                    });
+                    <div id="daumRoughmapContainer1671521733287" class="root_daum_roughmap root_daum_roughmap_landing half-vw"></div>
+
+
+                    <div id="daumRoughmapContainer1671521486051" class="root_daum_roughmap root_daum_roughmap_landing half-vw"></div>
+
+
+
+
+
+                </div>
+            </div>
+            <!--cont2-->
+        </div>
+        <!-- id : container -->
+        <div data-include2="footer-html" id="footer-html"></div>
+        <!--footer 영역-->
+
+
+        <script charset="UTF-8">
+            new daum.roughmap.Lander({
+                "timestamp": "1671521486051",
+                "key": "2d4fi",
+            }).render();
+        </script>
+
+        <script charset="UTF-8">
+            new daum.roughmap.Lander({
+                "timestamp": "1671521733287",
+                "key": "2d4fw",
+            }).render();
+        </script>
+
+
+        <script>
+            $(function() {
+                var includes1 = $('[data-include1="header-html"]');
+                var includes2 = $('[data-include2="footer-html"]');
+                jQuery.each(includes1, function() {
+                    $(this).load('header.html');
                 });
-            </script>
+                jQuery.each(includes2, function() {
+                    $(this).load('footer.html');
+                });
+            });
+        </script>
 
-            <!--header/footer include-->
+        <!--header/footer include-->
 
 
     </body>
