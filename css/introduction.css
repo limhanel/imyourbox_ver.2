@@ -462,7 +462,8 @@ footer .contact-text2 i {
   margin-right: 20px;
 }
 
-.cont2 .map-size {
-  width: 50%;
-  height: 400px;
+.cont2 .cont--inner::after {
+  content: "";
+  display: block;
+  clear: both;
 }/*# sourceMappingURL=introduction.css.map */

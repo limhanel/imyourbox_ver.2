@@ -75,8 +75,9 @@
 }
 
 .cont2 {
-    .map-size {
-        width: 50%;
-        height: 400px;
+    .cont--inner {
+        &::after {
+            @include float-clear;
+        }
     }
 }
