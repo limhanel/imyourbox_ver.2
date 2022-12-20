@@ -17,26 +17,21 @@
         <link rel="shortcut icon" href="images/imyourbox.ico" />
 
         <!-- 폰트어썸 -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/b662cbe3c5.js" crossorigin="anonymous"></script>
 
         <!-- css부분 -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
-        <link rel="stylesheet" type="text/css" href="css/access.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="stylesheet" type="text/css" href="css/all-html.css" />
         <link rel="stylesheet" type="text/css" href="css/all-responsive.css" />
-        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+        <link rel="stylesheet" type="text/css" href="css/introduction.css" />
+
 
         <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <!-- 폰트 -->
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
 
         <!-- Enliple Common Tracker v3.6 [공용] end -->
         <script type="text/javascript">
@@ -59,92 +54,11 @@
         </script>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
         <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-
-
     </head>
 
-
-    <div>
-
-        <header id="header">
-            <div class="cont--inner">
-                <h1 class="logo">
-                    <a href="index.html"><img src="images/horizontal-logo.png" alt="아임유어박스">IMYOURBOX</a>
-                </h1>
-
-                <div class="header--gnb pc">
-                    <ul class="gnb">
-                        <li>
-                            <a href="enquiry.html">간편문의</a>
-                        </li>
-                        <li>
-                            <a href="estimate.html">예상견적</a>
-                        </li>
-                        <li>
-                            <a href="service.html">SERVICE</a>
-                        </li>
-                        <li>
-                            <a href="introduction.html">회사소개</a>
-                        </li>
-                        <li>
-                            <a href="http://222.231.61.51/" target="_blank">WMS</a>
-                        </li>
-                    </ul>
-
-                </div>
-
-                <input type="checkbox" id="menuicon">
-                <label for="menuicon">
-            <span></span>
-            <span></span>
-            <span></span>            
-            </label>
-
-                <div class="sidebar">
-                    <p>MENU</p>
-                    <ul class="gnb">
-                        <li>
-                            <a href="enquiry.html">간편문의</a>
-                        </li>
-                        <li>
-                            <a href="estimate.html">예상견적</a>
-                        </li>
-                        <li>
-                            <a href="service.html">SERVICE</a>
-                        </li>
-                        <li>
-                            <a href="introduction.html">회사소개</a>
-                        </li>
-                        <li>
-                            <a href="http://222.231.61.51/" target="_blank">WMS</a>
-                        </li>
-                    </ul>
-                    <!-- gnb mobile-->
-                    <ul class="sns">
-                        <li>
-                            <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
-                        </li>
-                        <li>
-                            <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x" ></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x" ></i></a>
-                        </li>
-                    </ul>
-                    <!--sns-->
-                </div>
-
-
-
-            </div>
-            <!--inner-->
-
-
-        </header>
-
+    <body>
         <div id="container">
-
+            <div data-include1="header-html" id="header-html"></div>
             <div class="main cont--inner" style="text-align:left">
 
                 <input id="access__tab1" type="radio" name="tabs" checked>
@@ -315,88 +229,27 @@
 
             </div>
             <!--main-->
-        </div>
-        <!--container-->
+            <!-- id : container -->
+            <div data-include2="footer-html" id="footer-html"></div>
+            <!--footer 영역-->
 
 
+            <script>
+                $(function() {
+                    var includes1 = $('[data-include1="header-html"]');
+                    var includes2 = $('[data-include2="footer-html"]');
+                    jQuery.each(includes1, function() {
+                        $(this).load('header.html');
+                    });
+                    jQuery.each(includes2, function() {
+                        $(this).load('footer.html');
+                    });
+                });
+            </script>
+
+            <!--header/footer include-->
 
 
+    </body>
 
-        <footer id="footer">
-            <div class="inner">
-                <div class="cont--inner">
-                    <div class="logo-div">
-                        <div class="footer-logo logo-width">
-                            <img src="images/logo_white.png" alt="footerlogo">
-                        </div>
-                        <!--footer-logo-->
-
-
-                        <a href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/Imyourbox.pdf" alt=소개서 target="blank">
-                            <p class="logo-width service-download">서비스 소개서 다운로드<i class="fas fa-caret-square-down"></i></p>
-                        </a>
-                        <p class="logo-width call"><i class="fas fa-phone-alt"></i>대표번호 031-635-1471</p>
-
-
-                        <div class="footer-sns logo-width">
-                            <ul class="sns">
-                                <li>
-                                    <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x"></i></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-                                </li>
-                            </ul>
-                            <!--sns-->
-                        </div>
-                        <!--footer-sns-->
-                    </div>
-                    <!--logo-div-->
-
-                    <div class="contact">
-                        <div class="contact-text1">
-                            <span class="company">&#40;주&#41;에이티엔</span>
-                            <span>대표이사 안동석</span>
-                            <span>사업자등록번호 126-86-03002</span>
-                            <p>이메일 help&#64;newatn.co.kr</p>
-                        </div>
-                        <!--contact-text1-->
-                        <div class="contact-text2">
-                            <p>
-                                경기도 이천시 마장면 덕평로 771-10<br>&#40;구주소 &#58; 경기도 이천시 마장면 이평리 293-8 &#41;
-                            </p>
-                            <p>
-                                서울 금천구 가산디지털1로 165 가산비즈니스센터 403호<br>&#40; 구주소 &#58; 서울 금천구 가산동 371-6 가산비즈니스센터 403호&#41;
-                            </p>
-                        </div>
-                        <!--contact-text2-->
-                    </div>
-                    <!-- contact -->
-
-
-                    <div class="use-div">
-                        <ul class="use">
-                            <li><a href="access.html">이용약관</a></li>
-                            <li><a href="access2.html" class="bold">개인정보처리방침</a></li>
-                            <li><a href="contact.html">오시는길</a></li>
-                        </ul>
-                        <!--use-->
-                    </div>
-                    <!-- use-div-->
-                    <p class="copy">
-                        Copyright &copy; 2019 I’m your box Inc. All Rights Reserved.
-                    </p>
-                </div>
-            </div>
-            <!-- inner-->
-
-
-        </footer>
-
-
-        </body>
-
-        </html>
+    </html>
