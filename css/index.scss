@@ -121,18 +121,25 @@
 
 .cont6 {
     .checkbox__area {
-        &>.endfour__container {
-            position: relative;
+        &::after {
+            @include float-clear;
         }
-        .simpleOrder__checkbox span {
-            line-height: 1.3;
-            display: inline-block;
-            padding-left: 35px;
+        .simpleOrder__checkbox {
+            position: relative;
+            &::after {
+                @include float-clear;
+            }
+            span {
+                line-height: 1.3;
+                display: inline-block;
+                padding-left: 35px;
+            }
         }
         .checkbox {
             position: absolute;
             left: 0;
             display: block;
+            z-index: 0;
         }
     }
     background-color: rgb(236, 236, 236);
