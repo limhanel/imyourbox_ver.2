@@ -16,9 +16,14 @@
         display: none;
     }
     .half-vw {
-        width: 95%;
+        width: 100%;
         margin: initial;
+        margin-bottom: 5%;
         float: left;
+        img {
+            width: 50%;
+            margin: 0 25%;
+        }
     }
 }
 
@@ -43,5 +48,9 @@
         width: 45%;
         margin: 0 2.5%;
         float: left;
+        img {
+            width: 80%;
+            margin: 0 10%;
+        }
     }
 }

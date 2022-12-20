@@ -212,6 +212,12 @@ input[id=menuicon]:checked + label span + div {
 }
 
 /*---------- container공통영역 ----------*/
+.half-vw::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /*---------- 버튼디자인 ----------*/
 .button-type1 {
   padding: 0.6em 1.5em;
@@ -264,12 +270,6 @@ input[id=menuicon]:checked + label span + div {
   content: "";
   display: block;
   clear: both;
-}
-
-.half-vw {
-  width: 45%;
-  margin: 0 2.5%;
-  float: left;
 }
 
 .simple__input {
@@ -398,9 +398,14 @@ footer .contact-text2 i {
     display: none;
   }
   .half-vw {
-    width: 95%;
+    width: 100%;
     margin: initial;
+    margin-bottom: 5%;
     float: left;
+  }
+  .half-vw img {
+    width: 50%;
+    margin: 0 25%;
   }
 }
 /*--------- PC 반응형 --------*/
@@ -422,5 +427,9 @@ footer .contact-text2 i {
     width: 45%;
     margin: 0 2.5%;
     float: left;
+  }
+  .half-vw img {
+    width: 80%;
+    margin: 0 10%;
   }
 }/*# sourceMappingURL=all-responsive.css.map */

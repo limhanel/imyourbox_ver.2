@@ -165,7 +165,7 @@ input[id=menuicon]:checked + label span + div {
   right: 0;
   z-index: 1;
   transition: all 0.35s;
-  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  box-shadow: 3px 3px 3px rgba(92, 55, 13, 0.39);
 }
 .sidebar p {
   text-align: center;
@@ -212,6 +212,12 @@ input[id=menuicon]:checked + label span + div {
 }
 
 /*---------- container공통영역 ----------*/
+.half-vw::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /*---------- 버튼디자인 ----------*/
 .button-type1 {
   padding: 0.6em 1.5em;
@@ -266,12 +272,6 @@ input[id=menuicon]:checked + label span + div {
   clear: both;
 }
 
-.half-vw {
-  width: 45%;
-  margin: 0 2.5%;
-  float: left;
-}
-
 .simple__input {
   width: 100%;
   font-size: 15px;
@@ -279,6 +279,8 @@ input[id=menuicon]:checked + label span + div {
   margin-top: 6px;
   margin-bottom: 15px;
   background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .checkbox {
@@ -390,13 +392,11 @@ footer .contact-text2 i {
 }
 .cont1 .cont--inner .cont1-text {
   position: absolute;
-  top: -600px;
+  top: -650px;
   width: 100%;
 }
 .cont1 .cont--inner .cont1-text .button {
   padding: 2em 1em;
-  width: 40%;
-  margin: 5%;
   box-sizing: border-box;
   box-shadow: 0px 5px 5px rgba(73, 45, 13, 0.432);
 }
@@ -412,10 +412,6 @@ footer .contact-text2 i {
   box-sizing: border-box;
   background-color: rgba(255, 218, 196, 0.233);
 }
-.cont2 .system img {
-  width: 80%;
-  margin: 0 10%;
-}
 .cont2 .system a {
   float: right;
   margin: 5%;
@@ -427,6 +423,7 @@ footer .contact-text2 i {
 .cont2 .system p {
   width: 90%;
   margin: 5%;
+  line-height: 1.5;
 }
 
 .cont3 {
@@ -444,8 +441,6 @@ footer .contact-text2 i {
   background-color: rgba(255, 255, 255, 0.781);
 }
 .cont3 .service-part {
-  width: calc(33.3% - 30px);
-  height: 300px;
   float: left;
   margin: 15px;
   box-sizing: border-box;
@@ -471,7 +466,6 @@ footer .contact-text2 i {
 .cont5 .consumer p.strong {
   font-size: 1.8em;
   margin-bottom: 5%;
-  margin-top: 30%;
 }
 .cont5 .consumer .left {
   float: left;
@@ -486,12 +480,6 @@ footer .contact-text2 i {
   content: "";
   display: block;
   clear: both;
-}
-.cont5 .consumer .box img {
-  width: 100%;
-}
-.cont5 .consumer .box div {
-  width: 48%;
 }
 .cont5 .consumer .box div::after {
   content: "";
@@ -514,6 +502,19 @@ footer .contact-text2 i {
 
 .cont6 {
   background-color: rgb(236, 236, 236);
+}
+.cont6 .checkbox__area > .endfour__container {
+  position: relative;
+}
+.cont6 .checkbox__area .simpleOrder__checkbox span {
+  line-height: 1.3;
+  display: inline-block;
+  padding-left: 35px;
+}
+.cont6 .checkbox__area .checkbox {
+  position: absolute;
+  left: 0;
+  display: block;
 }
 .cont6 .simple__textarea {
   height: 250px;
@@ -591,5 +592,26 @@ footer .contact-text2 i {
   }
   to {
     opacity: 1;
+  }
+}
+/*--------- 모바일 반응형 --------*/
+@media screen and (min-width: 0px) and (max-width: 1079px) {
+  .cont5 p {
+    text-align: center;
+  }
+  .cont5.strong {
+    margin-top: 0%;
+  }
+  .service-part {
+    width: calc(50% - 30px);
+  }
+}
+/*--------- PC 반응형 --------*/
+@media screen and (min-width: 1080px) {
+  .service-part {
+    width: calc(33.3% - 30px);
+  }
+  .cont5 p.strong {
+    margin-top: 30%;
   }
 }/*# sourceMappingURL=index.css.map */

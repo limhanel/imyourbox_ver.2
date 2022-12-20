@@ -303,6 +303,12 @@ input[id="menuicon"] {
 
 /*---------- container공통영역 ----------*/
 
+.half-vw {
+    &::after {
+        @include float-clear
+    }
+}
+
 
 /*---------- 버튼디자인 ----------*/
 
@@ -321,12 +327,6 @@ input[id="menuicon"] {
     &::after {
         @include float-clear
     }
-}
-
-.half-vw {
-    width: 45%;
-    margin: 0 2.5%;
-    float: left;
 }
 
 .simple__input {
@@ -368,7 +368,7 @@ input[type="checkbox"] {
         float: left;
     }
     p {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
         font-size: $fs-small;
     }
 }

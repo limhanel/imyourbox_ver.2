@@ -212,6 +212,12 @@ input[id=menuicon]:checked + label span + div {
 }
 
 /*---------- container공통영역 ----------*/
+.half-vw::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 /*---------- 버튼디자인 ----------*/
 .button-type1 {
   padding: 0.6em 1.5em;
@@ -266,12 +272,6 @@ input[id=menuicon]:checked + label span + div {
   clear: both;
 }
 
-.half-vw {
-  width: 45%;
-  margin: 0 2.5%;
-  float: left;
-}
-
 .simple__input {
   width: 100%;
   font-size: 15px;
@@ -314,7 +314,7 @@ input[type=checkbox] {
   float: left;
 }
 .cont-box p {
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   font-size: 16px;
 }
 
