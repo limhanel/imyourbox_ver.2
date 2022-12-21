@@ -393,10 +393,9 @@ footer .contact-text2 i {
 
 /*--intriduction 디자인 css--*/
 .cont1 {
+  background-position: right bottom;
   background-image: url("../images/history-image.png");
   background-repeat: no-repeat;
-  background-size: 500px;
-  background-position: right bottom;
 }
 .cont1 .cont--inner {
   background-size: contain;
@@ -406,9 +405,6 @@ footer .contact-text2 i {
 }
 .cont1 .history-time {
   font-size: 25px;
-}
-.cont1 .history {
-  margin-left: 150px;
 }
 .cont1 .history h4 {
   margin: 0 20px;
@@ -439,7 +435,7 @@ footer .contact-text2 i {
   left: 7px;
   top: 0;
   height: 100%;
-  border-left: 2px solid #ccc;
+  border-left: 2px dotted #ff7a22;
 }
 .cont1 .history div:first-child::before {
   top: 10px;
@@ -453,17 +449,52 @@ footer .contact-text2 i {
 .cont1 .history ol {
   padding: 20px 0 74px;
   float: left;
+  margin-top: -25px;
 }
 .cont1 .history ol li {
   color: #333;
   line-height: 30px;
 }
-.cont1 .history ol li p span {
-  margin-right: 20px;
+.cont1 .history ol li span {
+  font-size: 20px;
+  color: rgb(143, 143, 143);
+  margin-right: 15px;
+  display: inline-block;
 }
 
 .cont2 .cont--inner::after {
   content: "";
   display: block;
   clear: both;
+}
+.cont2 .half-vw {
+  display: block;
+}
+.cont2 .half-vw p {
+  line-height: 1.5;
+}
+.cont2 .half-vw .strong {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/*--------- 모바일 반응형 --------*/
+@media screen and (min-width: 0px) and (max-width: 1079px) {
+  .cont1 {
+    background-size: 300px;
+    padding-bottom: 30%;
+  }
+  .cont1 .history {
+    margin-left: 20px;
+    padding-top: 20px;
+  }
+}
+/*--------- PC 반응형 --------*/
+@media screen and (min-width: 1080px) {
+  .cont1 {
+    background-size: 500px;
+  }
+  .cont1 .history {
+    margin-left: 150px;
+  }
 }/*# sourceMappingURL=introduction.css.map */

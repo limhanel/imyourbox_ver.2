@@ -1,83 +1,115 @@
-/*--전체 디자인 css include--*/
-
-@import 'all-html';
-
-/*--intriduction 디자인 css--*/
-
-.cont1 {
-    background-image: url('../images/history-image.png');
-    background-repeat: no-repeat;
-    background-size: 500px;
-    background-position: right bottom;
-    .cont--inner {
-        background-size: contain;
-    }
-    h3 {
-        margin-top: 130px;
-    }
-    .history-time {
-        font-size: $fs-large;
-    }
-    .history {
-        margin-left: 150px;
-        h4 {
-            margin: 0 20px;
-            color: $main-color;
-            font-size: $fs-medium;
-            float: left;
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                left: -39px;
-                top: 50%;
-                width: 13px;
-                height: 13px;
-                border-radius: 100%;
-                transform: translateY(-50%);
-                border: 7px solid $main-color;
-                box-sizing: border-box;
-            }
+    /*--전체 디자인 css include--*/
+    
+    @import 'all-html';
+    /*--intriduction 디자인 css--*/
+    
+    .cont1 {
+        background-position: right bottom;
+        background-image: url('../images/history-image.png');
+        background-repeat: no-repeat;
+        .cont--inner {
+            background-size: contain;
         }
-        div {
-            position: relative;
-            padding: 0 0 0 20px;
-            &::before {
-                content: "";
-                position: absolute;
-                left: 7px;
-                top: 0;
-                height: 100%;
-                border-left: 2px solid #ccc;
-            }
-            &:first-child::before {
-                top: 10px;
-                height: calc(100% - 10px);
-            }
-            &::after {
-                @include float-clear;
-            }
+        h3 {
+            margin-top: 130px;
         }
-        ol {
-            padding: 20px 0 74px;
-            float: left;
-            li {
-                color: #333;
-                line-height: 30px;
-                p {
+        .history-time {
+            font-size: $fs-large;
+        }
+        .history {
+            h4 {
+                margin: 0 20px;
+                color: $main-color;
+                font-size: $fs-medium;
+                float: left;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: -39px;
+                    top: 50%;
+                    width: 13px;
+                    height: 13px;
+                    border-radius: 100%;
+                    transform: translateY(-50%);
+                    border: 7px solid $main-color;
+                    box-sizing: border-box;
+                }
+            }
+            div {
+                position: relative;
+                padding: 0 0 0 20px;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 7px;
+                    top: 0;
+                    height: 100%;
+                    border-left: 2px dotted $main-color;
+                }
+                &:first-child::before {
+                    top: 10px;
+                    height: calc(100% - 10px);
+                }
+                &::after {
+                    @include float-clear;
+                }
+            }
+            ol {
+                padding: 20px 0 74px;
+                float: left;
+                margin-top: -25px;
+                li {
+                    color: #333;
+                    line-height: 30px;
                     span {
-                        margin-right: 20px;
+                        font-size: $fs-medium;
+                        color: rgb(143, 143, 143);
+                        margin-right: 15px;
+                        display: inline-block;
                     }
                 }
             }
         }
     }
-}
-
-.cont2 {
-    .cont--inner {
-        &::after {
-            @include float-clear;
+    
+    .cont2 {
+        .cont--inner {
+            &::after {
+                @include float-clear;
+            }
+        }
+        .half-vw {
+            display: block;
+            // justify-content: space-between;
+            p {
+                line-height: 1.5;
+            }
+            .strong {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
         }
     }
-}
+    /*--------- 모바일 반응형 --------*/
+    
+    @media screen and (min-width:0px) and (max-width:1079px) {
+        .cont1 {
+            background-size: 300px;
+            padding-bottom: 30%;
+            .history {
+                margin-left: 20px;
+                padding-top: 20px;
+            }
+        }
+    }
+    /*--------- PC 반응형 --------*/
+    
+    @media screen and (min-width:1080px) {
+        .cont1 {
+            background-size: 500px;
+            .history {
+                margin-left: 150px;
+            }
+        }
+    }
