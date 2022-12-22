@@ -315,6 +315,7 @@ h3 {
 }
 
 .simple__input {
+  box-sizing: border-box;
   width: 100%;
   font-size: 15px;
   padding: 10px 5px;
@@ -342,7 +343,7 @@ input[type=checkbox] {
   outline: none;
 }
 
-/*---header/footer 디자인 공통--*/
+/*---footer 디자인 공통--*/
 footer {
   padding: 30px 0;
   background-color: #2F2F2F;

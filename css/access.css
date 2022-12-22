@@ -24,6 +24,10 @@ span {
 
 /*---- 폰트사이즈 변경 ---*/
 /*---- 간격/애니메이션 세팅 ---*/
+.cont1 {
+  margin-top: 55px;
+}
+
 .cont2,
 .cont3,
 .cont5,
@@ -35,7 +39,6 @@ span {
   padding: 120px 0;
 }
 
-.cont1,
 .cont4 {
   padding: 0;
 }
@@ -165,7 +168,7 @@ input[id=menuicon]:checked + label span + div {
   right: 0;
   z-index: 1;
   transition: all 0.35s;
-  box-shadow: 3px 3px 3px rgba(92, 55, 13, 0.39);
+  box-shadow: 10px 0px 0px rgba(92, 55, 13, 0.39);
 }
 .sidebar p {
   text-align: center;
@@ -174,10 +177,13 @@ input[id=menuicon]:checked + label span + div {
   color: #ff7a22;
 }
 .sidebar ul.gnb li {
-  border-bottom: solid 1px #333;
+  border-bottom: solid 1px rgb(160, 160, 160);
 }
 .sidebar ul.gnb li:hover {
   background-color: #ff7a22;
+}
+.sidebar ul.gnb li:hover a {
+  color: #fff;
 }
 .sidebar ul.gnb li a {
   display: inline-block;
@@ -216,6 +222,42 @@ input[id=menuicon]:checked + label span + div {
   content: "";
   display: block;
   clear: both;
+}
+
+.gray-text {
+  color: #999;
+}
+
+.inner {
+  margin: 0 auto;
+}
+
+.cont-box {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  clear: both;
+}
+.cont-box .button {
+  float: left;
+}
+.cont-box p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.2em;
+  font-weight: 600;
+  margin-bottom: 40px;
 }
 
 /*---------- 버튼디자인 ----------*/
@@ -300,38 +342,7 @@ input[type=checkbox] {
   outline: none;
 }
 
-.inner {
-  margin: 0 auto;
-}
-
-.cont-box {
-  margin: 0 auto;
-  content: "";
-  display: block;
-  clear: both;
-}
-.cont-box .button {
-  float: left;
-}
-.cont-box p {
-  margin-bottom: 30px;
-  font-size: 16px;
-}
-
-h2 {
-  font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 30px;
-  line-height: 1.2em;
-}
-
-h3 {
-  font-size: 28px;
-  line-height: 1.2em;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
+/*---header/footer 디자인 공통--*/
 footer {
   padding: 30px 0;
   background-color: #2F2F2F;
@@ -379,10 +390,14 @@ footer .contact > div {
 }
 footer .contact-text2 {
   border-top: 1px solid #E5E5E5;
-  opacity: 0.6;
+  opacity: 1;
 }
 footer .contact-text2 i {
   padding-left: 6px;
+}
+footer .contact-text2 .service-download {
+  color: #ff7a22;
+  opacity: 1;
 }
 
 /*--access 디자인 css--*//*# sourceMappingURL=access.css.map */

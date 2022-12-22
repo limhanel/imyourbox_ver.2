@@ -1,259 +1,235 @@
-/*--전체 디자인 css include--*/
-
-@import 'all-html';
-
-/*--index 디자인 css--*/
-
-.cont1 {
-    margin-top: 50px;
-    position: relative;
-    .cont--inner {
-        .cont1-text {
-            position: absolute;
-            top: -650px;
-            width: 100%;
-            .button {
-                padding: 2em 1em;
-                box-sizing: border-box;
-                box-shadow: 0px 5px 5px rgba(73, 45, 13, 0.432);
-            }
-        }
-    }
-}
-
-.cont2 {
-    &::after {
-        @include float-clear;
-    }
-    .system {
-        box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
-        border-radius: 20px;
-        box-sizing: border-box;
-        background-color: rgba(255, 218, 196, 0.233);
-        a {
-            float: right;
-            margin: 5%;
-            color: #fff;
-            &:hover {
-                color: $main-color
-            }
-        }
-        p {
-            width: 90%;
-            margin: 5%;
-            line-height: 1.5;
-        }
-    }
-}
-
-.cont3 {
-    background-color: $main-color;
-    &::after {
-        @include float-clear;
-    }
-    .cont--inner {
-        div:nth-child(odd) {
-            background-color: #fff;
-        }
-        div:nth-child(even) {
-            background-color: rgba(255, 255, 255, 0.781);
-        }
-    }
-    .service-part {
-        float: left;
-        margin: 15px;
-        box-sizing: border-box;
-        text-align: center;
-        border-radius: 10px;
-        padding: 15px 0;
-        box-shadow: 0px 5px 5px rgba(255, 155, 41, 0.288);
-        a {
-            color: #333;
-        }
-        img {
-            width: 100%;
-            padding-bottom: 20px;
-        }
-    }
-}
-
-.cont5 {
-    .button {
-        padding-top: 100px;
-    }
-    .consumer {
-        p {
-            line-height: 1.3;
-            &.strong {
-                font-size: 1.8em;
-                margin-bottom: 5%;
-            }
-        }
-        .left {
-            float: left;
-        }
-        .right {
-            float: right;
-        }
-        .box {
-            &::after {
-                @include float-clear;
-            }
-            padding-top: 60px;
-            div {
-                &::after {
-                    @include float-clear;
+    /*--전체 디자인 css include--*/
+    
+    @import 'all-html';
+    /*--index 디자인 css--*/
+    
+    .cont1 {
+        margin-top: 50px;
+        position: relative;
+        .cont--inner {
+            .cont1-text {
+                position: absolute;
+                top: -650px;
+                width: 100%;
+                .button {
+                    padding: 1.5em 1em;
+                    box-sizing: border-box;
+                    box-shadow: 0px 5px 5px rgba(73, 45, 13, 0.432);
                 }
             }
         }
     }
-}
-
-.cont6 .button,
-.cont5 .button {
-    margin-top: 20px;
-    width: 300px;
-    margin-left: calc(50% - 150px);
-    text-align: center;
-    padding: 12px 0;
-    i {
-        margin-left: 20px;
-    }
-}
-
-.cont6 {
-    .checkbox__area {
+    
+    .cont2 {
         &::after {
             @include float-clear;
         }
-        .simpleOrder__checkbox {
-            position: relative;
+        .system {
+            box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
+            border-radius: 20px;
+            box-sizing: border-box;
+            background-color: rgba(255, 218, 196, 0.233);
+            a {
+                float: right;
+                margin: 5%;
+                color: #fff;
+                &:hover {
+                    color: $main-color
+                }
+            }
+            p {
+                width: 90%;
+                margin: 5%;
+                line-height: 1.5;
+            }
+        }
+    }
+    
+    .cont3 {
+        background-color: $main-color;
+        &::after {
+            @include float-clear;
+        }
+        .service-part {
+            background-color: #fff;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+            border-radius: 10px;
+            padding: 15px 0;
+            box-shadow: 0px 5px 5px rgba(255, 155, 41, 0.288);
+            a {
+                color: #333;
+            }
+            img {
+                width: 100%;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    
+    .cont5 {
+        .button {
+            padding-top: 100px;
+        }
+        .consumer {
+            p {
+                line-height: 1.3;
+                &.strong {
+                    margin-bottom: 5%;
+                }
+            }
+            .box {
+                &::after {
+                    @include float-clear;
+                }
+                padding-top: 60px;
+                div {
+                    &::after {
+                        @include float-clear;
+                    }
+                }
+            }
+        }
+    }
+    
+    .cont6 .button,
+    .cont5 .button {
+        margin-top: 20px;
+        width: 300px;
+        margin-left: calc(50% - 150px);
+        text-align: center;
+        padding: 12px 0;
+        i {
+            margin-left: 20px;
+        }
+    }
+    
+    .cont6 {
+        .checkbox__area {
             &::after {
                 @include float-clear;
             }
-            span {
-                line-height: 1.3;
-                display: inline-block;
-                padding-left: 35px;
+            .simpleOrder__checkbox {
+                position: relative;
+                &::after {
+                    @include float-clear;
+                }
+                span {
+                    line-height: 1.3;
+                    display: inline-block;
+                    padding-left: 35px;
+                }
+            }
+            .checkbox {
+                position: absolute;
+                left: 0;
+                display: block;
+                z-index: 0;
             }
         }
-        .checkbox {
-            position: absolute;
-            left: 0;
-            display: block;
-            z-index: 0;
+        background-color: rgb(236, 236, 236);
+    }
+    /* Slideshow container */
+    
+    .slideshow-container {
+        &::after {
+            @include float-clear;
         }
-    }
-    background-color: rgb(236, 236, 236);
-    .simple__textarea {
-        height: 250px;
-    }
-}
-
-
-/* Slideshow container */
-
-.slideshow-container {
-    &::after {
-        @include float-clear;
-    }
-    width:100vw;
-    img {
-        width: 100vw;
-        height: 800px;
-        object-fit: cover;
-    }
-    .cont--inner {
-        position: relative;
-        h3 {
-            position: absolute;
-            margin: 80px 0;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.3);
-            color: #fff;
+        width:100vw;
+        img {
+            width: 100vw;
+            height: 800px;
+            object-fit: cover;
         }
-        .arrow-button {
-            cursor: pointer;
-            position: absolute;
-            bottom: 50px;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: $main-color;
-            background-color: rgba(255, 255, 255, 0.8);
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 3px;
-            &:hover {
-                background-color: rgba(255, 102, 0, 0.664);
+        .cont--inner {
+            position: relative;
+            h3 {
+                position: absolute;
+                margin: 80px 0;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.3);
                 color: #fff;
             }
-        }
-        .next,
-        .main-next {
-            right: 0;
-        }
-        position: relative;
-        margin: auto;
-    }
-}
-
-
-/* effect */
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
-}
-
-
-/*--------- 모바일 반응형 --------*/
-
-@media screen and (min-width:0px) and (max-width:1079px) {
-    .cont5 {
-        p {
-            text-align: center;
-        }
-        &.strong {
-            margin-top: 0%;
+            .arrow-button {
+                cursor: pointer;
+                position: absolute;
+                bottom: 50px;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: $main-color;
+                background-color: rgba(255, 255, 255, 0.8);
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 3px;
+                &:hover {
+                    background-color: rgba(255, 102, 0, 0.664);
+                    color: #fff;
+                }
+            }
+            .next,
+            .main-next {
+                right: 0;
+            }
+            position: relative;
+            margin: auto;
         }
     }
-    .service-part {
-        width: calc(50% - 30px);
+    /* effect */
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
     }
-}
-
-
-/*--------- PC 반응형 --------*/
-
-@media screen and (min-width:1080px) {
-    .service-part {
-        width: calc(33.3% - 30px);
-    }
-    .cont5 {
-        p.strong {
-            margin-top: 30%;
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
         }
     }
-}
+    
+    @keyframes fade {
+        from {
+            opacity: .4
+        }
+        to {
+            opacity: 1
+        }
+    }
+    /*--------- 모바일 반응형 --------*/
+    
+    @media screen and (min-width:0px) and (max-width:1079px) {
+        .cont5 {
+            p {
+                text-align: center;
+            }
+            p.strong {
+                margin-top: 0%;
+                font-size: 23px;
+            }
+        }
+        .simple__textarea {
+            height: 200px;
+        }
+    }
+    /*--------- PC 반응형 --------*/
+    
+    @media screen and (min-width:1080px) {
+        .cont5 {
+            margin: 0 auto;
+            p.strong {
+                margin-top: 30%;
+                font-size: 1.8em;
+            }
+        }
+        .simple__textarea {
+            height: 265px;
+        }
+    }

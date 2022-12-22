@@ -224,6 +224,42 @@ input[id=menuicon]:checked + label span + div {
   clear: both;
 }
 
+.gray-text {
+  color: #999;
+}
+
+.inner {
+  margin: 0 auto;
+}
+
+.cont-box {
+  margin: 0 auto;
+  content: "";
+  display: block;
+  clear: both;
+}
+.cont-box .button {
+  float: left;
+}
+.cont-box p {
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 28px;
+  line-height: 1.2em;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
 /*---------- 버튼디자인 ----------*/
 .button-type1 {
   padding: 0.6em 1.5em;
@@ -279,6 +315,7 @@ input[id=menuicon]:checked + label span + div {
 }
 
 .simple__input {
+  box-sizing: border-box;
   width: 100%;
   font-size: 15px;
   padding: 10px 5px;
@@ -306,38 +343,7 @@ input[type=checkbox] {
   outline: none;
 }
 
-.inner {
-  margin: 0 auto;
-}
-
-.cont-box {
-  margin: 0 auto;
-  content: "";
-  display: block;
-  clear: both;
-}
-.cont-box .button {
-  float: left;
-}
-.cont-box p {
-  margin-bottom: 30px;
-  font-size: 16px;
-}
-
-h2 {
-  font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 30px;
-  line-height: 1.2em;
-}
-
-h3 {
-  font-size: 28px;
-  line-height: 1.2em;
-  font-weight: 600;
-  margin-bottom: 40px;
-}
-
+/*---footer 디자인 공통--*/
 footer {
   padding: 30px 0;
   background-color: #2F2F2F;
@@ -385,14 +391,55 @@ footer .contact > div {
 }
 footer .contact-text2 {
   border-top: 1px solid #E5E5E5;
-  opacity: 0.6;
+  opacity: 1;
 }
 footer .contact-text2 i {
   padding-left: 6px;
 }
+footer .contact-text2 .service-download {
+  color: #ff7a22;
+  opacity: 1;
+}
+
+.flexbox_02 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2%;
+}
+
+.item_02 {
+  margin-bottom: 5%;
+  flex-shrink: 1;
+  flex-grow: 1;
+  justify-content: center;
+}
+.item_02 img {
+  width: 100%;
+}
+
+.flexbox_03 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3%;
+}
+
+.item_03 {
+  margin-bottom: 3%;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.item-reverse {
+  flex-direction: row-reverse;
+}
 
 /*--------- 모바일 반응형 --------*/
 @media screen and (min-width: 0px) and (max-width: 1079px) {
+  h2 {
+    font-size: 35px;
+  }
   .cont--inner {
     width: 90%;
     margin: 0 5%;
@@ -403,15 +450,13 @@ footer .contact-text2 i {
   .pc {
     display: none;
   }
-  .half-vw {
-    width: 100%;
-    margin: initial;
-    margin-bottom: 5%;
-    float: left;
+  .item_02 {
+    flex-basis: 100%;
+    justify-content: center;
+    max-width: 100%;
   }
-  .half-vw img {
-    width: 50%;
-    margin: 0 25%;
+  .item_03 {
+    flex-basis: 48.5%;
   }
 }
 /*--------- PC 반응형 --------*/
@@ -429,13 +474,11 @@ footer .contact-text2 i {
   input[id=menuicon] + label {
     display: none;
   }
-  .half-vw {
-    width: 45%;
-    margin: 0 2.5%;
-    float: left;
+  .item_02 {
+    flex-basis: 46.5%;
+    max-width: 540px;
   }
-  .half-vw img {
-    width: 80%;
-    margin: 0 10%;
+  .item_03 {
+    flex-basis: 31%;
   }
 }/*# sourceMappingURL=all-responsive.css.map */

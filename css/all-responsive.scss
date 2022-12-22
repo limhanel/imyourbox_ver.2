@@ -1,56 +1,85 @@
-/*--전체 디자인 css include--*/
-
-@import 'all-html';
-
-/*--------- 모바일 반응형 --------*/
-
-@media screen and (min-width:0px) and (max-width:1079px) {
-    .cont--inner {
-        width: 90%;
-        margin: 0 5%;
+    /*--전체 디자인 css include--*/
+    
+    @import 'all-html';
+    .flexbox_02 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2%;
     }
-    .mobile {
-        display: block;
-    }
-    .pc {
-        display: none;
-    }
-    .half-vw {
-        width: 100%;
-        margin: initial;
+    
+    .item_02 {
         margin-bottom: 5%;
-        float: left;
+        flex-shrink: 1;
+        flex-grow: 1;
+        justify-content: center;
         img {
-            width: 50%;
-            margin: 0 25%;
+            width: 100%;
         }
     }
-}
-
-
-/*--------- PC 반응형 --------*/
-
-@media screen and (min-width:1080px) {
-    .cont--inner {
-        width: 1080px;
-        margin: 0 auto;
+    
+    .flexbox_03 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 3%;
     }
-    .mobile {
-        display: none;
+    
+    .item_03 {
+        margin-bottom: 3%;
+        flex-shrink: 1;
+        flex-grow: 1;
     }
-    .pc {
-        display: block;
+    
+    .item-reverse {
+        flex-direction: row-reverse;
     }
-    input[id="menuicon"]+label {
-        display: none;
-    }
-    .half-vw {
-        width: 45%;
-        margin: 0 2.5%;
-        float: left;
-        img {
-            width: 80%;
-            margin: 0 10%;
+    /*--------- 모바일 반응형 --------*/
+    
+    @media screen and (min-width:0px) and (max-width:1079px) {
+        h2 {
+            font-size: 35px;
+        }
+        .cont--inner {
+            width: 90%;
+            margin: 0 5%;
+        }
+        .mobile {
+            display: block;
+        }
+        .pc {
+            display: none;
+        }
+        .item_02 {
+            flex-basis: 100%;
+            justify-content: center;
+            max-width: 100%;
+        }
+        .item_03 {
+            flex-basis: 48.5%;
         }
     }
-}
+    /*--------- PC 반응형 --------*/
+    
+    @media screen and (min-width:1080px) {
+        .cont--inner {
+            width: 1080px;
+            margin: 0 auto;
+        }
+        .mobile {
+            display: none;
+        }
+        .pc {
+            display: block;
+        }
+        input[id="menuicon"]+label {
+            display: none;
+        }
+        .item_02 {
+            flex-basis: 46.5%;
+            max-width: 540px;
+        }
+        .item_03 {
+            flex-basis: 31%;
+        }
+    }
