@@ -315,6 +315,40 @@ input[id="menuicon"] {
     }
 }
 
+.gray-text {
+    color: #999
+}
+
+.inner {
+    margin: 0 auto;
+}
+
+.cont-box {
+    margin: 0 auto;
+    @include float-clear;
+    .button {
+        float: left;
+    }
+    p {
+        margin-bottom: 30px;
+        font-size: $fs-small;
+    }
+}
+
+h2 {
+    font-size: $fs-2x-large;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.2em;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 1.2em;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
 
 /*---------- 버튼디자인 ----------*/
 
@@ -363,35 +397,8 @@ input[type="checkbox"] {
     outline: none;
 }
 
-.inner {
-    margin: 0 auto;
-}
 
-.cont-box {
-    margin: 0 auto;
-    @include float-clear;
-    .button {
-        float: left;
-    }
-    p {
-        margin-bottom: 30px;
-        font-size: $fs-small;
-    }
-}
-
-h2 {
-    font-size: $fs-2x-large;
-    font-weight: 600;
-    margin-bottom: 30px;
-    line-height: 1.2em;
-}
-
-h3 {
-    font-size: 28px;
-    line-height: 1.2em;
-    font-weight: 600;
-    margin-bottom: 40px;
-}
+/*---header/footer 디자인 공통--*/
 
 footer {
     padding: 30px 0;
@@ -438,9 +445,13 @@ footer {
     }
     .contact-text2 {
         border-top: 1px solid $gray-color;
-        opacity: 0.6;
+        opacity: 1;
         i {
             padding-left: 6px;
+        }
+        .service-download {
+            color: $main-color;
+            opacity: 1;
         }
     }
 }

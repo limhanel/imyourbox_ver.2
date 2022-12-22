@@ -224,6 +224,10 @@ input[id=menuicon]:checked + label span + div {
   clear: both;
 }
 
+.gray-text {
+  color: #999;
+}
+
 /*---------- 버튼디자인 ----------*/
 .button-type1 {
   padding: 0.6em 1.5em;
@@ -392,13 +396,11 @@ footer .contact-text2 i {
 }
 
 /*--intriduction 디자인 css--*/
-.cont1 {
+.cont1 .cont--inner {
+  background-size: contain;
   background-position: right bottom;
   background-image: url("../images/history-image.png");
   background-repeat: no-repeat;
-}
-.cont1 .cont--inner {
-  background-size: contain;
 }
 .cont1 h3 {
   margin-top: 130px;
@@ -467,20 +469,19 @@ footer .contact-text2 i {
   display: block;
   clear: both;
 }
-.cont2 .half-vw {
-  display: block;
-}
 .cont2 .half-vw p {
   line-height: 1.5;
 }
 .cont2 .half-vw .strong {
   font-weight: bold;
-  margin-bottom: 5px;
+}
+.cont2 .contact-text1 .strong {
+  margin-right: 30px;
 }
 
 /*--------- 모바일 반응형 --------*/
 @media screen and (min-width: 0px) and (max-width: 1079px) {
-  .cont1 {
+  .cont1 .cont--inner {
     background-size: 300px;
     padding-bottom: 30%;
   }
@@ -488,13 +489,26 @@ footer .contact-text2 i {
     margin-left: 20px;
     padding-top: 20px;
   }
+  .cont2 .contact-height {
+    height: initial;
+    margin-bottom: 50px;
+  }
+  .cont2 .contact-text1 {
+    height: 40px;
+  }
 }
 /*--------- PC 반응형 --------*/
 @media screen and (min-width: 1080px) {
-  .cont1 {
+  .cont1 .cont--inner {
     background-size: 500px;
   }
   .cont1 .history {
     margin-left: 150px;
+  }
+  .cont2 .contact-height {
+    height: 440px;
+  }
+  .cont2 .contact-text1 {
+    height: 80px;
   }
 }/*# sourceMappingURL=introduction.css.map */
