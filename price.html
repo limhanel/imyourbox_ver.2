@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="stylesheet" type="text/css" href="css/all-html.css" />
         <link rel="stylesheet" type="text/css" href="css/all-responsive.css" />
-        <link rel="stylesheet" type="text/css" href="css/introduction.css" />
+        <link rel="stylesheet" type="text/css" href="css/price.css" />
 
 
         <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
@@ -59,26 +59,232 @@
     <body>
         <div id="container">
             <div data-include1="header-html" id="header-html"></div>
-
-            <!-- id : container -->
-            <div data-include2="footer-html" id="footer-html"></div>
-            <!--footer 영역-->
+            <div class="cont-box cont-padding">
 
 
-            <script>
-                $(function() {
-                    var includes1 = $('[data-include1="header-html"]');
-                    var includes2 = $('[data-include2="footer-html"]');
-                    jQuery.each(includes1, function() {
-                        $(this).load('header.html');
+
+                <section id="stepfour" class="secton">
+                    <div id="svg_wrap"></div>
+                    <div class="cont6 simple__input__area">
+                        <div class="cont--inner">
+                            <h3 class="">상담전화 및 견적서 발송을 위한 정보를 입력해주세요</h3>
+                            <h3 class="orange"><span class=number>1</span>기본 정보를 입력 해 주세요(필수사항)</h3>
+
+
+                            <div class="section__container">
+                                <div class="flexbox_02">
+                                    <div class="item_02">
+                                        <div class="detail__container stepFour__container first__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">업체명 *</span>
+                                            </div>
+                                            <div class="stepfour__detail__input__container">
+                                                <input type="input" class="simple__input simple_customer_company" placeholder=" 회사명 "></input>
+                                            </div>
+                                        </div>
+                                        <div class="detail__container stepFour__container second__detail__container ">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">연락처 *</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container">
+                                                <input type="number" class="simple__input simple_customer_phone" placeholder=" 핸드폰번호 "></input>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="detail__container stepFour__container first__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title ">이메일 *</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container">
+                                                <input type="input" class="simple__input simple_customer_email" placeholder=" Email "></input>
+                                                <!-- <h2 id="simpe__emailCheck ">
+                                                            </h2> -->
+                                            </div>
+                                        </div>
+                                        <div class="detail__container stepFour__container second__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">담당자 성함*</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container ">
+                                                <input type="input" class="simple__input simple_customer_manager_name " placeholder=" 담당자명"></input>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--half-vw-->
+                                    <div class="detail__container memo__container half-vw  item_02">
+                                        <div class="stepone__category companyNameWrapper">
+                                            <span class="stepone__category-title">상담 내용 </span>
+                                        </div>
+                                        <div class="memo__input__container">
+                                            <textarea class="simple__textarea simple_customer_memo simple__input" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보를 입력해주세요.(이 칸은 입력하지 않으셔도 됩니다)"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!--section__container-->
+                            <div class="checkbox__area">
+                                <div class="stepone__category endfour__container">
+                                    <div class="last__checkbox simpleOrder__checkbox">
+                                        <input id="simpleOrder__permission" class="checkbox" type="checkbox">
+                                        <label for="simpleOrder__permission "><span class="check">개인정보 수집 및 이용목적에 동의합니다.<br>
+                                                            입력해주신 개인정보는 문의/상담 목적으로 사용되며 사용 후 즉시 폐기됩니다.</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button button-type1 large-button"><a id=" gtagSimpleOrder" class=" callSimpleOrderBtn" onclick=" ">문의신청</a>
+                            </div>
+
+                </section>
+
+                <section>
+                    <p>Address</p>
+                    <input type="text" placeholder="Street, nbr" />
+                    <input type="text" placeholder="City" />
+                    <input type="text" placeholder="Postcode" />
+                    <input type="text" placeholder="Country" />
+                </section>
+
+
+
+                <div class="button-example" id="prev">&larr; Previous</div>
+                <div class="button-example" id="next">Next &rarr;</div>
+                <div class="button-example" id="submit">Agree and send application</div>
+
+                </div>
+                <!--cont--inner-->
+
+                </div>
+                <!-- class : cont6 -->
+
+
+
+                <div data-include2="footer-html" id="footer-html"></div>
+                <!--footer 영역-->
+
+
+                <script>
+                    $(function() {
+                        var includes1 = $('[data-include1="header-html"]');
+                        var includes2 = $('[data-include2="footer-html"]');
+                        jQuery.each(includes1, function() {
+                            $(this).load('header.html');
+                        });
+                        jQuery.each(includes2, function() {
+                            $(this).load('footer.html');
+                        });
                     });
-                    jQuery.each(includes2, function() {
-                        $(this).load('footer.html');
-                    });
-                });
-            </script>
+                </script>
 
-            <!--header/footer include-->
+                <!--header/footer include-->
+                <script>
+                    $(document).ready(function() {
+                        var base_color = "rgb(230,230,230)";
+                        var active_color = "rgb(237, 40, 70)";
+
+
+
+                        var child = 1;
+                        var length = $("section").length - 1;
+                        $("#prev").addClass("disabled");
+                        $("#submit").addClass("disabled");
+
+                        $("section").not("section:nth-of-type(1)").hide();
+                        $("section").not("section:nth-of-type(1)").css('transform', 'translateX(100px)');
+
+                        var svgWidth = length * 200 + 24;
+                        $("#svg_wrap").html(
+                            '<svg version="1.1" id="svg_form_time" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 ' +
+                            svgWidth +
+                            ' 24" xml:space="preserve"></svg>'
+                        );
+
+                        function makeSVG(tag, attrs) {
+                            var el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+                            for (var k in attrs) el.setAttribute(k, attrs[k]);
+                            return el;
+                        }
+
+                        for (i = 0; i < length; i++) {
+                            var positionX = 12 + i * 200;
+                            var rect = makeSVG("rect", {
+                                x: positionX,
+                                y: 9,
+                                width: 200,
+                                height: 6
+                            });
+                            document.getElementById("svg_form_time").appendChild(rect);
+                            // <g><rect x="12" y="9" width="200" height="6"></rect></g>'
+                            var circle = makeSVG("circle", {
+                                cx: positionX,
+                                cy: 12,
+                                r: 12,
+                                width: positionX,
+                                height: 6
+                            });
+                            document.getElementById("svg_form_time").appendChild(circle);
+                        }
+
+                        var circle = makeSVG("circle", {
+                            cx: positionX + 200,
+                            cy: 12,
+                            r: 12,
+                            width: positionX,
+                            height: 6
+                        });
+                        document.getElementById("svg_form_time").appendChild(circle);
+
+                        $('#svg_form_time rect').css('fill', base_color);
+                        $('#svg_form_time circle').css('fill', base_color);
+                        $("circle:nth-of-type(1)").css("fill", active_color);
+
+
+                        $(".button-example").click(function() {
+                            $("#svg_form_time rect").css("fill", active_color);
+                            $("#svg_form_time circle").css("fill", active_color);
+                            var id = $(this).attr("id");
+                            if (id == "next") {
+                                $("#prev").removeClass("disabled");
+                                if (child >= length) {
+                                    $(this).addClass("disabled");
+                                    $('#submit').removeClass("disabled");
+                                }
+                                if (child <= length) {
+                                    child++;
+                                }
+                            } else if (id == "prev") {
+                                $("#next").removeClass("disabled");
+                                $('#submit').addClass("disabled");
+                                if (child <= 2) {
+                                    $(this).addClass("disabled");
+                                }
+                                if (child > 1) {
+                                    child--;
+                                }
+                            }
+                            var circle_child = child + 1;
+                            $("#svg_form_time rect:nth-of-type(n + " + child + ")").css(
+                                "fill",
+                                base_color
+                            );
+                            $("#svg_form_time circle:nth-of-type(n + " + circle_child + ")").css(
+                                "fill",
+                                base_color
+                            );
+                            var currentSection = $("section:nth-of-type(" + child + ")");
+                            currentSection.fadeIn();
+                            currentSection.css('transform', 'translateX(0)');
+                            currentSection.prevAll('section').css('transform', 'translateX(-100px)');
+                            currentSection.nextAll('section').css('transform', 'translateX(100px)');
+                            $('section').not(currentSection).hide();
+                        });
+
+                    });
+                </script>
+
 
 
     </body>

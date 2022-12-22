@@ -69,9 +69,6 @@
     }
     
     .cont5 {
-        .button {
-            padding-top: 100px;
-        }
         .consumer {
             p {
                 line-height: 1.3;
@@ -93,41 +90,7 @@
         }
     }
     
-    .cont6 .button,
-    .cont5 .button {
-        margin-top: 20px;
-        width: 300px;
-        margin-left: calc(50% - 150px);
-        text-align: center;
-        padding: 12px 0;
-        i {
-            margin-left: 20px;
-        }
-    }
-    
     .cont6 {
-        .checkbox__area {
-            &::after {
-                @include float-clear;
-            }
-            .simpleOrder__checkbox {
-                position: relative;
-                &::after {
-                    @include float-clear;
-                }
-                span {
-                    line-height: 1.3;
-                    display: inline-block;
-                    padding-left: 35px;
-                }
-            }
-            .checkbox {
-                position: absolute;
-                left: 0;
-                display: block;
-                z-index: 0;
-            }
-        }
         background-color: rgb(236, 236, 236);
     }
     /* Slideshow container */
@@ -215,9 +178,6 @@
                 font-size: 23px;
             }
         }
-        .simple__textarea {
-            height: 200px;
-        }
     }
     /*--------- PC 반응형 --------*/
     
@@ -226,10 +186,6 @@
             margin: 0 auto;
             p.strong {
                 margin-top: 30%;
-                font-size: 1.8em;
             }
-        }
-        .simple__textarea {
-            height: 265px;
         }
     }

@@ -9,7 +9,7 @@
     }
     
     .item_02 {
-        margin-bottom: 5%;
+        margin-bottom: 3%;
         flex-shrink: 1;
         flex-grow: 1;
         justify-content: center;
@@ -58,6 +58,9 @@
         .item_03 {
             flex-basis: 48.5%;
         }
+        .simple__textarea {
+            height: 200px;
+        }
     }
     /*--------- PC 반응형 --------*/
     
@@ -81,5 +84,8 @@
         }
         .item_03 {
             flex-basis: 31%;
+        }
+        .simple__textarea {
+            height: 265px;
         }
     }

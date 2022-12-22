@@ -45,10 +45,15 @@ span {
 
 /*---전체 컬러 디자인---*/
 /*---전체 버튼 디자인---*/
-input[type=textarea],
-input[type=input] {
-  border: 1px solid rgb(197, 197, 197);
-  border-radius: 10px;
+.large-button {
+  margin-top: 20px;
+  width: 300px;
+  margin-left: calc(50% - 175px);
+  text-align: center;
+  padding: 12px 0;
+}
+.large-button i {
+  margin-left: 20px;
 }
 
 /*--모바일 세팅--*/
@@ -308,10 +313,41 @@ h3 {
 }
 
 /*---------- input 디자인----------*/
+input[type=textarea],
+input[type=input] {
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 10px;
+}
+
 .section__container::after {
   content: "";
   display: block;
   clear: both;
+}
+
+.simple__input__area .checkbox__area::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.simple__input__area .checkbox__area .simpleOrder__checkbox {
+  position: relative;
+}
+.simple__input__area .checkbox__area .simpleOrder__checkbox::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.simple__input__area .checkbox__area .simpleOrder__checkbox span {
+  line-height: 1.3;
+  display: inline-block;
+  padding-left: 35px;
+}
+.simple__input__area .checkbox__area .checkbox {
+  position: absolute;
+  left: 0;
+  display: block;
+  z-index: 0;
 }
 
 .simple__input {
@@ -467,9 +503,6 @@ footer .contact-text2 .service-download {
   padding-bottom: 20px;
 }
 
-.cont5 .button {
-  padding-top: 100px;
-}
 .cont5 .consumer p {
   line-height: 1.3;
 }
@@ -490,45 +523,8 @@ footer .contact-text2 .service-download {
   clear: both;
 }
 
-.cont6 .button,
-.cont5 .button {
-  margin-top: 20px;
-  width: 300px;
-  margin-left: calc(50% - 150px);
-  text-align: center;
-  padding: 12px 0;
-}
-.cont6 .button i,
-.cont5 .button i {
-  margin-left: 20px;
-}
-
 .cont6 {
   background-color: rgb(236, 236, 236);
-}
-.cont6 .checkbox__area::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.cont6 .checkbox__area .simpleOrder__checkbox {
-  position: relative;
-}
-.cont6 .checkbox__area .simpleOrder__checkbox::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.cont6 .checkbox__area .simpleOrder__checkbox span {
-  line-height: 1.3;
-  display: inline-block;
-  padding-left: 35px;
-}
-.cont6 .checkbox__area .checkbox {
-  position: absolute;
-  left: 0;
-  display: block;
-  z-index: 0;
 }
 
 /* Slideshow container */
@@ -614,9 +610,6 @@ footer .contact-text2 .service-download {
     margin-top: 0%;
     font-size: 23px;
   }
-  .simple__textarea {
-    height: 200px;
-  }
 }
 /*--------- PC 반응형 --------*/
 @media screen and (min-width: 1080px) {
@@ -625,9 +618,5 @@ footer .contact-text2 .service-download {
   }
   .cont5 p.strong {
     margin-top: 30%;
-    font-size: 1.8em;
-  }
-  .simple__textarea {
-    height: 265px;
   }
 }/*# sourceMappingURL=index.css.map */
