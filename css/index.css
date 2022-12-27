@@ -264,6 +264,19 @@ h3 {
   font-weight: 600;
   margin-bottom: 40px;
 }
+h3 .number {
+  width: 20px;
+  height: 20px;
+  padding: 0 7px;
+  margin-right: 10px;
+  color: #ff7a22;
+  border-radius: 6px;
+  border: 2px solid #ff7a22;
+}
+
+.orange {
+  color: #ff7a22;
+}
 
 /*---------- 버튼디자인 ----------*/
 .button-type1 {
@@ -325,6 +338,9 @@ input[type=input] {
   clear: both;
 }
 
+.simple__input__area .detail__container span {
+  font-weight: 600;
+}
 .simple__input__area .checkbox__area::after {
   content: "";
   display: block;
