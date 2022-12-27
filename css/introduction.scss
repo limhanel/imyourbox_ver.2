@@ -1,4 +1,4 @@
- /*--전체 디자인 css include----*/
+ /*--전체 디자인 css include--*/
  
  @import 'all-html';
  /*--intriduction 디자인 css--*/
@@ -79,7 +79,7 @@
              @include float-clear;
          }
      }
-     .item_02 {
+     .half-vw {
          // justify-content: space-between;
          p {
              line-height: 1.5;
@@ -130,8 +130,10 @@
      }
      .cont2 {
          .contact-height {
-             height: 420px;
+             height: 440px;
          }
-
+         .contact-text1 {
+             height: 80px;
+         }
      }
  }
