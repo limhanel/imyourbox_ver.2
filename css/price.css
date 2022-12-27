@@ -454,95 +454,59 @@ footer .contact-text2 .service-download {
 }
 
 /*--price 디자인 css--*/
+.small-text {
+  color: rgb(151, 151, 151);
+  font-size: 18px;
+  display: block;
+}
+
 .simple__input__area {
   background-color: #fff !important;
 }
 
-body {
-  background-color: #f6f7fb;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
-}
-
-.container {
-  text-align: center;
-}
-
-.progress-container {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  margin-bottom: 30px;
+#svg_form_time {
+  height: 20px;
   max-width: 100%;
-  width: 300px;
+  margin: 40px auto 20px;
+  display: block;
 }
 
-.progress-container::before {
+#svg_form_time circle,
+#svg_form_time rect {
+  fill: white;
+}
+
+#svg_wrap {
+  margin-top: 100px;
+}
+
+.disabled {
+  display: none;
+}
+
+section {
+  padding: 50px;
+  margin: 30px auto;
+  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button-inner::after {
   content: "";
-  background-color: #efefef;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 100%;
-  z-index: -1;
+  display: block;
+  clear: both;
 }
-
-.progress {
-  background-color: #3498db;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  height: 4px;
-  width: 0%;
-  z-index: -1;
-  transition: 0.4s ease;
+.button-inner > div {
+  margin: 30px 0;
 }
-
-.circle {
-  background-color: #fff;
-  color: #999;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #efefef;
-  transition: 0.4s ease;
+.button-inner #prev {
+  float: left;
 }
-
-.circle.active {
-  border-color: #3498db;
-}
-
-.btn {
-  background-color: #3498db;
-  color: white;
-  border: 0;
-  border-radius: 6px;
-  cursor: pointer;
-  padding: 8px 30px;
-  margin: 5px;
-  font-size: 14px;
-}
-
-.btn:disabled {
-  background-color: #999;
-  cursor: not-allowed;
-}
-
-.btn:focus {
-  outline: 0;
-}
-
-.btn.active {
-  transform: scale(0.98);
+.button-inner #next,
+.button-inner #submit {
+  float: right;
 }/*# sourceMappingURL=price.css.map */
