@@ -62,81 +62,6 @@
         <div id="container">
             <div id="svg_wrap"></div>
             <div class="cont-box cont-padding">
-                <section id="stepfour" class="secton">
-
-                    <div class="simple__input__area">
-                        <div class="cont--inner">
-                            <h3 class="">상담전화 및 견적서 발송을 위한 정보를 입력해주세요</h3>
-                            <h3 class="orange"><span class=number>1</span>기본 정보를 입력 해 주세요</h3>
-
-                            <div class="section__container">
-                                <div class="flexbox_02">
-                                    <div class="item_02">
-                                        <div class="detail__container stepFour__container first__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">업체명 *</span>
-                                            </div>
-                                            <div class="stepfour__detail__input__container">
-                                                <input type="input" class="simple__input simple_customer_company" placeholder=" 회사명 "></input>
-                                            </div>
-                                        </div>
-                                        <div class="detail__container stepFour__container second__detail__container ">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">연락처 *</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container">
-                                                <input type="number" class="simple__input simple_customer_phone" placeholder=" 핸드폰번호 "></input>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="detail__container stepFour__container first__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title ">이메일 *</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container">
-                                                <input type="input" class="simple__input simple_customer_email" placeholder=" Email "></input>
-                                                <!-- <h2 id="simpe__emailCheck ">
-                                                            </h2> -->
-                                            </div>
-                                        </div>
-                                        <div class="detail__container stepFour__container second__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">담당자 성함*</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container ">
-                                                <input type="input" class="simple__input simple_customer_manager_name " placeholder=" 담당자명"></input>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!--half-vw-->
-                                    <div class="detail__container memo__container half-vw  item_02">
-                                        <div class="stepone__category companyNameWrapper">
-                                            <span class="stepone__category-title">상담 내용 </span>
-                                        </div>
-                                        <div class="memo__input__container">
-                                            <textarea class="simple__textarea simple_customer_memo simple__input" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보가 있으시다면 입력해주세요."></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <!--section__container-->
-                            <div class="checkbox__area">
-                                <div class="stepone__category endfour__container">
-                                    <div class="last__checkbox simpleOrder__checkbox">
-                                        <input id="simpleOrder__permission" class="checkbox" type="checkbox">
-                                        <label for="simpleOrder__permission "><span class="check">개인정보 수집 및 이용목적에 동의합니다.<br>
-                                                            입력해주신 개인정보는 문의/상담 목적으로 사용되며 사용 후 즉시 폐기됩니다.</span></label>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                </section>
-
                 <section>
                     <div class="simple__input__area">
                         <div class="cont--inner">
@@ -146,60 +71,192 @@
                             <h3 class="orange"><span class=number>2</span>상세정보를 입력 해 주세요</h3>
 
                             <div class="section__container">
-                                <div class="flexbox_02">
-                                    <div class="item_02">
-                                        <div class="detail__container stepFour__container first__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">업체명 *</span>
-                                            </div>
-                                            <div class="stepfour__detail__input__container">
-                                                <input type="input" class="simple__input simple_customer_company" placeholder=" 회사명 "></input>
-                                            </div>
-                                        </div>
-                                        <div class="detail__container stepFour__container second__detail__container ">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">연락처 *</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container">
-                                                <input type="number" class="simple__input simple_customer_phone" placeholder=" 핸드폰번호 "></input>
-                                            </div>
-                                        </div>
+                                <div class="stepone__category">
+                                    <span class="stepone__category-title">상품종류</span>
+                                    <span class="stepone__category-description">중복 선택이 가능합니다.</span>
+                                </div>
+                                <ul class="stepone__category__list flexbox_05">
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input healthfood
+                                        " type="button" value="건강기능식품" required>
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input beauty" type="button" value="뷰티">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input stuff" type="button" value="잡화">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input food" type="button" value="식음료">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input electronics" type="button" value="가전/가구">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input householdgoods" type="button" value="생활용품">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input stationery" type="button" value="문구류">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input clothes " type="button" value="의류" required>
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input pet " type="button" value="애견용품" required>
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="item_05 button-type3">
+                                        <input class="stepone__category__list__label__input etc" type="button" value="기타">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                </ul>
 
-
-                                        <div class="detail__container stepFour__container first__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title ">이메일 *</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container">
-                                                <input type="input" class="simple__input simple_customer_email" placeholder=" Email "></input>
-                                                <!-- <h2 id="simpe__emailCheck ">
-                                                            </h2> -->
-                                            </div>
-                                        </div>
-                                        <div class="detail__container stepFour__container second__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">담당자 성함*</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container ">
-                                                <input type="input" class="simple__input simple_customer_manager_name " placeholder=" 담당자명"></input>
-                                            </div>
-                                        </div>
-
+                                <div class="detail__container">
+                                    <div class="detail__text__container">
+                                        <span class="stepone__category-title">상세품목</span>
+                                        <span class="stepone__category-description">문의하고자 하는 품목의 상세한 종류를 입력해주세요.</span>
                                     </div>
-                                    <!--half-vw-->
-                                    <div class="detail__container memo__container half-vw  item_02">
-                                        <div class="stepone__category companyNameWrapper">
-                                            <span class="stepone__category-title">상담 내용 </span>
-                                        </div>
-                                        <div class="memo__input__container">
-                                            <textarea class="simple__textarea simple_customer_memo simple__input" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보가 있으시다면 입력해주세요."></textarea>
-                                        </div>
+                                    <div class="detail__input__container">
+                                        <input type="input" class="detail__input" placeholder="         예시)  시계,립틴트,더치커피(병)" required></input>
                                     </div>
                                 </div>
+                                <div class="storageType__container">
+                                    <span class="stepone__category-title">보관형태</span>
+                                    <span class="stepone__category-description">상품이 보관될 창고의 온도조절방식을 선택해주세요.</span>
+                                    <span class="stepone__category-description both">(중복선택 가능)</span>
+                                </div>
+                                <ul class="storageType__container__buttons">
+                                    <li>
+                                        <input class="storageType__container__button room_temperature" type="button" value="상온보관">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li>
+                                        <input class="storageType__container__button low_temperature" type="button" value="저온보관">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li>
+                                        <input class="storageType__container__button refrigerated_storage" type="button" value="냉동보관">
+                                        <i class="fas fa-check"></i>
+                                        <!-- <span>* 냉장/냉동 보관방식은 준비중입니다.</span> -->
 
+                                    </li>
+                                    <li>
+                                        <input class="storageType__container__button fronze_storage" type="button" value="냉장보관">
+                                        <i class="fas fa-check"></i>
+                                    </li>
+                                </ul>
+                                <div class="barcode__container">
+                                    <span class="stepone__category-title">바코드 여부</span>
+                                    <span class="barcode-description">스캔이 가능한 바코드가 제품에 부착되어 있는지 여부를 확인해주세요.</span>
+                                </div>
+                                <ul class="barcode__radio__groups">
+                                    <li>
+                                        <label>
+                                                    바코드 있음
+                                                    <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="have_barcode">
+                                                    <span class="check"></span>
+                                                </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                                    바코드 없음
+                                                    <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="no_barcode">
+                                                <span class="check"></span>
+                                                </label>
+                                    </li>
+                                    <li>
+                                        <label>
+                                                    일부만 있음
+                                                    <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="part_barcode">
+                                                    <span class="check"></span>
+                                                </label>
+
+                                    </li>
+                                    <li class="blankcontainer">
+                                        <input class="barcode__radio__groups-radio useless" type="radio" value="nothing">
+                                    </li>
+                                </ul>
+                                <div class="option__container">
+                                    <div class="option__title__container">
+                                        <span class="option__title-title">선택정보</span>
+                                        <hr class="option__title-line" />
+                                    </div>
+                                    <span class="option__description">* 선택이 필요 없을경우 페이지 하단의 '다음'버튼을 눌러주세요.</span>
+                                </div>
+                                <div class="productURL__container">
+                                    <div class="productURL__text__container">
+                                        <span class="stepone__category-title">대표상품 URL</span>
+                                        <span class="productURL__description">상품의 URL이 있을 경우 입력해주세요.</span>
+                                    </div>
+                                    <div class="productURL__input__container">
+                                        <input type="input" class="productURL__input" placeholder="         URL을 입력해주세요."></input>
+                                    </div>
+                                </div>
+                                <div class="productCaution__container">
+                                    <div class="productCaution__title__container">
+                                        <span class="stepone__category-title">상품 취급 주의사항</span>
+                                        <span class="productURL__description">중복 선택이 가능합니다.</span>
+                                    </div>
+                                    <span class="productCaution__subDescription">* 20kg 이상의 중량물, 가로/세로 한 변이 110cm 이상 및 높이 170cm 이상의 물품은 서비스 이용이 어려우실 수 있습니다.</span>
+                                </div>
+                                <ul class="productCaution__list">
+                                    <li>
+                                        <input class="productCaution__list__btn fragile" type="button" value="유리 등의 파손주의 상품">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li>
+                                        <input class="productCaution__list__btn discoloration" type="button" value="인쇄물 등의 변색주의 상품">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li>
+                                        <input class="productCaution__list__btn highprice" type="button" value="시계, 귀중품 등 고가품">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li>
+                                        <input class="productCaution__list__btn fitness_product" type="button" value="헬스용품 등 20kg 미만 중량물">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li>
+                                        <input class="productCaution__list__btn largefurniture" type="button" value="침대 등 대형가구">
+                                        <i class="fas fa-check"></i>
+                                        </input>
+                                    </li>
+                                    <li class="position">
+                                        <input class="productCaution__list__btn" type="button">
+                                        </input>
+                                    </li>
+                                </ul>
 
                             </div>
-                            <!--section__container-->
+                            </form>
+
+
+                        </div>
+                        <!--section__container-->
 
                 </section>
 
@@ -267,6 +324,79 @@
                             </div>
                             <!--section__container-->
                 </section>
+
+                <section id="stepfour" class="secton">
+
+                    <div class="simple__input__area">
+                        <div class="cont--inner">
+                            <h3 class="">상담전화 및 견적서 발송을 위한 정보를 입력해주세요</h3>
+                            <h3 class="orange"><span class=number>1</span>기본 정보를 입력 해 주세요</h3>
+
+                            <div class="section__container">
+                                <div class="flexbox_02">
+                                    <div class="item_02">
+                                        <div class="detail__container stepFour__container first__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">업체명 *</span>
+                                            </div>
+                                            <div class="stepfour__detail__input__container">
+                                                <input type="input" class="simple__input simple_customer_company" placeholder=" 회사명 "></input>
+                                            </div>
+                                        </div>
+                                        <div class="detail__container stepFour__container second__detail__container ">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">연락처 *</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container">
+                                                <input type="number" class="simple__input simple_customer_phone" placeholder=" 핸드폰번호 "></input>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="detail__container stepFour__container first__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title ">이메일 *</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container">
+                                                <input type="input" class="simple__input simple_customer_email" placeholder=" Email "></input>
+                                                <!-- <h2 id="simpe__emailCheck ">
+                                                            </h2> -->
+                                            </div>
+                                        </div>
+                                        <div class="detail__container stepFour__container second__detail__container">
+                                            <div class="stepone__category companyNameWrapper">
+                                                <span class="stepone__category-title">담당자 성함*</span>
+                                            </div>
+                                            <div class="detail__input__container stepfour__detail__input__container ">
+                                                <input type="input" class="simple__input simple_customer_manager_name " placeholder=" 담당자명"></input>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="detail__container memo__container half-vw  item_02">
+                                        <div class="stepone__category companyNameWrapper">
+                                            <span class="stepone__category-title">상담 내용 </span>
+                                        </div>
+                                        <div class="memo__input__container">
+                                            <textarea class="simple__textarea simple_customer_memo simple__input" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보가 있으시다면 입력해주세요."></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="checkbox__area">
+                                <div class="stepone__category endfour__container">
+                                    <div class="last__checkbox simpleOrder__checkbox">
+                                        <input id="simpleOrder__permission" class="checkbox" type="checkbox">
+                                        <label for="simpleOrder__permission "><span class="check">개인정보 수집 및 이용목적에 동의합니다.<br>
+                                                            입력해주신 개인정보는 문의/상담 목적으로 사용되며 사용 후 즉시 폐기됩니다.</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                </section>
+
+
 
                 <div class="cont--inner button-inner">
                     <div class="button button-type1" id="prev"><a>&larr; 이전페이지</a></div>

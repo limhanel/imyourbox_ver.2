@@ -325,6 +325,31 @@ h3 .number {
   color: #444;
 }
 
+.button-type3 {
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 7px;
+}
+.button-type3 > input {
+  border: none;
+  background-size: 55% 60%;
+  background-position: center 10px;
+}
+.button-type3 > i {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+.button-type3:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
+.button-type3:clicked {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
+
 /*---------- input 디자인----------*/
 input[type=textarea],
 input[type=input] {

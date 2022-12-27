@@ -129,6 +129,31 @@ $font-white :#fff;
     }
 }
 
+@mixin button-type3 {
+    border: none;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 15%);
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 7px;
+    &>input {
+        border: none;
+        background-size: 55% 60%;
+        background-position: center 10px;
+    }
+    &>i {
+        position: absolute;
+        top: 7px;
+        right: 7px;
+    }
+    &:hover {
+        box-shadow: 0px 0px 5px 0px #ff9948;
+    }
+    &:clicked {
+        box-shadow: 0px 0px 5px 0px #ff9948;
+    }
+}
+
 .large-button {
     margin-top: 20px;
     width: 300px;
@@ -376,6 +401,10 @@ h3 {
 
 .button-type2 {
     @include button-type2
+}
+
+.button-type3 {
+    @include button-type3
 }
 
 
