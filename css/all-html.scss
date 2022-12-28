@@ -136,10 +136,18 @@ $font-white :#fff;
     box-sizing: border-box;
     position: relative;
     border-radius: 7px;
-    &>input {
+    height: 120px;
+    &>input,
+    &>li {
         border: none;
         background-size: 55% 60%;
-        background-position: center 10px;
+        background-position: center 0px;
+        line-height: 12;
+        text-align: center;
+        box-sizing: border-box;
+        min-width: 95px;
+        font-size: 14px;
+        max-height: 100px;
     }
     &>i {
         position: absolute;
@@ -149,7 +157,35 @@ $font-white :#fff;
     &:hover {
         box-shadow: 0px 0px 5px 0px #ff9948;
     }
-    &:clicked {
+    &.clicked {
+        box-shadow: 0px 0px 5px 0px #ff9948;
+        border: 0;
+        outline: 0;
+    }
+}
+
+@mixin button-type4 {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    height: 2.5rem;
+    margin-top: 0.5625rem;
+    i {
+        position: relative;
+        bottom: calc(50% + 8px);
+        left: 13px;
+        color: #ff8888;
+    }
+    .storageType__container__button {
+        -webkit-appearance: none; //safari;
+        width: 100%;
+        height: inherit;
+        border: 0px solid #ffffff;
+        background-color: #ffffff;
+        cursor: pointer;
+        border-radius: 20px;
+        font-family: "Noto Sans KR", sans-serif;
+    }
+    &:hover {
         box-shadow: 0px 0px 5px 0px #ff9948;
     }
 }
@@ -339,12 +375,6 @@ input[id="menuicon"] {
 
 /*---------- container공통영역 ----------*/
 
-.half-vw {
-    &::after {
-        @include float-clear
-    }
-}
-
 .gray-text {
     color: #999
 }
@@ -407,13 +437,21 @@ h3 {
     @include button-type3
 }
 
+.button-type4 {
+    @include button-type4
+}
+
 
 /*---------- input 디자인----------*/
 
-input[type="textarea"],
-input[type="input"] {
+textarea,
+input[type="input"],
+input[type="number"] {
     border: 1px solid rgb(197, 197, 197);
     border-radius: 10px;
+    &:focus {
+        background: #fdfdf4;
+    }
 }
 
 .section__container {

@@ -223,12 +223,6 @@ input[id=menuicon]:checked + label span + div {
 }
 
 /*---------- container공통영역 ----------*/
-.half-vw::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .gray-text {
   color: #999;
 }
@@ -335,7 +329,7 @@ h3 .number {
 }
 .button-type3 > input {
   border: none;
-  background-size: 55% 60%;
+  background-size: 55% 60% !important;
   background-position: center 10px;
 }
 .button-type3 > i {
@@ -346,15 +340,18 @@ h3 .number {
 .button-type3:hover {
   box-shadow: 0px 0px 5px 0px #ff9948;
 }
-.button-type3:clicked {
-  box-shadow: 0px 0px 5px 0px #ff9948;
-}
 
 /*---------- input 디자인----------*/
-input[type=textarea],
-input[type=input] {
+textarea,
+input[type=input],
+input[type=number] {
   border: 1px solid rgb(197, 197, 197);
   border-radius: 10px;
+}
+textarea:focus,
+input[type=input]:focus,
+input[type=number]:focus {
+  background: #fdfdf4;
 }
 
 .section__container::after {
@@ -489,9 +486,19 @@ footer .contact-text2 .service-download {
   margin-bottom: 3%;
   flex-shrink: 1;
   flex-grow: 1;
-  justify-content: center;
+  flex-direction: column;
 }
 .item_02 img {
+  width: 100%;
+}
+
+.item_02-1 {
+  flex-shrink: 1;
+  flex-grow: 1;
+  justify-content: center;
+  flex-direction: column;
+}
+.item_02-1 img {
   width: 100%;
 }
 
@@ -499,26 +506,26 @@ footer .contact-text2 .service-download {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 3%;
 }
 
 .item_03 {
   margin-bottom: 3%;
   flex-shrink: 1;
-  flex-grow: 1;
+  flex-grow: 0;
+  flex-direction: column;
 }
 
 .flexbox_04 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 2%;
 }
 
 .item_04 {
   margin-bottom: 2%;
   flex-shrink: 1;
-  flex-grow: 1;
+  flex-grow: 0;
+  flex-direction: column;
 }
 
 .flexbox_05 {
@@ -526,12 +533,15 @@ footer .contact-text2 .service-download {
   flex-wrap: wrap;
 }
 
-.item_05 {
+.item_05,
+.item_05-1 {
   margin-bottom: 2%;
   flex-shrink: 1;
+  flex-direction: column;
   height: auto;
 }
-.item_05 img {
+.item_05 img,
+.item_05-1 img {
   width: 90%;
 }
 
@@ -565,13 +575,24 @@ footer .contact-text2 .service-download {
   }
   .item_03,
 .item_04 {
-    flex-basis: 48.5%;
+    flex-basis: calc(50% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
   }
   .flexbox_05 {
     justify-content: flex-start;
   }
+  .item_02-1 {
+    flex-basis: calc(33% - 10px);
+    box-sizing: border-box;
+  }
   .item_05 {
     flex-basis: calc(25% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  .item_05-1 {
+    flex-basis: calc(50% - 20px);
     margin: 10px;
     box-sizing: border-box;
   }
@@ -594,12 +615,13 @@ footer .contact-text2 .service-download {
   input[id=menuicon] + label {
     display: none;
   }
-  .item_02 {
+  .item_02,
+.item_02-1 {
     flex-basis: 46.5%;
     max-width: 540px;
   }
   .item_03 {
-    flex-basis: 31%;
+    flex-basis: calc(31% - 20px);
   }
   .item_04 {
     flex-basis: 23%;
@@ -610,11 +632,14 @@ footer .contact-text2 .service-download {
   .item_05 {
     flex-basis: 8%;
   }
+  .item_05-1 {
+    flex-basis: calc(20% - 20px);
+  }
   .simple__textarea {
     height: 265px;
   }
 }
-@media screen and (min-width: 0px) and (max-width: 470px) {
+@media screen and (min-width: 0px) and (max-width: 513px) {
   .item_05 {
     flex-basis: calc(50% - 20px);
   }

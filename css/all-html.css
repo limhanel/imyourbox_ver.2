@@ -223,12 +223,6 @@ input[id=menuicon]:checked + label span + div {
 }
 
 /*---------- container공통영역 ----------*/
-.half-vw::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 .gray-text {
   color: #999;
 }
@@ -332,11 +326,18 @@ h3 .number {
   box-sizing: border-box;
   position: relative;
   border-radius: 7px;
+  height: 120px;
 }
-.button-type3 > input {
+.button-type3 > input, .button-type3 > li {
   border: none;
   background-size: 55% 60%;
-  background-position: center 10px;
+  background-position: center 0px;
+  line-height: 12;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 95px;
+  font-size: 14px;
+  max-height: 100px;
 }
 .button-type3 > i {
   position: absolute;
@@ -346,15 +347,49 @@ h3 .number {
 .button-type3:hover {
   box-shadow: 0px 0px 5px 0px #ff9948;
 }
-.button-type3:clicked {
+.button-type3.clicked {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+  border: 0;
+  outline: 0;
+}
+
+.button-type4 {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 2.5rem;
+  margin-top: 0.5625rem;
+}
+.button-type4 i {
+  position: relative;
+  bottom: calc(50% + 8px);
+  left: 13px;
+  color: #ff8888;
+}
+.button-type4 .storageType__container__button {
+  -webkit-appearance: none;
+  width: 100%;
+  height: inherit;
+  border: 0px solid #ffffff;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.button-type4:hover {
   box-shadow: 0px 0px 5px 0px #ff9948;
 }
 
 /*---------- input 디자인----------*/
-input[type=textarea],
-input[type=input] {
+textarea,
+input[type=input],
+input[type=number] {
   border: 1px solid rgb(197, 197, 197);
   border-radius: 10px;
+}
+textarea:focus,
+input[type=input]:focus,
+input[type=number]:focus {
+  background: #fdfdf4;
 }
 
 .section__container::after {

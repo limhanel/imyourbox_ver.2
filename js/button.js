@@ -58,8 +58,10 @@ const stepthree = document.querySelector("#stepthree");
 const stepfour = document.querySelector("#stepfour");
 const stepresult = document.querySelector("#stepresult");
 
-const preBtn = document.querySelector(".stepBtn__preBtn");
-const nextBtn = document.querySelector(".stepBtn__nextBtn");
+// const preBtn = document.querySelector(".stepBtn__preBtn");
+// const nextBtn = document.querySelector(".stepBtn__nextBtn");
+const preBtn = document.querySelector("#pre");
+const nextBtn = document.querySelector("#next");
 const stepbar__two = document.querySelector(".stepbox__two");
 const stepbar__three = document.querySelector(".stepbox__three");
 const stepbar__four = document.querySelector(".stepbox__four");
