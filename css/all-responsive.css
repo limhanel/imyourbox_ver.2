@@ -343,6 +343,12 @@ h3 .number {
   top: 7px;
   right: 7px;
 }
+.button-type3:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
+.button-type3:clicked {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
 
 /*---------- input 디자인----------*/
 input[type=textarea],
