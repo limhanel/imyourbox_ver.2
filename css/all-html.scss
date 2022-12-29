@@ -51,6 +51,25 @@ $animation :all 0.3s ease 0s;
     clear: both;
 }
 
+@mixin blind {
+    visibility: hidden;
+    position: absolute;
+    top: -9999999px;
+    left: -9999999px;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    background: none;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999999px;
+}
+
+.blind {
+    @include blind
+}
+
 .cont1 {
     margin-top: 55px;
 }
@@ -140,13 +159,13 @@ $font-white :#fff;
     &>input,
     &>li {
         border: none;
-        background-size: 55% 60%;
-        background-position: center 0px;
-        line-height: 12;
+        background-size: 55% 60% !important;
+        background-position: center 10px !important;
+        line-height: 10.5 !important;
         text-align: center;
         box-sizing: border-box;
         min-width: 95px;
-        font-size: 14px;
+        font-size: 16px !important;
         max-height: 100px;
     }
     &>i {
@@ -168,11 +187,10 @@ $font-white :#fff;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
     height: 2.5rem;
-    margin-top: 0.5625rem;
     i {
-        position: relative;
+        position: absolute;
         bottom: calc(50% + 8px);
-        left: 13px;
+        right: 20px !important;
         color: #ff8888;
     }
     .storageType__container__button {
@@ -188,6 +206,89 @@ $font-white :#fff;
     &:hover {
         box-shadow: 0px 0px 5px 0px #ff9948;
     }
+    &>input,
+    &>li {
+        font-size: 16px !important;
+    }
+}
+
+@mixin button-type5 {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    height: 2.5rem;
+    margin-top: 10px;
+    label {
+        height: inherit;
+        display: block;
+        position: relative;
+        padding-top: 13px;
+        cursor: pointer;
+        height: 100%;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+    .check {
+        position: absolute;
+        left: 12px;
+        height: 15px;
+        width: 15px;
+        background-color: var(--color__white);
+        border-radius: 50%;
+        border: 1px solid #474747;
+    }
+    input:checked~.check {
+        background-color: var(--color__white);
+        //체크되었을때 하얀색으로
+        border-color: var(--color__white);
+        border: 1px solid #f18b24;
+    }
+    .check:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+    label {
+        .check:after {
+            top: 2.5px;
+            left: 2.5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--syboml__color);
+        }
+        input:checked~.check:after {
+            display: block;
+        }
+    }
+    &:hover {
+        box-shadow: 0px 0px 5px 0px #ff9948;
+    }
+}
+
+
+/*---------- 버튼디자인 ----------*/
+
+.button-type1 {
+    @include button-type1
+}
+
+.button-type2 {
+    @include button-type2
+}
+
+.button-type3 {
+    @include button-type3
+}
+
+.button-type4 {
+    @include button-type4
+}
+
+.button-type5 {
+    @include button-type5
 }
 
 .large-button {
@@ -420,25 +521,6 @@ h3 {
 
 .orange {
     color: $main-color
-}
-
-
-/*---------- 버튼디자인 ----------*/
-
-.button-type1 {
-    @include button-type1
-}
-
-.button-type2 {
-    @include button-type2
-}
-
-.button-type3 {
-    @include button-type3
-}
-
-.button-type4 {
-    @include button-type4
 }
 
 

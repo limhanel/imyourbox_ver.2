@@ -57,16 +57,14 @@ section {
     }
 }
 
-.stepone__category__list {
-    .stepone__category__list__label__input {
-        line-height: 12;
-        text-align: center;
-        box-sizing: border-box;
-        min-width: 95px;
-        font-size: 14px;
-    }
-}
-
+// .stepone__category__list {
+//     .stepone__category__list__label__input {
+//         line-height: 1;
+//         text-align: center;
+//         box-sizing: border-box;
+//         min-width: 95px;
+//     }
+// }
 @media screen and (min-width:0px) and (max-width:1079px) {
     .stepone__category__list__label__input {
         width: 100%;
@@ -123,32 +121,29 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 }
 
 .stepone__category__list li {
-    input {
-        background-position: center 10px;
-    }
     .clothes {
-        background: url("#{$baseURL}/catecory01.svg") no-repeat center;
+        background: url("#{$baseURL}/catecory01.svg") no-repeat;
     }
     .stuff {
-        background: url("#{$baseURL}/catecory02.svg") no-repeat center;
+        background: url("#{$baseURL}/catecory02.svg") no-repeat;
     }
     .beauty {
-        background: url("#{$baseURL}/catecory03.svg") no-repeat center;
+        background: url("#{$baseURL}/catecory03.svg") no-repeat;
     }
     .householdgoods {
-        background: url("#{$baseURL}/catecory04.svg") no-repeat center;
+        background: url("#{$baseURL}/catecory04.svg") no-repeat;
     }
     .electronics {
-        background: url("#{$baseURL}/catecory05.svg") no-repeat center;
+        background: url("#{$baseURL}/catecory05.svg") no-repeat;
     }
     .stationery {
-        background: url("#{$baseURL}/catecory06.svg") no-repeat center;
+        background: url("#{$baseURL}/catecory06.svg") no-repeat;
     }
     .food {
-        background: url("#{$baseURL}/catecory07.svg") no-repeat center;
+        background: url("#{$baseURL}/catecory07.svg") no-repeat;
     }
     .etc {
-        background: url("#{$baseURL}/catecory08.svg") no-repeat center;
+        background: url("#{$baseURL}/catecory08.svg") no-repeat;
     }
     &:hover {
         box-shadow: 0px 0px 5px 0px #ff9948;
@@ -163,10 +158,6 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     flex-direction: column;
     align-items: left;
     text-align: left;
-    .detail__text__container {
-        display: flex;
-        flex-direction: column;
-    }
 }
 
 .detail__input {
@@ -175,11 +166,6 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     height: 40px;
     max-width: 100%;
     width: 100%;
-}
-
-.barcode__container {
-    flex-direction: column;
-    margin-top: 2.5rem;
 }
 
 .barcode-description {
@@ -197,70 +183,11 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
 }
 
-.barcode__radio__groups li {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    height: 2.5rem;
-    margin-top: 10px;
-    label {
-        height: inherit;
-        display: block;
-        position: relative;
-        padding-top: 13px;
-        cursor: pointer;
-        height: 100%;
-    }
-    input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-    }
-    .check {
-        position: absolute;
-        left: 12px;
-        height: 15px;
-        width: 15px;
-        background-color: var(--color__white);
-        border-radius: 50%;
-        border: 1px solid #474747;
-    }
-    input:checked~.check {
-        background-color: var(--color__white);
-        //체크되었을때 하얀색으로
-        border-color: var(--color__white);
-        border: 1px solid #f18b24;
-    }
-    .check:after {
-        content: "";
-        position: absolute;
-        display: none;
-    }
-    label {
-        .check:after {
-            top: 2.5px;
-            left: 2.5px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--syboml__color);
-        }
-        input:checked~.check:after {
-            display: block;
-        }
-    }
-}
-
-.barcode__radio__groups li:hover {
-    box-shadow: 0px 0px 5px 0px #ff9948;
-}
-
 .option__title__container {
     align-items: center;
     .option__title-line {
-        max-width: 80%;
         width: 100%;
-        margin: 0;
-        border: 1px solid #bfbfbf;
+        border: 0.5px solid #bfbfbf;
     }
 }
 
@@ -287,14 +214,13 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
     }
 }
 
-.productURL__description {
-    font-weight: 500;
-    letter-spacing: -0.05em;
-    font-style: normal;
-    color: var(--color_category_description);
-    margin: 0rem 1.5%;
-}
-
+// .productURL__description {
+//     font-weight: 500;
+//     letter-spacing: -0.05em;
+//     font-style: normal;
+//     color: var(--color_category_description);
+//     margin: 0rem 1.5%;
+// }
 .productCaution__container {
     flex-direction: column;
     margin-top: 2.5rem;
@@ -374,3 +300,17 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 //         border: 0px;
 //     }
 // }
+.category-title-css {
+    font-weight: 600;
+    font-size: 17px;
+    display: inline-block !important;
+    margin-right: 60px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+.description-title {
+    font-size: 14px;
+    margin: 15px 0;
+    display: block;
+}

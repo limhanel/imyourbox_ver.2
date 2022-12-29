@@ -24,6 +24,21 @@ span {
 
 /*---- 폰트사이즈 변경 ---*/
 /*---- 간격/애니메이션 세팅 ---*/
+.blind {
+  visibility: hidden;
+  position: absolute;
+  top: -9999999px;
+  left: -9999999px;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999999px;
+}
+
 .cont1 {
   margin-top: 55px;
 }
@@ -45,6 +60,168 @@ span {
 
 /*---전체 컬러 디자인---*/
 /*---전체 버튼 디자인---*/
+/*---------- 버튼디자인 ----------*/
+.button-type1 {
+  padding: 0.6em 1.5em;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  background-color: #ff7a22;
+  border: 1px solid #ff7a22;
+  border-radius: 20px;
+}
+.button-type1 a {
+  color: white;
+}
+.button-type1:hover {
+  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  border: 1px solid #ff7a22;
+  background-color: white;
+  cursor: pointer;
+}
+.button-type1:hover a {
+  color: #ff7a22;
+}
+
+.button-type2 {
+  font-size: 25px;
+  padding: 0.6em 1.5em;
+  transition: all 0.3s ease 0s;
+  font-weight: 600;
+  background-color: white;
+  color: #ff7a22;
+  border-radius: 20px;
+}
+.button-type2:hover {
+  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  background-color: #ff7a22;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.button-type2:hover p {
+  color: white;
+  transition: all 0.3s ease 0s;
+}
+.button-type2 p {
+  font-size: 16px;
+  color: #444;
+}
+
+.button-type3 {
+  border: none;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 7px;
+  height: 120px;
+}
+.button-type3 > input, .button-type3 > li {
+  border: none;
+  background-size: 55% 60% !important;
+  background-position: center 10px !important;
+  line-height: 10.5 !important;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 95px;
+  font-size: 16px !important;
+  max-height: 100px;
+}
+.button-type3 > i {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+.button-type3:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
+.button-type3.clicked {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+  border: 0;
+  outline: 0;
+}
+
+.button-type4 {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 2.5rem;
+}
+.button-type4 i {
+  position: relative;
+  bottom: calc(50% + 8px);
+  right: 13px !important;
+  color: #ff8888;
+}
+.button-type4 .storageType__container__button {
+  -webkit-appearance: none;
+  width: 100%;
+  height: inherit;
+  border: 0px solid #ffffff;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.button-type4:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
+.button-type4 > input, .button-type4 > li {
+  font-size: 16px !important;
+}
+
+.button-type5 {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 2.5rem;
+  margin-top: 10px;
+}
+.button-type5 label {
+  height: inherit;
+  display: block;
+  position: relative;
+  padding-top: 13px;
+  cursor: pointer;
+  height: 100%;
+}
+.button-type5 input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.button-type5 .check {
+  position: absolute;
+  left: 12px;
+  height: 15px;
+  width: 15px;
+  background-color: var(--color__white);
+  border-radius: 50%;
+  border: 1px solid #474747;
+}
+.button-type5 input:checked ~ .check {
+  background-color: var(--color__white);
+  border-color: var(--color__white);
+  border: 1px solid #f18b24;
+}
+.button-type5 .check:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.button-type5 label .check:after {
+  top: 2.5px;
+  left: 2.5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--syboml__color);
+}
+.button-type5 label input:checked ~ .check:after {
+  display: block;
+}
+.button-type5:hover {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
+
 .large-button {
   margin-top: 20px;
   width: 300px;
@@ -272,75 +449,6 @@ h3 .number {
   color: #ff7a22;
 }
 
-/*---------- 버튼디자인 ----------*/
-.button-type1 {
-  padding: 0.6em 1.5em;
-  transition: all 0.3s ease 0s;
-  font-weight: 600;
-  background-color: #ff7a22;
-  border: 1px solid #ff7a22;
-  border-radius: 20px;
-}
-.button-type1 a {
-  color: white;
-}
-.button-type1:hover {
-  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
-  border: 1px solid #ff7a22;
-  background-color: white;
-  cursor: pointer;
-}
-.button-type1:hover a {
-  color: #ff7a22;
-}
-
-.button-type2 {
-  font-size: 25px;
-  padding: 0.6em 1.5em;
-  transition: all 0.3s ease 0s;
-  font-weight: 600;
-  background-color: white;
-  color: #ff7a22;
-  border-radius: 20px;
-}
-.button-type2:hover {
-  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
-  background-color: #ff7a22;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-.button-type2:hover p {
-  color: white;
-  transition: all 0.3s ease 0s;
-}
-.button-type2 p {
-  font-size: 16px;
-  color: #444;
-}
-
-.button-type3 {
-  border: none;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 7px;
-}
-.button-type3 > input {
-  border: none;
-  background-size: 55% 60% !important;
-  background-position: center 10px;
-}
-.button-type3 > i {
-  position: absolute;
-  top: 7px;
-  right: 7px;
-}
-.button-type3:hover {
-  box-shadow: 0px 0px 5px 0px #ff9948;
-}
-
 /*---------- input 디자인----------*/
 textarea,
 input[type=input],
@@ -522,7 +630,6 @@ footer .contact-text2 .service-download {
 }
 
 .item_04 {
-  margin-bottom: 2%;
   flex-shrink: 1;
   flex-grow: 0;
   flex-direction: column;
