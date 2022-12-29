@@ -36,7 +36,7 @@
     }
     
     .item_03 {
-        margin-bottom: 3%;
+        // margin-bottom: 3%;
         flex-shrink: 1;
         flex-grow: 0;
         flex-direction: column;
@@ -50,6 +50,7 @@
     
     .item_04 {
         // margin-bottom: 2%;
+        position: relative;
         flex-shrink: 1;
         flex-grow: 0;
         flex-direction: column;

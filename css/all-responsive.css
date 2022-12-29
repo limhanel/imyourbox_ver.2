@@ -124,7 +124,7 @@ span {
   text-align: center;
   box-sizing: border-box;
   min-width: 95px;
-  font-size: 16px !important;
+  font-size: 15px !important;
   max-height: 100px;
 }
 .button-type3 > i {
@@ -147,9 +147,9 @@ span {
   height: 2.5rem;
 }
 .button-type4 i {
-  position: relative;
+  position: absolute;
   bottom: calc(50% + 8px);
-  right: 13px !important;
+  right: 20px !important;
   color: #ff8888;
 }
 .button-type4 .storageType__container__button {
@@ -173,7 +173,6 @@ span {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   height: 2.5rem;
-  margin-top: 10px;
 }
 .button-type5 label {
   height: inherit;
@@ -617,7 +616,6 @@ footer .contact-text2 .service-download {
 }
 
 .item_03 {
-  margin-bottom: 3%;
   flex-shrink: 1;
   flex-grow: 0;
   flex-direction: column;
@@ -630,6 +628,7 @@ footer .contact-text2 .service-download {
 }
 
 .item_04 {
+  position: relative;
   flex-shrink: 1;
   flex-grow: 0;
   flex-direction: column;
