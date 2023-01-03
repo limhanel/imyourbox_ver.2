@@ -443,11 +443,18 @@ input[type="checkbox"] {
 
 .slider-wrap {
     position: relative;
+    .cont {
+        margin: 0 10px;
+        border-radius: 10px;
+        img {
+            width: 100%;
+        }
+    }
     .slick-next {
         position: absolute;
         top: 50%;
         right: 30px;
-        font-size: 2em;
+        font-size: 1em;
         color: gray;
         cursor: pointer;
     }
@@ -455,8 +462,16 @@ input[type="checkbox"] {
         position: absolute;
         top: 50%;
         left: 30px;
-        font-size: 2em;
+        font-size: 1em;
         color: gray;
         cursor: pointer;
     }
+}
+
+.slick-dots {
+    display: none !important;
+}
+
+.orange-back {
+    background-color: #ffe0d7;
 }

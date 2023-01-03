@@ -366,11 +366,18 @@ input[type=checkbox] {
 .slider-wrap {
   position: relative;
 }
+.slider-wrap .cont {
+  margin: 0 10px;
+  border-radius: 10px;
+}
+.slider-wrap .cont img {
+  width: 100%;
+}
 .slider-wrap .slick-next {
   position: absolute;
   top: 50%;
   right: 30px;
-  font-size: 2em;
+  font-size: 1em;
   color: gray;
   cursor: pointer;
 }
@@ -378,7 +385,15 @@ input[type=checkbox] {
   position: absolute;
   top: 50%;
   left: 30px;
-  font-size: 2em;
+  font-size: 1em;
   color: gray;
   cursor: pointer;
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+.orange-back {
+  background-color: #ffe0d7;
 }/*# sourceMappingURL=all-html.css.map */
