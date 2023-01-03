@@ -237,7 +237,8 @@ span {
 /*--모바일 세팅--*/
 /*----헤더영역 세팅---*/
 #header {
-  width: 100vw;
+  margin: 0 auto;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 99999;
@@ -255,7 +256,7 @@ span {
 
 .logo {
   text-align: center;
-  width: 130px;
+  width: 150px;
   display: inline-block;
 }
 .logo a {
@@ -790,7 +791,7 @@ section {
 }
 
 .productCaution__list {
-  margin: 0 auto 8rem auto;
+  margin: 0 auto 50px auto;
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
@@ -820,7 +821,7 @@ section {
   font-size: 17px;
   display: inline-block !important;
   margin-right: 60px;
-  margin-top: 40px;
+  margin-top: 65px;
   margin-bottom: 15px;
 }
 

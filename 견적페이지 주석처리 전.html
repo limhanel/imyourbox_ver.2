@@ -54,10 +54,9 @@
         </script>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
         <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script type="text/javascript" src="js/stepOne.js">
+        <script type="text/javascript" src="js/stepone.js">
         </script>
-        <script type="text/javascript" src="js/button.js">
-        </script>
+
     </head>
 
     <body>
@@ -76,7 +75,7 @@
 
                             <div class="section__container">
                                 <div class="stepone__category">
-                                    <span class="stepone__category-title">상품종류</span>
+                                    <span class="stepone__category-title category-title-css">상품종류</span>
                                     <span class="stepone__category-description">중복 선택이 가능합니다.</span>
                                 </div>
                                 <ul class="stepone__category__list flexbox_05">
@@ -135,7 +134,7 @@
 
                                 <div class="detail__container">
                                     <div class="detail__text__container">
-                                        <span class="stepone__category-title">상세품목</span>
+                                        <span class="stepone__category-title category-title-css">상세품목</span>
                                         <span class="stepone__category-description">문의하고자 하는 품목의 상세한 종류를 입력해주세요.</span>
                                     </div>
                                     <div class="detail__input__container">
@@ -143,52 +142,52 @@
                                     </div>
                                 </div>
                                 <div class="storageType__container">
-                                    <span class="stepone__category-title">보관형태</span>
-                                    <span class="stepone__category-description">상품이 보관될 창고의 온도조절방식을 선택해주세요.</span>
+                                    <span class="stepone__category-title category-title-css">보관형태</span>
+                                    <span class="stepone__category-description ">상품이 보관될 창고의 온도조절방식을 선택해주세요.</span>
                                     <span class="stepone__category-description both">(중복선택 가능)</span>
                                 </div>
-                                <ul class="storageType__container__buttons">
-                                    <li>
+                                <ul class="storageType__container__buttons flexbox_04">
+                                    <li class="item_04 button-type4">
                                         <input class="storageType__container__button room_temperature" type="button" value="상온보관">
                                         <i class="fas fa-check"></i>
                                         </input>
                                     </li>
-                                    <li>
+                                    <li class="item_04 button-type4">
                                         <input class="storageType__container__button low_temperature" type="button" value="저온보관">
                                         <i class="fas fa-check"></i>
                                         </input>
                                     </li>
-                                    <li>
+                                    <li class="item_04 button-type4">
                                         <input class="storageType__container__button refrigerated_storage" type="button" value="냉동보관">
                                         <i class="fas fa-check"></i>
                                         <!-- <span>* 냉장/냉동 보관방식은 준비중입니다.</span> -->
 
                                     </li>
-                                    <li>
+                                    <li class="item_04 button-type4">
                                         <input class="storageType__container__button fronze_storage" type="button" value="냉장보관">
                                         <i class="fas fa-check"></i>
                                     </li>
                                 </ul>
                                 <div class="barcode__container">
-                                    <span class="stepone__category-title">바코드 여부</span>
+                                    <span class="stepone__category-title category-title-css">바코드 여부</span>
                                     <span class="barcode-description">스캔이 가능한 바코드가 제품에 부착되어 있는지 여부를 확인해주세요.</span>
                                 </div>
-                                <ul class="barcode__radio__groups">
-                                    <li>
+                                <ul class="barcode__radio__groups flexbox_03">
+                                    <li class="item_03 button-type5">
                                         <label>
                                                     바코드 있음
                                                     <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="have_barcode">
                                                     <span class="check"></span>
                                                 </label>
                                     </li>
-                                    <li>
+                                    <li class="item_03 button-type5">
                                         <label>
                                                     바코드 없음
                                                     <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="no_barcode">
                                                 <span class="check"></span>
                                                 </label>
                                     </li>
-                                    <li>
+                                    <li class="item_03 button-type5">
                                         <label>
                                                     일부만 있음
                                                     <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="part_barcode">
@@ -196,20 +195,20 @@
                                                 </label>
 
                                     </li>
-                                    <li class="blankcontainer">
+                                    <!-- <li class="blankcontainer">
                                         <input class="barcode__radio__groups-radio useless" type="radio" value="nothing">
-                                    </li>
+                                    </li> -->
                                 </ul>
                                 <div class="option__container">
                                     <div class="option__title__container">
-                                        <span class="option__title-title">선택정보</span>
+                                        <span class="option__title-title category-title-css">선택정보</span>
                                         <hr class="option__title-line" />
                                     </div>
-                                    <span class="option__description">* 선택이 필요 없을경우 페이지 하단의 '다음'버튼을 눌러주세요.</span>
+                                    <span class="option__description description-title">* 선택이 필요 없을경우 페이지 하단의 '다음'버튼을 눌러주세요.</span>
                                 </div>
                                 <div class="productURL__container">
                                     <div class="productURL__text__container">
-                                        <span class="stepone__category-title">대표상품 URL</span>
+                                        <span class="stepone__category-title category-title-css">대표상품 URL</span>
                                         <span class="productURL__description">상품의 URL이 있을 경우 입력해주세요.</span>
                                     </div>
                                     <div class="productURL__input__container">
@@ -218,41 +217,41 @@
                                 </div>
                                 <div class="productCaution__container">
                                     <div class="productCaution__title__container">
-                                        <span class="stepone__category-title">상품 취급 주의사항</span>
+                                        <span class="stepone__category-title category-title-css">상품 취급 주의사항</span>
                                         <span class="productURL__description">중복 선택이 가능합니다.</span>
                                     </div>
-                                    <span class="productCaution__subDescription">* 20kg 이상의 중량물, 가로/세로 한 변이 110cm 이상 및 높이 170cm 이상의 물품은 서비스 이용이 어려우실 수 있습니다.</span>
+                                    <span class="productCaution__subDescription description-title">* 20kg 이상의 중량물, 가로/세로 한 변이 110cm 이상 및 높이 170cm 이상의 물품은 서비스 이용이 어려우실 수 있습니다.</span>
                                 </div>
-                                <ul class="productCaution__list">
-                                    <li>
+                                <ul class="productCaution__list flexbox_05">
+                                    <li class="item_05-1 button-type3">
                                         <input class="productCaution__list__btn fragile" type="button" value="유리 등의 파손주의 상품">
                                         <i class="fas fa-check"></i>
                                         </input>
                                     </li>
-                                    <li>
+                                    <li class="item_05-1 button-type3">
                                         <input class="productCaution__list__btn discoloration" type="button" value="인쇄물 등의 변색주의 상품">
                                         <i class="fas fa-check"></i>
                                         </input>
                                     </li>
-                                    <li>
+                                    <li class="item_05-1 button-type3">
                                         <input class="productCaution__list__btn highprice" type="button" value="시계, 귀중품 등 고가품">
                                         <i class="fas fa-check"></i>
                                         </input>
                                     </li>
-                                    <li>
+                                    <li class="item_05-1 button-type3">
                                         <input class="productCaution__list__btn fitness_product" type="button" value="헬스용품 등 20kg 미만 중량물">
                                         <i class="fas fa-check"></i>
                                         </input>
                                     </li>
-                                    <li>
+                                    <li class="item_05-1 button-type3">
                                         <input class="productCaution__list__btn largefurniture" type="button" value="침대 등 대형가구">
                                         <i class="fas fa-check"></i>
                                         </input>
                                     </li>
-                                    <li class="position">
+                                    <!-- <li class="position">
                                         <input class="productCaution__list__btn" type="button">
                                         </input>
-                                    </li>
+                                    </li> -->
                                 </ul>
 
                             </div>
@@ -428,6 +427,7 @@
                     });
                 </script>
 
+
                 <script>
                     $(document).ready(function() {
                         var base_color = "rgb(230,230,230)";
@@ -532,9 +532,10 @@
 
                     });
                 </script>
-                <script type="text/javascript"></script>
+                <script type="text/javascript" src="js/button.js">
+                </script>
     </body>
 
-    </div>
+
 
     </html>

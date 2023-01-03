@@ -235,7 +235,8 @@ span {
 /*--모바일 세팅--*/
 /*----헤더영역 세팅---*/
 #header {
-  width: 100vw;
+  margin: 0 auto;
+  width: 100%;
   position: fixed;
   top: 0;
   z-index: 99999;
@@ -253,7 +254,7 @@ span {
 
 .logo {
   text-align: center;
-  width: 130px;
+  width: 150px;
   display: inline-block;
 }
 .logo a {
