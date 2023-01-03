@@ -1,3 +1,10 @@
+/*--전체 디자인 css include--*/
+
+@import 'all-html';
+
+/*--index 디자인 css--*/
+
+
 /*----헤더영역 세팅---*/
 
 #header {
@@ -18,7 +25,7 @@
 
 .logo {
     text-align: center;
-    width: 150px;
+    width: 130px;
     display: inline-block;
     a {
         font-size: 0;

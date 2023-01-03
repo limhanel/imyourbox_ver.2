@@ -114,7 +114,6 @@ span {
   box-sizing: border-box;
   position: relative;
   border-radius: 7px;
-  height: 120px;
 }
 .button-type3 > input, .button-type3 > li {
   border: none;
@@ -127,7 +126,7 @@ span {
   font-size: 15px !important;
   max-height: 100px;
 }
-.button-type3 > i {
+.button-type3 i {
   position: absolute;
   top: 7px;
   right: 7px;
@@ -181,6 +180,7 @@ span {
   padding-top: 13px;
   cursor: pointer;
   height: 100%;
+  text-align: center;
 }
 .button-type5 input {
   position: absolute;
@@ -230,173 +230,6 @@ span {
 }
 .large-button i {
   margin-left: 20px;
-}
-
-/*--모바일 세팅--*/
-/*----헤더영역 세팅---*/
-#header {
-  margin: 0 auto;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 99999;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #fff;
-  box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.247);
-}
-#header::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.logo {
-  text-align: center;
-  width: 150px;
-  display: inline-block;
-}
-.logo a {
-  font-size: 0;
-  text-indent: -9999px;
-}
-.logo a img {
-  width: 100%;
-}
-
-.header--gnb {
-  float: right;
-}
-.header--gnb ul {
-  display: inline-block;
-}
-.header--gnb ul li {
-  float: left;
-}
-.header--gnb ul li a {
-  font-weight: 500;
-}
-.header--gnb ul li.gnb-menu {
-  margin: 0 15px;
-  padding-top: 10px;
-}
-.header--gnb ul li.button {
-  margin: 0 5px;
-  box-sizing: border-box;
-}
-
-input[id=menuicon] {
-  display: none;
-}
-input[id=menuicon] + label {
-  display: block;
-  width: 20px;
-  height: 20px;
-  position: fixed;
-  right: 15px;
-  top: 15px;
-  transition: all 0.35s;
-  cursor: pointer;
-}
-input[id=menuicon] + label span {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  border-radius: 30px;
-  background: #ff7a22;
-  transition: all 0.35s;
-}
-input[id=menuicon] + label span:nth-child(1) {
-  top: 0;
-}
-input[id=menuicon] + label span:nth-child(2) {
-  top: 50%;
-  transform: translateY(-50%);
-}
-input[id=menuicon] + label span:nth-child(3) {
-  bottom: 0;
-}
-input[id=menuicon]:checked + label {
-  z-index: 2;
-  right: 260px;
-}
-input[id=menuicon]:checked + label span {
-  background: #333;
-}
-input[id=menuicon]:checked + label span:nth-child(1) {
-  top: 50%;
-  transform: translateY(-50%) rotate(45deg);
-}
-input[id=menuicon]:checked + label span:nth-child(2) {
-  opacity: 0;
-}
-input[id=menuicon]:checked + label span:nth-child(3) {
-  bottom: 50%;
-  transform: translateY(50%) rotate(-45deg);
-}
-input[id=menuicon]:checked + label span + div {
-  right: 0;
-}
-
-.sidebar {
-  display: none;
-  width: 250px;
-  height: 100%;
-  background: #fff !important;
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  transition: all 0.35s;
-  box-shadow: 10px 0px 0px rgba(92, 55, 13, 0.39);
-}
-.sidebar p {
-  text-align: center;
-  font-size: 1.5em;
-  margin: 15px 0;
-  color: #ff7a22;
-}
-.sidebar ul.gnb li {
-  border-bottom: solid 1px rgb(160, 160, 160);
-}
-.sidebar ul.gnb li:hover {
-  background-color: #ff7a22;
-}
-.sidebar ul.gnb li:hover a {
-  color: #fff;
-}
-.sidebar ul.gnb li a {
-  display: inline-block;
-  color: #333;
-  padding: 15px;
-  font-size: 1em;
-}
-.sidebar ul.sns {
-  width: 100%;
-  margin: 14.5px 30px;
-  text-align: center;
-}
-.sidebar ul.sns:after {
-  clear: both;
-  content: "";
-  display: block;
-}
-.sidebar ul.sns li {
-  float: left;
-  margin: 0 20px;
-}
-.sidebar ul.sns li a {
-  font-size: 0.3;
-  color: #333;
-}
-.sidebar ul.sns li a:hover {
-  color: #ff7a22;
-}
-
-#footer ul.sns li {
-  margin: 0 15px;
 }
 
 /*---------- container공통영역 ----------*/
@@ -523,64 +356,6 @@ input[type=checkbox] {
   border: 3px solid #707070;
   border-radius: 10px;
   outline: none;
-}
-
-/*---footer 디자인 공통--*/
-footer {
-  padding: 30px 0;
-  background-color: #2F2F2F;
-}
-footer a,
-footer p,
-footer span {
-  color: #E5E5E5;
-  line-height: 1.5;
-}
-footer .footer-logo {
-  width: 200px;
-  float: left;
-}
-footer .footer-logo img {
-  width: 100%;
-}
-footer .logo-div,
-footer .use-div {
-  width: 100%;
-}
-footer .logo-div::after,
-footer .use-div::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-footer .call {
-  float: right;
-  padding-top: 28px;
-  font-size: 25px;
-}
-footer ul.use {
-  float: left;
-}
-footer ul.sns {
-  float: right;
-}
-footer ul li {
-  float: left;
-  margin-right: 30px;
-}
-footer .contact > div {
-  padding: 2em 0;
-}
-footer .contact-text2 {
-  border-top: 1px solid #E5E5E5;
-  opacity: 1;
-}
-footer .contact-text2 i {
-  padding-left: 6px;
-}
-footer .contact-text2 .service-download {
-  color: #ff7a22;
-  opacity: 1;
 }
 
 /*--intriduction 디자인 css--*/

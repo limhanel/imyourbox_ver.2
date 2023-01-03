@@ -21,12 +21,14 @@
 
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
         <link rel="stylesheet" type="text/css" href="css/all-html.css" />
         <link rel="stylesheet" type="text/css" href="css/all-responsive.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-
-
         <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <!-- 폰트 -->
@@ -185,6 +187,77 @@
                 <!-- class : cont4 -->
             </div>
             <!-- cont-box -->
+
+            <div class="cont8 orange-back cont-box">
+                <div class="cont--inner">
+                    <h3>NEWS</h3>
+                    <div class="slider-wrap">
+
+                        <div class="cont">
+                            <a href="https://www.news1.kr/articles/?4302728" target="blank" alt="새페이지">
+                                <div class="news-img-area">
+                                    <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/news_img05.jpg">
+                                    <i class="fas fa-arrow-right fa-2x arrow"></i>
+                                </div>
+                                <p class="news-title">“당일배송 선택 아닌 필수”…아임유어박스, 배송 경쟁력 강화</p>
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <a href="https://www.edaily.co.kr/news/read?newsId=01722006628988568&mediaCodeNo=257&OutLnkChk=Y" target="blank" alt="새페이지">
+                                <div class="news-img-area">
+                                    <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/news_img04.jpg">
+                                    <i class="fas fa-arrow-right fa-2x arrow"></i>
+                                </div>
+                                <p class="news-title">아임유어박스, 이천 단천물류센터 신규 오픈…이커머스 물류 강화</p>
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <a href="http://www.dt.co.kr/contents.html?article_no=2021021502109923053011&ref=naver" target="blank" alt="새페이지">
+                                <div class="news-img-area">
+                                    <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/news_img06.jpeg">
+                                    <i class="fas fa-arrow-right fa-2x arrow"></i>
+                                </div>
+                                <p class="news-title">아임유어박스, 공식 홈페이지 개편. "3PL 간편견적 가능해져"</p>
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <a href="http://news.heraldcorp.com/view.php?ud=20200921000956" target="blank" alt="새페이지">
+                                <div class="news-img-area">
+                                    <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/news_img03.jpg">
+                                    <i class="fas fa-arrow-right fa-2x arrow"></i>
+                                </div>
+
+                                <p class="news-title">고객 맞춤형 물류대행 서비스 ‘아임유어박스’</p>
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <a href="https://www.edaily.co.kr/news/read?newsId=01948326625962768&mediaCodeNo=257&OutLnkChk=Y" target="blank" alt="새페이지">
+                                <div class="news-img-area">
+                                    <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/news_img02.jpg">
+                                    <i class="fas fa-arrow-right fa-2x arrow"></i>
+                                </div>
+
+                                <p class="news-title">아임유어박스, 오늘의픽업과 업무제휴…"단 한 건도 당일배송"</p>
+                            </a>
+                        </div>
+                        <div class="cont">
+                            <a href="http://news.heraldcorp.com/view.php?ud=20201130000824" target="blank" alt="새페이지">
+                                <div class="news-img-area">
+                                    <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/news_img01.jpg">
+                                    <i class="fas fa-arrow-right fa-2x arrow"></i>
+                                </div>
+
+                                <a name="simpleOrder"></a>
+                                <p class="news-title">아임유어박스, 위드온나인 MOU 체결…”소형 셀러들의 아마존 입점 쉬워진다”</p>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- class : cont8 -->
 
             <div class="cont-box cont-padding">
                 <div class="cont5">
@@ -455,6 +528,41 @@
                 $(".main-slider").eq(newIndex).show();
 
             }
+        </script>
+
+        <script type="text/javascript">
+            $(function() {
+                $('.slider-wrap').slick({
+                    slide: 'div', //슬라이드 되어야 할 태그
+                    infinite: true, //무한 반복 옵션     
+                    slidesToShow: 3, // 한 화면에 보여질 컨텐츠 개수
+                    slidesToScroll: 1, //스크롤 한번에 움직일 컨텐츠 개수
+                    speed: 500, // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+                    arrows: true, // 옆으로 이동하는 화살표 표시 여부
+                    dots: true, // 스크롤바 아래 점으로 페이지네이션 여부
+                    autoplay: true, // 자동 스크롤 사용 여부
+                    autoplaySpeed: 2000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+                    pauseOnHover: true, // 슬라이드 이동    시 마우스 호버하면 슬라이더 멈추게 설정
+                    vertical: false, // 세로 방향 슬라이드 옵션
+                    prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
+                    nextArrow: "<button type='button' class='slick-next'>Next</button>",
+                    draggable: true, //드래그 가능 여부 
+                    responsive: [ // 반응형 웹 구현 옵션
+                        {
+                            breakpoint: 1079, //화면 사이즈 960px
+                            settings: {
+                                slidesToShow: 2
+                            }
+                        }, {
+                            breakpoint: 480, //화면 사이즈 768px
+                            settings: {
+                                slidesToShow: 1
+                            }
+                        }
+                    ]
+
+                });
+            })
         </script>
 
     </body>
