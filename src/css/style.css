@@ -1,0 +1,20 @@
+@import "./index.scss";
+@import "./all-html.scss";
+@import "./introduction.scss";
+@import "./all-responsive.scss";
+@import "./service.scss";
+@import "./access.scss";
+@import "./price.scss";
+@import "./all-html.scss";
+@import "./header_footer.scss";
+@import "./index.css";
+
+#kakao-talk-channel-chat-button {
+  position: fixed;
+  /* top: 80vh;
+  right: 5vw; */
+  right: 1.2rem;
+  bottom: 6.25rem;
+  cursor: pointer;
+  z-index: 5000;
+}

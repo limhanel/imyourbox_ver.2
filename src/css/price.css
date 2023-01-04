@@ -118,7 +118,8 @@ span {
   border-radius: 7px;
   height: auto;
 }
-.button-type3 > input, .button-type3 > li {
+.button-type3 > input,
+.button-type3 > li {
   border: none;
   background-size: 55% 60% !important;
   background-position: center 10px !important;
@@ -167,7 +168,8 @@ span {
 .button-type4:hover {
   box-shadow: 0px 0px 5px 0px #ff9948;
 }
-.button-type4 > input, .button-type4 > li {
+.button-type4 > input,
+.button-type4 > li {
   font-size: 16px !important;
 }
 
@@ -290,14 +292,14 @@ h3 .number {
 
 /*---------- input 디자인----------*/
 textarea,
-input[type=input],
-input[type=number] {
+input[type="input"],
+input[type="number"] {
   border: 1px solid rgb(197, 197, 197);
   border-radius: 10px;
 }
 textarea:focus,
-input[type=input]:focus,
-input[type=number]:focus {
+input[type="input"]:focus,
+input[type="number"]:focus {
   background: #fdfdf4;
 }
 
@@ -356,7 +358,7 @@ input[type=number]:focus {
   background-color: #fff;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border: 3px solid #707070;
@@ -398,7 +400,7 @@ input[type=checkbox] {
 section {
   margin: 30px auto;
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border-radius: 5px;
   transition: transform 0.2s ease-in-out;
 }
@@ -425,7 +427,7 @@ section {
     height: 100px;
   }
   .service__description,
-.stepone__category-description {
+  .stepone__category-description {
     display: block;
     margin-bottom: 10px;
   }
@@ -483,28 +485,36 @@ section {
 }
 
 .stepone__category__list li .clothes {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory01.svg") no-repeat;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory01.svg")
+    no-repeat;
 }
 .stepone__category__list li .stuff {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory02.svg") no-repeat;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory02.svg")
+    no-repeat;
 }
 .stepone__category__list li .beauty {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory03.svg") no-repeat;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory03.svg")
+    no-repeat;
 }
 .stepone__category__list li .householdgoods {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory04.svg") no-repeat;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory04.svg")
+    no-repeat;
 }
 .stepone__category__list li .electronics {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory05.svg") no-repeat;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory05.svg")
+    no-repeat;
 }
 .stepone__category__list li .stationery {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory06.svg") no-repeat;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory06.svg")
+    no-repeat;
 }
 .stepone__category__list li .food {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory07.svg") no-repeat;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory07.svg")
+    no-repeat;
 }
 .stepone__category__list li .etc {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory08.svg") no-repeat;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory08.svg")
+    no-repeat;
 }
 .stepone__category__list li:hover {
   box-shadow: 0px 0px 5px 0px #ff9948;
@@ -592,19 +602,24 @@ section {
   text-align: center;
 }
 .productCaution__list .fragile {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning01.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning01.svg")
+    no-repeat center;
 }
 .productCaution__list .discoloration {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning02.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning02.svg")
+    no-repeat center;
 }
 .productCaution__list .highprice {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning03.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning03.svg")
+    no-repeat center;
 }
 .productCaution__list .fitness_product {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning04.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning04.svg")
+    no-repeat center;
 }
 .productCaution__list .largefurniture {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning05.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/warning05.svg")
+    no-repeat center;
 }
 .productCaution__list .position {
   visibility: hidden;
@@ -623,29 +638,34 @@ section {
 }
 
 .total {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/packing.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/packing.svg")
+    no-repeat center;
 }
 
 .only {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/box.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/box.svg")
+    no-repeat center;
 }
 
 .pallet {
-  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/pallet.svg") no-repeat center;
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/pallet.svg")
+    no-repeat center;
 }
-
+/* 
 .box {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/box.svg") no-repeat center;
-}
+} */
 
-input[type=checkbox]:checked {
+input[type="checkbox"]:checked {
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
   box-shadow: none;
   content: "hello";
-  background: center var(--font_color) url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/checkicon.png") no-repeat;
+  background: center var(--font_color)
+    url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/checkicon.png")
+    no-repeat;
 }
 
 .noUi-target {
@@ -676,7 +696,8 @@ input[type=checkbox]:checked {
   border-right: 10px solid transparent;
   border-bottom: 10px solid transparent;
 }
-.noUi-handle:before, .noUi-handle:after {
+.noUi-handle:before,
+.noUi-handle:after {
   display: none;
 }
 
@@ -731,16 +752,23 @@ input[type=checkbox]:checked {
 .range__container .range__secondColumn .inputStore__range__count .count__one {
   margin-left: 5%;
 }
-.range__container .range__secondColumn .inputStore__range__count .count__thousnd {
+.range__container
+  .range__secondColumn
+  .inputStore__range__count
+  .count__thousnd {
   margin-right: 5%;
 }
-.range__container .range__secondColumn .calendar-inputStoreDate::-moz-placeholder {
+.range__container
+  .range__secondColumn
+  .calendar-inputStoreDate::-moz-placeholder {
   background-image: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/calendar.svg");
   background-size: 16px 16px;
   background-repeat: no-repeat;
   background-position: 3% center;
 }
-.range__container .range__secondColumn .calendar-inputStoreDate:-ms-input-placeholder {
+.range__container
+  .range__secondColumn
+  .calendar-inputStoreDate:-ms-input-placeholder {
   background-image: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/calendar.svg");
   background-size: 16px 16px;
   background-repeat: no-repeat;
@@ -766,4 +794,4 @@ input[type=checkbox]:checked {
 
 .end__container {
   margin: 0 auto 8rem auto;
-}/*# sourceMappingURL=price.css.map */
+} /*# sourceMappingURL=price.css.map */
