@@ -4,7 +4,7 @@
  /*--intriduction 디자인 css--*/
  
  .cont1 {
-     .cont--inner {
+     .history-background {
          background-size: contain;
          background-position: right bottom;
          background-image: url('../images/history-image.png');
@@ -98,7 +98,7 @@
  
  @media screen and (min-width:0px) and (max-width:1079px) {
      .cont1 {
-         .cont--inner {
+         .history-background {
              background-size: 300px;
              padding-bottom: 30%;
          }
@@ -121,7 +121,7 @@
  
  @media screen and (min-width:1080px) {
      .cont1 {
-         .cont--inner {
+         .history-background{
              background-size: 500px;
          }
          .history {
