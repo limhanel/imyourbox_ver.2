@@ -48,48 +48,14 @@
                                         <!-- <div class="top__divider"></div>  -->
                                     </div>
                                     <div class="service">
-                                        <span class="service__title category-title-css">서비스 런칭여부</span>
-                                        <span class="service__description">고객님의 서비스 또는 상품이 출시 전이라면 알려주세요. 상담시 반영됩니다.</span>
                                         <div class="service__checkbox">
-                                            <input id="prepare" type="checkbox">
+                                            <input id="prepare" type="checkbox" style="display:none;">
                                             <!-- <i class="fas fa-check"></i> -->
-                                            <label for="prepare"><span>상품 준비중입니다.</span></label>
+                                            <!-- <label for="prepare"><span>상품 준비중입니다.</span></label> -->
                                         </div>
                                     </div>
-                                    <div class="stepone__category">
-                                        <span class="stepone__category-title category-title-css">문의할 물류 서비스</span>
-                                        <span class="stepone__category-description">중복 선택이 가능합니다.</span>
-                                    </div>
-                                    <ul class="logistics_service_kinds__container flexbox_02">
-                                        <li class="button-type3 item_02">
-                                            <div class="logistics_service_kinds__list fullfillment">
-                                                <p class="logistics_service_kinds__list-title">풀필먼트</p>
-                                                <span class="logistics_service_kinds__list-description">상품의 입고부터 출고까지 물류의 모든 것을 대행해드리는 서비스입니다.</span>
-                                                <i class="fas fa-check"></i>
-                                            </div>
-                                        </li>
-                                        <li class="button-type3 item_02">
-                                            <div class="logistics_service_kinds__list storeproduct">
-                                                <p class="logistics_service_kinds__list-title">상품보관</p>
-                                                <span class="logistics_service_kinds__list-description">입고된 물류를 지정된 기간동안 보관해드리는 서비스입니다.</span>
-                                                <i class="fas fa-check"></i>
-                                            </div>
-                                        </li>
-                                        <li class="button-type3 item_02">
-                                            <div class="logistics_service_kinds__list processing">
-                                                <p class="logistics_service_kinds__list-title">임가공</p>
-                                                <span class="logistics_service_kinds__list-description">선물세트/재포장/에어캡 등 상품에 맞는 임가공을 진행하는 서비스입니다.</span>
-                                                <i class="fas fa-check"></i>
-                                            </div>
-                                        </li>
-                                        <li class="button-type3 item_02">
-                                            <div class="logistics_service_kinds__list etc">
-                                                <p class="logistics_service_kinds__list-title">기타문의</p>
-                                                <span class="logistics_service_kinds__list-description">기타 물류와 관련된 어떤 것이라도 문의주세요.</span>
-                                                <i class="fas fa-check"></i>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                 
+ 
                                     <div class="stepone__category">
                                         <span class="stepone__category-title category-title-css">물류 보관량</span>
                                         <span class="stepone__category-description">서비스를 이용하실 물류의 양을 알려주세요. 보관비용 계산에 필요한 정보입니다.</span>
@@ -100,80 +66,23 @@
                                                 <input type="radio" name="inputStore" value="pallet" checked  >
                                                 <span class="check"></span>
                                                 <div class="inputStoreType__radio__groups_radio__text">
-                                                    <span class="radio__title">파레트</span>
-                                                    <span class="radio__description">110cm X 110cm의 KPP규격 파레트를 사용합니다.</span>
+                                                    <p class="radio__title">파레트</p>
+                                                    <span class="radio__description">110cm x 110cm KPP규격 파레트</span>
                                                 </div>
                                             </label>
                                         </li>
                                         <li class="item_02 button-type5">
-                                            <label class="box">
+                                            <label class="box only">
                                                 <input type="radio" name="inputStore" value="box">
                                                  <span class="check"></span>
                                                 <div class="inputStoreType__radio__groups_radio__text">
-                                                <span class="radio__title">박스</span>
-                                                <span class="radio__description">파레트 양을 모를 경우 보관될 박스의 사이즈를 알려주세요.</span>
+                                                <p class="radio__title">박스</p>
+                                                <span class="radio__description">파레트의 양을 모를 경우 박스를 선택해주세요</span>
                                             </div>
                                             </label>
                                         </li>
                                     </ul>
 
-                                    <div class="box__checked__container">
-                                        <div class="range__container">
-                                            <div class="range__firstColumn">
-                                                <span class="stepone__category-title category-title-css">박스크기</span>
-                                            </div>
-                                        </div>
-                                        <ul class="box__inputStoreRadio__lists flexbox_02">
-                                            <li class="item_02 button-type5">
-                                                <label>
-                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="mini">
-                                                    <span class="check"></span>
-                                                    <span class="box__inputStoreRadio__lists-title"> 극소-세변의 합이 80cm이하</span>
-                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 1,2호 사이즈입니다.</span>
-                                                </label>
-                                            </li>
-                                            <li class="item_02 button-type5">
-                                                <label>
-                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="small">
-                                                    <span class="check"></span>
-                                                    <span class="box__inputStoreRadio__lists-title"> 소-세변의 합이 100cm이하</span>
-                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 3,4호 사이즈입니다.</span>
-                                                </label>
-                                            </li>
-                                            <li class="item_02 button-type5">
-                                                <label>
-                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="medium">
-                                                    <span class="check"></span>
-                                                    <span class="box__inputStoreRadio__lists-title"> 중-세변의 합이 120cm이하</span>
-                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 5호 사이즈입니다.</span>
-                                                </label>
-                                            </li>
-                                            <li class="item_02 button-type5">
-                                                <label>
-                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="large">
-                                                    <span class="check"></span>
-                                                    <span class="box__inputStoreRadio__lists-title"> 대-세변의 합이 160cm이하</span>
-                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 6호 사이즈입니다.</span>
-                                                </label>
-                                            </li>
-                                            <li class="item_02 button-type5">
-                                                <label>
-                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="giant">
-                                                    <span class="check"></span>
-                                                    <span class="box__inputStoreRadio__lists-title"> 특대/이형-세변의 합이 160cm초과</span>
-                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 6호사이즈 초과이거나 이상입니다.</span>
-                                                </label>
-                                            </li>
-                                            <li class="none item_02 button-type5">
-                                                <label>
-                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="giant">
-                                                    <span class="check"></span>
-                                                    <span class="box__inputStoreRadio__lists-title"> 특대/이형-세변의 합이 160cm초과</span>
-                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 6호사이즈 초과이거나 이상입니다.</span>
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
                                     <div class="pallet__checked__container">
                                         <div class="range__container">
                                             <div class="range__firstColumn">
@@ -213,72 +122,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="range__container">
-                                            <div class="range__firstColumn">
-                                                <span class="stepone__category-title category-title-css">입고 예정일</span>
-                                            </div>
-                                            <div class="range__secondColumn inputDate">
-                                                <label>
-                                            <input class="calendar-inputStoreDate" type="text" placeholder="             날짜를 입력해주세요." data-min-date=today >
-                                        </label>
-                                            </div>
-                                        </div>
-                                        <div class="stepone__category">
-                                            <span class="stepone__category-title category-title-css">출고 택배 사이즈</span>
-                                            <span class="stepone__category-description">상품이 출고되는 택배 박스의 평균 사이즈를 알려주세요. 예상 택배비용을 안내해드립니다.</span>
-                                        </div>
-                                        <div class="outputBoxsize__container">
-                                            <ul class="outputBoxsize__Radio__lists flexbox_02">
-                                                <li class="item_02 button-type5">
-                                                    <label>
-                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="mini">
-                                                <span class="check"></span>
-                                                <span class="outputBoxsize__Radio__lists-title"> 극소-세변의 합이 80cm이하</span>
-                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 1,2호 사이즈입니다.</span>
-                                            </label>
-                                                </li>
-                                                <li class="item_02 button-type5">
-                                                    <label>
-                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="small">
-                                                <span class="check"></span>
-                                                <span class="outputBoxsize__Radio__lists-title"> 소-세변의 합이 100cm이하</span>
-                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 3,4호 사이즈입니다.</span>
-                                            </label>
-                                                </li>
-                                                <li class="item_02 button-type5">
-                                                    <label>
-                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="medium">
-                                                <span class="check"></span>
-                                                <span class="outputBoxsize__Radio__lists-title"> 중-세변의 합이 120cm이하</span>
-                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 5호 사이즈입니다.</span>
-                                            </label>
-                                                </li>
-                                                <li class="item_02 button-type5">
-                                                    <label>
-                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="large">
-                                                <span class="check"></span>
-                                                <span class="outputBoxsize__Radio__lists-title"> 대-세변의 합이 160cm이하</span>
-                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 6호 사이즈입니다.</span>
-                                            </label>
-                                                </li>
-                                                <li class="item_02 button-type5">
-                                                    <label>
-                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="giant">
-                                                <span class="check"></span>
-                                                <span class="outputBoxsize__Radio__lists-title"> 특대/이형-세변의 합이 160cm초과</span>
-                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 6호사이즈 초과이거나 이상입니다.</span>
-                                            </label>
-                                                </li>
-                                                <li class="none item_02 button-type5">
-                                                    <label>
-                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="giant">
-                                                <span class="check"></span>
-                                                <span class="outputBoxsize__Radio__lists-title"> 특대/이형-세변의 합이 160cm초과</span>
-                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 6호사이즈 초과이거나 이상입니다.</span>
-                                            </label>
-                                                </li>
-                                            </ul>
-                                        </div>
+
+                                     
                                         <div class="range__container end__container">
                                             <div class="range__firstColumn">
                                                 <span class="stepone__category-title category-title-css">월 택배건수</span>
@@ -292,27 +137,10 @@
                                             <div class="range__secondColumn">
                                                 <div class="output__range"></div>
                                                 <div class="inputStore__range__count step__two__last">
-                                                    <span class="count__one">1</span> <span>2500</span> <span>5000</span> <span>7500</span> <span class="count__thousnd">10000</span>
+                                                    <span>1</span> <span>2500</span> <span>5000</span> <span>7500</span> <span>10000</span>
                                                 </div>
                                             </div>
                                         </div>
-
-                                        <!-- <div class="slidecontainer">
-                                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-                                            <p>Value: <span id="value"></span></p>
-                                        </div>
-
-                                        <script>
-                                            var slider = document.getElementById("myRange");
-                                            var output = document.getElementById("value");
-                                            output.innerHTML = slider.value;
-
-                                            slider.oninput = function() {
-                                                output.innerHTML = this.value;
-                                            }
-                                        </script> -->
-
-
                                     </div>
                                 </div>
                             </div>
@@ -348,7 +176,7 @@
                                     <span class="check"></span>
                                     <div class="output__radio__groups_radio__text">
                                         <p class="radio__title">합포장</p>
-                                        <span class="radio__description output__radio__description">가장 일반적인 방법입니다. 다품종의 상품을 주문별로 합포하여 출고합니다.</span>
+                                        <span class="radio__description output__radio__description">다품종의 상품을 주문별로 합포하여 출고 (가장 일반적인 방식)</span>
                                     </div>
                                 </label>
                                 </li>
@@ -358,64 +186,15 @@
                                      <span class="check"></span>
                                     <div class="output__radio__groups_radio__text">
                                     <p class="radio__title">단독포장</p>
-                                    <span class="radio__description output__radio__description">박스당 1개의 상품만 들어가는 포장방법입니다.</span>
+                                    <span class="radio__description output__radio__description">박스당 상품 1개만 들어가는 포장방식</span>
                                 </div>
                                 </label>
                                 </li>
                             </ul>
-                            <div class="service courierWrapper">
-                                <span class="service__title category-title-css">상품 출고를 위한 박스 또는 택배봉투가 있으신가요?</span>
-                                <p class="service__description">1호 (260*180*135mm), 2호 (370*260*170mm) 사이즈 박스가 준비되어 있으며, 상품이 해당 박스에 담기지 않으실 경우 제작이 필요합니다.</p>
-                            </div>
-                            <ul class="radio__groups courierBag flexbox_03">
-                                <li class="item_03 button-type5">
-                                    <label>
-                                    네, 있습니다
-                                    <input class="radio__groups-radio" type="radio" name="courierBag" value="have">
-                                    <span class="check"></span>
-                                </label>
-                                </li>
-                                <li class="item_03 button-type5">
-                                    <label>
-                                    아니요, 없습니다
-                                    <input class="radio__groups-radio" type="radio" name="courierBag" value="none">
-                                <span class="check"></span>
-                                </label>
-                                </li>
-                                <li class="item_03 button-type5">
-                                    <label>
-                                    제작이 필요합니다.
-                                    <input class="radio__groups-radio" type="radio" name="courierBag" value="need">
-                                <span class="check"></span>
-                                </label>
-                                </li>
-                            </ul>
-                            <div class="stepone__category processingWrapper">
-                                <span class="stepone__category-title category-title-css">포장 및 임가공 작업이 필요하신가요?</span>
-                                <span class="stepone__category-description">임가공 비용은 상세 상담 후 확정됩니다.</span>
-                            </div>
-                            <ul class="radio__groups processinglist flexbox_02">
-                                <li class="item_02 button-type5">
-                                    <label>
-                                    네, 필요합니다.
-                                    <input class="radio__groups-radio" type="radio" name="processingNeed" value="need">
-                                    <span class="check"></span>
-                                </label>
-                                </li>
-                                <li class="item_02 button-type5">
-                                    <label>
-                                    아니요, 필요하지 않습니다
-                                    <input class="radio__groups-radio" type="radio" name="processingNeed" value="not_need">
-                                <span class="check"></span>
-                                </label>
-                                </li>
-                            </ul>
-                        </div>
-
+                          
                     </div>
                     <!--section__container-->
-                </section>
-                <section>
+
                     <div class="simple__input__area">
                         <div class="cont--inner">
                             <h3 class="">상담시 필요한 내용을 입력 해 주세요.
@@ -510,7 +289,6 @@
                                     <li class="item_04 button-type4">
                                         <input class="storageType__container__button refrigerated_storage" type="button" value="냉동보관">
                                         <i class="fas fa-check"></i>
-                                        <!-- <span>* 냉장/냉동 보관방식은 준비중입니다.</span> -->
 
                                     </li>
                                     <li class="item_04 button-type4">
@@ -518,44 +296,8 @@
                                         <i class="fas fa-check"></i>
                                     </li>
                                 </ul>
-                                <div class="barcode__container">
-                                    <span class="stepone__category-title category-title-css">바코드 여부</span>
-                                    <span class="barcode-description">스캔이 가능한 바코드가 제품에 부착되어 있는지 여부를 확인해주세요.</span>
-                                </div>
-                                <ul class="barcode__radio__groups flexbox_03">
-                                    <li class="item_03 button-type5">
-                                        <label>
-                                                    바코드 있음
-                                                    <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="have_barcode">
-                                                    <span class="check"></span>
-                                                </label>
-                                    </li>
-                                    <li class="item_03 button-type5">
-                                        <label>
-                                                    바코드 없음
-                                                    <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="no_barcode">
-                                                <span class="check"></span>
-                                                </label>
-                                    </li>
-                                    <li class="item_03 button-type5">
-                                        <label>
-                                                    일부만 있음
-                                                    <input class="barcode__radio__groups-radio" type="radio" name="barcode" value="part_barcode">
-                                                    <span class="check"></span>
-                                                </label>
-
-                                    </li>
-                                    <!-- <li class="blankcontainer">
-                                        <input class="barcode__radio__groups-radio useless" type="radio" value="nothing">
-                                    </li> -->
-                                </ul>
-                                <div class="option__container">
-                                    <div class="option__title__container">
-                                        <span class="option__title-title category-title-css">선택정보</span>
-                                        <hr class="option__title-line" />
-                                    </div>
-                                    <span class="option__description description-title">* 선택이 필요 없을경우 페이지 하단의 '다음'버튼을 눌러주세요.</span>
-                                </div>
+                               
+                             
                                 <div class="productURL__container">
                                     <div class="productURL__text__container">
                                         <span class="stepone__category-title category-title-css">대표상품 URL</span>
@@ -565,46 +307,7 @@
                                         <input type="input" class="productURL__input" placeholder="         URL을 입력해주세요."></input>
                                     </div>
                                 </div>
-                                <div class="productCaution__container">
-                                    <div class="productCaution__title__container">
-                                        <span class="stepone__category-title category-title-css">상품 취급 주의사항</span>
-                                        <span class="productURL__description">중복 선택이 가능합니다.</span>
-                                    </div>
-                                    <span class="productCaution__subDescription description-title">* 20kg 이상의 중량물, 가로/세로 한 변이 110cm 이상 및 높이 170cm 이상의 물품은 서비스 이용이 어려우실 수 있습니다.</span>
-                                </div>
-                                <ul class="productCaution__list flexbox_05">
-                                    <li class="item_05-1 button-type3">
-                                        <input class="productCaution__list__btn fragile" type="button" value="유리 등의 파손주의 상품">
-                                        <i class="fas fa-check"></i>
-                                        </input>
-                                    </li>
-                                    <li class="item_05-1 button-type3">
-                                        <input class="productCaution__list__btn discoloration" type="button" value="인쇄물 등의 변색주의 상품">
-                                        <i class="fas fa-check"></i>
-                                        </input>
-                                    </li>
-                                    <li class="item_05-1 button-type3">
-                                        <input class="productCaution__list__btn highprice" type="button" value="시계, 귀중품 등 고가품">
-                                        <i class="fas fa-check"></i>
-                                        </input>
-                                    </li>
-                                    <li class="item_05-1 button-type3">
-                                        <input class="productCaution__list__btn fitness_product" type="button" value="헬스용품 등 20kg 미만 중량물">
-                                        <i class="fas fa-check"></i>
-                                        </input>
-                                    </li>
-                                    <li class="item_05-1 button-type3">
-                                        <input class="productCaution__list__btn largefurniture" type="button" value="침대 등 대형가구">
-                                        <i class="fas fa-check"></i>
-                                        </input>
-                                    </li>
-                                    <!-- <li class="position">
-                                        <input class="productCaution__list__btn" type="button">
-                                        </input>
-                                    </li> -->
-                                </ul>
 
-                            </div>
                             </form>
 
 
@@ -649,8 +352,6 @@
                                             </div>
                                             <div class="detail__input__container stepfour__detail__input__container">
                                                 <input type="input" class="simple__input simple_customer_email" placeholder=" Email "></input>
-                                                <!-- <h2 id="simpe__emailCheck ">
-                                                            </h2> -->
                                             </div>
                                         </div>
                                         <div class="detail__container stepFour__container second__detail__container">

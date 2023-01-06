@@ -649,7 +649,7 @@ section {
 .barcode__radio__groups {
     margin: 0 auto;
     align-items: center;
-    justify-content: center;
+
     flex-flow: row wrap;
     text-align: center;
 }

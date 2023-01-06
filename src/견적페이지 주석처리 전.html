@@ -11,60 +11,401 @@
         <meta name="keywords" content="imyourbox,i'myourbox,아임유어박스,3PL서비스,3PL,4PL,온라인쇼핑,온라인쇼핑물류,기업물류,소상공인물류,블로그마켓,3rdPartyLogistic,재고관리,포장대행,포장작업,택배대행,물류대행,택배배송,택배발송,WMS,OMS,e-Logistics,e-commer,이커머스,풀필먼트,fullfillment,물류보관,운송대행,보관,세트포장,셋트포장,소분작업,소분택배,소호사무실,소호,soho,blogmarket,스타트업,start-up,의류포장,악세서리포장,신발포장,화장품포장,잡화포장,임가공,짐보관,창고임대,공간임대,"
         />
         <meta name="author" content="limhanel" />
-
         <title>아임유어박스</title>
-
         <link rel="shortcut icon" href="images/imyourbox.ico" />
-
         <!-- 폰트어썸 -->
         <script src="https://kit.fontawesome.com/b662cbe3c5.js" crossorigin="anonymous"></script>
-
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="stylesheet" type="text/css" href="css/all-html.css" />
         <link rel="stylesheet" type="text/css" href="css/all-responsive.css" />
         <link rel="stylesheet" type="text/css" href="css/price.css" />
-
-
         <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
         <!-- 폰트 -->
-
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
-
-        <!-- Enliple Common Tracker v3.6 [공용] end -->
-        <script type="text/javascript">
-            jQuery(function($) {
-                var ticker = function() {
-                    timer = setTimeout(function() {
-                        $('#ticker li:first').animate({
-                            marginTop: '-40px',
-                            color: 'black'
-                        }, 400, function() {
-                            $(this).detach().appendTo('ul#ticker').removeAttr('style');
-                        });
-                        ticker();
-                    }, 2000);
-                };
-
-                ticker();
-
-            });
-        </script>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script type="text/javascript" src="js/stepone.js">
-        </script>
-
     </head>
 
     <body>
         <div data-include1="header-html" id="header-html"></div>
-
         <div id="container">
             <div id="svg_wrap"></div>
             <div class="cont-box cont-padding">
+                <section>
+                    <div class="simple__input__area">
+                        <div class="cont--inner">
+                            <h3 class="">상담에 필요한 추가사항이 있으신가요?
+                                <p class="small-text">추가사항이 없다면 바로 '견적서 받아보기' 버튼을 눌러주세요</p>
+                            </h3>
+                            <h3 class="orange"><span class="number">3</span>추가정보를 입력 해 주세요</h3>
+
+                            <div class="section__container">
+
+                                <div class="section__container">
+                                    <div class="step__container">
+                                        <!-- <div class="top__divider"></div>  -->
+                                    </div>
+                                    <div class="service">
+                                        <span class="service__title category-title-css">서비스 런칭여부</span>
+                                        <span class="service__description">고객님의 서비스 또는 상품이 출시 전이라면 알려주세요. 상담시 반영됩니다.</span>
+                                        <div class="service__checkbox">
+                                            <input id="prepare" type="checkbox">
+                                            <!-- <i class="fas fa-check"></i> -->
+                                            <label for="prepare"><span>상품 준비중입니다.</span></label>
+                                        </div>
+                                    </div>
+                                    <div class="stepone__category">
+                                        <span class="stepone__category-title category-title-css">문의할 물류 서비스</span>
+                                        <span class="stepone__category-description">중복 선택이 가능합니다.</span>
+                                    </div>
+                                    <ul class="logistics_service_kinds__container flexbox_02">
+                                        <li class="button-type3 item_02">
+                                            <div class="logistics_service_kinds__list fullfillment">
+                                                <p class="logistics_service_kinds__list-title">풀필먼트</p>
+                                                <span class="logistics_service_kinds__list-description">상품의 입고부터 출고까지, 물류의 모든 것을 대행하는 서비스</span>
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </li>
+                                        <li class="button-type3 item_02">
+                                            <div class="logistics_service_kinds__list storeproduct">
+                                                <p class="logistics_service_kinds__list-title">상품보관</p>
+                                                <span class="logistics_service_kinds__list-description">입고된 물류를 지정된 기간동안 보관하는 서비스</span>
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </li>
+                                        <li class="button-type3 item_02">
+                                            <div class="logistics_service_kinds__list processing">
+                                                <p class="logistics_service_kinds__list-title">임가공</p>
+                                                <span class="logistics_service_kinds__list-description">선물세트/재포장/에어캡 등 상품에 맞는 임가공 서비스</span>
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </li>
+                                        <li class="button-type3 item_02">
+                                            <div class="logistics_service_kinds__list etc">
+                                                <p class="logistics_service_kinds__list-title">기타문의</p>
+                                                <span class="logistics_service_kinds__list-description">물류와 관련된 어떤 것이든 문의 주세요!</span>
+                                                <i class="fas fa-check"></i>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="stepone__category">
+                                        <span class="stepone__category-title category-title-css">물류 보관량</span>
+                                        <span class="stepone__category-description">서비스를 이용하실 물류의 양을 알려주세요. 보관비용 계산에 필요한 정보입니다.</span>
+                                    </div>
+                                    <ul class="inputStoreType__radio__groups flexbox_02">
+                                        <li class="item_02 button-type5 button5-css">
+                                            <label class="pallet">
+                                                <input type="radio" name="inputStore" value="pallet" checked  >
+                                                <span class="check"></span>
+                                                <div class="inputStoreType__radio__groups_radio__text">
+                                                    <p class="radio__title">파레트</p>
+                                                    <span class="radio__description">110cm x 110cm KPP규격 파레트</span>
+                                                </div>
+                                            </label>
+                                        </li>
+                                        <li class="item_02 button-type5">
+                                            <label class="box only">
+                                                <input type="radio" name="inputStore" value="box">
+                                                 <span class="check"></span>
+                                                <div class="inputStoreType__radio__groups_radio__text">
+                                                <p class="radio__title">박스</p>
+                                                <span class="radio__description">파레트의 양을 모를 경우 박스를 선택해주세요</span>
+                                            </div>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                    <div class="box__checked__container">
+                                        <div class="range__container">
+                                            <div class="range__firstColumn">
+                                                <span class="stepone__category-title category-title-css">박스크기</span>
+                                            </div>
+                                        </div>
+                                        <ul class="box__inputStoreRadio__lists flexbox_02">
+                                            <li class="item_02 button-type5">
+                                                <label>
+                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="mini">
+                                                    <span class="check"></span>
+                                                    <p class="box__inputStoreRadio__lists-title"> 극소-세변의 합이 80cm이하</p>
+                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 1,2호 사이즈입니다.</span>
+                                                </label>
+                                            </li>
+                                            <li class="item_02 button-type5">
+                                                <label>
+                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="small">
+                                                    <span class="check"></span>
+                                                    <p class="box__inputStoreRadio__lists-title"> 소-세변의 합이 100cm이하</p>
+                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 3,4호 사이즈입니다.</span>
+                                                </label>
+                                            </li>
+                                            <li class="item_02 button-type5">
+                                                <label>
+                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="medium">
+                                                    <span class="check"></span>
+                                                    <p class="box__inputStoreRadio__lists-title"> 중-세변의 합이 120cm이하</p>
+                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 5호 사이즈입니다.</span>
+                                                </label>
+                                            </li>
+                                            <li class="item_02 button-type5">
+                                                <label>
+                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="large">
+                                                    <span class="check"></span>
+                                                    <p class="box__inputStoreRadio__lists-title"> 대-세변의 합이 160cm이하</p>
+                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 6호 사이즈입니다.</span>
+                                                </label>
+                                            </li>
+                                            <li class="item_02 button-type5">
+                                                <label>
+                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="giant">
+                                                    <span class="check"></span>
+                                                    <p class="box__inputStoreRadio__lists-title"> 특대/이형-세변의 합이 160cm초과</p>
+                                                    <span class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 6호사이즈 초과이거나 이상입니다.</span>
+                                                </label>
+                                            </li>
+                                            <li class="none item_02 button-type5">
+                                                <label>
+                                                    <input class="box__inputStoreRadio__lists-radio" type="radio" name="inputStoreBoxsize" value="giant">
+                                                    <span class="check"></span>
+                                                    <p class="box__inputStoreRadio__lists-title"> 특대/이형-세변의 합이 160cm초과</span>
+                                                    <p class="box__inputStoreRadio__lists-description">우체국택배 상자 규격 기준 6호사이즈 초과이거나 이상입니다.</span>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pallet__checked__container">
+                                        <div class="range__container">
+                                            <div class="range__firstColumn">
+                                                <span class="stepone__category-title category-title-css">물류 보관량</span>
+                                                <div class="range__description">
+                                                    <input class="indicator__inputStore__range" type="number" value="500">
+                                                    <span class="store__unit">plt</span>
+                                                </div>
+                                            </div>
+                                            <div class="range__secondColumn">
+                                                <div id="inputStore__range"></div>
+                                                <div class="inputStore__range__count">
+                                                    <span>1</span>
+                                                    <span>250</span>
+                                                    <span>500</span>
+                                                    <span>750</span>
+                                                    <span>1000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="range__container">
+                                            <div class="range__firstColumn">
+                                                <span class="stepone__category-title category-title-css">상품종류(SKU)</span>
+                                                <div class="range__description">
+                                                    <input class="indicator__inputStore__sku__range" type="number" value="250">
+                                                    <span>개</span>
+                                                </div>
+                                            </div>
+                                            <div class="range__secondColumn">
+                                                <div class="inputStore__sku__range"></div>
+                                                <div class="inputStore__range__count">
+                                                    <span>1</span>
+                                                    <span>250</span>
+                                                    <span>500</span>
+                                                    <span>750</span>
+                                                    <span>1000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="range__container">
+                                            <div class="range__firstColumn">
+                                                <span class="stepone__category-title category-title-css">입고 예정일</span>
+                                            </div>
+                                            <div class="range__secondColumn inputDate">
+                                                <label>
+                                            <input class="calendar-inputStoreDate" type="text" placeholder="             날짜를 입력해주세요." data-min-date=today >
+                                        </label>
+                                            </div>
+                                        </div>
+                                        <div class="stepone__category">
+                                            <span class="stepone__category-title category-title-css">출고 택배 사이즈</span>
+                                            <span class="stepone__category-description">상품이 출고되는 택배 박스의 평균 사이즈를 알려주세요. 예상 택배비용을 안내해드립니다.</span>
+                                        </div>
+                                        <div class="outputBoxsize__container">
+                                            <ul class="outputBoxsize__Radio__lists flexbox_02">
+                                                <li class="item_02 button-type5">
+                                                    <label>
+                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="mini">
+                                                <span class="check"></span>
+                                                <p class="outputBoxsize__Radio__lists-title"> 극소-세변의 합이 80cm이하</p>
+                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 1,2호 사이즈입니다.</span>
+                                            </label>
+                                                </li>
+                                                <li class="item_02 button-type5">
+                                                    <label>
+                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="small">
+                                                <span class="check"></span>
+                                                <p class="outputBoxsize__Radio__lists-title"> 소-세변의 합이 100cm이하</p>
+                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 3,4호 사이즈입니다.</span>
+                                            </label>
+                                                </li>
+                                                <li class="item_02 button-type5">
+                                                    <label>
+                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="medium">
+                                                <span class="check"></span>
+                                                <p class="outputBoxsize__Radio__lists-title"> 중-세변의 합이 120cm이하</p>
+                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 5호 사이즈입니다.</span>
+                                            </label>
+                                                </li>
+                                                <li class="item_02 button-type5">
+                                                    <label>
+                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="large">
+                                                <span class="check"></span>
+                                                <p class="outputBoxsize__Radio__lists-title"> 대-세변의 합이 160cm이하</p>
+                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 6호 사이즈입니다.</span>
+                                            </label>
+                                                </li>
+                                                <li class="item_02 button-type5">
+                                                    <label>
+                                                <input class="outputBoxsize__Radio__lists-radio" type="radio" name="outputBoxsize" value="giant">
+                                                <span class="check"></span>
+                                                <p class="outputBoxsize__Radio__lists-title"> 특대/이형-세변의 합이 160cm초과</p>
+                                                <span class="outputBoxsize__Radio__lists-description">우체국택배 상자 규격 기준 6호사이즈 초과이거나 이상입니다.</span>
+                                            </label>
+                                            </ul>
+                                        </div>
+                                        <div class="range__container end__container">
+                                            <div class="range__firstColumn">
+                                                <span class="stepone__category-title category-title-css">월 택배건수</span>
+                                                <div class="range__description">
+                                                    <input class="indicator__output__range" type="number" value="250">
+                                                    <span>건</span>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="range__secondColumn">
+                                                <div class="output__range"></div>
+                                                <div class="inputStore__range__count step__two__last">
+                                                    <span>1</span> <span>2500</span> <span>5000</span> <span>7500</span> <span>10000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="slidecontainer">
+                                            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                                            <p>Value: <span id="value"></span></p>
+                                        </div>
+
+                                        <script>
+                                            var slider = document.getElementById("myRange");
+                                            var output = document.getElementById("value");
+                                            output.innerHTML = slider.value;
+
+                                            slider.oninput = function() {
+                                                output.innerHTML = this.value;
+                                            }
+                                        </script> -->
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="stepone__category fullfillmentWrapper">
+                                <span class="stepone__category-title category-title-css">물류대행 서비스 이용이 처음이신가요?</span>
+                            </div>
+                            <ul class="radio__groups fullfillmentRadios flexbox_02">
+                                <li class="item_02 button-type5">
+                                    <label>
+                                    네, 처음입니다.
+                                    <input class="radio__groups-radio" type="radio" name="service" value="fisrt">
+                                    <span class="check"></span>
+                                </label>
+                                </li>
+                                <li class="item_02 button-type5">
+                                    <label>
+                                    아니요, 이용중인 업체가 있습니다.
+                                    <input class="radio__groups-radio" type="radio" name="service" value="using">
+                                <span class="check"></span>
+                                </label>
+                                </li>
+                            </ul>
+                            <div class="stepone__category outputWrapper">
+                                <span class="stepone__category-title category-title-css">출고 패키징</span>
+                                <span class="stepone__category-description">출고시 상품이 포장되는 방법을 선택해주세요.</span>
+                            </div>
+                            <ul class="output__radio__groups flexbox_02">
+                                <li class="item_02 button-type5">
+                                    <label class="pallet total">
+                                    <input type="radio" name="outputMethod" value="total_packaing">
+                                    <span class="check"></span>
+                                    <div class="output__radio__groups_radio__text">
+                                        <p class="radio__title">합포장</p>
+                                        <span class="radio__description output__radio__description">다품종의 상품을 주문별로 합포하여 출고 (가장 일반적인 방식)</span>
+                                    </div>
+                                </label>
+                                </li>
+                                <li class="item_02 button-type5">
+                                    <label class="box only">
+                                    <input type="radio" name="outputMethod" value="only_packaing">
+                                     <span class="check"></span>
+                                    <div class="output__radio__groups_radio__text">
+                                    <p class="radio__title">단독포장</p>
+                                    <span class="radio__description output__radio__description">박스당 상품 1개만 들어가는 포장방식</span>
+                                </div>
+                                </label>
+                                </li>
+                            </ul>
+                            <div class="service courierWrapper">
+                                <span class="service__title category-title-css">상품 출고를 위한 박스 또는 택배봉투가 있으신가요?</span>
+                                <p class="service__description">1호 (260*180*135mm), 2호 (370*260*170mm) 사이즈 박스가 준비되어 있으며, 상품이 해당 박스에 담기지 않으실 경우 제작이 필요합니다.</p>
+                            </div>
+                            <ul class="radio__groups courierBag flexbox_03">
+                                <li class="item_03 button-type5">
+                                    <label>
+                                    네, 있습니다
+                                    <input class="radio__groups-radio" type="radio" name="courierBag" value="have">
+                                    <span class="check"></span>
+                                </label>
+                                </li>
+                                <li class="item_03 button-type5">
+                                    <label>
+                                    아니요, 없습니다
+                                    <input class="radio__groups-radio" type="radio" name="courierBag" value="none">
+                                <span class="check"></span>
+                                </label>
+                                </li>
+                                <li class="item_03 button-type5">
+                                    <label>
+                                    제작이 필요합니다.
+                                    <input class="radio__groups-radio" type="radio" name="courierBag" value="need">
+                                <span class="check"></span>
+                                </label>
+                                </li>
+                            </ul>
+                            <div class="stepone__category processingWrapper">
+                                <span class="stepone__category-title category-title-css">포장 및 임가공 작업이 필요하신가요?</span>
+                                <span class="stepone__category-description">임가공 비용은 상세 상담 후 확정됩니다.</span>
+                            </div>
+                            <ul class="radio__groups processinglist flexbox_02">
+                                <li class="item_02 button-type5">
+                                    <label>
+                                    네, 필요합니다.
+                                    <input class="radio__groups-radio" type="radio" name="processingNeed" value="need">
+                                    <span class="check"></span>
+                                </label>
+                                </li>
+                                <li class="item_02 button-type5">
+                                    <label>
+                                    아니요, 필요하지 않습니다
+                                    <input class="radio__groups-radio" type="radio" name="processingNeed" value="not_need">
+                                <span class="check"></span>
+                                </label>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!--section__container-->
+                </section>
                 <section>
                     <div class="simple__input__area">
                         <div class="cont--inner">
@@ -263,70 +604,7 @@
 
                 </section>
 
-                <section>
-                    <div class="simple__input__area">
-                        <div class="cont--inner">
-                            <h3 class="">상담에 필요한 추가사항이 있으신가요?
-                                <p class="small-text">추가사항이 없다면 바로 '견적서 받아보기' 버튼을 눌러주세요</p>
-                            </h3>
-                            <h3 class="orange"><span class="number">3</span>추가정보를 입력 해 주세요</h3>
 
-                            <div class="section__container">
-                                <div class="flexbox_02">
-                                    <div class="item_02">
-                                        <div class="detail__container stepFour__container first__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">업체명 *</span>
-                                            </div>
-                                            <div class="stepfour__detail__input__container">
-                                                <input type="input" class="simple__input simple_customer_company" placeholder=" 회사명 "></input>
-                                            </div>
-                                        </div>
-                                        <div class="detail__container stepFour__container second__detail__container ">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">연락처 *</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container">
-                                                <input type="number" class="simple__input simple_customer_phone" placeholder=" 핸드폰번호 "></input>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="detail__container stepFour__container first__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title ">이메일 *</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container">
-                                                <input type="input" class="simple__input simple_customer_email" placeholder=" Email "></input>
-                                                <!-- <h2 id="simpe__emailCheck ">
-                                                            </h2> -->
-                                            </div>
-                                        </div>
-                                        <div class="detail__container stepFour__container second__detail__container">
-                                            <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">담당자 성함*</span>
-                                            </div>
-                                            <div class="detail__input__container stepfour__detail__input__container ">
-                                                <input type="input" class="simple__input simple_customer_manager_name " placeholder=" 담당자명"></input>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                    <!--half-vw-->
-                                    <div class="detail__container memo__container half-vw  item_02">
-                                        <div class="stepone__category companyNameWrapper">
-                                            <span class="stepone__category-title">상담 내용 </span>
-                                        </div>
-                                        <div class="memo__input__container">
-                                            <textarea class="simple__textarea simple_customer_memo simple__input" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보가 있으시다면 입력해주세요."></textarea>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                            <!--section__container-->
-                </section>
 
                 <section id="stepfour" class="secton">
 
@@ -368,7 +646,7 @@
                                         </div>
                                         <div class="detail__container stepFour__container second__detail__container">
                                             <div class="stepone__category companyNameWrapper">
-                                                <span class="stepone__category-title">담당자 성함*</span>
+                                                <span class="stepone__category-title">담당자 성함 *</span>
                                             </div>
                                             <div class="detail__input__container stepfour__detail__input__container ">
                                                 <input type="input" class="simple__input simple_customer_manager_name " placeholder=" 담당자명"></input>

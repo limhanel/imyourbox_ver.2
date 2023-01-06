@@ -76,6 +76,8 @@
         flex-direction: row-reverse;
     }
     /*--------- 모바일 반응형 --------*/
+
+
     
     @media screen and (min-width:0px) and (max-width:1079px) {
         h2 {
@@ -176,5 +178,14 @@
     @media screen and (min-width:0px) and (max-width:513px) {
         .item_05 {
             flex-basis: calc(50% - 20px);
+        }
+    }
+
+    /*--------- 깨지는 반응형 정리 --------*/
+    @media screen and (min-width:0px) and (max-width:470px) {
+        .item_05-1 {
+            flex-basis: calc(100% - 20px);
+            margin: 10px;
+            box-sizing: border-box;
         }
     }
