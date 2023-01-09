@@ -160,6 +160,9 @@
             background: inherit;
             color: rgba(255, 255, 255, 0) !important;
             cursor: none;
+            &:hover {
+                color: $main-color;
+            }
             a {
                 font-size: 30px;
                 &:hover {
