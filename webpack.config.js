@@ -98,7 +98,11 @@ module.exports = {
             template: path.resolve(__dirname, "src", "footer.html"),
             minify: false,
         }),
-
+        new HtmlWebpackPlugin({
+            filename: "employment.html",
+            template: path.resolve(__dirname, "src", "employment.html"),
+            minify: false,
+        }),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery",
