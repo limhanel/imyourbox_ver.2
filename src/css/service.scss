@@ -4,13 +4,21 @@
     /*--service 디자인 css--*/
     
     .cont2 {
+        background-color: #ffecdf;
+        h3 {
+            color: $main-color
+        }
         ul {
             li {
+                p {
+                    margin: 10px;
+                }
                 .strong {
                     font-weight: bold;
                 }
                 img {
-                    border: 1px solid #ccc;
+                    background-color: #fff;
+                    // border: 1px solid #ccc;
                     border-radius: 10px;
                     padding: 10px;
                     box-sizing: border-box;
@@ -22,8 +30,14 @@
     .cont3 {
         background-color: #fff;
         .item_02 {
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 10px;
+            img {
+                border-radius: 10px;
+                // object-fit: cover;
+                // height: fit-content
+            }
+            p {
+                font-weight: bold;
+                margin: 10px;
+            }
         }
     }
