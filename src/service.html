@@ -242,6 +242,31 @@
         <!--footer 영역-->
 
 
+<<<<<<< HEAD
+
+
+    </body>
+    <!-- 폰트어썸 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b662cbe3c5.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(function() {
+            var includes1 = $('[data-include1="header-html"]');
+            var includes2 = $('[data-include2="footer-html"]');
+            jQuery.each(includes1, function() {
+                $(this).load('header.html');
+            });
+            jQuery.each(includes2, function() {
+                $(this).load('footer.html');
+            });
+        });
+    </script>
+
+    <!--header/footer include-->
+
+=======
         <script>
             $(function() {
                 var includes1 = $('[data-include1="header-html"]');
@@ -292,5 +317,6 @@
         </script>
 
     </body>
+>>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684
 
     </html>

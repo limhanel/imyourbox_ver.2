@@ -1,43 +1,5 @@
-    /*--전체 디자인 css include--*/
-    
-    @import 'all-html';
-    /*--service 디자인 css--*/
-    
-    .cont2 {
-        background-color: #ffecdf;
-        h3 {
-            color: $main-color
-        }
-        ul {
-            li {
-                p {
-                    margin: 10px;
-                }
-                .strong {
-                    font-weight: bold;
-                }
-                img {
-                    background-color: #fff;
-                    // border: 1px solid #ccc;
-                    border-radius: 10px;
-                    padding: 10px;
-                    box-sizing: border-box;
-                }
-            }
-        }
-    }
-    
-    .cont3 {
-        background-color: #fff;
-        .item_02 {
-            img {
-                border-radius: 10px;
-                // object-fit: cover;
-                // height: fit-content
-            }
-            p {
-                font-weight: bold;
-                margin: 10px;
-            }
-        }
-    }
+/*--전체 디자인 css include--*/
+
+@import 'all-html';
+
+/*--service 디자인 css--*/
