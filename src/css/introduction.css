@@ -114,6 +114,7 @@ span {
   box-sizing: border-box;
   position: relative;
   border-radius: 7px;
+  height: auto;
 }
 .button-type3 > input, .button-type3 > li {
   border: none;
@@ -172,6 +173,9 @@ span {
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   height: 2.5rem;
+}
+.button-type5 .button5-css {
+  height: 100px;
 }
 .button-type5 label {
   height: inherit;
@@ -356,6 +360,42 @@ input[type=checkbox] {
   border: 3px solid #707070;
   border-radius: 10px;
   outline: none;
+}
+
+/*post slider*/
+.slider-wrap {
+  position: relative;
+}
+.slider-wrap .cont {
+  margin: 0 10px;
+  border-radius: 10px;
+}
+.slider-wrap .cont img {
+  width: 100%;
+}
+.slider-wrap .slick-next {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 1em;
+  color: gray;
+  cursor: pointer;
+}
+.slider-wrap .slick-prev {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  font-size: 1em;
+  color: gray;
+  cursor: pointer;
+}
+
+.slick-dots {
+  display: none !important;
+}
+
+.orange-back {
+  background-color: #ffe0d7;
 }
 
 /*--intriduction 디자인 css--*/

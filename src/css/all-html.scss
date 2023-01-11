@@ -170,8 +170,8 @@ $font-white :#fff;
     }
     i {
         position: absolute;
-        top: 7px;
-        right: 7px;
+        top: 10px;
+        right: 10px;
     }
     &:hover {
         box-shadow: 0px 0px 5px 0px #ff9948;
@@ -192,7 +192,6 @@ $font-white :#fff;
         // bottom: calc(50% + 8px);
         bottom: calc(50% - 7px) !important;
         right: 20px !important;
-        color: #ff8888;
     }
     .storageType__container__button {
         -webkit-appearance: none; //safari;
@@ -221,16 +220,17 @@ $font-white :#fff;
     0,
     0,
     0.15);
-    border-radius: 20px;
-    height: 2.5rem;
+    border-radius: 10px;
+    // height: 2.5rem;
+    height: inherit;
     // margin-top: 10px;
     label {
-        height: inherit;
+  
         display: block;
         position: relative;
-        padding-top: 13px;
+        padding: 12px 0;
         cursor: pointer;
-        height: 100%;
+
         text-align: center;
     }
     input {
@@ -249,7 +249,6 @@ $font-white :#fff;
     }
     input:checked~.check {
         background-color: var(--color__white);
-        //체크되었을때 하얀색으로
         border-color: var(--color__white);
         border: 1px solid #f18b24;
     }
@@ -328,7 +327,7 @@ $font-white :#fff;
         float: left;
     }
     p {
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
         font-size: $fs-small;
     }
 }
@@ -433,10 +432,11 @@ input[type="number"] {
 input[type="checkbox"] {
     width: 20px;
     height: 20px;
-    border: 3px solid #707070;
-    border-radius: 10px;
+    border-radius: 3px;
     outline: none;
 }
+
+input[type="checkbox"] span{margin-top: 20px;}
 
 
 /*post slider*/

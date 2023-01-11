@@ -1,6 +1,7 @@
 /*--전체 디자인 css include--*/
 
 @import "all-html";
+<<<<<<< HEAD
 /*--price 디자인 css--*/
 
 .small-text {
@@ -18,10 +19,36 @@
   max-width: 80%;
   margin: 40px auto 20px;
   display: block;
+=======
+p,
+span {
+    line-height: 1.3;
+}
+
+
+/*--price 디자인 css--*/
+
+.small-text {
+    color: rgb(151, 151, 151);
+    font-size: 18px;
+    display: block;
+}
+
+.simple__input__area {
+    background-color: #fff !important;
+}
+
+#svg_form_time {
+    height: 20px;
+    max-width: 80%;
+    margin: 40px auto 20px;
+    display: block;
+>>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684
 }
 
 #svg_form_time circle,
 #svg_form_time rect {
+<<<<<<< HEAD
   fill: white;
 }
 
@@ -92,12 +119,79 @@ section {
     margin-top: 65px;
     margin-bottom: 15px;
   }
+=======
+    fill: white;
+}
+
+#svg_wrap {
+    margin-top: 100px;
+}
+
+.disabled {
+    display: none;
+}
+
+section {
+    margin: 30px auto;
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.button-inner {
+    &::after {
+        @include float-clear;
+    }
+    &>div {
+        margin: 30px 0;
+    }
+    #prev {
+        float: left;
+    }
+    #next,
+    #submit {
+        float: right;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1079px) {
+    .stepone__category__list__label__input {
+        width: 100%;
+        height: 100px;
+    }
+    .service__description,
+    .stepone__category-description {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .category-title-css {
+        margin-right: 0px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+}
+
+
+/*--------- PC 반응형 --------*/
+
+@media screen and (min-width: 1080px) {
+    .stepone__category__list__label__input {
+        height: 100px;
+        width: 100px;
+    }
+    .category-title-css {
+        margin-right: 60px;
+        margin-top: 65px;
+        margin-bottom: 15px;
+    }
+>>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684
 }
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 :root {
+<<<<<<< HEAD
   --syboml__color: #ff9948;
   --background_color_one: #fff;
   --font_color: #ffa63f;
@@ -333,11 +427,198 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 
 .pallet {
   background: url("#{$baseURL}/pallet.svg") no-repeat center;
+=======
+    --syboml__color: #ff9948;
+    --background_color_one: #fff;
+    --font_color: #ffa63f;
+    --font_stepbar_color: #6d6d6d;
+    --font_text_color: #474747;
+    --color_step_eclispe: #fff3d2;
+    --color_range_bar: #ffc671;
+    --color_divider: #ffd18c;
+    --color_category_description: #666666;
+    --color_button_deactive: #ffffff;
+    --color__white: #ffffff;
+    --color__tesxt: #23232;
+    --color__checked: #f18b24;
+}
+
+.divider {
+    width: 90%;
+    max-width: 100%;
+    border: 1px solid var(--color_divider);
+    margin: 0rem auto;
+}
+
+.stepone__title {
+    color: var(--syboml__color);
+}
+
+.stepone__category-description {
+    color: var(--color_category_description);
+}
+
+.stepone__category-description.both {
+    color: #c4c4c4;
+}
+
+.stepone__category__list li {
+    .clothes {
+        background: url("#{$baseURL}/catecory01.svg") no-repeat;
+    }
+    .stuff {
+        background: url("#{$baseURL}/catecory02.svg") no-repeat;
+    }
+    .beauty {
+        background: url("#{$baseURL}/catecory03.svg") no-repeat;
+    }
+    .householdgoods {
+        background: url("#{$baseURL}/catecory04.svg") no-repeat;
+    }
+    .electronics {
+        background: url("#{$baseURL}/catecory05.svg") no-repeat;
+    }
+    .stationery {
+        background: url("#{$baseURL}/catecory06.svg") no-repeat;
+    }
+    .food {
+        background: url("#{$baseURL}/catecory07.svg") no-repeat;
+    }
+    .etc {
+        background: url("#{$baseURL}/catecory08.svg") no-repeat;
+    }
+    &:hover {
+        box-shadow: 0px 0px 5px 0px #ff9948;
+    }
+    &.clicked {
+        color: var(--color__checked);
+    }
+}
+
+.detail__container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+}
+
+.detail__input {
+    background: #f2f2f2;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+    height: 40px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.barcode-description {
+    color: var(--color_category_description);
+}
+
+.barcode__radio__groups {
+    margin: 0 auto;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    .blankcontainer {
+        visibility: hidden;
+    }
+}
+
+.option__title__container {
+    align-items: center;
+    .option__title-line {
+        width: 100%;
+        border: 0.5px solid #bfbfbf;
+    }
+}
+
+.productURL__container {
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    .productURL__text__container {
+        flex-direction: column;
+    }
+    .productURL__input {
+        border: 0.5px solid #c4c4c4;
+        background: #f2f2f2;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 10px;
+        height: 40px;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 1.5625rem;
+    }
+    .productURL__input:focus {
+        background: #ffffff;
+    }
+}
+
+.productCaution__container {
+    flex-direction: column;
+    margin-top: 2.5rem;
+    align-items: left;
+    text-align: left;
+    .productCaution__title__container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.productCaution__list {
+    margin: 0 auto 50px auto;
+    align-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+    .fragile {
+        background: url("#{$baseURL}/warning01.svg") no-repeat center;
+    }
+    .discoloration {
+        background: url("#{$baseURL}/warning02.svg") no-repeat center;
+    }
+    .highprice {
+        background: url("#{$baseURL}/warning03.svg") no-repeat center;
+    }
+    .fitness_product {
+        background: url("#{$baseURL}/warning04.svg") no-repeat center;
+    }
+    .largefurniture {
+        background: url("#{$baseURL}/warning05.svg") no-repeat center;
+    }
+    .position {
+        visibility: hidden;
+    }
+}
+
+.category-title-css {
+    font-weight: 600;
+    font-size: 17px;
+    display: inline-block !important;
+}
+
+.description-title {
+    font-size: 14px;
+    margin: 15px 0;
+    display: block;
+}
+
+.total {
+    background: url("#{$baseURL}/packing.svg") no-repeat center;
+}
+
+.only {
+    background: url("#{$baseURL}/box.svg") no-repeat center;
+}
+
+.pallet {
+    background: url("#{$baseURL}/pallet.svg") no-repeat center;
+>>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684
 }
 
 // .box {
 //     background: url("#{$baseURL}/box.svg") no-repeat center;
 // }
+<<<<<<< HEAD
 
 input[type="checkbox"]:checked {
   -webkit-appearance: none;
@@ -383,10 +664,53 @@ input[type="checkbox"]:checked {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid transparent;
+=======
+input[type="checkbox"]:checked {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    content: "hello";
+    background: center var(--font_color) url("#{$baseURL}/checkicon.png") no-repeat;
+}
+
+.noUi-target {
+    width: 100%;
+    height: 8px;
+    background-color: rgb(242, 242, 242);
+    border: 3px solid #ccc;
+    cursor: pointer;
+    border-radius: 10px;
+    /* iOS */
+    margin-bottom: 0.5rem;
+    margin: 2% auto;
+    margin-bottom: 1%;
+}
+
+.noUi-connect {
+    background: #ff9410;
+    height: 100px;
+}
+
+.noUi-handle {
+    &:before,
+    &:after {
+        display: none;
+    }
+    width: 20px !important;
+    height: 20px !important;
+    border: none;
+    box-shadow: none;
+    background-color: #ff4800;
+    border-radius: 50%;
+    top:-5px;
+>>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684
 }
 
 // noUiSlider end
 .range__container {
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -461,3 +785,399 @@ input[type="checkbox"]:checked {
 .end__container {
   margin: 0 auto 8rem auto;
 }
+=======
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    .range__firstColumn {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        margin-left: 1.875rem;
+        justify-content: space-between;
+        font-size: 1rem;
+        font-weight: 700 !important;
+        .range__description {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            align-items: center;
+            margin-right: 1.875rem;
+            input {
+                display: inline;
+                width: 120px;
+                height: 40px;
+                border-radius: 10px;
+                background-color: #f6f6f6;
+                border: 0.5px solid #cacaca;
+                box-sizing: border-box;
+                text-align: center;
+                margin-right: 1.875rem;
+            }
+        }
+    }
+    .range__secondColumn {
+        width: 100%;
+        margin: 0 auto;
+        .inputStore__range {
+            height: 20px;
+        }
+        .inputStore__range__count {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .count__one {
+                margin-left: 5%;
+            }
+            .count__thousnd {
+                margin-right: 5%;
+            }
+        }
+        .calendar-inputStoreDate::placeholder {
+            background-image: url("#{$baseURL}/calendar.svg");
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+            background-position: 3% center;
+        }
+        .calendar-inputStoreDate {
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: 0.5px solid #c4c4c4;
+            background: #f2f2f2;
+        }
+    }
+    .inputDate {
+        margin-top: 3%;
+        margin-bottom: 4.9375rem;
+    }
+}
+
+.end__container {
+    margin: 0 auto 80px auto;
+}
+
+.logistics_service_kinds__container {
+    li {
+        padding: 20px;
+    }
+}
+
+.logistics_service_kinds__list {
+    p {
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+}
+
+.output__radio__groups,
+.inputStoreType__radio__groups {
+    label {
+        height: 40%;
+        margin-top: 20px;
+        padding-top: 0 !important;
+        ;
+    }
+}
+
+.output__radio__groups_radio__text,
+.inputStoreType__radio__groups_radio__text {
+    p {
+        margin-bottom: 60px;
+        text-align: left;
+        padding-left: 35px;
+    }
+    span {
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+.outputBoxsize__Radio__lists-title {
+    font-weight: bold;
+}
+
+.avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    img {
+        width: 100px;
+        height: 100px;
+        background: no-repeat center;
+        margin: 0 auto;
+    }
+    .avartar__title {
+        margin-top: 15px
+    }
+    .result-title-css {
+        margin: 20px 0 10px 0;
+    }
+    .avartar__price {
+        color: #1a1a1a;
+        font-weight: 900;
+        line-height: 20px;
+    }
+    .avartar__description {
+        margin-top: 0.25rem;
+        font-weight: 500;
+        font-style: normal;
+        color: hsl(0, 0%, 47%);
+        font-size: 0.8125rem;
+    }
+    .avartar__button {
+        margin-top: 2.6875rem;
+        display: flex;
+        flex-direction: column;
+        button {
+            width: 10.3125rem;
+            height: 2.5rem;
+            border-radius: 20px;
+            // box-shadow: 0px 0px 5px 0px #ff9948;
+            border: 1px solid #ffa63f;
+            color: #ffa73f;
+            background-color: #ffffff;
+            font-weight: 700;
+            font-style: normal;
+            font-size: 1rem;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .home {
+            margin-top: 1.1875rem;
+        }
+    }
+}
+
+.last__title {
+    margin: 0.5rem 5% 0px;
+}
+
+.stepresultLiner {
+    margin-bottom: 1.5625rem;
+}
+
+.detailOrder__title {
+    font-weight: 600;
+    text-align: center;
+    display: block;
+    margin: 10px 0;
+    font-size: 22px;
+    color: $main-color;
+}
+
+.detailOrder {
+    margin-bottom: 20px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    .detailOrder__item {
+        display: flex;
+        flex-direction: column;
+        //   border: 2px solid #f18b24;
+        border-radius: 12px;
+        box-shadow: 0px 0px 5px 0px #ff9948;
+        width: 33.3%;
+        padding: 10px;
+        margin: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        .detailOrder__item__title {
+            font-size: 0.875rem;
+            font-weight: 500;
+            font-style: normal;
+            color: #4e4e4e;
+        }
+        .inputStoreFee {
+            margin-top: 15px;
+            font-weight: 700;
+        }
+    }
+    .recalculation {
+        padding-top: 25px;
+        margin-top: 15px;
+        border-top: 1px solid #ccc;
+    }
+}
+
+.result__details {
+    padding: 10px;
+    .line {
+        border: 1px solid #e4e4e4;
+        margin: 15px auto;
+    }
+    .item__Bigtitle {
+        text-align: left;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 1rem;
+    }
+    .item {
+        margin-top: 0.9375rem;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: left;
+        .item__title {
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+        .item__content {
+            display: block;
+            word-break: break-all;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 0.875rem;
+            margin-left: 20%;
+            color: #777777;
+        }
+        .productCategory,
+        .detailInput,
+        .productURL {
+            margin-left: 3rem;
+        }
+        .haveBarcode {
+            margin-left: 2.2rem;
+        }
+        .proCaution {
+            margin-left: 1rem;
+        }
+        .serviceLaunching {
+            margin-left: 3rem;
+        }
+        .logisticsServiceKinds {
+            margin-left: 2rem;
+        }
+        .inputStoreCount {
+            margin-left: 4.2rem;
+        }
+        .inputSKUcount {
+            margin-left: 3rem;
+        }
+        .inputDateResult {
+            margin-left: 4rem;
+        }
+        .outputDeliveryCount {
+            margin-left: 4rem;
+        }
+        .outputPackaing {
+            margin-left: 4.2rem;
+        }
+        .userService {
+            margin-left: 1rem;
+        }
+        .courierBagSpan {
+            margin-left: 2rem;
+        }
+        .processingNeedWork {
+            margin-left: 1.8rem;
+        }
+        .ResultCustomerCompany,
+        .ResultCustomerPhone,
+        .ResultCustomerEmail {
+            margin-left: 4.6rem;
+        }
+        .ResultCustomerName {
+            margin-left: 3rem;
+        }
+        .ResultCustomerMemo {
+            margin-left: 3.8rem;
+        }
+    }
+}
+
+.avartar__button {
+    margin-top: 2.6875rem;
+    display: flex;
+    flex-direction: column;
+    float: center;
+    margin-left: calc(50% - 75px);
+    button {
+        display: inline-block;
+        width: 250px;
+        height: 2.5rem;
+        border-radius: 20px;
+        box-shadow: 0px 0px 5px 0px #ff9948;
+        border: 1px solid #ffa63f;
+        color: #ffa73f;
+        background-color: #ffffff;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .home {
+        margin-top: 1.1875rem;
+    }
+}
+
+.recalculation__area {
+    .__input__container {
+        width: calc(25% - 20px);
+        margin-right: 20px;
+        float: left;
+        & input {
+            //   border: 0.5px solid #c4c4c4;
+            background: #f2f2f2;
+            box-shadow: 0px 0px 5px rgb(0 0 0 / 15%);
+            border-radius: 10px;
+            height: 40px;
+            // max-width: 100%;
+            width: 100%;
+        }
+        .pro__input {
+            margin-top: 10px;
+        }
+    }
+    &::after {
+        @include float-clear;
+    }
+    p.strong {
+        font-weight: bold;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .recalculation__input__area {
+        padding-bottom: 20px;
+        .recalculation {
+            margin-top: 28px;
+            width: calc(25% - 10px);
+            float: right;
+            box-sizing: border-box;
+            text-align: center;
+            color: #fff;
+            padding: 14px 1.5em !important;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+    .recalculation-text {
+        display: block;
+        p {
+            color: #6d6d6d;
+            margin-top: 80px;
+            font-size: 14px !important;
+            // border: 1px solid #ccc;
+            background-color: rgb(243, 243, 243);
+            border-radius: 15px;
+            padding: 20px;
+        }
+    }
+}
+
+//responsive
+@media screen and (min-width: 768px) {
+    // .endfour__container {
+    //     margin: 1.75rem 5%;
+    // }
+}
+>>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684

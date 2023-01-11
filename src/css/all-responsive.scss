@@ -127,6 +127,9 @@
             flex-basis: calc(50% - 20px);
             margin: 10px;
             box-sizing: border-box;
+            img {
+                width: 100%;
+            }
         }
         .simple__textarea {
             height: 200px;
@@ -167,6 +170,9 @@
         }
         .item_05-1 {
             flex-basis: calc(20% - 20px);
+            img {
+                width: 100%;
+            }
         }
         .simple__textarea {
             height: 265px;
@@ -176,5 +182,17 @@
     @media screen and (min-width:0px) and (max-width:513px) {
         .item_05 {
             flex-basis: calc(50% - 20px);
+        }
+    }
+    /*--------- 깨지는 반응형 정리 --------*/
+    
+    @media screen and (min-width:0px) and (max-width:470px) {
+        .item_05-1 {
+            flex-basis: 100%;
+            margin: 10px;
+            box-sizing: border-box;
+            img {
+                width: 100%;
+            }
         }
     }

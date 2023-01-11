@@ -71,7 +71,10 @@ if (
   const total = $("#poppop img").length, // get the number of slides
     rand = Math.floor(Math.random() * total); // random number
 
+<<<<<<< HEAD
   console.log(rand);
+=======
+>>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684
   //팝업 뉴스 케러셀
   $(() => {
     $("#poppop").slick({
