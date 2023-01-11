@@ -225,12 +225,10 @@ $font-white :#fff;
     height: inherit;
     // margin-top: 10px;
     label {
-  
         display: block;
         position: relative;
         padding: 12px 0;
         cursor: pointer;
-
         text-align: center;
     }
     input {
@@ -436,7 +434,9 @@ input[type="checkbox"] {
     outline: none;
 }
 
-input[type="checkbox"] span{margin-top: 20px;}
+input[type="checkbox"] span {
+    margin-top: 20px;
+}
 
 
 /*post slider*/
@@ -445,26 +445,48 @@ input[type="checkbox"] span{margin-top: 20px;}
     position: relative;
     .cont {
         margin: 0 10px;
-        border-radius: 10px;
+        background-color: #fff;
+        border-radius: 15px !important;
         img {
             width: 100%;
+            border-radius: 15px 15px 0 0;
+        }
+        .news-img-area {
+            position: relative;
+            i {
+                position: absolute;
+                right: 15px;
+                bottom: 15px;
+                color: $main-color;
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+        .news-title {
+            padding: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bolder;
+        }
+    }
+    .slick-arrow {
+        all: unset;
+        position: absolute;
+        top: calc(50% - 25px);
+        cursor: pointer;
+        z-index: 1;
+        font-size: 25px;
+        &:hover {
+            color: $main-color;
         }
     }
     .slick-next {
-        position: absolute;
-        top: 50%;
-        right: 30px;
-        font-size: 1em;
-        color: gray;
-        cursor: pointer;
+        right: -15px;
     }
     .slick-prev {
-        position: absolute;
-        top: 50%;
-        left: 30px;
-        font-size: 1em;
-        color: gray;
-        cursor: pointer;
+        left: -15px;
     }
 }
 
