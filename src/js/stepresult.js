@@ -8,10 +8,8 @@ import {
   inputStoreDate,
   arr_logistics_service_kinds,
   inputStoreValue,
-  inputStoreBoxsizeValue,
   inputStoreCount,
   skuInputStoreCount,
-  outputBoxsizeValue,
   service_launching_status,
 } from "./stepTwo";
 import {
@@ -145,9 +143,7 @@ const monthWMSFee = document.querySelector(".monthWMS__fee");
 //stepOne
 const HTMLproductCategory = document.querySelector(".productCategory");
 const HTMLdetailInput = document.querySelector(".detailInput");
-const HTMLhaveBarcode = document.querySelector(".haveBarcode");
 const HTMLproductURL = document.querySelector(".productURL");
-const HTMLproductCaution = document.querySelector(".proCaution");
 
 //stepTwo
 
@@ -221,12 +217,8 @@ stepResultButton.addEventListener("click", () => {
     //상품정보
     HTMLproductCategory.textContent = `${enToKr(clothMap, product_category)}`;
     HTMLdetailInput.textContent = `${detailInput}`;
-    HTMLhaveBarcode.textContent = `${haveBarcodeMap[barcodeValue]}`;
     HTMLproductURL.textContent = `${product_url}`;
-    HTMLproductCaution.textContent = `${enToKr(
-      productCautionMap,
-      arr_caution_product_type
-    )}`;
+
     //물류기본정보
     HTMLserviceLaunching.textContent = `${serviceLaunching(
       service_launching_status

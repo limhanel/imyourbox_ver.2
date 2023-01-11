@@ -31,21 +31,12 @@ if (
   window.location.pathname === "/"
 ) {
   //서비스소개서
-<<<<<<< HEAD
-  document.getElementById("gtagServiceDownload").onclick = function () {
-    gtag("event", "service", {
-      event_category: "(리뉴얼후)서비스소개서",
-      event_label: "(renewal)serviceFile",
-    });
-  };
-=======
   // document.getElementById("gtagServiceDownload").onclick = function () {
   //   gtag("event", "service", {
   //     event_category: "(리뉴얼후)서비스소개서",
   //     event_label: "(renewal)serviceFile",
   //   });
   // };
->>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684
 
   // 전화문의신청 -> 간단견적신청으로 변경예정
 

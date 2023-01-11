@@ -7,8 +7,9 @@
 @import "./price.scss";
 @import "./all-html.scss";
 @import "./header_footer.scss";
-<<<<<<< HEAD
-@import "./index.css";
+@import "./employment.scss";
+
+/* @import "./index.css"; */
 
 #kakao-talk-channel-chat-button {
   position: fixed;
@@ -19,18 +20,3 @@
   cursor: pointer;
   z-index: 5000;
 }
-=======
-@import "./employment.scss";
-
-/* @import "./index.css"; */
-
-#kakao-talk-channel-chat-button {
-    position: fixed;
-    /* top: 80vh;
-  right: 5vw; */
-    right: 1.2rem;
-    bottom: 6.25rem;
-    cursor: pointer;
-    z-index: 5000;
-}
->>>>>>> a4d03ddcf7a4096eede46726b0bde6e6c9594684
