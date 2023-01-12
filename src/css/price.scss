@@ -131,6 +131,9 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
 }
 
 .stepone__category__list li {
+  i {
+    color: #ffffff;
+  }
   .clothes {
     background: url("#{$baseURL}/catecory01.svg") no-repeat;
   }
@@ -155,12 +158,40 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .etc {
     background: url("#{$baseURL}/catecory08.svg") no-repeat;
   }
+  > input {
+    cursor: pointer;
+  }
   &:hover {
     box-shadow: 0px 0px 5px 0px #ff9948;
   }
   &.clicked {
     color: var(--color__checked);
   }
+}
+
+.clothes.clicked,
+.stuff.clicked,
+.beauty.clicked,
+.householdgoods.clicked,
+.electronics.clicked,
+.stationery.clicked,
+.food.clicked,
+.etc.clicked {
+  background-size: 3.375rem 3.375rem;
+  color: #ffffff;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  background-size: 2.1875rem 2.1875rem;
+  box-shadow: 0px 0px 5px 0px #ff9948;
+  color: var(--color__checked);
+}
+
+.inputStorePallet.clicked,
+.inputStoreBox.clicked,
+.total_packaing.clicked,
+.only_packaing.clicked {
+  box-shadow: 0px 0px 5px 0px #ff9948;
 }
 
 .detail__container {
@@ -176,20 +207,6 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   height: 40px;
   max-width: 100%;
   width: 100%;
-}
-
-.barcode-description {
-  color: var(--color_category_description);
-}
-
-.barcode__radio__groups {
-  margin: 0 auto;
-  align-items: center;
-  flex-flow: row wrap;
-  text-align: center;
-  .blankcontainer {
-    visibility: hidden;
-  }
 }
 
 .option__title__container {
@@ -222,39 +239,47 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
 }
 
-.productCaution__container {
-  flex-direction: column;
-  margin-top: 2.5rem;
-  align-items: left;
-  text-align: left;
-  .productCaution__title__container {
-    display: flex;
-    flex-direction: column;
-  }
-}
+.storageType__container__buttons li {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: calc((128% - 16px) / 3);
+  height: 2.5rem;
+  margin-left: 0.9375rem;
+  margin-top: 0.5625rem;
 
-.productCaution__list {
-  margin: 0 auto 50px auto;
-  align-items: center;
-  flex-flow: row wrap;
-  text-align: center;
-  .fragile {
-    background: url("#{$baseURL}/warning01.svg") no-repeat center;
+  i {
+    color: #ffffff;
   }
-  .discoloration {
-    background: url("#{$baseURL}/warning02.svg") no-repeat center;
+
+  .storageType__container__button {
+    -webkit-appearance: none; //safari;
+    width: 100%;
+    height: inherit;
+    border: 0px solid #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: "Noto Sans KR", sans-serif;
   }
-  .highprice {
-    background: url("#{$baseURL}/warning03.svg") no-repeat center;
+
+  .refrigerated_storage:hover,
+  .fronze_storage:hover,
+  .room_temperature:hover,
+  .low_temperature:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
   }
-  .fitness_product {
-    background: url("#{$baseURL}/warning04.svg") no-repeat center;
+  .refrigerated_storage.clicked,
+  .fronze_storage.clicked,
+  .room_temperature.clicked,
+  .low_temperature.clicked {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+    border: 0;
+    outline: 0;
   }
-  .largefurniture {
-    background: url("#{$baseURL}/warning05.svg") no-repeat center;
-  }
-  .position {
-    visibility: hidden;
+  span {
+    font-weight: 500;
+    font-size: 0.65rem;
+    color: #bfbfbf;
   }
 }
 
@@ -420,15 +445,29 @@ input[type="checkbox"]:checked {
   }
 }
 
+.typepallet.clicked,
+.typebox.clicked {
+  background-size: 3.375rem 3.375rem;
+  color: #ffffff;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  background-size: 2.1875rem 2.1875rem;
+  box-shadow: 0px 0px 5px 0px #ff9948;
+  color: var(--color__checked);
+}
+
 .output__radio__groups,
 .inputStoreType__radio__groups {
+  li:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
   label {
     height: 40%;
     margin-top: 20px;
     padding-top: 0 !important;
   }
 }
-
 .output__radio__groups_radio__text,
 .inputStoreType__radio__groups_radio__text {
   p {

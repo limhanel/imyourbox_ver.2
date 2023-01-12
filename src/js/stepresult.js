@@ -3,28 +3,18 @@ import {
   newCacluateDeliveryFee,
   newCaclutateWMSfee,
 } from "./newPrice";
+
 import {
   outputBoxCount,
-  inputStoreDate,
-  arr_logistics_service_kinds,
   inputStoreValue,
   inputStoreCount,
   skuInputStoreCount,
-  service_launching_status,
-} from "./stepTwo";
-import {
+  product_url,
   product_category,
   detailInput,
-  barcodeValue,
-  product_url,
-  arr_caution_product_type,
-} from "./stepone";
-import {
   releasepackaing,
-  use_service,
-  courier_bag,
-  processing_need,
-} from "./stepThree";
+} from "./stepTwo";
+
 import {
   customer_company,
   customer_phone,
@@ -64,57 +54,7 @@ const clothMap = {
   etc: "기타",
 };
 
-//취급주의
-const productCautionMap = {
-  fragile: "유리 등의 파손주의 상품",
-  discoloration: "인쇄물 등의 변색주의 상품",
-  highprice: "시계,귀중품 등 고가품",
-  fitness_product: "헬스용품 등 20kg 미만 중량물",
-  largefurniture: "침대 등 대형가구",
-};
-
 //stepTwo
-
-const serviceLaunching = (bool) => {
-  if (bool) {
-    return "서비스런칭";
-  } else {
-    return "서비스준비중";
-  }
-};
-
-const storeTypeMap = {
-  room_temperature: "상온보관",
-  low_temperature: "저온보관",
-  refrigerated_storage: "냉장보관",
-  fronze_storage: "냉동보관",
-};
-
-const logistics_service_kindsMap = {
-  fullfillment: "풀필먼트",
-  storeproduct: "상품보관",
-  processing: "임가공",
-  etc: "기타",
-};
-
-const haveBarcodeMap = {
-  have_barcode: "바코드있음",
-  no_barcode: "바코드없음",
-  part_barcode: "바코드 일부만 있음",
-};
-
-const deliveryBoxSizeMap = {
-  mini: "극소",
-  small: "소",
-  medium: "중",
-  large: "대",
-  giant: "특대",
-};
-
-const serviceUseMap = {
-  first: "처음입니다",
-  using: "이용중입니다",
-};
 
 const releasepackagingMap = {
   total_packaing: "합포장",
@@ -140,25 +80,15 @@ const monthStoreFee = document.querySelector(".monthstore__fee");
 const monthDeliveryFee = document.querySelector(".monthDelivery__fee");
 const monthWMSFee = document.querySelector(".monthWMS__fee");
 
-//stepOne
+//stepTwo
 const HTMLproductCategory = document.querySelector(".productCategory");
 const HTMLdetailInput = document.querySelector(".detailInput");
 const HTMLproductURL = document.querySelector(".productURL");
-
-//stepTwo
-
-const HTMLserviceLaunching = document.querySelector(".serviceLaunching");
-const HTMLlogisticsServiceKinds = document.querySelector(
-  ".logisticsServiceKinds"
-);
 const HTMLinputStoreCount = document.querySelector(".inputStoreCount");
 const HTMLinputSKUcount = document.querySelector(".inputSKUcount");
-const HTMLinputDateResult = document.querySelector(".inputDateResult");
-const HTMLoutputDeliveryCount = document.querySelector(".outputDeliveryCount");
 
 //stepThree
 
-const HTMLuseService = document.querySelector(".userService");
 const HTMLoutputPackaing = document.querySelector(".outputPackaing");
 const HTMLcourierBagSpan = document.querySelector(".courierBagSpan");
 const HTMLprocessingNeedWork = document.querySelector(".processingNeedWork");
@@ -220,23 +150,10 @@ stepResultButton.addEventListener("click", () => {
     HTMLproductURL.textContent = `${product_url}`;
 
     //물류기본정보
-    HTMLserviceLaunching.textContent = `${serviceLaunching(
-      service_launching_status
-    )}`;
-    HTMLlogisticsServiceKinds.textContent = `${enToKr(
-      logistics_service_kindsMap,
-      arr_logistics_service_kinds
-    )}`;
     HTMLinputStoreCount.textContent = `${inputStoreCount} ${inputStoreValue}`;
     HTMLinputSKUcount.textContent = `${skuInputStoreCount.toString()} 개`;
-
-    console.log(inputStoreDate);
-    HTMLinputDateResult.textContent = `${inputStoreDate}`;
-    HTMLoutputDeliveryCount.textContent = `${outputBoxCount.toString()}  ${
-      deliveryBoxSizeMap[outputBoxsizeValue]
-    }`;
     //물류추가정보
-    HTMLuseService.textContent = `${checkNull(serviceUseMap[use_service])}`;
+
     HTMLoutputPackaing.textContent = `${checkNull(
       releasepackagingMap[releasepackaing]
     )}`;

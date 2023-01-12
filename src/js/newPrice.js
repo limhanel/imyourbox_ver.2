@@ -1,4 +1,4 @@
-const newCaclulateStoreFee = (storeType, storeValue, boxsize) => {
+const newCaclulateStoreFee = (storeType, storeValue) => {
   let oneDayStorePrice = 600;
   let monthStoreprice = 0;
   let boxcount = 70;
@@ -7,10 +7,6 @@ const newCaclulateStoreFee = (storeType, storeValue, boxsize) => {
     console.log(`caclulateStoreFee ${monthStoreprice}`);
     return (monthStoreprice = storeValue * oneDayStorePrice * 30);
   } else if (storeType === "box") {
-    if (boxsize === null) {
-      console.log("설마여기로들어오나?");
-      return;
-    }
     let covnvertToPlt = Math.floor(storeValue / boxcount);
 
     //박스일때 월보관료

@@ -4,7 +4,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
-const WebpackCdnPlugin = require("webpack-cdn-plugin");
 const webpack = require("webpack");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 const production = process.env.NODE_ENV === "production";
@@ -36,7 +35,8 @@ module.exports = {
       {
         test: /\.(sc|c|sa)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          // { loader: "style-loader" },
+          { loader: MiniCssExtractPlugin.loader },
           {
             loader: "css-loader",
             options: {

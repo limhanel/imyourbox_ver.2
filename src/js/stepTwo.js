@@ -1,53 +1,84 @@
 import noUiSlider from "nouislider";
 import "nouislider/distribute/nouislider.css";
 import wNumb from "wnumb";
-import flatpickr from "flatpickr";
 import "flatpickr/dist/themes/material_orange.css";
-import { Korean } from "flatpickr/dist/l10n/ko";
-import moment from "moment";
 const CLICKED_CLASS = "clicked";
 
 //step2
-//서비스런칭 여부
-let service_launching_status = false;
-const checkbox = document.querySelector("#prepare");
-checkbox.addEventListener("change", (e) => {
-  service_launching_status = e.target.checked;
-  console.log(service_launching_status);
-});
-//문의할 물류 서비스
-const arr_logistics_service_kinds = [];
-const buttons_logistics_service_kinds_type = document.querySelectorAll(
-  "ul.logistics_service_kinds__container > li >div"
+
+//상품종류
+const product_category = [];
+const buttons_category = document.querySelectorAll(
+  "ul.stepone__category__list>li>input"
 );
-buttons_logistics_service_kinds_type.forEach((e) => {
+
+const white = "#ffffff";
+buttons_category.forEach((e) => {
   e.addEventListener("click", () => {
-    const checked__icon = e.childNodes[4];
-    const splitStorageType = e.className.split(" ")[1];
-    // console.log(`${splitStorageType}`)
-    // console.log(arr_logistics_service_kinds.includes(splitStorageType));
-    if (arr_logistics_service_kinds.includes(splitStorageType)) {
-      arr_logistics_service_kinds.splice(
-        arr_logistics_service_kinds.indexOf(splitStorageType),
-        1
-      );
+    const checked__icon = e.parentElement.lastElementChild;
+    const splitCategory = e.className.split(" ")[1];
+    if (product_category.includes(splitCategory)) {
+      product_category.splice(product_category.indexOf(splitCategory), 1);
       checked__icon.style.color = "#ffffff";
       checked__icon.style.opacity = 0.7;
     } else {
-      arr_logistics_service_kinds.push(splitStorageType);
+      product_category.push(splitCategory);
       checked__icon.style.color = "#f18b24";
       checked__icon.style.opacity = 0.7;
     }
-    console.log(arr_logistics_service_kinds);
     e.classList.toggle(CLICKED_CLASS);
   });
 });
 
+//상세 품목
+let detailInput = "";
+const input_detail = document.querySelector(".detail__input");
+input_detail.addEventListener("input", (e) => {
+  detailInput = e.target.value;
+  console.log(detailInput);
+  input_detail.style.backgroundColor = white;
+});
+
+//보관형태
+const arr_storage_type = [];
+const buttons_storage_type = document.querySelectorAll(
+  "ul.storageType__container__buttons > li> input"
+);
+buttons_storage_type.forEach((e) => {
+  e.addEventListener("click", () => {
+    const checked__icon = e.parentElement.lastElementChild;
+    const splitStorageType = e.className.split(" ")[1];
+    if (arr_storage_type.includes(splitStorageType)) {
+      arr_storage_type.splice(arr_storage_type.indexOf(splitStorageType), 1);
+      e.style.color = "#474747";
+      checked__icon.style.color = "#ffffff";
+      checked__icon.style.opacity = 0.7;
+    } else {
+      arr_storage_type.push(splitStorageType);
+      checked__icon.style.color = "#f18b24";
+      checked__icon.style.opacity = 0.7;
+      e.style.color = "#f18b24";
+    }
+    console.log(arr_storage_type);
+    e.classList.toggle(CLICKED_CLASS);
+  });
+});
+
+//대표상품 URL
+let product_url = "";
+const input_product_url = document.querySelector(".productURL__input");
+
+input_product_url.addEventListener("input", (e) => {
+  product_url = e.target.value;
+  input_product_url.style.backgroundColor = white;
+  console.log(product_url);
+});
+
 //물류보관량
 let inputStoreValue = "pallet";
-const boxItem = document.querySelector(".box__checked__container");
 const storeUnit = document.querySelector(".store__unit");
-//boxItem.style.display = "none";
+const selectedPalletTag = document.querySelector(".inputStorePallet");
+const selectedBoxTag = document.querySelector(".inputStoreBox");
 const radio_inputStores = document.querySelector(
   ".inputStoreType__radio__groups"
 );
@@ -56,33 +87,33 @@ radio_inputStores.addEventListener("change", (e) => {
     ".inputStoreType__radio__groups > li"
   );
 
-  const black = "#000000";
   const selectedColor = "#f18b24";
+  const black = "#000000";
+  let pallteTitle = selected[0].childNodes[1].childNodes[5].childNodes[1];
+  let pallteDescription = selected[0].childNodes[1].childNodes[5].childNodes[3];
+  let boxTitle = selected[1].childNodes[1].childNodes[5].childNodes[1];
+  let boxDescription = selected[1].childNodes[1].childNodes[5].childNodes[3];
+
   inputStoreValue = e.target.value;
+
   switch (inputStoreValue) {
     case "pallet":
-      selected[0].style.boxShadow = "0px 0px 5px 0px #ff9948";
-      selected[0].childNodes[0].childNodes[3].childNodes[0].style.color =
-        selectedColor;
-      selected[0].childNodes[0].childNodes[3].childNodes[2].style.color =
-        selectedColor;
-      selected[1].style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
-      selected[1].childNodes[0].childNodes[3].childNodes[0].style.color = black;
-      selected[1].childNodes[0].childNodes[3].childNodes[2].style.color = black;
+      pallteTitle.style.color = selectedColor;
+      pallteDescription.style.color = selectedColor;
+      boxTitle.style.color = black;
+      boxDescription.style.color = black;
       storeUnit.textContent = "plt";
-      boxItem.style.display = "none";
+      selectedPalletTag.classList.toggle(CLICKED_CLASS);
+      selectedBoxTag.classList.remove(CLICKED_CLASS);
       break;
     case "box":
-      selected[1].style.boxShadow = "0px 0px 5px 0px #ff9948";
-      selected[1].childNodes[0].childNodes[3].childNodes[0].style.color =
-        selectedColor;
-      selected[1].childNodes[0].childNodes[3].childNodes[2].style.color =
-        selectedColor;
-      selected[0].style.boxShadow = "0px 0px 5px 0px rgba(0, 0, 0, 0.15)";
-      selected[0].childNodes[0].childNodes[3].childNodes[0].style.color = black;
-      selected[0].childNodes[0].childNodes[3].childNodes[2].style.color = black;
+      pallteTitle.style.color = black;
+      pallteDescription.style.color = black;
+      boxTitle.style.color = selectedColor;
+      boxDescription.style.color = selectedColor;
       storeUnit.textContent = "박스";
-      boxItem.style.display = "";
+      selectedPalletTag.classList.remove(CLICKED_CLASS);
+      selectedBoxTag.classList.toggle(CLICKED_CLASS);
       break;
     default:
       break;
@@ -118,7 +149,6 @@ indicatorInputStore.addEventListener("input", (e) => {
   console.log(inputStoreCount);
 });
 
-console.log("?????");
 //inputStoreCountSKU
 let sku__range__inputStore = document.querySelector(".inputStore__sku__range");
 let indicatorSKUInputStore = document.querySelector(
@@ -172,31 +202,59 @@ indicatorOutputBox.addEventListener("input", (e) => {
   outputRangeSlider.noUiSlider.set(e.target.value);
   outputBoxCount = outputRangeSlider.noUiSlider.get();
 });
-//input_store_date
-let inputStoreDate = moment().format("YYYY-MM-DD");
+//출고패키징
+let releasepackaing = "total_packaing";
+const outputRadio_inputStores = document.querySelector(
+  ".output__radio__groups"
+);
+const selectedTotalPackaingTag = document.querySelector(".total_packaing");
+const selectedOnlyPackaingTag = document.querySelector(".only_packaing");
 
-flatpickr(".calendar-inputStoreDate", {
-  locale: Korean,
-  onChange: (selectedDate, dateStr) => {
-    inputStoreDate = dateStr;
-    // console.log(nputStoreDate);
-    // console.log(typeof inputStoreDate);
-  },
+outputRadio_inputStores.addEventListener("change", (e) => {
+  const selected = document.querySelectorAll(".output__radio__groups > li");
+  let totalPackingTitle = selected[0].childNodes[1].childNodes[5].childNodes[1];
+  let totalPackingeDescription =
+    selected[0].childNodes[1].childNodes[5].childNodes[3];
+  let onlyPackingTitle = selected[1].childNodes[1].childNodes[5].childNodes[1];
+  let onlyPackingDescription =
+    selected[1].childNodes[1].childNodes[5].childNodes[3];
+  const black = "#000000";
+  const selectedColor = "#f18b24";
+  releasepackaing = e.target.value;
+  switch (releasepackaing) {
+    case "total_packaing":
+      selectedTotalPackaingTag.classList.toggle(CLICKED_CLASS);
+      selectedOnlyPackaingTag.classList.remove(CLICKED_CLASS);
+      totalPackingTitle.style.color = selectedColor;
+      totalPackingeDescription.style.color = selectedColor;
+      onlyPackingTitle.style.color = black;
+      onlyPackingDescription.style.color = black;
+      break;
+    case "only_packaing":
+      selectedTotalPackaingTag.classList.remove(CLICKED_CLASS);
+      selectedOnlyPackaingTag.classList.toggle(CLICKED_CLASS);
+      onlyPackingTitle.style.color = selectedColor;
+      onlyPackingDescription.style.color = selectedColor;
+      totalPackingTitle.style.color = black;
+      totalPackingeDescription.style.color = black;
+      break;
+    default:
+      break;
+  }
 });
 
 export {
-  //service_launching_status
-  service_launching_status,
-  //물류서비스/servicekinds
-  arr_logistics_service_kinds,
+  product_category,
+  detailInput,
+  arr_storage_type,
+  product_url,
   //물류보관타입/input_store_type
   inputStoreValue,
   //보관량/input_store_num
   inputStoreCount,
   //입고sku양 /input_sku_store_num
   skuInputStoreCount,
-  //input_store_date
-  inputStoreDate,
   //output_delivery_box_amount,
   outputBoxCount,
+  releasepackaing,
 };

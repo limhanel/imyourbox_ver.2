@@ -6,26 +6,17 @@ import {
   permissionPersonalInfo,
   customer_memo,
 } from "./stepFour";
+
 import {
+  inputStoreCount,
+  inputStoreValue,
+  outputBoxCount,
+  skuInputStoreCount,
   product_category,
   detailInput,
   arr_storage_type,
   product_url,
-} from "./stepone";
-import {
-  courier_bag,
-  processing_need,
   releasepackaing,
-  use_service,
-} from "./stepThree";
-import {
-  arr_logistics_service_kinds,
-  inputStoreCount,
-  inputStoreDate,
-  inputStoreValue,
-  outputBoxCount,
-  service_launching_status,
-  skuInputStoreCount,
 } from "./stepTwo";
 import { detailOrderInfo } from "./lib/api/detail_order_info";
 import Swal from "sweetalert2";
@@ -225,7 +216,7 @@ nextBtn.addEventListener("click", () => {
         input_store_type: inputStoreValue,
         input_store_num: inputStoreCount,
         input_sku_store_num: skuInputStoreCount,
-        input_store_date: inputStoreDate,
+        input_store_date: "",
         output_delivery_box_amount: outputBoxCount,
         use_service: use_service,
         output_packaing: releasepackaing,
