@@ -70,25 +70,6 @@ $animation :all 0.3s ease 0s;
     @include blind
 }
 
-.cont1 {
-    margin-top: 55px;
-}
-
-.cont2,
-.cont3,
-.cont5,
-.cont6,
-.cont7,
-.cont8,
-.cont9,
-.cont10 {
-    padding: 120px 0;
-}
-
-.cont4 {
-    padding: 0;
-}
-
 
 /*---전체 컬러 디자인---*/
 
@@ -298,10 +279,9 @@ $font-white :#fff;
 
 .large-button {
     margin-top: 20px;
-    width: 300px;
-    margin-left: calc(50% - 175px);
+    width: 250px;
+    margin-left: calc(50% - 150px);
     text-align: center;
-    padding: 12px 0;
     i {
         margin-left: 20px;
     }
@@ -331,7 +311,6 @@ $font-white :#fff;
 }
 
 h2 {
-    font-size: $fs-2x-large;
     font-weight: 600;
     margin-bottom: 30px;
     line-height: 1.2em;
@@ -416,6 +395,12 @@ input[type="number"] {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 10px;
+}
+
+.memo__input__container {
+    .simple__input {
+        height: 280px;
+    }
 }
 
 .checkbox {

@@ -15,8 +15,8 @@ p.strong {
     .cont--inner {
         .cont1-text {
             position: absolute;
-            top: -650px;
             width: 100%;
+            color: #fff;
             .button {
                 padding: 1.5em 1em;
                 box-sizing: border-box;
@@ -99,8 +99,8 @@ p.strong {
     }
 }
 
-.simple__input__area {
-    background-color: rgb(240, 240, 240) !important;
+.cont6 {
+    background-color: rgb(240, 240, 240);
 }
 
 
@@ -184,6 +184,14 @@ p.strong {
 /*--------- 모바일 반응형 --------*/
 
 @media screen and (min-width:0px) and (max-width:1079px) {
+    .cont1 {
+        .button {
+            margin-top: 20px;
+        }
+        .cont1-text {
+            top: -750px;
+        }
+    }
     .cont5 {
         p {
             text-align: center;
@@ -196,12 +204,23 @@ p.strong {
             padding-top: 60px;
         }
     }
+    .cont6 {
+        margin-top: 50px;
+    }
 }
 
 
 /*--------- PC 반응형 --------*/
 
 @media screen and (min-width:1080px) {
+    .cont1 {
+        .button {
+            margin-top: 100px;
+        }
+        .cont1-text {
+            top: -650px;
+        }
+    }
     .cont5 {
         margin: 0 auto;
         p.strong {

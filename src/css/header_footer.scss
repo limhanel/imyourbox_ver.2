@@ -195,19 +195,6 @@ footer {
     .call {
         float: right;
         padding-top: 28px;
-        font-size: $fs-large;
-    }
-    ul {
-        &.use {
-            float: left;
-        }
-        &.sns {
-            float: right;
-        }
-        li {
-            float: left;
-            margin-right: 30px;
-        }
     }
     .contact>div {
         padding: 2em 0;

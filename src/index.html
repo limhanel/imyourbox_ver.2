@@ -30,23 +30,22 @@
     </head>
 
     <body>
-        <header data-include="./include/header.html"></header>
-        <div id="container">
-            <!-- <div data-include1="header-html" id="header-html"></div> -->
 
+        <div id="container">
+            <div data-include1="header-html" id="header-html"></div>
             <div class="cont-box">
                 <div class="cont1">
                     <div class="slideshow-container">
                         <div class="main-slider fade active">
-                            <img src="../src/images/back-img01.jpg">
+                            <img src="../src/images/main-back-img01.jpg">
                         </div>
 
                         <div class="main-slider fade">
-                            <img src="../src/images/back-img02.jpg">
+                            <img src="../src/images/main-back-img02.jpg">
                         </div>
 
                         <div class="main-slider fade">
-                            <img src="../src/images/back-img03.jpg">
+                            <img src="../src/images/main-back-img03.jpg">
                         </div>
 
                         <div class="cont--inner">
@@ -54,7 +53,7 @@
                             <a class="main-next arrow-button" onclick="nextMainSlide()">&#10095;</a>
                             <div class="cont1-text">
                                 <h2>사장님은 판매만 하세요!<br>물류 통합 솔루션</h2>
-                                <p><span style="font-weight:600">물류관리부터 배송까지<br></span> 한번에 끝내는 나의 물류매니저</p>
+                                <p style="color:#fff"><span style="font-weight:600; color:#fff">물류관리부터 배송까지<br></span > 한번에 끝내는 나의 물류매니저</p>
                                 <div class="flexbox_02">
                                     <a class="button button-type2 item_02">
                                         <p>빠른 물류매니저와의 문의를 원한다면?</p>간편문의</a>
@@ -275,7 +274,7 @@
                         </div>
                         <!--consumer-->
 
-                        <div class="button button-type1 large-button"><a onclick=" ">예상견적 보러가기<i class="fa-solid fa-arrow-right fa-lg "></i></a>
+                        <div class="button button-type1 large-button"><a href="price.html" onclick=" ">예상견적 보러가기<i class="fa-solid fa-arrow-right fa-lg "></i></a>
                         </div>
                     </div>
                     <!--cont--inner-->
@@ -342,11 +341,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
                             </div>
                             <!--section__container-->
                             <div class="checkbox__area">
@@ -384,11 +378,11 @@
     <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
         $(function() {
-            // var includes1 = $('[data-include1="header-html"]');
+            var includes1 = $('[data-include1="header-html"]');
             var includes2 = $('[data-include2="footer-html"]');
-            // jQuery.each(includes1, function() {
-            //     $(this).load('header.html');
-            // });
+            jQuery.each(includes1, function() {
+                $(this).load('header.html');
+            });
             jQuery.each(includes2, function() {
                 $(this).load('footer.html');
             });
