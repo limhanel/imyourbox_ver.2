@@ -34,7 +34,7 @@
         <div id="container">
             <div id="svg_wrap"></div>
             <div class="cont-box cont-padding">
-                <section id="stepfour" class="secton">
+                <section id="firstStep" class="secton">
                     <div class="simple__input__area">
                         <div class="cont--inner">
                             <h3 class="">상담전화 및 견적서 발송을 위한 정보를 입력해주세요</h3>
@@ -48,7 +48,7 @@
                                                 <span class="stepone__category-title">업체명 *</span>
                                             </div>
                                             <div class="stepfour__detail__input__container">
-                                                <input type="input" class="simple__input simple_customer_company" placeholder=" 회사명 "></input>
+                                                <input type="input" class="simple__input customer_company" placeholder=" 회사명 "></input>
                                             </div>
                                         </div>
                                         <div class="detail__container stepFour__container second__detail__container ">
@@ -56,7 +56,7 @@
                                                 <span class="stepone__category-title">연락처 *</span>
                                             </div>
                                             <div class="detail__input__container stepfour__detail__input__container">
-                                                <input type="number" class="simple__input simple_customer_phone" placeholder=" 핸드폰번호 "></input>
+                                                <input type="number" class="simple__input customer_phone" placeholder=" 핸드폰번호 "></input>
                                             </div>
                                         </div>
 
@@ -66,7 +66,7 @@
                                                 <span class="stepone__category-title ">이메일 *</span>
                                             </div>
                                             <div class="detail__input__container stepfour__detail__input__container">
-                                                <input type="input" class="simple__input simple_customer_email" placeholder=" Email "></input>
+                                                <input type="input" class="simple__input customer_email" placeholder=" Email "></input>
                                             </div>
                                         </div>
                                         <div class="detail__container stepFour__container second__detail__container">
@@ -74,7 +74,7 @@
                                                 <span class="stepone__category-title">담당자 성함 *</span>
                                             </div>
                                             <div class="detail__input__container stepfour__detail__input__container ">
-                                                <input type="input" class="simple__input simple_customer_manager_name " placeholder=" 담당자명"></input>
+                                                <input type="input" class="simple__input customer_manager_name " placeholder=" 담당자명"></input>
                                             </div>
                                         </div>
 
@@ -84,7 +84,7 @@
                                             <span class="stepone__category-title">상담 내용 </span>
                                         </div>
                                         <div class="memo__input__container">
-                                            <textarea class="simple__textarea simple_customer_memo simple__input" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보가 있으시다면 입력해주세요."></textarea>
+                                            <textarea class="simple__textarea customer_memo simple__input" rows="5" cols="33" placeholder="판매상품의 종류, 취급수, 취급방법 등 상담에 도움이 될 정보가 있으시다면 입력해주세요."></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -94,15 +94,15 @@
                             <div class="checkbox__area">
                                 <div class="stepone__category endfour__container">
                                     <div class="last__checkbox simpleOrder__checkbox">
-                                        <input id="simpleOrder__permission" class="checkbox" type="checkbox">
-                                        <label for="simpleOrder__permission "><span class="check">개인정보 수집 및 이용목적에 동의합니다.<br>
+                                        <input id="permission" class="checkbox" type="checkbox">
+                                        <label for="permission "><span class="check">개인정보 수집 및 이용목적에 동의합니다.<br>
                                                             입력해주신 개인정보는 문의/상담 목적으로 사용되며 사용 후 즉시 폐기됩니다.</span></label>
                                     </div>
                                 </div>
                             </div>
                 </section>
 
-                <section>
+                <section id="secondStep">
                     <div class="simple__input__area">
                         <div class="cont--inner">
                             <h3 class="">상담에 필요한 상세정보를 입력 해 주세요
@@ -374,7 +374,7 @@
 
                 </section>
 
-                <section id="stepresult" class="section">
+                <section id="finalStep" class="section">
                     <div class="section__container">
                         <div class="cont--inner">
                             <div class="avatar">
@@ -424,8 +424,7 @@
                                         <input type="input" class="pro__input" placeholder="포장방식을 입력하세요"></input>
                                     </div>
 
-                                    <a class="button-type1 recalculation 
-                    ">다시 계산하기</a>
+                                    <a class="button-type1 recalculation">다시 계산하기</a>
                                 </div>
                                 <div class="recalculation-text">
                                     <p>* 택배의 사이즈와 무게에 따라 금액은 변동될 수 있습니다.<br> * 상품의 수와 종류, 바코드 여부에 따라 가격은 바뀔 수 있습니다.<br> * 해당 견적은 임가공 추가에 따라 변동될 수 있습니다
@@ -550,13 +549,10 @@
                 </section>
 
 
-
-
-
                 <div class="cont--inner button-inner">
                     <div class="button button-type1" id="prev"><a>&larr; 이전페이지</a></div>
-                    <div class="button button-type1" id="next"><a>다음페이지 &rarr;</a></div>
-                    <div class="button button-type1" id="submit"><a id="gtagSimpleOrder" class=" callSimpleOrderBtn" onclick=" ">견적서 받아보기</a></div>
+                    <div class="button button-type1 next_button" id="next"><a>다음페이지 &rarr;</a></div>
+                    <!-- <div class="button button-type1" id="submit"><a id="gtagSimpleOrder" class=" callSimpleOrderBtn" onclick=" ">견적서 받아보기</a></div> -->
                 </div>
 
                 </div>
@@ -577,111 +573,6 @@
                             $(this).load('footer.html');
                         });
                     });
-                </script>
-
-
-                <script>
-                    $(document).ready(function() {
-                        var base_color = "rgb(230,230,230)";
-                        var active_color = "rgb(237, 40, 70)";
-                        var child = 1;
-                        var length = $("section").length - 1;
-                        $("#prev").addClass("disabled");
-                        $("#submit").addClass("disabled");
-
-                        $("section").not("section:nth-of-type(1)").hide();
-                        $("section").not("section:nth-of-type(1)").css('transform', 'translateX(100px)');
-
-                        var svgWidth = length * 200 + 24;
-                        $("#svg_wrap").html(
-                            '<svg version="1.1" id="svg_form_time" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 ' +
-                            svgWidth +
-                            ' 24" xml:space="preserve"></svg>'
-                        );
-
-                        function makeSVG(tag, attrs) {
-                            var el = document.createElementNS("http://www.w3.org/2000/svg", tag);
-                            for (var k in attrs) el.setAttribute(k, attrs[k]);
-                            return el;
-                        }
-
-                        for (i = 0; i < length; i++) {
-                            var positionX = 12 + i * 200;
-                            var rect = makeSVG("rect", {
-                                x: positionX,
-                                y: 9,
-                                width: 200,
-                                height: 6
-                            });
-                            document.getElementById("svg_form_time").appendChild(rect);
-                            // <g><rect x="12" y="9" width="200" height="6"></rect></g>'
-                            var circle = makeSVG("circle", {
-                                cx: positionX,
-                                cy: 12,
-                                r: 12,
-                                width: positionX,
-                                height: 6
-                            });
-                            document.getElementById("svg_form_time").appendChild(circle);
-                        }
-
-                        var circle = makeSVG("circle", {
-                            cx: positionX + 200,
-                            cy: 12,
-                            r: 12,
-                            width: positionX,
-                            height: 6
-                        });
-                        document.getElementById("svg_form_time").appendChild(circle);
-
-                        $('#svg_form_time rect').css('fill', base_color);
-                        $('#svg_form_time circle').css('fill', base_color);
-                        $("circle:nth-of-type(1)").css("fill", active_color);
-
-
-                        $(".button").click(function() {
-                            $("#svg_form_time rect").css("fill", active_color);
-                            $("#svg_form_time circle").css("fill", active_color);
-                            var id = $(this).attr("id");
-                            if (id == "next") {
-                                $("#prev").removeClass("disabled");
-                                if (child >= length) {
-                                    $(this).addClass("disabled");
-                                    $('#submit').removeClass("disabled");
-                                }
-                                if (child <= length) {
-                                    child++;
-                                }
-                            } else if (id == "prev") {
-                                $("#next").removeClass("disabled");
-                                $('#submit').addClass("disabled");
-                                if (child <= 2) {
-                                    $(this).addClass("disabled");
-                                }
-                                if (child > 1) {
-                                    child--;
-                                }
-                            }
-                            var circle_child = child + 1;
-                            $("#svg_form_time rect:nth-of-type(n + " + child + ")").css(
-                                "fill",
-                                base_color
-                            );
-                            $("#svg_form_time circle:nth-of-type(n + " + circle_child + ")").css(
-                                "fill",
-                                base_color
-                            );
-                            var currentSection = $("section:nth-of-type(" + child + ")");
-                            currentSection.fadeIn();
-                            currentSection.css('transform', 'translateX(0)');
-                            currentSection.prevAll('section').css('transform', 'translateX(-100px)');
-                            currentSection.nextAll('section').css('transform', 'translateX(100px)');
-                            $('section').not(currentSection).hide();
-                        });
-
-                    });
-                </script>
-                <script type="text/javascript" src="js/button.js">
                 </script>
     </body>
 

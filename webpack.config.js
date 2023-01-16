@@ -23,7 +23,7 @@ module.exports = {
     contentBase: path.resolve(__dirname, ""),
     watchContentBase: true,
     host: "127.0.0.1",
-    port: 8080,
+    port: 3000,
   },
   target: "web",
   module: {

@@ -8,10 +8,9 @@ import "./lib/marketing/google";
 import "./lib/marketing/mirae";
 import "./lib/marketing/mob";
 import "./lib/marketing/naver";
-import "./stepTwo";
-import "./stepFour";
-import "./button";
-import "./stepresult";
+import "./priceStepTwo";
+import "./priceStepFirst";
+import "./priceStepFinal";
 import KakaoChat from "./lib/chat/kakaochat";
 
 KakaoChat();

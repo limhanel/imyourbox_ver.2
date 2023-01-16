@@ -75,7 +75,7 @@ input_product_url.addEventListener("input", (e) => {
 });
 
 //물류보관량
-let inputStoreValue = "pallet";
+let inputStoreType = "pallet";
 const storeUnit = document.querySelector(".store__unit");
 const selectedPalletTag = document.querySelector(".inputStorePallet");
 const selectedBoxTag = document.querySelector(".inputStoreBox");
@@ -94,9 +94,9 @@ radio_inputStores.addEventListener("change", (e) => {
   let boxTitle = selected[1].childNodes[1].childNodes[5].childNodes[1];
   let boxDescription = selected[1].childNodes[1].childNodes[5].childNodes[3];
 
-  inputStoreValue = e.target.value;
+  inputStoreType = e.target.value;
 
-  switch (inputStoreValue) {
+  switch (inputStoreType) {
     case "pallet":
       pallteTitle.style.color = selectedColor;
       pallteDescription.style.color = selectedColor;
@@ -154,6 +154,7 @@ let sku__range__inputStore = document.querySelector(".inputStore__sku__range");
 let indicatorSKUInputStore = document.querySelector(
   ".indicator__inputStore__sku__range"
 );
+
 let skuInputStoreCount = 0;
 noUiSlider.create(sku__range__inputStore, {
   start: [0],
@@ -202,6 +203,7 @@ indicatorOutputBox.addEventListener("input", (e) => {
   outputRangeSlider.noUiSlider.set(e.target.value);
   outputBoxCount = outputRangeSlider.noUiSlider.get();
 });
+
 //출고패키징
 let releasepackaing = "total_packaing";
 const outputRadio_inputStores = document.querySelector(
@@ -249,7 +251,7 @@ export {
   arr_storage_type,
   product_url,
   //물류보관타입/input_store_type
-  inputStoreValue,
+  inputStoreType,
   //보관량/input_store_num
   inputStoreCount,
   //입고sku양 /input_sku_store_num

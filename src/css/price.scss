@@ -756,6 +756,27 @@ input[type="checkbox"]:checked {
   }
 }
 
+.fadeIn {
+  display: block;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(-5%, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+/* fadeOut */
+.show-layer {
+  margin-top: 10px;
+}
+
 //responsive
 @media screen and (min-width: 768px) {
   // .endfour__container {
