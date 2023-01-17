@@ -144,7 +144,7 @@ recalculationButton.addEventListener("click", () => {
 
 if (priceSectionIndex.get() == 1) {
   stepPrevButton.style.display = "none";
-  HTMLpriceFirstSection.classList.add("fadeIn");
+  // HTMLpriceFirstSection.classList.add("fadeIn");
   HTMLpriceSecondSection.style.display = "none";
   HTMLpriceFinalSection.style.display = "none";
 }

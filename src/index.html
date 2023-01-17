@@ -17,8 +17,8 @@
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-        <link rel="stylesheet"  href="./css/index.scss"  type="text/css"/>
-        <!-- <link rel="stylesheet" type="text/css" href="/src/css/index.scss" />
+        <!-- <link rel="stylesheet" type="text/css" href="css/all-html.css" />
+        <link rel="stylesheet" type="text/css" href="css/all-responsive.css" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/slick-theme.css" /> -->
 
@@ -26,24 +26,26 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
         <!-- Enliple Common Tracker v3.6 [공용] end -->
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <script src="./include.js" defer></script>
     </head>
 
     <body>
+
         <div id="container">
             <div data-include1="header-html" id="header-html"></div>
             <div class="cont-box">
                 <div class="cont1">
                     <div class="slideshow-container">
                         <div class="main-slider fade active">
-                            <img src="../src/images/back-img01.jpg">
+                            <img src="../src/images/main-back-img01.jpg">
                         </div>
 
                         <div class="main-slider fade">
-                            <img src="../src/images/back-img02.jpg">
+                            <img src="../src/images/main-back-img02.jpg">
                         </div>
 
                         <div class="main-slider fade">
-                            <img src="../src/images/back-img03.jpg">
+                            <img src="../src/images/main-back-img03.jpg">
                         </div>
 
                         <div class="cont--inner">
@@ -51,7 +53,7 @@
                             <a class="main-next arrow-button" onclick="nextMainSlide()">&#10095;</a>
                             <div class="cont1-text">
                                 <h2>사장님은 판매만 하세요!<br>물류 통합 솔루션</h2>
-                                <p><span style="font-weight:600">물류관리부터 배송까지<br></span> 한번에 끝내는 나의 물류매니저</p>
+                                <p style="color:#fff"><span style="font-weight:600; color:#fff">물류관리부터 배송까지<br></span > 한번에 끝내는 나의 물류매니저</p>
                                 <div class="flexbox_02">
                                     <a class="button button-type2 item_02">
                                         <p>빠른 물류매니저와의 문의를 원한다면?</p>간편문의</a>
@@ -162,7 +164,6 @@
                 <div class="cont--inner">
                     <h3>NEWS</h3>
                     <div class="slider-wrap">
-
                         <div class="cont">
                             <a href="https://www.news1.kr/articles/?4302728" target="blank" alt="새페이지">
                                 <div class="news-img-area">
@@ -219,8 +220,7 @@
                                 <p class="news-title">아임유어박스, 위드온나인 MOU 체결…”소형 셀러들의 아마존 입점 쉬워진다”</p>
                             </a>
                         </div>
-                        <button type='button' class='slick-prev'><a>&#10094;</a></button>
-                        <button type='button' class='slick-next'><a>&#10095;</a></button>
+
                     </div>
 
                 </div>
@@ -273,9 +273,8 @@
                             <!--box-->
                         </div>
                         <!--consumer-->
-                        <div class="button button-type1 large-button"><a onclick=" ">견적 요청하기<i class="fa-solid fa-arrow-right fa-lg "></i></a>
-                        </div>
-                        <div class="button button-type1 large-button"><a onclick=" ">예상견적 보러가기<i class="fa-solid fa-arrow-right fa-lg "></i></a>
+
+                        <div class="button button-type1 large-button"><a href="price.html" onclick=" ">예상견적 보러가기<i class="fa-solid fa-arrow-right fa-lg "></i></a>
                         </div>
                     </div>
                     <!--cont--inner-->
@@ -342,11 +341,6 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-
-
                             </div>
                             <!--section__container-->
                             <div class="checkbox__area">
@@ -396,6 +390,9 @@
     </script>
 
     <!--header/footer include-->
+
+
+
     <script type="text/javascript">
         $(document).ready(function() {
             $(".cont4-slider").not(".active").hide();
@@ -521,17 +518,17 @@
                 autoplaySpeed: 2000, // 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
                 // pauseOnHover: true, // 슬라이드 이동    시 마우스 호버하면 슬라이더 멈추게 설정
                 vertical: false, // 세로 방향 슬라이드 옵션
-                prevArrow: "<button type='button' class='slick-prev'>Previous</button>",
-                nextArrow: "<button type='button' class='slick-next'>Next</button>",
+                prevArrow: "<button type='button' class='slick-prev'>&#10094;</button>",
+                nextArrow: "<button type='button' class='slick-next'>&#10095;</button>",
                 draggable: true, //드래그 가능 여부 
                 responsive: [ // 반응형 웹 구현 옵션
                     {
-                        breakpoint: 1079, //화면 사이즈 960px
+                        breakpoint: 1079, //화면 사이즈 1080px 이하일 때
                         settings: {
                             slidesToShow: 2
                         }
                     }, {
-                        breakpoint: 480, //화면 사이즈 768px
+                        breakpoint: 480, //화면 사이즈 480px 이하일 때
                         settings: {
                             slidesToShow: 1
                         }

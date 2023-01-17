@@ -14,10 +14,6 @@ span {
   display: block;
 }
 
-.simple__input__area {
-  background-color: #fff !important;
-}
-
 #svg_form_time {
   height: 20px;
   max-width: 80%;
@@ -169,31 +165,6 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
 }
 
-.clothes.clicked,
-.stuff.clicked,
-.beauty.clicked,
-.householdgoods.clicked,
-.electronics.clicked,
-.stationery.clicked,
-.food.clicked,
-.etc.clicked {
-  background-size: 3.375rem 3.375rem;
-  color: #ffffff;
-  border: 0;
-  outline: 0;
-  border-radius: 10px;
-  background-size: 2.1875rem 2.1875rem;
-  box-shadow: 0px 0px 5px 0px #ff9948;
-  color: var(--color__checked);
-}
-
-.inputStorePallet.clicked,
-.inputStoreBox.clicked,
-.total_packaing.clicked,
-.only_packaing.clicked {
-  box-shadow: 0px 0px 5px 0px #ff9948;
-}
-
 .detail__container {
   display: flex;
   flex-direction: column;
@@ -207,14 +178,6 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   height: 40px;
   max-width: 100%;
   width: 100%;
-}
-
-.option__title__container {
-  align-items: center;
-  .option__title-line {
-    width: 100%;
-    border: 0.5px solid #bfbfbf;
-  }
 }
 
 .productURL__container {
@@ -239,47 +202,39 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   }
 }
 
-.storageType__container__buttons li {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
-  border-radius: 20px;
-  width: calc((128% - 16px) / 3);
-  height: 2.5rem;
-  margin-left: 0.9375rem;
-  margin-top: 0.5625rem;
+.productCaution__container {
+  flex-direction: column;
+  margin-top: 2.5rem;
+  align-items: left;
+  text-align: left;
+  .productCaution__title__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
-  i {
-    color: #ffffff;
+.productCaution__list {
+  margin: 0 auto 50px auto;
+  align-items: center;
+  flex-flow: row wrap;
+  text-align: center;
+  .fragile {
+    background: url("#{$baseURL}/warning01.svg") no-repeat center;
   }
-
-  .storageType__container__button {
-    -webkit-appearance: none; //safari;
-    width: 100%;
-    height: inherit;
-    border: 0px solid #ffffff;
-    background-color: #ffffff;
-    cursor: pointer;
-    border-radius: 20px;
-    font-family: "Noto Sans KR", sans-serif;
+  .discoloration {
+    background: url("#{$baseURL}/warning02.svg") no-repeat center;
   }
-
-  .refrigerated_storage:hover,
-  .fronze_storage:hover,
-  .room_temperature:hover,
-  .low_temperature:hover {
-    box-shadow: 0px 0px 5px 0px #ff9948;
+  .highprice {
+    background: url("#{$baseURL}/warning03.svg") no-repeat center;
   }
-  .refrigerated_storage.clicked,
-  .fronze_storage.clicked,
-  .room_temperature.clicked,
-  .low_temperature.clicked {
-    box-shadow: 0px 0px 5px 0px #ff9948;
-    border: 0;
-    outline: 0;
+  .fitness_product {
+    background: url("#{$baseURL}/warning04.svg") no-repeat center;
   }
-  span {
-    font-weight: 500;
-    font-size: 0.65rem;
-    color: #bfbfbf;
+  .largefurniture {
+    background: url("#{$baseURL}/warning05.svg") no-repeat center;
+  }
+  .position {
+    visibility: hidden;
   }
 }
 
@@ -323,15 +278,15 @@ input[type="checkbox"]:checked {
 
 .noUi-target {
   width: 100%;
-  height: 8px;
-  background-color: rgb(242, 242, 242);
-  border: 3px solid #ccc;
+  height: 14px;
+  background-color: rgb(236, 236, 236);
   cursor: pointer;
   border-radius: 10px;
   /* iOS */
   margin-bottom: 0.5rem;
   margin: 2% auto;
   margin-bottom: 1%;
+  border: none;
 }
 
 .noUi-connect {
@@ -344,13 +299,13 @@ input[type="checkbox"]:checked {
   &:after {
     display: none;
   }
-  width: 20px !important;
-  height: 20px !important;
+  width: 16px !important;
+  height: 25px !important;
   border: none;
   box-shadow: none;
   background-color: #ff4800;
-  border-radius: 50%;
-  top: -5px;
+  border-radius: 6px;
+  top: -8px;
 }
 
 // noUiSlider end
@@ -445,37 +400,24 @@ input[type="checkbox"]:checked {
   }
 }
 
-.typepallet.clicked,
-.typebox.clicked {
-  background-size: 3.375rem 3.375rem;
-  color: #ffffff;
-  border: 0;
-  outline: 0;
-  border-radius: 10px;
-  background-size: 2.1875rem 2.1875rem;
-  box-shadow: 0px 0px 5px 0px #ff9948;
-  color: var(--color__checked);
-}
-
 .output__radio__groups,
 .inputStoreType__radio__groups {
-  li:hover {
-    box-shadow: 0px 0px 5px 0px #ff9948;
-  }
   label {
     height: 40%;
     margin-top: 20px;
     padding-top: 0 !important;
   }
 }
+
 .output__radio__groups_radio__text,
 .inputStoreType__radio__groups_radio__text {
   p {
     margin-bottom: 60px;
     text-align: left;
     padding-left: 35px;
+    color: #333;
   }
-  span {
+  .radio__description {
     text-align: center;
     padding: 0 10px;
   }
@@ -486,6 +428,9 @@ input[type="checkbox"]:checked {
 }
 
 .avatar {
+  .large-text {
+    font-size: 25px;
+  }
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -567,13 +512,11 @@ input[type="checkbox"]:checked {
     //   border: 2px solid #f18b24;
     border-radius: 12px;
     box-shadow: 0px 0px 5px 0px #ff9948;
-    width: 33.3%;
     padding: 10px;
     margin: 10px;
     box-sizing: border-box;
     text-align: center;
     .detailOrder__item__title {
-      font-size: 0.875rem;
       font-weight: 500;
       font-style: normal;
       color: #4e4e4e;
@@ -583,10 +526,18 @@ input[type="checkbox"]:checked {
       font-weight: 700;
     }
   }
-  .recalculation {
+  .recalculation__area {
     padding-top: 25px;
     margin-top: 15px;
     border-top: 1px solid #ccc;
+    .inputStoreType__radio__groups_radio__text {
+      p {
+        padding-top: 60px;
+        text-align: left;
+        padding-left: 35px;
+        color: #333;
+      }
+    }
   }
 }
 
@@ -682,10 +633,10 @@ input[type="checkbox"]:checked {
   display: flex;
   flex-direction: column;
   float: center;
-  margin-left: calc(50% - 75px);
+  margin-left: calc(50% - 125px);
   button {
     display: inline-block;
-    width: 250px;
+    width: 200px;
     height: 2.5rem;
     border-radius: 20px;
     box-shadow: 0px 0px 5px 0px #ff9948;
@@ -703,20 +654,20 @@ input[type="checkbox"]:checked {
 
 .recalculation__area {
   .__input__container {
-    width: calc(25% - 20px);
-    margin-right: 20px;
-    float: left;
     & input {
       //   border: 0.5px solid #c4c4c4;
       background: #f2f2f2;
       box-shadow: 0px 0px 5px rgb(0 0 0 / 15%);
       border-radius: 10px;
-      height: 40px;
+      height: 48px;
       // max-width: 100%;
       width: 100%;
     }
     .pro__input {
-      margin-top: 10px;
+      box-sizing: border-box;
+    }
+    p.text-change {
+      margin-bottom: 10px;
     }
   }
   &::after {
@@ -730,8 +681,6 @@ input[type="checkbox"]:checked {
   .recalculation__input__area {
     padding-bottom: 20px;
     .recalculation {
-      margin-top: 28px;
-      width: calc(25% - 10px);
       float: right;
       box-sizing: border-box;
       text-align: center;
@@ -746,7 +695,6 @@ input[type="checkbox"]:checked {
     display: block;
     p {
       color: #6d6d6d;
-      margin-top: 80px;
       font-size: 14px !important;
       // border: 1px solid #ccc;
       background-color: rgb(243, 243, 243);
@@ -756,6 +704,68 @@ input[type="checkbox"]:checked {
   }
 }
 
+#finalStep {
+  .inputStoreType__radio__groups label,
+  .output__radio__groups label {
+    margin-top: 15px;
+  }
+  .inputStoreType__radio__groups_radio__text p,
+  .output__radio__groups p {
+    margin-bottom: 0;
+  }
+  .radio__title {
+    display: none;
+  }
+  .total,
+  .only,
+  .pallet {
+    background: none;
+  }
+}
+
+//responsive
+@media screen and (min-width: 768px) {
+  // .endfour__container {
+  //     margin: 1.75rem 5%;
+  // }
+}
+
+/*--------- 모바일 반응형 --------*/
+
+@media screen and (min-width: 0px) and (max-width: 1079px) {
+  .detailOrder__item {
+    width: 100%;
+    display: initial;
+    // flex-basis: 100%;
+  }
+  .__input__container {
+    width: 100%;
+    padding: 15px 0 15px 0;
+    float: initial;
+    border-bottom: 1px solid #ccc;
+  }
+  .pro__input {
+    margin-bottom: 10px;
+  }
+  .recalculation {
+    margin-top: 28px;
+    width: 100%;
+  }
+  .recalculation-text {
+    p {
+      margin-top: 70px;
+    }
+  }
+  .avartar__button {
+    button {
+      width: 100%;
+    }
+  }
+}
+
+//희중추가
+
+//애니메이션
 .fadeIn {
   display: block;
   animation: fadeIn 0.3s forwards;
@@ -772,14 +782,83 @@ input[type="checkbox"]:checked {
   }
 }
 
-/* fadeOut */
-.show-layer {
-  margin-top: 10px;
+.clothes.clicked,
+.stuff.clicked,
+.beauty.clicked,
+.householdgoods.clicked,
+.electronics.clicked,
+.stationery.clicked,
+.food.clicked,
+.etc.clicked {
+  background-size: 3.375rem 3.375rem;
+  color: #ffffff;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  background-size: 2.1875rem 2.1875rem;
+  box-shadow: 0px 0px 5px 0px #ff9948;
+  color: var(--color__checked);
 }
 
-//responsive
-@media screen and (min-width: 768px) {
-  // .endfour__container {
-  //     margin: 1.75rem 5%;
-  // }
+.inputStorePallet.clicked,
+.inputStoreBox.clicked,
+.total_packaing.clicked,
+.only_packaing.clicked {
+  box-shadow: 0px 0px 5px 0px #ff9948;
+}
+
+//보관형태
+.storageType__container__buttons li {
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: calc((128% - 16px) / 3);
+  height: 2.5rem;
+  margin-left: 0.9375rem;
+  margin-top: 0.5625rem;
+
+  .refrigerated_storage:hover,
+  .fronze_storage:hover,
+  .room_temperature:hover,
+  .low_temperature:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+  .refrigerated_storage.clicked,
+  .fronze_storage.clicked,
+  .room_temperature.clicked,
+  .low_temperature.clicked {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+    border: 0;
+    outline: 0;
+  }
+  span {
+    font-weight: 500;
+    font-size: 0.65rem;
+    color: #bfbfbf;
+  }
+
+  i {
+    color: #ffffff;
+  }
+}
+
+/*--------- PC 반응형 --------*/
+
+@media screen and (min-width: 1080px) {
+  .detailOrder__item {
+    width: 33.3%;
+  }
+  .__input__container {
+    width: calc(25% - 20px);
+    margin-right: 20px;
+    float: left;
+  }
+  .recalculation {
+    margin-top: 28px;
+    width: calc(25% - 10px);
+  }
+  .recalculation-text {
+    p {
+      margin-top: 140px;
+    }
+  }
 }

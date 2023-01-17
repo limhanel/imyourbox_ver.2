@@ -17,11 +17,7 @@
         <script src="https://kit.fontawesome.com/b662cbe3c5.js" crossorigin="anonymous"></script>
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-        <link rel="stylesheet" type="text/css" href="./css/all-html.scss" />
-        <link rel="stylesheet" type="text/css" href="css/all-responsive.css" />
-        <link rel="stylesheet" type="text/css" href="css/price.css" />
-        <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-       
+
         <!-- 폰트 -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -34,6 +30,7 @@
         <div id="container">
             <div id="svg_wrap"></div>
             <div class="cont-box cont-padding">
+
                 <section id="firstStep" class="secton">
                     <div class="simple__input__area">
                         <div class="cont--inner">
@@ -117,7 +114,8 @@
                                 </div>
                                 <ul class="stepone__category__list flexbox_05">
                                     <li class="item_05 button-type3">
-                                        <input class="stepone__category__list__label__input healthfood" type="button" value="건강기능식품" required>
+                                        <input class="stepone__category__list__label__input healthfood
+                                                    " type="button" value="건강기능식품" required>
                                         <i class="fas fa-check"></i>
                                         </input>
                                     </li>
@@ -222,13 +220,10 @@
 
                                 <div class="section__container">
                                     <div class="step__container">
-                                        <!-- <div class="top__divider"></div>  -->
                                     </div>
                                     <div class="service">
                                         <div class="service__checkbox">
                                             <input id="prepare" type="checkbox" style="display:none;">
-                                            <!-- <i class="fas fa-check"></i> -->
-                                            <!-- <label for="prepare"><span>상품 준비중입니다.</span></label> -->
                                         </div>
                                     </div>
 
@@ -240,7 +235,7 @@
                                     <ul class="inputStoreType__radio__groups flexbox_02">
                                         <li class="item_02 button-type5 button5-css inputStorePallet">
                                             <label class="pallet">
-                                                <input type="radio" name="inputStore" value="pallet">
+                                                <input type="radio" name="inputStore" value="pallet" checked  >
                                                 <span class="check"></span>
                                                 <div class="inputStoreType__radio__groups_radio__text">
                                                     <p class="radio__title">파레트</p>
@@ -321,34 +316,13 @@
                                     </div>
                                 </div>
                             </div>
-
-
-                            <div class="stepone__category fullfillmentWrapper">
-                                <span class="stepone__category-title category-title-css">물류대행 서비스 이용이 처음이신가요?</span>
-                            </div>
-                            <ul class="radio__groups fullfillmentRadios flexbox_02">
-                                <li class="item_02 button-type5">
-                                    <label>
-                                    네, 처음입니다.
-                                    <input class="radio__groups-radio" type="radio" name="service" value="fisrt">
-                                    <span class="check"></span>
-                                </label>
-                                </li>
-                                <li class="item_02 button-type5">
-                                    <label>
-                                    아니요, 이용중인 업체가 있습니다.
-                                    <input class="radio__groups-radio" type="radio" name="service" value="using">
-                                <span class="check"></span>
-                                </label>
-                                </li>
-                            </ul>
                             <div class="stepone__category outputWrapper">
                                 <span class="stepone__category-title category-title-css">출고 패키징</span>
                                 <span class="stepone__category-description">출고시 상품이 포장되는 방법을 선택해주세요.</span>
                             </div>
                             <ul class="output__radio__groups flexbox_02">
                                 <li class="item_02 button-type5 total_packaing">
-                                    <label class="pallet total">
+                                    <label class="total">
                                     <input type="radio" name="outputMethod" value="total_packaing">
                                     <span class="check"></span>
                                     <div class="output__radio__groups_radio__text">
@@ -380,16 +354,8 @@
                             <div class="avatar">
                                 <img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/profile.svg" alt="아바타이미지" class="avartar__img">
                                 <p class="result-title-css"><span class="avartar__title">test-text</span>님의 예상 비용</p>
-                                <p>월 <span class="avartar__price">test-text</span> 원</p>
+                                <p class="large-text">월 <span class="avartar__price">test-text</span> 원</p>
                                 <span class="avartar__description">제공되는 비용은 예상 견적이며, 상담 진행시 협의를 통해 변동될 수 있습니다.</span>
-                                <!-- <div class="avartar__button">
-                            <a href="index.html">
-                                <button class="home">메인으로</button>
-                            </a>
-                            <a href="service.html">
-                                <button class="home">계약 프로세스 확인</button>
-                            </a>
-                        </div> -->
                             </div>
                             <div class="liner stepresultLiner"></div>
                             <span class="detailOrder__title">상세 견적 내용</span>
@@ -407,7 +373,7 @@
                                     <span class="inputStoreFee monthWMS__fee">test-text</span>
                                 </div>
                             </div>
-                            
+
                             <div class="recalculation__area">
                                 <p class="strong">견적을 다시 계산하고 싶으신가요?</p>
                                 <div class="recalculation__input__area">
@@ -435,11 +401,11 @@
                                                 </label>
                                             </li>
                                         </ul>
-                                        <input type="input" class="pro__input reInputStoreValue" placeholder="보관량을 입력하세요 (plt/개)" style="margin-top: 10px;"></input>
+                                        <input type="input" class="pro__input" placeholder="보관량을 입력하세요 (plt/개)" style="margin-top: 10px;"></input>
                                     </div>
                                     <div class="__input__container">
                                         <p class="input-css text-change">출고량을 바꾸고 싶어요</p>
-                                        <input type="input" class="pro__input reMonthDeliveryCount" placeholder="출고량을 입력하세요 (박스갯수)"></input>
+                                        <input type="input" class="pro__input" placeholder="출고량을 입력하세요 (박스갯수)"></input>
                                     </div>
                                     <div class="__input__container">
                                         <p class="text-change">포장 방식을 바꾸고 싶어요</p>
@@ -475,6 +441,9 @@
                                 </div>
                             </div>
 
+                            
+
+                            
 
                             <div class="result__details">
                                 <div class="line"></div>
@@ -488,30 +457,12 @@
                                         <span class="item__title">상세 품목</span>
                                         <span class="item__content detailInput">test-text</span>
                                     </div>
-                                    <!-- <div class="item">
-                                <span class="item__title">바코드 여부</span>
-                                <span class="item__content haveBarcode"></span>
-                            </div> -->
                                     <div class="item">
                                         <span class="item__title">상품 URL</span>
                                         <span class="item__content productURL">test-text</span>
                                     </div>
-                                    <!-- <div class="item">
-                                <span class="item__title">상품 취급 주의사항</span>
-                                <span class="item__content proCaution"></span>
-                            </div> -->
                                 </div>
                                 <div class="result__detail">
-                                    <!-- <div class="line"></div>
-                            <div class="item__Bigtitle">물류 기본정보</div> -->
-                                    <!-- <div class="item">
-                                <span class="item__title">서비스 런칭여부</span>
-                                <span class="item__content serviceLaunching"></span>
-                            </div> -->
-                                    <!-- <div class="item">
-                                <span class="item__title">문의할 물류 서비스</span>
-                                <span class="item__content logisticsServiceKinds"></span>
-                            </div> -->
                                     <div class="item">
                                         <span class="item__title">물류 보관량</span>
                                         <span class="item__content inputStoreCount">test-text</span>
@@ -520,10 +471,7 @@
                                         <span class="item__title">상품 종류(SKU)</span>
                                         <span class="item__content inputSKUcount">test-text</span>
                                     </div>
-                                    <!-- <div class="item">
-                                <span class="item__title">입고 예정일</span>
-                                <span class="item__content inputDateResult"></span>
-                            </div> -->
+
                                     <div class="item">
                                         <span class="item__title">출고 택배량</span>
                                         <span class="item__content outputDeliveryCount">test-text</span>
@@ -532,24 +480,12 @@
 
 
                                 <div class="result__detail">
-                                    <!-- <div class="line"></div>
-                            <div class="item__Bigtitle">물류 추가정보</div> -->
-                                    <div class="item">
-                                        <span class="item__title">물류대행 서비스 이용</span>
-                                        <span class="item__content userService">test-text</span>
-                                    </div>
+
                                     <div class="item">
                                         <span class="item__title">출고 패키징</span>
                                         <span class="item__content outputPackaing">test-text</span>
                                     </div>
-                                    <!-- <div class="item">
-                                <span class="item__title">박스 또는 택배봉투</span>
-                                <span class="item__content courierBagSpan"></span>
-                            </div>
-                            <div class="item">
-                                <span class="item__title">포장 및 임가공 작업</span>
-                                <span class="item__content processingNeedWork"></span>
-                            </div> -->
+
                                 </div>
 
 
@@ -593,10 +529,11 @@
                 </section>
 
 
+
+
                 <div class="cont--inner button-inner">
                     <div class="button button-type1" id="prev"><a>&larr; 이전페이지</a></div>
-                    <div class="button button-type1 next_button" id="next"><a>다음페이지 &rarr;</a></div>
-                    <!-- <div class="button button-type1" id="submit"><a id="gtagSimpleOrder" class=" callSimpleOrderBtn" onclick=" ">견적서 받아보기</a></div> -->
+                    <div class="button button-type1" id="next"><a>다음페이지 &rarr;</a></div>
                 </div>
 
                 </div>
@@ -617,6 +554,8 @@
                             $(this).load('footer.html');
                         });
                     });
+                </script>
+
                 </script>
     </body>
 
