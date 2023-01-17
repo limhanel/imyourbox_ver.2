@@ -22,8 +22,6 @@ module.exports = {
     publicPath: "",
     contentBase: path.resolve(__dirname, ""),
     watchContentBase: true,
-    host: "127.0.0.1",
-    port: 3000,
   },
   target: "web",
   module: {

@@ -82,18 +82,6 @@ const releasepackagingMap = {
   only_packaing: "단독포장",
 };
 
-const courierBagMap = {
-  have: "있음",
-  none: "없음",
-  need: "필요함",
-};
-
-//임가공필요여부
-const processingNeedMap = {
-  need: "필요함",
-  not_need: "필요없음",
-};
-
 //견적세부조건
 
 const customerCompany = document.querySelector(".avartar__title");
@@ -127,14 +115,29 @@ const HTMLpriceFinalSection = document.querySelector("#finalStep");
 
 //재계산
 const recalculationButton = document.querySelector(".recalculation");
+const reInputStoreValue = document.querySelector(".reInputStoreValue");
+const reMonthDeliveryCount = document.querySelector(".reMonthDeliveryCount");
+const reOutputType = document.querySelector(".reOutputType");
 
 recalculationButton.addEventListener("click", () => {
   let sumPrice =
-    CaclulateStoreFee(inputStoreType, 500) +
-    CacluateDeliveryFee(outputBoxCount, releasepackaing) +
+    CaclulateStoreFee(inputStoreType, reInputStoreValue.value) +
+    CacluateDeliveryFee(reMonthDeliveryCount.value, releasepackaing) +
     CaclutateWMSfee(skuInputStoreCount);
   customerCompany.textContent = `"${customer_company}" 고객님의 예상 비용`;
   totalPrice.textContent = `월 ${sumPrice
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
+  monthStoreFee.textContent = `${CaclulateStoreFee(
+    inputStoreType,
+    reInputStoreValue.value
+  )
+    .toString()
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
+  monthDeliveryFee.textContent = `${CacluateDeliveryFee(
+    reMonthDeliveryCount.value,
+    releasepackaing
+  )
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
 });
@@ -197,8 +200,6 @@ stepResultButton.addEventListener("click", () => {
     totalPrice.textContent = `월 ${sumPrice
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
-    console.log(totalPrice.textContent);
-    console.log(totalPrice);
 
     monthStoreFee.textContent = `${CaclulateStoreFee(
       inputStoreType,

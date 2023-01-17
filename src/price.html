@@ -407,30 +407,74 @@
                                     <span class="inputStoreFee monthWMS__fee">test-text</span>
                                 </div>
                             </div>
-
+                            
                             <div class="recalculation__area">
                                 <p class="strong">견적을 다시 계산하고 싶으신가요?</p>
                                 <div class="recalculation__input__area">
                                     <div class="__input__container">
-                                        <p>보관량을 바꾸고 싶어요</p>
-                                        <input type="input" class="pro__input" placeholder="보관량을 입력하세요"></input>
+                                        <p class="text-change">보관량을 바꾸고 싶어요</p>
+                                        <ul class="inputStoreType__radio__groups flexbox_02">
+                                            <li class="item_02-1 button-type5 button5-css">
+                                                <label class="pallet">
+                                                    <input type="radio" name="inputStore" value="pallet" checked  >
+                                                    <span class="check"></span>
+                                                    <div class="inputStoreType__radio__groups_radio__text">
+                                                        <p class="radio__title" style="color: rgba(255, 255, 255, 0);">파레트</p>
+                                                        <span class="radio__description" style="margin-top: 10px;">파레트</span>
+                                                    </div>
+                                                </label>
+                                            </li>
+                                            <li class="item_02-1 button-type5">
+                                                <label class="box only">
+                                                    <input type="radio" name="inputStore" value="box">
+                                                     <span class="check"></span>
+                                                    <div class="inputStoreType__radio__groups_radio__text">
+                                                    <p class="radio__title" style="color: rgba(255, 255, 255, 0);">박스</p>
+                                                    <span class="radio__description">박스</span>
+                                                </div>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <input type="input" class="pro__input reInputStoreValue" placeholder="보관량을 입력하세요 (plt/개)" style="margin-top: 10px;"></input>
                                     </div>
                                     <div class="__input__container">
-                                        <p>출고량을 바꾸고 싶어요</p>
-                                        <input type="input" class="pro__input" placeholder="출고량을 입력하세요"></input>
+                                        <p class="input-css text-change">출고량을 바꾸고 싶어요</p>
+                                        <input type="input" class="pro__input reMonthDeliveryCount" placeholder="출고량을 입력하세요 (박스갯수)"></input>
                                     </div>
                                     <div class="__input__container">
-                                        <p>포장 방식을 바꾸고 싶어요</p>
-                                        <input type="input" class="pro__input" placeholder="포장방식을 입력하세요"></input>
+                                        <p class="text-change">포장 방식을 바꾸고 싶어요</p>
+                                        <ul class="output__radio__groups flexbox_02">
+                                            <li class="item_02-1 button-type5">
+                                                <label class="pallet total">
+                                                <input type="radio" name="outputMethod" value="total_packaing">
+                                                <span class="check"></span>
+                                                <div class="output__radio__groups_radio__text">
+                                                    <p class="radio__title"style="color: rgba(255, 255, 255, 0);">합포장</p>
+                                                    <span class="radio__description output__radio__description">합포장</span>
+                                                </div>
+                                            </label>
+                                            </li>
+                                            <li class="item_02-1 button-type5">
+                                                <label class="box only">
+                                                <input type="radio" name="outputMethod" value="only_packaing">
+                                                 <span class="check"></span>
+                                                <div class="output__radio__groups_radio__text">
+                                                <p class="radio__title"style="color: rgba(255, 255, 255, 0);">단독포장</p>
+                                                <span class="radio__description output__radio__description">단독포장</span>
+                                            </div>
+                                            </label>
+                                            </li>
+                                        </ul>
                                     </div>
-
-                                    <a class="button-type1 recalculation">다시 계산하기</a>
+                                    <a class="button-type1 recalculation 
+                    ">다시 계산하기</a>
                                 </div>
                                 <div class="recalculation-text">
                                     <p>* 택배의 사이즈와 무게에 따라 금액은 변동될 수 있습니다.<br> * 상품의 수와 종류, 바코드 여부에 따라 가격은 바뀔 수 있습니다.<br> * 해당 견적은 임가공 추가에 따라 변동될 수 있습니다
                                     </p>
                                 </div>
                             </div>
+
 
                             <div class="result__details">
                                 <div class="line"></div>
