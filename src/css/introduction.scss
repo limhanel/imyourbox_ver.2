@@ -62,6 +62,9 @@
              li {
                  color: #333;
                  line-height: 30px;
+                 &:nth-child(1) {
+                     padding-top: 15px;
+                 }
                  span {
                      font-size: $fs-medium;
                      color: rgb(143, 143, 143);
@@ -106,6 +109,9 @@
              margin-left: 20px;
              padding-top: 20px;
          }
+         ol {
+             width: 100%
+         }
      }
      .cont2 {
          .contact-height {
@@ -121,7 +127,7 @@
  
  @media screen and (min-width:1080px) {
      .cont1 {
-         .history-background{
+         .history-background {
              background-size: 500px;
          }
          .history {

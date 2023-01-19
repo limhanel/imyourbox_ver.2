@@ -3,3 +3,17 @@
 @import 'all-html';
 
 /*--service 디자인 css--*/
+
+.cont1 {
+    padding-bottom: 120px;
+    p.strong {
+        font-size: 20px;
+    }
+    .item_05-1 {
+        flex-basis: calc(20% - 35px);
+    }
+}
+
+.cont2 {
+    background-color: #ffe0d7;
+}
