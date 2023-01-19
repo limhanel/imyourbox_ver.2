@@ -2,8 +2,8 @@ import axios from "axios";
 
 const client = axios.create();
 
-client.defaults.baseURL = "https://api.imyourbox.com";
-// client.defaults.baseURL = "http://127.0.0.1:3065/";
+//client.defaults.baseURL = "https://api.imyourbox.com";
+client.defaults.baseURL = "http://127.0.0.1:3065/";
 
 //헤더설정
 // client.defaults.headers

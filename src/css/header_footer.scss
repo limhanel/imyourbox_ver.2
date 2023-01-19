@@ -215,3 +215,70 @@ footer {
 #footer ul.sns li {
     margin: 0 15px;
 }
+
+
+/*--------- 모바일 반응형 --------*/
+
+@media screen and (min-width:0px) and (max-width:1079px) {
+    footer {
+        .use-div {
+            text-align: center;
+        }
+        .call {
+            font-size: 18px;
+        }
+        ul {
+            text-align: center;
+            &::after {
+                @include float-clear;
+            }
+            &.use {
+                width: 350px;
+                float: initial;
+                display: table;
+                margin: auto;
+            }
+            &.sns {
+                margin-top: 20px;
+                float: initial;
+                display: table;
+                margin: 20px auto auto auto;
+                width: 200px;
+            }
+            li {
+                width: 33%;
+                margin: 0;
+            }
+            // li {
+            //     // float: left;
+            //     // margin-right: 30px;
+            //     // &::after {
+            //     //     @include float-clear;
+            //     // }
+            // }
+        }
+    }
+}
+
+
+/*--------- PC 반응형 --------*/
+
+@media screen and (min-width:1080px) {
+    footer {
+        .call {
+            font-size: $fs-large;
+        }
+        ul {
+            &.use {
+                float: left;
+            }
+            &.sns {
+                float: right;
+            }
+            li {
+                float: left;
+                margin-right: 30px;
+            }
+        }
+    }
+}

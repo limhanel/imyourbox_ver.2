@@ -22,37 +22,101 @@
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
+        <link rel="stylesheet" type="text/css" href="../src/css/service.css"/>
+        <link rel="stylesheet" type="text/css" href="../src/css/all-html.css"/>
+        <link rel="stylesheet" type="text/css" href="../src/css/all-responsive.css"/>
+        <link rel="stylesheet" type="text/css" href="../src/css/header_footer.css"/>
         <!-- 폰트 -->
 
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
-
-        <!-- Enliple Common Tracker v3.6 [공용] end -->
-        <script type="text/javascript">
-            jQuery(function($) {
-                var ticker = function() {
-                    timer = setTimeout(function() {
-                        $('#ticker li:first').animate({
-                            marginTop: '-40px',
-                            color: 'black'
-                        }, 400, function() {
-                            $(this).detach().appendTo('ul#ticker').removeAttr('style');
-                        });
-                        ticker();
-                    }, 2000);
-                };
-
-                ticker();
-
-            });
-        </script>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>    
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
         <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </head>
-
     <body>
         <div id="container">
-            <div data-include1="header-html" id="header-html"></div>
+            <header id="header">
+                <div class="cont--inner">
+                    <h1 class="logo">
+                        <a href="index.html"><img src="../src/images/horizontal-logo.png" alt="아임유어박스">IMYOURBOX</a>
+                    </h1>
+    
+                    <div class="header--gnb pc">
+                        <ul class="gnb">
+                            <li class="gnb-menu">
+                                <a href="price.html">예상견적</a>
+                            </li>
+                            <li class="gnb-menu">
+                                <a href="service.html">SERVICE</a>
+                            </li>
+                            <li class="gnb-menu">
+                                <a href="introduction.html">회사소개</a>
+                            </li>
+                            <li class="gnb-menu">
+                                <a href="employment.html">채용정보</a>
+                            </li>
+                            <li class="button button-type1">
+                                <a href="http://222.231.61.51/" target="_blank">WMS</a>
+                            </li>
+                            <li class="button button-type1">
+                                <a href="https://newatis.co.kr/" target="_blank">ATIS</a>
+                            </li>
+                        </ul>
+    
+                    </div>
+    
+                    <div class="mobile">
+                        <input type="checkbox" id="menuicon" onclick="dis()">
+                        <label for="menuicon">
+                           <span class="mobile"></span>
+                           <span class="mobile"></span>
+                             <span class="mobile"></span>
+                       </label>
+    
+                        <div class="sidebar">
+                            <ul class="gnb">
+                                <li>
+                                    <a href="price.html">예상견적</a>
+                                </li>
+                                <li>
+                                    <a href="service.html">SERVICE</a>
+                                </li>
+                                <li>
+                                    <a href="introduction.html">회사소개</a>
+                                </li>
+                                <li>
+                                    <a href="employment.html">채용정보</a>
+                                </li>
+                                <li>
+                                    <a href="http://222.231.61.51/" target="_blank">WMS</a>
+                                </li>
+                                <li>
+                                    <a href="https://newatis.co.kr/" target="_blank">ATIS</a>
+                                </li>
+                            </ul>
+    
+                            <!-- gnb mobile-->
+    
+                            <ul class="sns">
+                                <li>
+                                    <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x" ></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x" ></i></a>
+                                </li>
+                            </ul>
+                            <!--sns-->
+                        </div>
+                        <!--sidebar-->
+                    </div>
+                    <!--mobile-->
+    
+                </div>
+    
+    
+            </header>
 
             <div class="cont-box cont-padding">
                 <div class="cont1">
@@ -152,8 +216,42 @@
                 </div>
             </div>
 
+
             <div class="cont-box cont-padding">
-                <div class="cont4">
+                <div class="cont3">
+                    <div class="cont--inner">
+                        <h3 class="">아임유어박스의 WMS</h3>
+                        <div class="flexbox_02">
+                            <div class="item_02">
+                                <img src="../src/images/wms01.jpeg">
+                                <span><p>실시간 CS 업무 및 SMS 관리</p>- 취소 / 교환 /맞교환 / 반품 / 선환불 등 상황에 맞는 CS처리 가능
+                                    - 각종 환불 내역 및 CS 관리 가능
+                                    - 각주문에 관해 CS처리 이력관리가 가능하며, SMS 발송가능</span>
+                            </div>
+                            <div class="item_02">
+                                <img src="../src/images/wms02.jpeg">
+                                <span><p>효과적인 매출분석</p>주- 재고회전율의 리포트를 제공
+                                    판매 대쉬보드를 통해 배송건수 / 당일매출 / 당월매출목표 대비 실적 등을 한눈에 확인 가능</span>
+                            </div>
+                            <div class="item_02">
+                                <img src="../src/images/wms03.jpeg">
+                                <span><p>데이터기반의 영업활동 지원</p>- 전월 / 전년 대비 매출실적, 현황 자료 등을 일괄 조회 가능
+                                    - 매출과 실시간 재고를 함께 조회하여 분석자료를
+                                    - 상품별 기간판매 / 누적판매 / 재고에 관한 분석 자료를 제공</span>
+                            </div>
+                            <div class="item_02">
+                                <img src="../src/images/wms04.jpeg">
+                                <span><p>주문수집 연동</p>- 쇼핑몰 양식에 맞춰서 편집 없이 발주파일 업로드 가능
+                                    - 주문 연동 자동화로 발주를 간편하게 할 수 있습니다.
+                                       * 사방넷 OMS프로그램과 제휴</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cont-box cont-padding">
+                <div class="cont5">
                     <div class="cont--inner">
 
                         <h3 class="">아임유어박스와 함께<br> 나아가고 있는 셀러 브랜드 </h3>
@@ -232,7 +330,76 @@
 
         </div>
         <!-- id : container -->
-        <div data-include2="footer-html" id="footer-html"></div>
+        <footer id="footer cont-padding ">
+            <div class="inner ">
+                <div class="cont--inner ">
+                    <div class="logo-div ">
+                        <div class="footer-logo ">
+                            <img src="../src/images/logo_white.png " alt="footerlogo ">
+                        </div>
+                        <!--footer-logo-->
+                        <p class="call"><i class="fas fa-phone-alt fa-xs"></i> 02-853-7374</p>
+    
+                    </div>
+                    <!--logo-div-->
+    
+                    <div class="contact ">
+                        <div class="contact-text1 ">
+    
+                            <span class="company " style="font-weight:bold; ">&#40;주&#41;아임유어박스</span><br>
+                            <p>imurbox&#64;imyourbox.com</p>
+                            <span>사업자등록번호 126-86-03002</span>
+                            <span>ㅣ 대표이사 임우택</span>
+    
+                            <p>
+                                [08593] 서울특별시 금천구 가산디지털로 1길 165,403호 (가산동, 가산비즈니스센터)
+                            </p>
+                        </div>
+                        <!--contact-text1-->
+                        <div class="contact-text2">
+                            <a href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/Imyourbox.pdf " alt=소개서 target="blank ">
+                                <p class="service-download">서비스 소개서 다운로드<i class="fa-solid fa-download"></i></p>
+                            </a>
+                            <p>
+                                Copyright &copy; 2023 I’m your box Inc. All Rights Reserved.
+                            </p>
+    
+                        </div>
+                        <!--contact-text2-->
+                    </div>
+                    <!-- contact -->
+    
+                    <div class="use-div ">
+                        <ul class="use ">
+                            <li><a href="access.html ">이용약관</a></li>
+                            <li><a href="access2.html " class="bold ">개인정보처리방침</a></li>
+                            <li><a href="contact.html ">오시는길</a></li>
+                        </ul>
+                        <!--use-->
+                        <ul class="sns ">
+                            <li>
+                                <a href="https://www.facebook.com/Imyourbox " target="_blank "><i class="fab fa-facebook-f fa-2x "></i></sa>
+                            </li>
+                            <li>
+                                <a href="https://blog.naver.com/imyourbox " target="_blank "><i class="fab fa-blogger-b fa-2x "></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/imyourbox " target="_blank "><i class="fab fa-instagram fa-2x "></i></a>
+                            </li>
+                        </ul>
+                        <!--sns-->
+                    </div>
+                    <!-- use-div-->
+    
+                    <!-- use-div-->
+                    <!-- use-div-->
+    
+                </div>
+            </div>
+            <!-- inner-->
+    
+    
+        </footer>
         <!--footer 영역-->
 
 

@@ -18,10 +18,12 @@ module.exports = {
   watch: production ? false : true,
   mode: production ? "production" : "development",
   devtool: production ? "hidden-source-map" : "eval",
+
   devServer: {
-    publicPath: "",
-    contentBase: path.resolve(__dirname, ""),
-    watchContentBase: true,
+    host: "localhost",
+    port: 3001,
+    hotOnly: true,
+    hot: true,
   },
   target: "web",
   module: {
@@ -30,11 +32,29 @@ module.exports = {
         test: /\.filename$/,
         use: ["loader-b", "loader-a"],
       },
+      // {
+      //   test: /\.(sc|c|sa)ss$/,
+      //   use: [
+      //     { loader: "style-loader" },
+      //     // { loader: MiniCssExtractPlugin.loader },
+      //     {
+      //       loader: "css-loader",
+      //       options: {
+      //         sourceMap: true,
+      //       },
+      //     },
+      //     {
+      //       loader: "sass-loader",
+      //       options: {
+      //         sourceMap: true,
+      //       },
+      //     },
+      //   ],
+      // },
       {
         test: /\.(sc|c|sa)ss$/,
         use: [
-          // { loader: "style-loader" },
-          { loader: MiniCssExtractPlugin.loader },
+          "style-loader",
           {
             loader: "css-loader",
             options: {
@@ -78,7 +98,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({}),
-    new MiniCssExtractPlugin({ filename: "[name].css" }),
+    // new MiniCssExtractPlugin({ filename: "[name].css" }),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       filename: "index.html",
@@ -99,16 +119,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "access.html",
       template: path.resolve(__dirname, "src", "access.html"),
-      minify: false,
-    }),
-    new HtmlWebpackPlugin({
-      filename: "header.html",
-      template: path.resolve(__dirname, "src", "header.html"),
-      minify: false,
-    }),
-    new HtmlWebpackPlugin({
-      filename: "footer.html",
-      template: path.resolve(__dirname, "src", "footer.html"),
       minify: false,
     }),
     new HtmlWebpackPlugin({

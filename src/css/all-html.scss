@@ -2,483 +2,474 @@
 
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
 body {
-    font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 ul {
-    list-style: none;
-    padding-left: 0px;
+  list-style: none;
+  padding-left: 0px;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 @mixin initial-type {
-    text-decoration: none;
-    font-family: 'Roboto';
-    color: #333;
+  text-decoration: none;
+  font-family: "Roboto";
+  color: #333;
 }
 
 a,
 p,
 span {
-    @include initial-type;
+  @include initial-type;
 }
-
 
 /*---- 폰트사이즈 변경 ---*/
 
-$fs-small:16px;
+$fs-small: 16px;
 //작은 설명텍스트//
-$fs-medium:20px;
+$fs-medium: 20px;
 //본문 기본크기//
-$fs-large:25px;
+$fs-large: 25px;
 //강조텍스트 크기//
-$fs-x-large:40px;
+$fs-x-large: 40px;
 //cont 제목크기//
-$fs-2x-large:50px;
+$fs-2x-large: 50px;
 //캐러셀 강조텍스트//
 
 /*---- 간격/애니메이션 세팅 ---*/
 
 // $cont-padding:20px 0;
 // $cont-margin:30px 0;
-$animation :all 0.3s ease 0s;
+$animation: all 0.3s ease 0s;
 @mixin float-clear {
-    content: '';
-    display: block;
-    clear: both;
+  content: "";
+  display: block;
+  clear: both;
 }
 
 @mixin blind {
-    visibility: hidden;
-    position: absolute;
-    top: -9999999px;
-    left: -9999999px;
-    width: 1px;
-    height: 1px;
-    margin: 0;
-    padding: 0;
-    background: none;
-    font-size: 0;
-    line-height: 0;
-    text-indent: -9999999px;
+  visibility: hidden;
+  position: absolute;
+  top: -9999999px;
+  left: -9999999px;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999999px;
 }
 
 .blind {
-    @include blind
+  @include blind;
 }
-
 
 /*---전체 컬러 디자인---*/
 
 $main-color: #ff7a22;
-$sub-color:#FF881A;
-$gray-color:#E5E5E5;
-$dark-color:#2F2F2F;
+$sub-color: #ff881a;
+$gray-color: #e5e5e5;
+$dark-color: #2f2f2f;
 $font-dark: #444;
-$font-white :#fff;
+$font-white: #fff;
 
 /*---전체 버튼 디자인---*/
 
 @mixin button-type1 {
-    a {
-        color: white;
-    }
-    padding: 0.6em 1.5em;
-    transition: $animation;
-    font-weight: 600;
-    background-color: $main-color;
+  a {
+    color: white;
+  }
+  padding: 0.6em 1.5em;
+  transition: $animation;
+  font-weight: 600;
+  background-color: $main-color;
+  border: 1px solid $main-color;
+  border-radius: 20px;
+  &:hover {
+    box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
     border: 1px solid $main-color;
-    border-radius: 20px;
-    &:hover {
-        box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
-        border: 1px solid $main-color;
-        background-color: white;
-        cursor: pointer;
-        a {
-            color: $main-color
-        }
+    background-color: white;
+    cursor: pointer;
+    a {
+      color: $main-color;
     }
+  }
 }
 
 @mixin button-type2 {
-    font-size: $fs-large;
-    padding: 0.6em 1.5em;
+  font-size: $fs-large;
+  padding: 0.6em 1.5em;
+  transition: $animation;
+  font-weight: 600;
+  background-color: white;
+  color: $main-color;
+  border-radius: 20px;
+  // border: 1px solid $main-color;
+  &:hover {
+    box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+    background-color: $main-color;
+    color: white;
+    cursor: pointer;
     transition: $animation;
-    font-weight: 600;
-    background-color: white;
-    color: $main-color;
-    border-radius: 20px;
-    // border: 1px solid $main-color;
-    &:hover {
-        box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
-        background-color: $main-color;
-        color: white;
-        cursor: pointer;
-        transition: $animation;
-        p {
-            color: white;
-            transition: $animation;
-        }
+    p {
+      color: white;
+      transition: $animation;
     }
-    & p {
-        font-size: $fs-small;
-        color: $font-dark;
-    }
+  }
+  & p {
+    font-size: $fs-small;
+    color: $font-dark;
+  }
 }
 
 @mixin button-type3 {
+  border: none;
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 15%);
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 7px;
+  height: auto;
+  & > input,
+  & > li {
     border: none;
-    box-shadow: 0px 0px 5px rgb(0 0 0 / 15%);
-    cursor: pointer;
+    background-size: 55% 60% !important;
+    background-position: center 10px !important;
+    line-height: 10.5 !important;
+    text-align: center;
     box-sizing: border-box;
-    position: relative;
-    border-radius: 7px;
-    height: auto;
-    &>input,
-    &>li {
-        border: none;
-        background-size: 55% 60% !important;
-        background-position: center 10px !important;
-        line-height: 10.5 !important;
-        text-align: center;
-        box-sizing: border-box;
-        min-width: 95px;
-        font-size: 15px !important;
-        max-height: 100px;
-    }
-    i {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-    &:hover {
-        box-shadow: 0px 0px 5px 0px #ff9948;
-    }
-    &.clicked {
-        box-shadow: 0px 0px 5px 0px #ff9948;
-        border: 0;
-        outline: 0;
-    }
+    min-width: 95px;
+    font-size: 15px !important;
+    max-height: 100px;
+  }
+  i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  &:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+  &.clicked {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+    border: 0;
+    outline: 0;
+  }
 }
 
 @mixin button-type4 {
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  height: 2.5rem;
+  i {
+    position: absolute;
+    // bottom: calc(50% + 8px);
+    bottom: calc(50% - 7px) !important;
+    right: 20px !important;
+  }
+  .storageType__container__button {
+    -webkit-appearance: none; //safari;
+    width: 100%;
+    height: inherit;
+    border: 0px solid #ffffff;
+    background-color: #ffffff;
+    cursor: pointer;
     border-radius: 20px;
-    height: 2.5rem;
-    i {
-        position: absolute;
-        // bottom: calc(50% + 8px);
-        bottom: calc(50% - 7px) !important;
-        right: 20px !important;
-    }
-    .storageType__container__button {
-        -webkit-appearance: none; //safari;
-        width: 100%;
-        height: inherit;
-        border: 0px solid #ffffff;
-        background-color: #ffffff;
-        cursor: pointer;
-        border-radius: 20px;
-        font-family: "Noto Sans KR", sans-serif;
-    }
-    &:hover {
-        box-shadow: 0px 0px 5px 0px #ff9948;
-    }
-    &>input,
-    &>li {
-        font-size: 16px !important;
-    }
+    font-family: "Noto Sans KR", sans-serif;
+  }
+  &:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
+  & > input,
+  & > li {
+    font-size: 16px !important;
+  }
 }
 
 @mixin button-type5 {
-    .button5-css {
-        height: 100px;
-    }
-    box-shadow: 0px 0px 5px rgba(0,
-    0,
-    0,
-    0.15);
-    border-radius: 10px;
-    // height: 2.5rem;
-    height: inherit;
-    // margin-top: 10px;
-    label {
-        display: block;
-        position: relative;
-        padding: 12px 0;
-        cursor: pointer;
-        text-align: center;
-    }
-    input {
-        position: absolute;
-        opacity: 0;
-        cursor: pointer;
-    }
-    .check {
-        position: absolute;
-        left: 12px;
-        height: 15px;
-        width: 15px;
-        background-color: var(--color__white);
-        border-radius: 50%;
-        border: 1px solid #474747;
-    }
-    input:checked~.check {
-        background-color: var(--color__white);
-        border-color: var(--color__white);
-        border: 1px solid #f18b24;
-    }
+  .button5-css {
+    height: 100px;
+  }
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  // height: 2.5rem;
+  height: inherit;
+  // margin-top: 10px;
+  label {
+    display: block;
+    position: relative;
+    padding: 12px 0;
+    cursor: pointer;
+    text-align: center;
+  }
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .check {
+    position: absolute;
+    left: 12px;
+    height: 15px;
+    width: 15px;
+    background-color: var(--color__white);
+    border-radius: 50%;
+    border: 1px solid #474747;
+  }
+  input:checked ~ .check {
+    background-color: var(--color__white);
+    border-color: var(--color__white);
+    border: 1px solid #f18b24;
+  }
+  .check:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  label {
     .check:after {
-        content: "";
-        position: absolute;
-        display: none;
+      top: 2.5px;
+      left: 2.5px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--syboml__color);
     }
-    label {
-        .check:after {
-            top: 2.5px;
-            left: 2.5px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background: var(--syboml__color);
-        }
-        input:checked~.check:after {
-            display: block;
-        }
+    input:checked ~ .check:after {
+      display: block;
     }
-    &:hover {
-        box-shadow: 0px 0px 5px 0px #ff9948;
-    }
+  }
+  &:hover {
+    box-shadow: 0px 0px 5px 0px #ff9948;
+  }
 }
-
 
 /*---------- 버튼디자인 ----------*/
 
 .button-type1 {
-    @include button-type1
+  @include button-type1;
 }
 
 .button-type2 {
-    @include button-type2
+  @include button-type2;
 }
 
 .button-type3 {
-    @include button-type3
+  @include button-type3;
 }
 
 .button-type4 {
-    @include button-type4
+  @include button-type4;
 }
 
 .button-type5 {
-    @include button-type5
+  @include button-type5;
 }
 
 .large-button {
-    margin-top: 20px;
-    width: 250px;
-    margin-left: calc(50% - 150px);
-    text-align: center;
-    i {
-        margin-left: 20px;
-    }
+  margin-top: 20px;
+  width: 250px;
+  margin-left: calc(50% - 150px);
+  text-align: center;
+  i {
+    margin-left: 20px;
+  }
 }
-
 
 /*---------- container공통영역 ----------*/
 
 .gray-text {
-    color: #999
+  color: #999;
 }
 
 .inner {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .cont-box {
-    margin: 0 auto;
-    @include float-clear;
-    .button {
-        float: left;
-    }
-    p {
-        // margin-bottom: 30px;
-        font-size: $fs-small;
-    }
+  margin: 0 auto;
+  @include float-clear;
+  .button {
+    float: left;
+  }
+  p {
+    // margin-bottom: 30px;
+    font-size: $fs-small;
+  }
 }
 
 h2 {
-    font-weight: 600;
-    margin-bottom: 30px;
-    line-height: 1.2em;
+  font-weight: 600;
+  margin-bottom: 30px;
+  line-height: 1.2em;
 }
 
 h3 {
-    font-size: 28px;
-    line-height: 1.2em;
-    font-weight: 600;
-    margin-bottom: 40px;
-    .number {
-        width: 20px;
-        height: 20px;
-        padding: 0 7px;
-        margin-right: 10px;
-        color: $main-color;
-        border-radius: 6px;
-        border: 2px solid $main-color;
-    }
+  font-size: 28px;
+  line-height: 1.2em;
+  font-weight: 600;
+  margin-bottom: 40px;
+  .number {
+    width: 20px;
+    height: 20px;
+    padding: 0 7px;
+    margin-right: 10px;
+    color: $main-color;
+    border-radius: 6px;
+    border: 2px solid $main-color;
+  }
 }
 
 .orange {
-    color: $main-color
+  color: $main-color;
 }
-
 
 /*---------- input 디자인----------*/
 
 textarea,
 input[type="input"],
 input[type="number"] {
-    border: 1px solid rgb(197, 197, 197);
-    border-radius: 10px;
-    &:focus {
-        background: #fdfdf4;
-    }
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 10px;
+  &:focus {
+    background: #fdfdf4;
+  }
 }
 
 .section__container {
-    &::after {
-        @include float-clear
-    }
+  &::after {
+    @include float-clear;
+  }
 }
 
 .simple__input__area {
-    .detail__container {
-        span {
-            font-weight: 600;
-        }
+  .detail__container {
+    span {
+      font-weight: 600;
     }
-    .checkbox__area {
-        &::after {
-            @include float-clear;
-        }
-        .simpleOrder__checkbox {
-            position: relative;
-            &::after {
-                @include float-clear;
-            }
-            span {
-                line-height: 1.3;
-                display: inline-block;
-                padding-left: 35px;
-            }
-        }
-        .checkbox {
-            position: absolute;
-            left: 0;
-            display: block;
-            z-index: 0;
-        }
+  }
+  .checkbox__area {
+    &::after {
+      @include float-clear;
     }
+    .simpleOrder__checkbox {
+      position: relative;
+      &::after {
+        @include float-clear;
+      }
+      span {
+        line-height: 1.3;
+        display: inline-block;
+        padding-left: 35px;
+      }
+    }
+    .checkbox {
+      position: absolute;
+      left: 0;
+      display: block;
+      z-index: 0;
+    }
+  }
 }
 
 .simple__input {
-    box-sizing: border-box;
-    width: 100%;
-    font-size: 15px;
-    padding: 10px 5px;
-    margin-top: 6px;
-    margin-bottom: 15px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 15px;
+  padding: 10px 5px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
 
 .memo__input__container {
-    .simple__input {
-        height: 280px;
-    }
+  .simple__input {
+    height: 280px;
+  }
 }
 
 .checkbox {
-    border: 1px solid $main-color;
-    width: 20px;
-    border-radius: 10px;
-    outline: none;
-    padding: 10px 5px;
-    background-color: #fff;
+  border: 1px solid $main-color;
+  width: 20px;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px 5px;
+  background-color: #fff;
 }
 
 input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    border-radius: 3px;
-    outline: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  outline: none;
 }
 
 input[type="checkbox"] span {
-    margin-top: 20px;
+  margin-top: 20px;
 }
-
 
 /*post slider*/
 
 .slider-wrap {
-    position: relative;
-    .cont {
-        margin: 0 10px;
-        background-color: #fff;
-        border-radius: 15px !important;
-        img {
-            width: 100%;
-            border-radius: 15px 15px 0 0;
-        }
-        .news-img-area {
-            position: relative;
-            i {
-                position: absolute;
-                right: 15px;
-                bottom: 15px;
-                color: $main-color;
-                &:hover {
-                    color: #fff;
-                }
-            }
-        }
-        .news-title {
-            padding: 20px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            font-weight: bolder;
-        }
+  position: relative;
+  .cont {
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 15px !important;
+    img {
+      width: 100%;
+      border-radius: 15px 15px 0 0;
     }
-    .slick-arrow {
-        all: unset;
+    .news-img-area {
+      position: relative;
+      i {
         position: absolute;
-        top: calc(50% - 25px);
-        cursor: pointer;
-        z-index: 1;
-        font-size: 25px;
+        right: 15px;
+        bottom: 15px;
+        color: $main-color;
         &:hover {
-            color: $main-color;
+          color: #fff;
         }
+      }
     }
-    .slick-next {
-        right: -15px;
+    .news-title {
+      padding: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: bolder;
     }
-    .slick-prev {
-        left: -15px;
+  }
+  .slick-arrow {
+    all: unset;
+    position: absolute;
+    top: calc(50% - 25px);
+    cursor: pointer;
+    z-index: 1;
+    font-size: 25px;
+    &:hover {
+      color: $main-color;
     }
+  }
+  .slick-next {
+    right: -15px;
+  }
+  .slick-prev {
+    left: -15px;
+  }
 }
 
 .slick-dots {
-    display: none !important;
+  display: none !important;
 }
 
 .orange-back {
-    background-color: #ffe0d7;
+  background-color: #ffe0d7;
 }
