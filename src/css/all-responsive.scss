@@ -152,38 +152,7 @@
     .simple__textarea {
         height: 200px;
     }
-    footer {
-        .use-div {
-            text-align: center;
-            width: 100%;
-        }
-        .call {
-            font-size: 18px;
-        }
-        ul {
-            width: 100%;
-            text-align: center;
-            &::after {
-                @include float-clear;
-            }
-            &.use {
-                float: initial;
-                display: block;
-                margin: 0 auto;
-            }
-            &.sns {
-                float: initial;
-                display: block;
-            }
-            li {
-                float: left;
-                margin-right: 30px;
-                // &::after {
-                //     @include float-clear;
-                // }
-            }
-        }
-    }
+
 }
 
 
@@ -247,23 +216,6 @@
     }
     .simple__textarea {
         height: 265px;
-    }
-    footer {
-        .call {
-            font-size: $fs-large;
-        }
-        ul {
-            &.use {
-                float: left;
-            }
-            &.sns {
-                float: right;
-            }
-            li {
-                float: left;
-                margin-right: 30px;
-            }
-        }
     }
 }
 
