@@ -17,10 +17,10 @@
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-        <link rel="stylesheet" type="text/css" href="../src/css/all-html.css"/>
-        <link rel="stylesheet" type="text/css" href="../src/css/all-responsive.css"/>
-        <link rel="stylesheet" type="text/css" href="../src/css/header_footer.css"/>
-        <link rel="stylesheet" type="text/css" href="../src/css/employment.css"/>
+        <link rel="stylesheet" type="text/css" href="../src/css/all-html.css" />
+        <link rel="stylesheet" type="text/css" href="../src/css/all-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="../src/css/header_footer.css" />
+        <link rel="stylesheet" type="text/css" href="../src/css/employment.css" />
         <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
 
         <!-- 폰트 -->
@@ -37,7 +37,7 @@
                     <h1 class="logo">
                         <a href="index.html"><img src="../src/images/horizontal-logo.png" alt="아임유어박스">IMYOURBOX</a>
                     </h1>
-    
+
                     <div class="header--gnb pc">
                         <ul class="gnb">
                             <li class="gnb-menu">
@@ -59,9 +59,9 @@
                                 <a href="https://newatis.co.kr/" target="_blank">ATIS</a>
                             </li>
                         </ul>
-    
+
                     </div>
-    
+
                     <div class="mobile">
                         <input type="checkbox" id="menuicon" onclick="dis()">
                         <label for="menuicon">
@@ -69,7 +69,7 @@
                            <span class="mobile"></span>
                              <span class="mobile"></span>
                        </label>
-    
+
                         <div class="sidebar">
                             <ul class="gnb">
                                 <li>
@@ -91,9 +91,9 @@
                                     <a href="https://newatis.co.kr/" target="_blank">ATIS</a>
                                 </li>
                             </ul>
-    
+
                             <!-- gnb mobile-->
-    
+
                             <ul class="sns">
                                 <li>
                                     <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
@@ -110,10 +110,10 @@
                         <!--sidebar-->
                     </div>
                     <!--mobile-->
-    
+
                 </div>
-    
-    
+
+
             </header>
             <div class="cont-box">
                 <div class="cont1">
@@ -133,6 +133,16 @@
     <script src="https://kit.fontawesome.com/b662cbe3c5.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="text/javascript" async="true" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript">
+        function dis() {
+            if ($('.sidebar').css('display') == 'none') {
+                $('.sidebar').show();
+            } else {
+                $('.sidebar').hide();
+            }
+        }
+    </script>
     <script>
         $(function() {
             var includes1 = $('[data-include1="header-html"]');

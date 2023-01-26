@@ -16,6 +16,11 @@
 
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+        <link rel="stylesheet" type="text/css" href="../src/css/all-html.css" />
+        <link rel="stylesheet" type="text/css" href="../src/css/all-responsive.css" />
+        <link rel="stylesheet" type="text/css" href="../src/css/header_footer.css" />
+        <link rel="stylesheet" type="text/css" href="../src/css/index.css" />
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
         <!-- 폰트 -->
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
@@ -25,9 +30,91 @@
     </head>
 
     <body>
-
         <div id="container">
-            <div data-include1="header-html" id="header-html"></div>
+            <header id="header">
+                <div class="cont--inner">
+                    <h1 class="logo">
+                        <a href="index.html"><img src="../src/images/horizontal-logo.png" alt="아임유어박스">IMYOURBOX</a>
+                    </h1>
+
+                    <div class="header--gnb pc">
+                        <ul class="gnb">
+                            <li class="gnb-menu">
+                                <a href="price.html">예상견적</a>
+                            </li>
+                            <li class="gnb-menu">
+                                <a href="service.html">SERVICE</a>
+                            </li>
+                            <li class="gnb-menu">
+                                <a href="introduction.html">회사소개</a>
+                            </li>
+                            <li class="gnb-menu">
+                                <a href="employment.html">채용정보</a>
+                            </li>
+                            <li class="button button-type1">
+                                <a href="http://222.231.61.51/" target="_blank">WMS</a>
+                            </li>
+                            <li class="button button-type1">
+                                <a href="https://newatis.co.kr/" target="_blank">ATIS</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="mobile">
+                        <input type="checkbox" id="menuicon" onclick="dis()">
+                        <label for="menuicon">
+                           <span class="mobile"></span>
+                           <span class="mobile"></span>
+                             <span class="mobile"></span>
+                       </label>
+
+                        <div class="sidebar">
+                            <ul class="gnb">
+                                <li>
+                                    <a href="price.html">예상견적</a>
+                                </li>
+                                <li>
+                                    <a href="service.html">SERVICE</a>
+                                </li>
+                                <li>
+                                    <a href="introduction.html">회사소개</a>
+                                </li>
+                                <li>
+                                    <a href="employment.html">채용정보</a>
+                                </li>
+                                <li>
+                                    <a href="http://222.231.61.51/" target="_blank">WMS</a>
+                                </li>
+                                <li>
+                                    <a href="https://newatis.co.kr/" target="_blank">ATIS</a>
+                                </li>
+                            </ul>
+
+                            <!-- gnb mobile-->
+
+                            <ul class="sns">
+                                <li>
+                                    <a href="https://www.facebook.com/Imyourbox" target="_blank"><i class="fab fa-facebook-f fa-2x" ></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://blog.naver.com/imyourbox" target="_blank"><i class="fab fa-blogger-b fa-2x" ></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/imyourbox" target="_blank"><i class="fab fa-instagram fa-2x" ></i></a>
+                                </li>
+                            </ul>
+                            <!--sns-->
+                        </div>
+                        <!--sidebar-->
+                    </div>
+                    <!--mobile-->
+
+                </div>
+
+
+            </header>
+            <!-- <div data-include1="header-html" id="header-html"></div> -->
             <div class="cont-box">
                 <div class="cont1">
                     <div class="slideshow-container">
@@ -120,7 +207,7 @@
             </div>
             <!-- cont-box -->
 
-            <div class="cont-box cont-padding">
+            <!-- <div class="cont-box cont-padding">
                 <div class="cont4">
                     <div class="slideshow-container">
                         <div class="cont4-slider fade active">
@@ -149,10 +236,8 @@
                             <a class="next arrow-button" onclick="nextSlide()">&#10095;</a>
                         </div>
                     </div>
-                    <!--slideshow-container-->
                 </div>
-                <!-- class : cont4 -->
-            </div>
+            </div> -->
             <!-- cont-box -->
 
             <div class="cont8 orange-back cont-box">
@@ -359,7 +444,74 @@
             <!--cont-box-->
         </div>
         <!-- id : container -->
-        <div data-include2="footer-html" id="footer-html"></div>
+        <footer id="footer cont-padding ">
+            <div class="inner ">
+                <div class="cont--inner ">
+                    <div class="logo-div ">
+                        <div class="footer-logo ">
+                            <img src="../src/images/logo_white.png " alt="footerlogo ">
+                        </div>
+                        <!--footer-logo-->
+                        <p class="call"><i class="fas fa-phone-alt fa-xs"></i> 02-853-7374</p>
+
+                    </div>
+                    <!--logo-div-->
+
+                    <div class="contact ">
+                        <div class="contact-text1 ">
+
+                            <span class="company " style="font-weight:bold; ">&#40;주&#41;아임유어박스</span><br>
+                            <p>imurbox&#64;imyourbox.com</p>
+                            <span>사업자등록번호 126-86-03002</span>
+                            <span>ㅣ 대표이사 임우택</span>
+
+                            <p>
+                                [08593] 서울특별시 금천구 가산디지털로 1길 165,403호 (가산동, 가산비즈니스센터)
+                            </p>
+                        </div>
+                        <!--contact-text1-->
+                        <div class="contact-text2">
+                            <a href="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/Imyourbox.pdf " alt=소개서 target="blank ">
+                                <p class="service-download">서비스 소개서 다운로드<i class="fa-solid fa-download"></i></p>
+                            </a>
+                            <p>
+                                Copyright &copy; 2023 I’m your box Inc. All Rights Reserved.
+                            </p>
+
+                        </div>
+                        <!--contact-text2-->
+                    </div>
+                    <!-- contact -->
+
+                    <div class="use-div ">
+                        <ul class="use ">
+                            <li><a href="access.html ">이용약관</a></li>
+                            <li><a href="access2.html " class="bold ">개인정보처리방침</a></li>
+                            <li><a href="contact.html ">오시는길</a></li>
+                        </ul>
+                        <!--use-->
+                        <ul class="sns ">
+                            <li>
+                                <a href="https://www.facebook.com/Imyourbox " target="_blank "><i class="fab fa-facebook-f fa-2x "></i></sa>
+                            </li>
+                            <li>
+                                <a href="https://blog.naver.com/imyourbox " target="_blank "><i class="fab fa-blogger-b fa-2x "></i></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/imyourbox " target="_blank "><i class="fab fa-instagram fa-2x "></i></a>
+                            </li>
+                        </ul>
+                        <!--sns-->
+                    </div>
+                    <!-- use-div-->
+
+                </div>
+            </div>
+            <!-- inner-->
+
+
+        </footer>
+        <!-- <div data-include2="footer-html" id="footer-html"></div> -->
         <!--footer 영역-->
 
 
@@ -382,6 +534,16 @@
                 $(this).load('footer.html');
             });
         });
+    </script>
+
+    <script type="text/javascript">
+        function dis() {
+            if ($('.sidebar').css('display') == 'none') {
+                $('.sidebar').show();
+            } else {
+                $('.sidebar').hide();
+            }
+        }
     </script>
 
     <!--header/footer include-->

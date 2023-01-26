@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/*--전체 디자인 css include--*/ /*---전체 디자인---*/
+/*--전체 디자인 css include--*/
+/*---전체 디자인---*/
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
 body {
   font-family: "Roboto";
@@ -44,21 +45,26 @@ span {
 /*---------- 버튼디자인 ----------*/
 .button-type1 {
   padding: 0.6em 1.5em;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   font-weight: 600;
   background-color: #ff7a22;
   border: 1px solid #ff7a22;
   border-radius: 20px;
 }
+
 .button-type1 a {
   color: white;
 }
+
 .button-type1:hover {
-  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  -webkit-box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+          box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
   border: 1px solid #ff7a22;
   background-color: white;
   cursor: pointer;
 }
+
 .button-type1:hover a {
   color: #ff7a22;
 }
@@ -66,23 +72,30 @@ span {
 .button-type2 {
   font-size: 25px;
   padding: 0.6em 1.5em;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   font-weight: 600;
   background-color: white;
   color: #ff7a22;
   border-radius: 20px;
 }
+
 .button-type2:hover {
-  box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+  -webkit-box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
+          box-shadow: 0px 3px 3px rgba(255, 155, 41, 0.288);
   background-color: #ff7a22;
   color: white;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
 .button-type2:hover p {
   color: white;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
+
 .button-type2 p {
   font-size: 16px;
   color: #444;
@@ -90,48 +103,59 @@ span {
 
 .button-type3 {
   border: none;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   border-radius: 7px;
   height: auto;
 }
-.button-type3 > input, .button-type3 > li {
+
+.button-type3 > input,
+.button-type3 > li {
   border: none;
   background-size: 55% 60% !important;
   background-position: center 10px !important;
   line-height: 10.5 !important;
   text-align: center;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   min-width: 95px;
   font-size: 15px !important;
   max-height: 100px;
 }
+
 .button-type3 i {
   position: absolute;
   top: 10px;
   right: 10px;
 }
+
 .button-type3:hover {
-  box-shadow: 0px 0px 5px 0px #ff9948;
+  -webkit-box-shadow: 0px 0px 5px 0px #ff9948;
+          box-shadow: 0px 0px 5px 0px #ff9948;
 }
+
 .button-type3.clicked {
-  box-shadow: 0px 0px 5px 0px #ff9948;
+  -webkit-box-shadow: 0px 0px 5px 0px #ff9948;
+          box-shadow: 0px 0px 5px 0px #ff9948;
   border: 0;
   outline: 0;
 }
 
 .button-type4 {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   height: 2.5rem;
 }
+
 .button-type4 i {
   position: absolute;
   bottom: calc(50% - 7px) !important;
   right: 20px !important;
 }
+
 .button-type4 .storageType__container__button {
   -webkit-appearance: none;
   width: 100%;
@@ -142,21 +166,28 @@ span {
   border-radius: 20px;
   font-family: "Noto Sans KR", sans-serif;
 }
+
 .button-type4:hover {
-  box-shadow: 0px 0px 5px 0px #ff9948;
+  -webkit-box-shadow: 0px 0px 5px 0px #ff9948;
+          box-shadow: 0px 0px 5px 0px #ff9948;
 }
-.button-type4 > input, .button-type4 > li {
+
+.button-type4 > input,
+.button-type4 > li {
   font-size: 16px !important;
 }
 
 .button-type5 {
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   height: inherit;
 }
+
 .button-type5 .button5-css {
   height: 100px;
 }
+
 .button-type5 label {
   display: block;
   position: relative;
@@ -164,11 +195,13 @@ span {
   cursor: pointer;
   text-align: center;
 }
+
 .button-type5 input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
+
 .button-type5 .check {
   position: absolute;
   left: 12px;
@@ -178,16 +211,19 @@ span {
   border-radius: 50%;
   border: 1px solid #474747;
 }
+
 .button-type5 input:checked ~ .check {
   background-color: var(--color__white);
   border-color: var(--color__white);
   border: 1px solid #f18b24;
 }
+
 .button-type5 .check:after {
   content: "";
   position: absolute;
   display: none;
 }
+
 .button-type5 label .check:after {
   top: 2.5px;
   left: 2.5px;
@@ -196,11 +232,14 @@ span {
   border-radius: 50%;
   background: var(--syboml__color);
 }
+
 .button-type5 label input:checked ~ .check:after {
   display: block;
 }
+
 .button-type5:hover {
-  box-shadow: 0px 0px 5px 0px #ff9948;
+  -webkit-box-shadow: 0px 0px 5px 0px #ff9948;
+          box-shadow: 0px 0px 5px 0px #ff9948;
 }
 
 .large-button {
@@ -209,6 +248,7 @@ span {
   margin-left: calc(50% - 150px);
   text-align: center;
 }
+
 .large-button i {
   margin-left: 20px;
 }
@@ -228,9 +268,11 @@ span {
   display: block;
   clear: both;
 }
+
 .cont-box .button {
   float: left;
 }
+
 .cont-box p {
   font-size: 16px;
 }
@@ -247,6 +289,7 @@ h3 {
   font-weight: 600;
   margin-bottom: 40px;
 }
+
 h3 .number {
   width: 20px;
   height: 20px;
@@ -263,14 +306,15 @@ h3 .number {
 
 /*---------- input 디자인----------*/
 textarea,
-input[type=input],
-input[type=number] {
-  border: 1px solid rgb(197, 197, 197);
+input[type="input"],
+input[type="number"] {
+  border: 1px solid #c5c5c5;
   border-radius: 10px;
 }
+
 textarea:focus,
-input[type=input]:focus,
-input[type=number]:focus {
+input[type="input"]:focus,
+input[type="number"]:focus {
   background: #fdfdf4;
 }
 
@@ -283,24 +327,29 @@ input[type=number]:focus {
 .simple__input__area .detail__container span {
   font-weight: 600;
 }
+
 .simple__input__area .checkbox__area::after {
   content: "";
   display: block;
   clear: both;
 }
+
 .simple__input__area .checkbox__area .simpleOrder__checkbox {
   position: relative;
 }
+
 .simple__input__area .checkbox__area .simpleOrder__checkbox::after {
   content: "";
   display: block;
   clear: both;
 }
+
 .simple__input__area .checkbox__area .simpleOrder__checkbox span {
   line-height: 1.3;
   display: inline-block;
   padding-left: 35px;
 }
+
 .simple__input__area .checkbox__area .checkbox {
   position: absolute;
   left: 0;
@@ -309,7 +358,8 @@ input[type=number]:focus {
 }
 
 .simple__input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   font-size: 15px;
   padding: 10px 5px;
@@ -333,14 +383,14 @@ input[type=number]:focus {
   background-color: #fff;
 }
 
-input[type=checkbox] {
+input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border-radius: 3px;
   outline: none;
 }
 
-input[type=checkbox] span {
+input[type="checkbox"] span {
   margin-top: 20px;
 }
 
@@ -348,27 +398,33 @@ input[type=checkbox] span {
 .slider-wrap {
   position: relative;
 }
+
 .slider-wrap .cont {
   margin: 0 10px;
   background-color: #fff;
   border-radius: 15px !important;
 }
+
 .slider-wrap .cont img {
   width: 100%;
   border-radius: 15px 15px 0 0;
 }
+
 .slider-wrap .cont .news-img-area {
   position: relative;
 }
+
 .slider-wrap .cont .news-img-area i {
   position: absolute;
   right: 15px;
   bottom: 15px;
   color: #ff7a22;
 }
+
 .slider-wrap .cont .news-img-area i:hover {
   color: #fff;
 }
+
 .slider-wrap .cont .news-title {
   padding: 20px;
   white-space: nowrap;
@@ -376,6 +432,7 @@ input[type=checkbox] span {
   text-overflow: ellipsis;
   font-weight: bolder;
 }
+
 .slider-wrap .slick-arrow {
   all: unset;
   position: absolute;
@@ -384,12 +441,15 @@ input[type=checkbox] span {
   z-index: 1;
   font-size: 25px;
 }
+
 .slider-wrap .slick-arrow:hover {
   color: #ff7a22;
 }
+
 .slider-wrap .slick-next {
   right: -15px;
 }
+
 .slider-wrap .slick-prev {
   left: -15px;
 }
@@ -403,76 +463,130 @@ input[type=checkbox] span {
 }
 
 .flexbox_02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 2%;
 }
 
 .item_02 {
   margin-bottom: 3%;
-  flex-shrink: 1;
-  flex-grow: 1;
-  flex-direction: column;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .item_02 img {
   width: 100%;
 }
 
 .item_02-1 {
-  flex-shrink: 1;
-  flex-grow: 1;
-  justify-content: center;
-  flex-direction: column;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 .item_02-1 img {
   width: 100%;
 }
 
 .flexbox_03 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .item_03 {
-  flex-shrink: 1;
-  flex-grow: 0;
-  flex-direction: column;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .flexbox_04 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .item_04 {
   position: relative;
-  flex-shrink: 1;
-  flex-grow: 0;
-  flex-direction: column;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .flexbox_05 {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .item_05,
 .item_05-1 {
   margin-bottom: 2%;
-  flex-shrink: 1;
-  flex-direction: column;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: auto;
 }
+
 .item_05 img,
 .item_05-1 img {
   width: 90%;
 }
 
 .item-reverse {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 /*--------- 모바일 반응형 --------*/
@@ -511,8 +625,11 @@ input[type=checkbox] span {
     display: none;
   }
   .item_02 {
-    flex-basis: 100%;
-    justify-content: center;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     max-width: 100%;
   }
   .item_02 img {
@@ -521,26 +638,36 @@ input[type=checkbox] span {
   }
   .item_03,
   .item_04 {
-    flex-basis: calc(50% - 20px);
+    -ms-flex-preferred-size: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
     margin: 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .flexbox_05 {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .item_02-1 {
-    flex-basis: calc(33% - 10px);
-    box-sizing: border-box;
+    -ms-flex-preferred-size: calc(33% - 10px);
+        flex-basis: calc(33% - 10px);
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .item_05 {
-    flex-basis: calc(25% - 20px);
+    -ms-flex-preferred-size: calc(25% - 20px);
+        flex-basis: calc(25% - 20px);
     margin: 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .item_05-1 {
-    flex-basis: calc(50% - 20px);
+    -ms-flex-preferred-size: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
     margin: 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .item_05-1 img {
     width: 100%;
@@ -548,36 +675,8 @@ input[type=checkbox] span {
   .simple__textarea {
     height: 200px;
   }
-  footer .use-div {
-    text-align: center;
-    width: 100%;
-  }
-  footer .call {
-    font-size: 18px;
-  }
-  footer ul {
-    width: 100%;
-    text-align: center;
-  }
-  footer ul::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  footer ul.use {
-    float: initial;
-    display: block;
-    margin: 0 auto;
-  }
-  footer ul.sns {
-    float: initial;
-    display: block;
-  }
-  footer ul li {
-    float: left;
-    margin-right: 30px;
-  }
 }
+
 /*--------- PC 반응형 --------*/
 @media screen and (min-width: 1080px) {
   .cont1 {
@@ -599,6 +698,9 @@ input[type=checkbox] span {
   h2 {
     font-size: 50px;
   }
+  h3 {
+    margin-bottom: 40px;
+  }
   .cont--inner {
     width: 1080px;
     margin: 0 auto;
@@ -609,28 +711,35 @@ input[type=checkbox] span {
   .pc {
     display: block;
   }
-  input[id=menuicon] + label {
+  input[id="menuicon"] + label {
     display: none;
   }
   .item_02,
   .item_02-1 {
-    flex-basis: 46.5%;
+    -ms-flex-preferred-size: 46.5%;
+        flex-basis: 46.5%;
     max-width: 540px;
   }
   .item_03 {
-    flex-basis: calc(31% - 20px);
+    -ms-flex-preferred-size: calc(31% - 20px);
+        flex-basis: calc(31% - 20px);
   }
   .item_04 {
-    flex-basis: 23%;
+    -ms-flex-preferred-size: 23%;
+        flex-basis: 23%;
   }
   .flexbox_05 {
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .item_05 {
-    flex-basis: 8%;
+    -ms-flex-preferred-size: 8%;
+        flex-basis: 8%;
   }
   .item_05-1 {
-    flex-basis: calc(20% - 20px);
+    -ms-flex-preferred-size: calc(20% - 20px);
+        flex-basis: calc(20% - 20px);
   }
   .item_05-1 img {
     width: 100%;
@@ -638,35 +747,26 @@ input[type=checkbox] span {
   .simple__textarea {
     height: 265px;
   }
-  footer .call {
-    font-size: 25px;
-  }
-  footer ul.use {
-    float: left;
-  }
-  footer ul.sns {
-    float: right;
-  }
-  footer ul li {
-    float: left;
-    margin-right: 30px;
-  }
 }
+
 @media screen and (min-width: 0px) and (max-width: 513px) {
   .item_05 {
-    flex-basis: calc(50% - 20px);
+    -ms-flex-preferred-size: calc(50% - 20px);
+        flex-basis: calc(50% - 20px);
   }
 }
+
 /*--------- 깨지는 반응형 정리 --------*/
 @media screen and (min-width: 0px) and (max-width: 470px) {
   .item_05-1 {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
     margin: 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   .item_05-1 img {
     width: 100%;
   }
 }
-
 /*# sourceMappingURL=all-responsive.css.map */

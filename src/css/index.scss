@@ -1,245 +1,242 @@
-/*--전체 디자인 css include--*/
-
-@import "all-html";
-
-/*--index 디자인 css--*/
-
-.test {
-    font-size: 150px;
-}
-
-p.strong {
-    font-weight: bold;
-    font-size: 22px !important;
-}
-
-.cont1 {
-    margin-top: 50px;
-    position: relative;
-    .cont--inner {
-        .cont1-text {
-            position: absolute;
-            width: 100%;
-            color: #fff;
-            .button {
-                padding: 1.5em 1em;
-                box-sizing: border-box;
-                box-shadow: 0px 5px 5px rgba(73, 45, 13, 0.432);
-            }
-        }
+    /*--전체 디자인 css include--*/
+    
+    @import "all-html";
+    /*--index 디자인 css--*/
+    
+    p,
+    span {
+        line-height: 1.4;
     }
-}
-
-.cont2 {
-    &::after {
-        @include float-clear;
+    
+    .test {
+        font-size: 150px;
     }
-    .item_02 {
-        img {
-            width: 60%;
-            margin: 0 20%;
-        }
+    
+    p.strong {
+        font-weight: bold;
+        font-size: 22px !important;
     }
-    .system {
-        box-shadow: 0 4px 16px rgb(0 0 0 / 20%);
-        border-radius: 20px;
-        box-sizing: border-box;
-        background-color: rgba(255, 218, 196, 0.233);
-        a {
-            float: right;
-            margin: 5%;
-            color: #fff;
-            &:hover {
-                color: $main-color;
-            }
-        }
-        p {
-            width: 90%;
-            margin: 5%;
-            line-height: 1.5;
-        }
-    }
-}
-
-.cont3 {
-    background-color: $main-color;
-    &::after {
-        @include float-clear;
-    }
-    .service-part {
-        background-color: #fff;
-        float: left;
-        box-sizing: border-box;
-        text-align: center;
-        border-radius: 10px;
-        padding: 15px 0;
-        box-shadow: 0px 5px 5px rgba(255, 155, 41, 0.288);
-        margin-bottom: 3%;
-        a {
-            color: #333;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        img {
-            width: 100%;
-            padding-bottom: 20px;
-        }
-    }
-}
-
-.cont5 {
-    .consumer {
-        p {
-            line-height: 1.3;
-            &.strong {
-                margin-bottom: 5%;
-            }
-        }
-        .box {
-            &::after {
-                @include float-clear;
-            }
-            div {
-                &::after {
-                    @include float-clear;
+    
+    .cont1 {
+        margin-top: 50px;
+        position: relative;
+        .cont--inner {
+            .cont1-text {
+                position: absolute;
+                width: 100%;
+                color: #fff;
+                .button {
+                    padding: 1.5em 1em;
+                    box-sizing: border-box;
+                    box-shadow: 0px 5px 5px rgba(73, 45, 13, 0.432);
                 }
             }
         }
-        img {
+    }
+    
+    .cont2 {
+        &::after {
+            @include float-clear;
+        }
+        .system {
+            box-shadow: 0px 5px 5px rgba(66, 66, 66, 0.432);
+            border-radius: 20px;
             box-sizing: border-box;
-        }
-    }
-}
-
-.cont6 {
-    background-color: rgb(240, 240, 240);
-}
-
-
-/* Slideshow container */
-
-.slideshow-container {
-    &::after {
-        @include float-clear;
-    }
-    width: 100vw;
-    img {
-        width: 100vw;
-        height: 800px;
-        object-fit: cover;
-    }
-    .cont--inner {
-        position: relative;
-        h3 {
-            position: absolute;
-            margin: 80px 0;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.3);
-            color: #fff;
-        }
-        .arrow-button {
-            cursor: pointer;
-            position: absolute;
-            bottom: 50px;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: $main-color;
-            background-color: rgba(255, 255, 255, 0.8);
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 3px;
-            &:hover {
-                background-color: rgba(255, 102, 0, 0.664);
+            background-color: rgba(255, 218, 196, 0.233);
+            a {
+                float: right;
+                margin: 5%;
                 color: #fff;
+                &:hover {
+                    color: $main-color;
+                }
+            }
+            p {
+                width: 90%;
+                margin: 5%;
             }
         }
-        .next,
-        .main-next {
-            right: 0;
+    }
+    
+    .cont3 {
+        background-color: $main-color;
+        &::after {
+            @include float-clear;
         }
-        position: relative;
-        margin: auto;
-    }
-}
-
-
-/* effect */
-
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-
-/*--------- 모바일 반응형 --------*/
-
-@media screen and (min-width: 0px) and (max-width: 1079px) {
-    .cont1 {
-        .button {
-            margin-top: 20px;
-        }
-        .cont1-text {
-            top: -750px;
-        }
-    }
-    .cont5 {
-        p {
+        .service-part {
+            background-color: #fff;
+            float: left;
+            box-sizing: border-box;
             text-align: center;
-        }
-        p.strong {
-            margin-top: 0%;
-            font-size: 23px;
-        }
-        .box {
-            padding-top: 60px;
-        }
-    }
-    .cont6 {
-        margin-top: 50px;
-    }
-}
-
-
-/*--------- PC 반응형 --------*/
-
-@media screen and (min-width: 1080px) {
-    .cont1 {
-        .button {
-            margin-top: 100px;
-        }
-        .cont1-text {
-            top: -650px;
+            border-radius: 10px;
+            padding: 15px 0;
+            box-shadow: 0px 5px 5px rgba(255, 155, 41, 0.288);
+            margin-bottom: 3%;
+            a {
+                color: #333;
+                font-weight: bold;
+                font-size: 18px;
+            }
+            img {
+                width: 100%;
+                padding-bottom: 20px;
+            }
         }
     }
+    
     .cont5 {
-        margin: 0 auto;
-        p.strong {
-            margin-top: 30%;
-        }
-        img {
-            padding: 10%;
+        .consumer {
+            p {
+                &.strong {
+                    margin-bottom: 5%;
+                }
+            }
+            .box {
+                &::after {
+                    @include float-clear;
+                }
+                div {
+                    &::after {
+                        @include float-clear;
+                    }
+                }
+            }
+            img {
+                box-sizing: border-box;
+            }
         }
     }
-}
+    
+    .cont6 {
+        background-color: rgb(240, 240, 240);
+    }
+    /* Slideshow container */
+    
+    .slideshow-container {
+        &::after {
+            @include float-clear;
+        }
+        width: 100vw;
+        img {
+            width: 100vw;
+            height: 800px;
+            object-fit: cover;
+        }
+        .cont--inner {
+            position: relative;
+            h3 {
+                position: absolute;
+                margin: 80px 0;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.3);
+                color: #fff;
+            }
+            .arrow-button {
+                cursor: pointer;
+                position: absolute;
+                bottom: 50px;
+                width: auto;
+                padding: 16px;
+                margin-top: -22px;
+                color: $main-color;
+                background-color: rgba(255, 255, 255, 0.8);
+                font-weight: bold;
+                font-size: 18px;
+                transition: 0.6s ease;
+                border-radius: 3px;
+                &:hover {
+                    background-color: rgba(255, 102, 0, 0.664);
+                    color: #fff;
+                }
+            }
+            .next,
+            .main-next {
+                right: 0;
+            }
+            position: relative;
+            margin: auto;
+        }
+    }
+    /* effect */
+    
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    /*--------- 모바일 반응형 --------*/
+    
+    @media screen and (min-width: 0px) and (max-width: 1079px) {
+        .slideshow-container {
+            h2 {
+                padding-top: 100px;
+            }
+            img {
+                height: 700px;
+            }
+        }
+        .cont1 {
+            .button {
+                margin-top: 20px;
+            }
+            .cont1-text {
+                top: -750px;
+            }
+        }
+        .cont5 {
+            p {
+                text-align: center;
+            }
+            p.strong {
+                margin-top: 0%;
+                font-size: 23px;
+            }
+            .box {
+                padding-top: 60px;
+            }
+        }
+        .cont6 {
+            margin-top: 50px;
+            padding-bottom: 100px;
+        }
+    }
+    /*--------- PC 반응형 --------*/
+    
+    @media screen and (min-width: 1080px) {
+        .cont1 {
+            .button {
+                margin-top: 100px;
+            }
+            .cont1-text {
+                top: -650px;
+            }
+        }
+        .cont5 {
+            margin: 0 auto;
+            p.strong {
+                margin-top: 30%;
+            }
+            img {
+                padding: 10%;
+            }
+        }
+    }

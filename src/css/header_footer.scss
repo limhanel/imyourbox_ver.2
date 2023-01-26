@@ -229,33 +229,29 @@ footer {
         }
         ul {
             text-align: center;
-            &::after {
-                @include float-clear;
-            }
             &.use {
-                width: 350px;
-                float: initial;
-                display: table;
-                margin: auto;
+                display: inline-block;
             }
             &.sns {
-                margin-top: 20px;
-                float: initial;
-                display: table;
-                margin: 20px auto auto auto;
+                &::after {
+                    @include float-clear;
+                }
                 width: 200px;
+                margin-left: calc(50vw - 100px);
+                margin-top: 20px;
+                li {
+                    a:hover {
+                        color: #FFF;
+                    }
+                }
             }
             li {
-                width: 33%;
-                margin: 0;
+                float: left;
+                margin: 0 15px;
+                &::after {
+                    @include float-clear;
+                }
             }
-            // li {
-            //     // float: left;
-            //     // margin-right: 30px;
-            //     // &::after {
-            //     //     @include float-clear;
-            //     // }
-            // }
         }
     }
 }
