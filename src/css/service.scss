@@ -1,4 +1,4 @@
-        /*--전체 디자인 css include--*/
+    /*--전체 디자인 css include--*/
     
     @import 'all-html';
     /*--service 디자인 css--*/
@@ -43,7 +43,7 @@
                 text-align: center;
                 background-color: #fff;
                 border: 1px solid rgb(216, 238, 255);
-                box-shadow: 0px 6px 6px rgba(62, 123, 255, 0.15);
+                // box-shadow: 0px 6px 6px rgba(62, 123, 255, 0.15);
             }
         }
     }
@@ -103,104 +103,116 @@
         }
     }
     
-    // .show-box {
-    //     position: relative;
-    //     img {
-    //         opacity: 0.7;
-    //         background-color: #000;
-    //     }
-    //     .show-text {
-    //         position: absolute;
-    //         top: 0px;
-    //         left: 0px;
-    //         opacity: 0;
-    //         transition: all ease 0.5s;
-    //     }
-    //     &:hover+.show-text {
-    //         opacity: 1;
-    //     }
-    // }
     .flexbox_02 {
-        span,
-        p {
-            color: #fff;
-            a {
-                display: block;
-                width: 100%;
-                height: 100%;
-                overflow: hidden;
-                position: relative;
-                &:hover figcaption,
-                &:focus figcaption {
-                    opacity: 1;
-                }
+        .show-a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            &:hover figcaption,
+            &:focus figcaption {
+                opacity: 1;
             }
-            figure {
-                width: 100%;
-                height: 100%;
-            }
-            figcaption {
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.6);
-                border-radius: 20px;
-                position: absolute;
-                /* 이미지와 겹치게 처리 */
-                top: 0;
-                left: 0;
+        }
+        .plus-button {
+            position: absolute;
+            top: calc(50% - 50px);
+            left: calc(50% - 50px);
+            opacity: 1;
+            width: 100px;
+            height: 100px;
+        }
+        figure {
+            width: 100%;
+            height: 100%;
+        }
+        figcaption {
+            padding: 20% 10%;
+            box-sizing: border-box;
+            p,
+            span {
                 color: #fff;
-                text-align: center;
-                line-height: 200px;
-                opacity: 0;
-                /* 처음엔 안보이고 */
-                transition: 0.3s;
             }
+            p.strong {
+                font-size: 25px;
+            }
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,
+            0,
+            0,
+            0.6);
+            border-radius: 20px;
+            position: absolute;
+            /* 이미지와 겹치게 처리 */
+            top: 0;
+            left: 0;
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            /* 처음엔 안보이고 */
+            transition: 0.3s;
         }
-        /*--------- 모바일 반응형 --------*/
-        @media screen and (min-width: 0px) and (max-width: 1079px) {
-            .cont1 {
-                // margin: 50px 0;
-                .cont--inner {
-                    background-size: 60%;
-                    padding-bottom: 140px;
-                    overflow: visible;
-                }
-            }
-            .item_02 {
-                text-align: center;
-                margin-bottom: 40px;
-                p,
-                span {
-                    width: 100%;
-                }
-                img {
-                    width: 90%;
-                    margin: 0 auto;
-                }
-            }
-            .item_03 {
-                text-align: center;
-                flex-basis: calc(100% - 20px);
-                margin-bottom: 40px;
-                box-sizing: border-box;
-                img {
-                    width: 70%;
-                    margin: 0 15%;
-                }
-            }
-            .item_05-1 {
-                flex-basis: calc(50% - 20px);
-                padding: 10px;
-                img {
-                    width: 55%;
+    }
+    
+    .cont3 {
+        .item_02 {
+            &:hover {
+                .plus-button {
+                    opacity: 0;
+                    transition: 0.4s;
                 }
             }
         }
-        /*--------- PC 반응형 --------*/
-        @media screen and (min-width: 1080px) {
-            .item_05-1 {
-                img {
-                    width: 70%;
-                }
+    }
+    /*--------- 모바일 반응형 --------*/
+    
+    @media screen and (min-width: 0px) and (max-width: 1079px) {
+        .cont1 {
+            // margin: 50px 0;
+            .cont--inner {
+                background-size: 60%;
+                padding-bottom: 140px;
+                overflow: visible;
             }
         }
+        .item_02 {
+            text-align: center;
+            margin-bottom: 40px;
+            p,
+            span {
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                margin: 0 auto;
+            }
+        }
+        .item_03 {
+            text-align: center;
+            flex-basis: calc(100% - 20px);
+            margin-bottom: 40px;
+            box-sizing: border-box;
+            img {
+                width: 70%;
+                margin: 0 15%;
+            }
+        }
+        .item_05-1 {
+            flex-basis: calc(50% - 20px);
+            padding: 10px;
+            img {
+                width: 55%;
+            }
+        }
+    }
+    /*--------- PC 반응형 --------*/
+    
+    @media screen and (min-width: 1080px) {
+        .item_05-1 {
+            img {
+                width: 70%;
+            }
+        }
+    }

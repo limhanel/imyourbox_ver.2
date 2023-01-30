@@ -507,8 +507,6 @@ span.strong {
   text-align: center;
   background-color: #fff;
   border: 1px solid #d8eeff;
-  -webkit-box-shadow: 0px 6px 6px rgba(62, 123, 255, 0.15);
-          box-shadow: 0px 6px 6px rgba(62, 123, 255, 0.15);
 }
 
 .cont6 {
@@ -570,7 +568,7 @@ span.strong {
   border-radius: 20px;
 }
 
-.flexbox_02 a {
+.flexbox_02 .show-a {
   display: block;
   width: 100%;
   height: 100%;
@@ -578,9 +576,18 @@ span.strong {
   position: relative;
 }
 
-.flexbox_02 a:hover figcaption,
-.flexbox_02 a:focus figcaption {
+.flexbox_02 .show-a:hover figcaption,
+.flexbox_02 .show-a:focus figcaption {
   opacity: 1;
+}
+
+.flexbox_02 .plus-button {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 50px);
+  opacity: 1;
+  width: 100px;
+  height: 100px;
 }
 
 .flexbox_02 figure {
@@ -589,6 +596,9 @@ span.strong {
 }
 
 .flexbox_02 figcaption {
+  padding: 20% 10%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
@@ -599,11 +609,25 @@ span.strong {
   left: 0;
   color: #fff;
   text-align: center;
-  line-height: 200px;
   opacity: 0;
   /* 처음엔 안보이고 */
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.flexbox_02 figcaption p,
+.flexbox_02 figcaption span {
+  color: #fff;
+}
+
+.flexbox_02 figcaption p.strong {
+  font-size: 25px;
+}
+
+.cont3 .item_02:hover .plus-button {
+  opacity: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 }
 
 /*--------- 모바일 반응형 --------*/
@@ -622,7 +646,7 @@ span.strong {
     width: 100%;
   }
   .item_02 img {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
   }
   .item_03 {
