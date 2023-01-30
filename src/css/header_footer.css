@@ -742,8 +742,8 @@ footer .contact-text2 .service-download {
     display: inline-block;
   }
   footer ul.sns {
-    width: 200px;
-    margin-left: calc(50vw - 100px);
+    width: 170px;
+    margin-left: calc(50vw - 120px);
     margin-top: 20px;
   }
   footer ul.sns::after {
