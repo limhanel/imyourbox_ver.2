@@ -481,13 +481,13 @@ input[type=checkbox] span {
     margin-top: 55px;
   }
   .cont2,
-  .cont3,
-  .cont5,
-  .cont6,
-  .cont7,
-  .cont8,
-  .cont9,
-  .cont10 {
+.cont3,
+.cont5,
+.cont6,
+.cont7,
+.cont8,
+.cont9,
+.cont10 {
     padding: 60px 0;
   }
   .cont4 {
@@ -520,7 +520,7 @@ input[type=checkbox] span {
     margin: 0 30%;
   }
   .item_03,
-  .item_04 {
+.item_04 {
     flex-basis: calc(50% - 20px);
     margin: 10px;
     box-sizing: border-box;
@@ -584,13 +584,13 @@ input[type=checkbox] span {
     margin-top: 55px;
   }
   .cont2,
-  .cont3,
-  .cont5,
-  .cont6,
-  .cont7,
-  .cont8,
-  .cont9,
-  .cont10 {
+.cont3,
+.cont5,
+.cont6,
+.cont7,
+.cont8,
+.cont9,
+.cont10 {
     padding: 120px 0;
   }
   .cont4 {
@@ -613,7 +613,7 @@ input[type=checkbox] span {
     display: none;
   }
   .item_02,
-  .item_02-1 {
+.item_02-1 {
     flex-basis: 46.5%;
     max-width: 540px;
   }
@@ -667,6 +667,4 @@ input[type=checkbox] span {
   .item_05-1 img {
     width: 100%;
   }
-}
-
-/*# sourceMappingURL=all-responsive.css.map */
+}/*# sourceMappingURL=all-responsive.css.map */

@@ -82,20 +82,22 @@ const selectedBoxTag = document.querySelector(".inputStoreBox");
 const radio_inputStores = document.querySelector(
   ".inputStoreType__radio__groups"
 );
+
+const selected = document.querySelectorAll(
+  ".inputStoreType__radio__groups > li"
+);
+
+const selectedColor = "#f18b24";
+const black = "#000000";
+let pallteTitle = selected[0].childNodes[1].childNodes[5].childNodes[1];
+let pallteDescription = selected[0].childNodes[1].childNodes[5].childNodes[3];
+let boxTitle = selected[1].childNodes[1].childNodes[5].childNodes[1];
+let boxDescription = selected[1].childNodes[1].childNodes[5].childNodes[3];
+pallteTitle.style.color = selectedColor;
+pallteDescription.style.color = selectedColor;
+selectedPalletTag.classList.toggle(CLICKED_CLASS);
 radio_inputStores.addEventListener("change", (e) => {
-  const selected = document.querySelectorAll(
-    ".inputStoreType__radio__groups > li"
-  );
-
-  const selectedColor = "#f18b24";
-  const black = "#000000";
-  let pallteTitle = selected[0].childNodes[1].childNodes[5].childNodes[1];
-  let pallteDescription = selected[0].childNodes[1].childNodes[5].childNodes[3];
-  let boxTitle = selected[1].childNodes[1].childNodes[5].childNodes[1];
-  let boxDescription = selected[1].childNodes[1].childNodes[5].childNodes[3];
-
   inputStoreType = e.target.value;
-
   switch (inputStoreType) {
     case "pallet":
       pallteTitle.style.color = selectedColor;
@@ -212,16 +214,22 @@ const outputRadio_inputStores = document.querySelector(
 const selectedTotalPackaingTag = document.querySelector(".total_packaing");
 const selectedOnlyPackaingTag = document.querySelector(".only_packaing");
 
+const selectedOutputPackaing = document.querySelectorAll(
+  ".output__radio__groups > li"
+);
+let totalPackingTitle =
+  selectedOutputPackaing[0].childNodes[1].childNodes[5].childNodes[1];
+let totalPackingeDescription =
+  selectedOutputPackaing[0].childNodes[1].childNodes[5].childNodes[3];
+let onlyPackingTitle =
+  selectedOutputPackaing[1].childNodes[1].childNodes[5].childNodes[1];
+let onlyPackingDescription =
+  selectedOutputPackaing[1].childNodes[1].childNodes[5].childNodes[3];
+selectedTotalPackaingTag.classList.toggle(CLICKED_CLASS);
+totalPackingTitle.style.color = selectedColor;
+totalPackingeDescription.style.color = selectedColor;
+
 outputRadio_inputStores.addEventListener("change", (e) => {
-  const selected = document.querySelectorAll(".output__radio__groups > li");
-  let totalPackingTitle = selected[0].childNodes[1].childNodes[5].childNodes[1];
-  let totalPackingeDescription =
-    selected[0].childNodes[1].childNodes[5].childNodes[3];
-  let onlyPackingTitle = selected[1].childNodes[1].childNodes[5].childNodes[1];
-  let onlyPackingDescription =
-    selected[1].childNodes[1].childNodes[5].childNodes[3];
-  const black = "#000000";
-  const selectedColor = "#f18b24";
   releasepackaing = e.target.value;
   switch (releasepackaing) {
     case "total_packaing":

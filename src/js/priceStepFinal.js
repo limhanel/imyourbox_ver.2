@@ -13,6 +13,7 @@ import {
   detailInput,
   releasepackaing,
   inputStoreType,
+  arr_storage_type,
 } from "./priceStepTwo";
 
 import {
@@ -21,6 +22,7 @@ import {
   customer_email,
   customer_manager_name,
   customer_memo,
+  permissionPersonalInfo,
 } from "./priceStepFirst";
 
 const enToKr = (obj, arr) => {
@@ -39,6 +41,13 @@ const checkNull = (val) => {
     return val;
   }
 };
+
+function alertMsg(msg, className) {
+  const scrollTo = document.querySelector(`.${className}`);
+  console.log(scrollTo);
+  alert(msg);
+  scrollTo.scrollIntoView({ behavior: "smooth", block: "center" });
+}
 
 function PriceSectionIndex() {
   let buttonCount = 1;
@@ -82,12 +91,14 @@ const releasepackagingMap = {
   only_packaing: "단독포장",
 };
 
+//버튼
+const stepResultButton = document.querySelector("#next");
+const stepPrevButton = document.querySelector("#prev");
+
 //견적세부조건
 
 const customerCompany = document.querySelector(".avartar__title");
 const totalPrice = document.querySelector(".avartar__price");
-const stepResultButton = document.querySelector("#next");
-const stepPrevButton = document.querySelector("#prev");
 
 const monthStoreFee = document.querySelector(".monthstore__fee");
 const monthDeliveryFee = document.querySelector(".monthDelivery__fee");
@@ -98,7 +109,14 @@ const HTMLdetailInput = document.querySelector(".detailInput");
 const HTMLproductURL = document.querySelector(".productURL");
 const HTMLinputStoreCount = document.querySelector(".inputStoreCount");
 const HTMLinputSKUcount = document.querySelector(".inputSKUcount");
+const HTMLoutputDeliveryCount = document.querySelector(".outputDeliveryCount");
 const HTMLoutputPackaing = document.querySelector(".outputPackaing");
+const HTMLrecalculationInputStore = document.querySelector(
+  ".recalculation_pro__inputStore"
+);
+const HTMLrecalculationOutput = document.querySelector(
+  ".recalculation_pro__output"
+);
 
 const HTMLResultCustomerCompany = document.querySelector(
   ".ResultCustomerCompany"
@@ -115,28 +133,53 @@ const HTMLpriceFinalSection = document.querySelector("#finalStep");
 
 //재계산
 const recalculationButton = document.querySelector(".recalculation");
-const reInputStoreValue = document.querySelector(".reInputStoreValue");
-const reMonthDeliveryCount = document.querySelector(".reMonthDeliveryCount");
+const reInputStoreValue = document.querySelector(
+  ".recalculation_pro__inputStore"
+);
+const reMonthDeliveryCount = document.querySelector(
+  ".recalculation_pro__output"
+);
 const reOutputType = document.querySelector(".reOutputType");
 
+const radio_recalculation_inputstore = document.querySelector(
+  ".recalculation_inputStoreType__radio__groups"
+);
+const radio_recalculation_output_radio_groups = document.querySelector(
+  ".recalculation_output_radio_groups"
+);
+
+let recalculationInputStoreType = inputStoreType;
+radio_recalculation_inputstore.addEventListener("change", (e) => {
+  recalculationInputStoreType = e.target.value;
+});
+
+let recalculationReleasepackaingType = releasepackaing;
+radio_recalculation_output_radio_groups.addEventListener("change", (e) => {
+  recalculationReleasepackaingType = e.target.value;
+});
+
+//재계산버튼
 recalculationButton.addEventListener("click", () => {
   let sumPrice =
-    CaclulateStoreFee(inputStoreType, reInputStoreValue.value) +
-    CacluateDeliveryFee(reMonthDeliveryCount.value, releasepackaing) +
+    CaclulateStoreFee(recalculationInputStoreType, reInputStoreValue.value) +
+    CacluateDeliveryFee(
+      reMonthDeliveryCount.value,
+      recalculationReleasepackaingType
+    ) +
     CaclutateWMSfee(skuInputStoreCount);
   customerCompany.textContent = `"${customer_company}" 고객님의 예상 비용`;
-  totalPrice.textContent = `월 ${sumPrice
+  totalPrice.textContent = `${sumPrice
     .toString()
-    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
+    .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} `;
   monthStoreFee.textContent = `${CaclulateStoreFee(
-    inputStoreType,
+    recalculationInputStoreType,
     reInputStoreValue.value
   )
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
   monthDeliveryFee.textContent = `${CacluateDeliveryFee(
     reMonthDeliveryCount.value,
-    releasepackaing
+    recalculationReleasepackaingType
   )
     .toString()
     .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
@@ -169,10 +212,31 @@ stepPrevButton.addEventListener("click", () => {
 });
 
 stepResultButton.addEventListener("click", () => {
-  //++counter
+  if (priceSectionIndex.get() == 1) {
+    // fristSectionExceptionHandle();
+    if (customer_company.length === 0) {
+      alert("이름을 입력해주세요");
+      return;
+    }
+    if (customer_phone.length === 0) {
+      alert("연락처를 입력해주세요");
+      return;
+    }
+    if (customer_email.length === 0) {
+      alert("이메일을 입력해주세요");
+      return;
+    }
+    if (customer_manager_name.length === 0) {
+      alert("담당자명을 입력해주세요");
+      return;
+    }
+    if (!permissionPersonalInfo) {
+      alert("개인정보 수집 및 이용목적에 동의해주세요.");
+      return;
+    }
+  }
   priceSectionIndex.increase();
-
-  if (priceSectionIndex.get() == 2) {
+  if (priceSectionIndex.get() === 2) {
     window.scrollTo(0, 0);
     stepPrevButton.style.display = "";
     //fadeIn;
@@ -183,6 +247,51 @@ stepResultButton.addEventListener("click", () => {
     HTMLpriceFinalSection.style.display = "none";
   }
   if (priceSectionIndex.get() == 3) {
+    if (product_category.length < 1) {
+      priceSectionIndex.decrease();
+      alertMsg("상품종류 하나이상을 선택해주세요", "product_category");
+      return;
+    }
+    if (detailInput.length < 1) {
+      priceSectionIndex.decrease();
+      alertMsg("상세품목명을 입력해주세요", "product_category");
+      return;
+    }
+    if (arr_storage_type.length < 1) {
+      priceSectionIndex.decrease();
+      alertMsg("보관형태를 하나이상 선택해주세요", "storageType__container");
+      return;
+    }
+    if (product_url.length < 1) {
+      priceSectionIndex.decrease();
+      alertMsg(
+        "상품url을 입력해주세요.만약없으시다면 없음으로 입력해주세요",
+        "productURL__container"
+      );
+      return;
+    }
+    if (inputStoreCount < 1) {
+      priceSectionIndex.decrease();
+      alertMsg(
+        "물류 보관량을 1이상 입력해주세요",
+        "indicator__inputStore__range"
+      );
+      return;
+    }
+    if (skuInputStoreCount < 1) {
+      priceSectionIndex.decrease();
+      alertMsg(
+        "SKU량을 1이상 입력해주세요",
+        "indicator__inputStore__sku__range"
+      );
+      return;
+    }
+    if (outputBoxCount < 1) {
+      priceSectionIndex.decrease();
+      alertMsg("월택배건수를 1이상 입력해주세요", "indicator__output__range");
+      return;
+    }
+
     window.scrollTo(0, 0);
     //fadeIn;
     stepResultButton.style.display = "none";
@@ -192,14 +301,33 @@ stepResultButton.addEventListener("click", () => {
     HTMLpriceSecondSection.style.display = "none";
     HTMLpriceFirstSection.style.display = "none";
 
+    //재계산영역
+    if (document.getElementById("inputStore_pallet").checked) {
+      document.getElementById("recalculation_inputstore_pallet").checked = true;
+    } else if (document.getElementById("inputStore_box").checked) {
+      document.getElementById("recalculation_inputstore_box").checked = true;
+    }
+    HTMLrecalculationInputStore.value = `${inputStoreCount}`;
+    HTMLrecalculationOutput.value = `${outputBoxCount}`;
+
+    if (document.getElementById("output_totalpackaing").checked) {
+      document.getElementById(
+        "recalculation_output_totalpackaing"
+      ).checked = true;
+    } else if (document.getElementById("output_onlypackaing").checked) {
+      document.getElementById(
+        "recalculation_output_onlypackaing"
+      ).checked = true;
+    }
+
     let sumPrice =
       CaclulateStoreFee(inputStoreType, inputStoreCount) +
       CacluateDeliveryFee(outputBoxCount, releasepackaing) +
       CaclutateWMSfee(skuInputStoreCount);
     customerCompany.textContent = `"${customer_company}" 고객님의 예상 비용`;
-    totalPrice.textContent = `월 ${sumPrice
+    totalPrice.textContent = `${sumPrice
       .toString()
-      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 원`;
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ",")} `;
 
     monthStoreFee.textContent = `${CaclulateStoreFee(
       inputStoreType,
@@ -224,6 +352,7 @@ stepResultButton.addEventListener("click", () => {
     //물류기본정보
     HTMLinputStoreCount.textContent = `${inputStoreCount} ${inputStoreType}`;
     HTMLinputSKUcount.textContent = `${skuInputStoreCount.toString()} 개`;
+    HTMLoutputDeliveryCount.textContent = `${outputBoxCount.toString()} 건`;
     //물류추가정보
     HTMLoutputPackaing.textContent = `${checkNull(
       releasepackagingMap[releasepackaing]

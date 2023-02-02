@@ -97,8 +97,7 @@ span {
   border-radius: 7px;
   height: auto;
 }
-.button-type3 > input,
-.button-type3 > li {
+.button-type3 > input, .button-type3 > li {
   border: none;
   background-size: 55% 60% !important;
   background-position: center 10px !important;
@@ -146,8 +145,7 @@ span {
 .button-type4:hover {
   box-shadow: 0px 0px 5px 0px #ff9948;
 }
-.button-type4 > input,
-.button-type4 > li {
+.button-type4 > input, .button-type4 > li {
   font-size: 16px !important;
 }
 
@@ -265,14 +263,14 @@ h3 .number {
 
 /*---------- input 디자인----------*/
 textarea,
-input[type="input"],
-input[type="number"] {
+input[type=input],
+input[type=number] {
   border: 1px solid rgb(197, 197, 197);
   border-radius: 10px;
 }
 textarea:focus,
-input[type="input"]:focus,
-input[type="number"]:focus {
+input[type=input]:focus,
+input[type=number]:focus {
   background: #fdfdf4;
 }
 
@@ -335,14 +333,14 @@ input[type="number"]:focus {
   background-color: #fff;
 }
 
-input[type="checkbox"] {
+input[type=checkbox] {
   width: 20px;
   height: 20px;
   border-radius: 3px;
   outline: none;
 }
 
-input[type="checkbox"] span {
+input[type=checkbox] span {
   margin-top: 20px;
 }
 
@@ -516,7 +514,8 @@ p.strong {
 .slideshow-container img {
   width: 100vw;
   height: 800px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .slideshow-container .cont--inner {
   position: relative;
@@ -616,6 +615,4 @@ p.strong {
   .cont5 img {
     padding: 10%;
   }
-}
-
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

@@ -177,7 +177,7 @@
                                 <div class="stepone__category endfour__container">
                                     <div class="last__checkbox simpleOrder__checkbox">
                                         <input id="permission" class="checkbox" type="checkbox">
-                                        <label for="permission "><span class="check">개인정보 수집 및 이용목적에 동의합니다.<br>
+                                        <label for="permission"><span class="check">개인정보 수집 및 이용목적에 동의합니다.<br>
                                                             입력해주신 개인정보는 문의/상담 목적으로 사용되며 사용 후 즉시 폐기됩니다.</span></label>
                                     </div>
                                 </div>
@@ -194,7 +194,7 @@
                             <div class="simple__input__area">
 
                                 <div class="stepone__category">
-                                    <span class="stepone__category-title category-title-css">상품종류</span>
+                                    <span class="stepone__category-title category-title-css product_category">상품종류</span>
                                     <span class="stepone__category-description">중복 선택이 가능합니다.</span>
                                 </div>
                                 <ul class="stepone__category__list flexbox_05">
@@ -320,7 +320,7 @@
                                     <ul class="inputStoreType__radio__groups flexbox_02">
                                         <li class="item_02 button-type5 button5-css inputStorePallet">
                                             <label class="pallet">
-                                                <input type="radio" name="inputStore" value="pallet" checked  >
+                                                <input type="radio" name="inputStore" id="inputStore_pallet" value="pallet" checked>
                                                 <span class="check"></span>
                                                 <div class="inputStoreType__radio__groups_radio__text">
                                                     <p class="radio__title">파레트</p>
@@ -330,7 +330,7 @@
                                         </li>
                                         <li class="item_02 button-type5 inputStoreBox">
                                             <label class="box only">
-                                                <input type="radio" name="inputStore" value="box">
+                                                <input type="radio" name="inputStore" id="inputStore_box" value="box" >
                                                  <span class="check"></span>
                                                 <div class="inputStoreType__radio__groups_radio__text">
                                                 <p class="radio__title">박스</p>
@@ -408,7 +408,7 @@
                             <ul class="output__radio__groups flexbox_02">
                                 <li class="item_02 button-type5 total_packaing">
                                     <label class="total">
-                                    <input type="radio" name="outputMethod" value="total_packaing">
+                                    <input type="radio" name="outputMethod" id="output_totalpackaing" value="total_packaing" checked>
                                     <span class="check"></span>
                                     <div class="output__radio__groups_radio__text">
                                         <p class="radio__title">합포장</p>
@@ -418,7 +418,7 @@
                                 </li>
                                 <li class="item_02 button-type5 only_packaing">
                                     <label class="box only">
-                                    <input type="radio" name="outputMethod" value="only_packaing">
+                                    <input type="radio" name="outputMethod" id="output_onlypackaing" value="only_packaing">
                                      <span class="check"></span>
                                     <div class="output__radio__groups_radio__text">
                                     <p class="radio__title">단독포장</p>
@@ -464,10 +464,10 @@
                                 <div class="recalculation__input__area">
                                     <div class="__input__container">
                                         <p class="text-change">보관량을 바꾸고 싶어요</p>
-                                        <ul class="inputStoreType__radio__groups flexbox_02">
+                                        <ul class="recalculation_inputStoreType__radio__groups flexbox_02">
                                             <li class="item_02-1 button-type5 button5-css">
                                                 <label class="pallet">
-                                                    <input type="radio" name="inputStore" value="pallet" checked  >
+                                                    <input type="radio" name="inputStore" id="recalculation_inputstore_pallet" value="pallet">
                                                     <span class="check"></span>
                                                     <div class="inputStoreType__radio__groups_radio__text">
                                                         <p class="radio__title" style="color: rgba(255, 255, 255, 0);">파레트</p>
@@ -477,7 +477,7 @@
                                             </li>
                                             <li class="item_02-1 button-type5">
                                                 <label class="box only">
-                                                    <input type="radio" name="inputStore" value="box">
+                                                    <input type="radio" name="inputStore"  id="recalculation_inputstore_box" value="box">
                                                      <span class="check"></span>
                                                     <div class="inputStoreType__radio__groups_radio__text">
                                                     <p class="radio__title" style="color: rgba(255, 255, 255, 0);">박스</p>
@@ -486,18 +486,18 @@
                                                 </label>
                                             </li>
                                         </ul>
-                                        <input type="input" class="pro__input" placeholder="보관량을 입력하세요 (plt/개)" style="margin-top: 10px;"></input>
+                                        <input type="input" class="pro__input recalculation_pro__inputStore" placeholder="보관량을 입력하세요 (plt/개)" style="margin-top: 10px;"></input>
                                     </div>
                                     <div class="__input__container">
                                         <p class="input-css text-change">출고량을 바꾸고 싶어요</p>
-                                        <input type="input" class="pro__input" placeholder="출고량을 입력하세요 (박스갯수)"></input>
+                                        <input type="input" class="pro__input recalculation_pro__output" placeholder="출고량을 입력하세요 (박스갯수)"></input>
                                     </div>
                                     <div class="__input__container">
                                         <p class="text-change">포장 방식을 바꾸고 싶어요</p>
-                                        <ul class="output__radio__groups flexbox_02">
+                                        <ul class="output__radio__groups recalculation_output_radio_groups flexbox_02">
                                             <li class="item_02-1 button-type5">
                                                 <label class="pallet total">
-                                                <input type="radio" name="outputMethod" value="total_packaing">
+                                                <input type="radio" name="outputMethod"  id="recalculation_output_totalpackaing" value="total_packaing">
                                                 <span class="check"></span>
                                                 <div class="output__radio__groups_radio__text">
                                                     <p class="radio__title"style="color: rgba(255, 255, 255, 0);">합포장</p>
@@ -507,7 +507,7 @@
                                             </li>
                                             <li class="item_02-1 button-type5">
                                                 <label class="box only">
-                                                <input type="radio" name="outputMethod" value="only_packaing">
+                                                <input type="radio" name="outputMethod" id="recalculation_output_onlypackaing" value="only_packaing">
                                                  <span class="check"></span>
                                                 <div class="output__radio__groups_radio__text">
                                                 <p class="radio__title"style="color: rgba(255, 255, 255, 0);">단독포장</p>
