@@ -1,0 +1,118 @@
+/*--전체 디자인 css include----*/
+
+@import 'all-html';
+
+/*--intriduction 디자인 css--*/
+
+p,
+span {
+    line-height: 1.4;
+}
+
+.strong {
+    color: $main-color;
+    font-weight: 600;
+    font-size: 22px !important;
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.cont1 {
+    h3 {
+        color: #fff;
+        text-align: center;
+    }
+    padding: 150px 0;
+    background-size:100vw 50vh;
+    background-image: url('../images/employment-image.png');
+    background-repeat: no-repeat;
+}
+
+.cont2 {
+    .flexbox_05 {
+        .item_05-2 {
+            p {
+                margin-top: 10px;
+                text-align: center;
+            }
+        }
+    }
+    .procedure {
+        li {
+            border-radius: 10px;
+            text-align: center;
+            box-sizing: border-box;
+            padding: 10px 0;
+            position: relative;
+            &::after {
+                content: '>';
+                color: rgb(255, 119, 29);
+                position: absolute;
+                top: calc(50% - 4px);
+            }
+        }
+        li:nth-child(1) {
+            background-color: rgb(255, 236, 212);
+        }
+        li:nth-child(2) {
+            background-color: rgb(255, 219, 175);
+        }
+        li:nth-child(3) {
+            background-color: rgb(255, 201, 134);
+        }
+        li:nth-child(4) {
+            background-color: rgb(255, 185, 100);
+            &::after {
+                content: '';
+            }
+        }
+    }
+    .button-type1 {
+        color: #fff;
+        &:hover {
+            color: $main-color;
+        }
+        margin-left: calc(50% - 90px);
+    }
+    ul.flexbox_03 {
+        margin: 10px 0 50px 0;
+        .item_03-1 {
+            box-sizing: border-box;
+            padding: 15px;
+            border: 1px solid rgb(255, 119, 29);
+            p {
+                font-weight: 600;
+                margin-bottom: 10px;
+                padding-left: 7px;
+            }
+        }
+    }
+    p.strong2 {
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 1079px) {
+    .cont1 {
+        padding: 80px 0;
+        overflow: visible;
+    }
+    .procedure {
+        li {
+            &::after {
+                right: -13px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .procedure {
+        li {
+            &::after {
+                right: calc(-5% - 8px);
+            }
+        }
+    }
+}
