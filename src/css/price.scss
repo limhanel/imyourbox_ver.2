@@ -161,6 +161,12 @@ $baseURL: "https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images";
   .etc {
     background: url("#{$baseURL}/catecory08.svg") no-repeat;
   }
+  .dogSupplies {
+    background: url("#{$baseURL}/category09.svg") no-repeat;
+  }
+  .healthFood {
+    background: url("#{$baseURL}/category10.svg") no-repeat;
+  }
   > input {
     cursor: pointer;
   }

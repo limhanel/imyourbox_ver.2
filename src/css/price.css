@@ -557,6 +557,12 @@ section {
 .stepone__category__list li .etc {
   background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/catecory08.svg") no-repeat;
 }
+.stepone__category__list li .dogSupplies {
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/category09.svg") no-repeat;
+}
+.stepone__category__list li .healthFood {
+  background: url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/category10.svg") no-repeat;
+}
 .stepone__category__list li > input {
   cursor: pointer;
 }

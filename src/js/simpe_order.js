@@ -1,4 +1,5 @@
 import Swal from "sweetalert2";
+import { validateEmail } from "./lib/validation/validate";
 import { orderInfo } from "./lib/api/order_info";
 let simpleOrderObj = {
   customer_company: "",
@@ -8,6 +9,9 @@ let simpleOrderObj = {
   customer_memo: "",
 };
 
+console.log("들어가나??");
+//이메일유효성검사
+let HTMLeamilErrorMsg = document.getElementById("emailCheck");
 //회사명인풋
 const input_simple_customer_company = document.querySelector(
   ".simple_customer_company"
@@ -31,6 +35,17 @@ const input_simple_customer_email = document.querySelector(
 );
 input_simple_customer_email.addEventListener("input", (e) => {
   simpleOrderObj.customer_email = e.target.value;
+  //유효성체크
+  if (
+    !validateEmail(simpleOrderObj.customer_email) &&
+    simpleOrderObj.customer_email.length > 0
+  ) {
+    HTMLeamilErrorMsg.style.visibility = "visible";
+    HTMLeamilErrorMsg.style.display = "";
+    HTMLeamilErrorMsg.textContent = `* ${simpleOrderObj.customer_email} 은 잘못된 이메일 형식입니다.`;
+  } else {
+    HTMLeamilErrorMsg.style.display = "none";
+  }
 });
 
 //담당자명
@@ -60,6 +75,16 @@ HTMLcallSimpleOrderBtn.addEventListener("click", () => {
     Swal.fire({
       icon: "warning",
       text: `필수항목들을 모두 채워주세요`,
+      confirmButtonText: "확인",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        return;
+      }
+    });
+  } else if (!validateEmail(simpleOrderObj.customer_email)) {
+    Swal.fire({
+      icon: "warning",
+      text: `이메일 형식이 올바르지않습니다.`,
       confirmButtonText: "확인",
     }).then((result) => {
       if (result.isConfirmed) {

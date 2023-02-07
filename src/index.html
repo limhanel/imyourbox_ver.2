@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<lang="ko">
-
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
@@ -12,8 +11,8 @@
         />
         <meta name="author" content="limhanel" />
         <title>아임유어박스</title>
+      
         <link rel="shortcut icon" href="../src/images/imyourbox.ico" />
-        
         <!-- css부분 -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
@@ -203,42 +202,6 @@
                 <!-- class : cont3 -->
             </div>
             <!-- cont-box -->
-
-            <div class="cont-box cont-padding">
-                <div class="cont4">
-                    <div class="slideshow-container">
-                        <div class="cont4-slider fade active">
-                            <div class="cont--inner">
-                                <h3 class="">11111 물건 보관부터 배송까지<br>간편하게 견적 내고 싶다면!</h3>
-                            </div>
-                            <img src="../src/images/back-img03.jpg">
-                        </div>
-
-                        <div class="cont4-slider fade">
-                            <div class="cont--inner">
-                                <h3 class="">22222 물건 보관부터 배송까지<br>간편하게 견적 내고 싶다면!</h3>
-                            </div>
-                            <img src="../src/images/back-img04.jpg">
-                        </div>
-
-                        <div class="cont4-slider fade">
-                            <div class="cont--inner">
-                                <h3 class="">33333 물건 보관부터 배송까지<br>간편하게 견적 내고 싶다면!</h3>
-                            </div>
-                            <img src="../src/images/back-img05.jpg">
-                        </div>
-
-                        <div class="cont--inner">
-                            <a class="prev arrow-button" onclick="prevSlide()">&#10094;</a>
-                            <a class="next arrow-button" onclick="nextSlide()">&#10095;</a>
-                        </div>
-                    </div>
-                    <!--slideshow-container-->
-                </div>
-                <!-- class : cont4 -->
-            </div>
-            <!-- cont-box -->
-
             <div class="cont8 orange-back cont-box">
                 <div class="cont--inner">
                     <h3>NEWS</h3>
@@ -396,8 +359,7 @@
                                             </div>
                                             <div class="detail__input__container stepfour__detail__input__container">
                                                 <input type="input" class="simple__input simple_customer_email" placeholder=" Email "></input>
-                                                <!-- <h2 id="simpe__emailCheck ">
-                                            </h2> -->
+                                                <h3 id="emailCheck"></h3>
                                             </div>
                                         </div>
                                         <div class="detail__container stepFour__container second__detail__container">
@@ -484,8 +446,8 @@
     
                     <div class="use-div ">
                         <ul class="use ">
-                            <li><a href="access.html ">이용약관</a></li>
-                            <li><a href="access2.html " class="bold ">개인정보처리방침</a></li>
+                            <li><a id="termsOfService">이용약관</a></li>
+                            <li><a id="personalInfoProcessing" class="bold ">개인정보처리방침</a></li>
                             <li><a href="contact.html ">오시는길</a></li>
                         </ul>
                         <!--use-->
@@ -520,6 +482,7 @@
 
     </body>
     <!-- 폰트어썸 -->
+    <script src="../src/js/simpe_order.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/b662cbe3c5.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>

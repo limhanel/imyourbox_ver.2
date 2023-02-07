@@ -525,6 +525,11 @@ input[type=checkbox] span {
     margin: 10px;
     box-sizing: border-box;
   }
+  .item_03-1 {
+    flex-basis: 100%;
+    box-sizing: border-box;
+    margin: 10px;
+  }
   .flexbox_05 {
     justify-content: flex-start;
   }
@@ -545,37 +550,17 @@ input[type=checkbox] span {
   .item_05-1 img {
     width: 100%;
   }
+  .item_05-2 {
+    flex-basis: calc(20% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+  }
+  .item_05-2 img {
+    width: 80%;
+    margin: 0 10%;
+  }
   .simple__textarea {
     height: 200px;
-  }
-  footer .use-div {
-    text-align: center;
-    width: 100%;
-  }
-  footer .call {
-    font-size: 18px;
-  }
-  footer ul {
-    width: 100%;
-    text-align: center;
-  }
-  footer ul::after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-  footer ul.use {
-    float: initial;
-    display: block;
-    margin: 0 auto;
-  }
-  footer ul.sns {
-    float: initial;
-    display: block;
-  }
-  footer ul li {
-    float: left;
-    margin-right: 30px;
   }
 }
 /*--------- PC 반응형 --------*/
@@ -599,6 +584,9 @@ input[type=checkbox] span {
   h2 {
     font-size: 50px;
   }
+  h3 {
+    margin-bottom: 40px;
+  }
   .cont--inner {
     width: 1080px;
     margin: 0 auto;
@@ -620,6 +608,9 @@ input[type=checkbox] span {
   .item_03 {
     flex-basis: calc(31% - 20px);
   }
+  .item_03-1 {
+    flex-basis: calc(33% - 20px);
+  }
   .item_04 {
     flex-basis: 23%;
   }
@@ -635,21 +626,17 @@ input[type=checkbox] span {
   .item_05-1 img {
     width: 100%;
   }
+  .item_05-2 {
+    flex-basis: calc(20% - 20px);
+    margin: 5px;
+    box-sizing: border-box;
+  }
+  .item_05-2 img {
+    width: 30%;
+    margin: 0 35%;
+  }
   .simple__textarea {
     height: 265px;
-  }
-  footer .call {
-    font-size: 25px;
-  }
-  footer ul.use {
-    float: left;
-  }
-  footer ul.sns {
-    float: right;
-  }
-  footer ul li {
-    float: left;
-    margin-right: 30px;
   }
 }
 @media screen and (min-width: 0px) and (max-width: 513px) {

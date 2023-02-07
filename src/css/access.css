@@ -402,4 +402,83 @@ input[type=checkbox] span {
   background-color: #ffe0d7;
 }
 
-/*--access 디자인 css--*//*# sourceMappingURL=access.css.map */
+/*--access 디자인 css--*/
+#container input {
+  display: none;
+}
+
+#container .main {
+  border-radius: 7px;
+  padding-top: 20px;
+  background: #ffffff;
+  margin: 0 auto;
+}
+
+#access__content1,
+#access__content2 {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 4px solid #ff7322;
+  overflow: hidden;
+  padding: 100px 50px;
+}
+
+#container {
+  margin-top: 70px;
+}
+
+#container input:checked + label {
+  color: #fff;
+  border-radius: 7px 7px 0 0;
+  box-sizing: border-box;
+  background-color: #ff7322;
+  transition: all 0.3s ease 0s;
+}
+
+#container .access__tabName {
+  display: inline-block;
+  padding: 15px 0;
+  box-sizing: border-box;
+  width: calc(50% - 2px);
+  font-weight: 500;
+  color: #666;
+  text-align: center;
+}
+
+#access__tab1:checked ~ #access__content1,
+#access__tab2:checked ~ #access__content2 {
+  display: block;
+  transition: all 0.5s ease 0s;
+}
+
+.access__section {
+  clear: both;
+  border: 2px solid #f18b24;
+  box-sizing: border-box;
+  border-top: none;
+  line-height: 1.5em;
+}
+
+p.bold {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+p.extrabold {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 1023px) {
+  #container {
+    font-size: 15px;
+  }
+  p.extrabold {
+    font-size: 17px;
+  }
+  #access__content1,
+#access__content2 {
+    padding: 40px 20px;
+  }
+}/*# sourceMappingURL=access.css.map */

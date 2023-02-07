@@ -35,7 +35,7 @@ const input_customer_email = document.querySelector(".customer_email");
 input_customer_email.addEventListener("input", (e) => {
   input_customer_email.style.backgroundColor = white;
   customer_email = e.target.value;
-  //유효성체크
+  // //유효성체크
   // if (!validateEmail(customer_email) && customer_email.length > 0) {
   //   HTMLeamilErrorMsg.style.visibility = "visible";
   //   HTMLeamilErrorMsg.style.display = "";

@@ -1,3 +1,4 @@
+import { detailOrderInfo } from "./lib/api/detail_order_info";
 import {
   CaclulateStoreFee,
   CacluateDeliveryFee,
@@ -291,6 +292,32 @@ stepResultButton.addEventListener("click", () => {
       alertMsg("월택배건수를 1이상 입력해주세요", "indicator__output__range");
       return;
     }
+
+    //상세견적정보
+    const detailOrderData = {
+      customer_company,
+      customer_manager_name,
+      customer_phone,
+      customer_email,
+      customer_memo,
+      category: product_category,
+      storetype: arr_storage_type,
+      detail_product_type: detailInput,
+      product_url,
+      input_store_type: inputStoreType,
+      input_store_num: inputStoreCount,
+      input_sku_store_num: skuInputStoreCount,
+      output_delivery_box_amount: outputBoxCount,
+      output_packaing: releasepackaing,
+    };
+
+    detailOrderInfo(detailOrderData)
+      .then((r) => {
+        console.log(r.data);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
 
     window.scrollTo(0, 0);
     //fadeIn;
