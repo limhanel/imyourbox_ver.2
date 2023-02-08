@@ -2,7 +2,7 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import "slick-carousel";
 import "./simpe_order";
-import "./access";
+// import "./access";
 import "./lib/marketing/kakao";
 import "./lib/marketing/google";
 import "./lib/marketing/mirae";

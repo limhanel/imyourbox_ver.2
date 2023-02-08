@@ -4,7 +4,7 @@
 @import "./all-responsive.scss";
 @import "./service.scss";
 @import "./access.scss";
-@import "./price.scss";
+/* @import "./price.scss"; */
 @import "./all-html.scss";
 @import "./header_footer.scss";
 @import "./employment.scss";

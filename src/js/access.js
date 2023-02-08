@@ -18,7 +18,6 @@ const HTMLTermsOfService = document.getElementById("termsOfService");
 HTMLTermsOfService.style.cursor = "pointer";
 HTMLTermsOfService.addEventListener("click", (e) => {
   isTermsOfService = true;
-  console.log("????!1111");
   window.localStorage.setItem(
     "termsOfService",
     JSON.stringify(isTermsOfService)
