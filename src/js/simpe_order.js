@@ -10,7 +10,14 @@ let simpleOrderObj = {
   isAgreePersonalInfo: false,
 };
 
-console.log("들어가나??");
+//심플견적으로 바로가기
+const HTMLSimpleOrderButton = document.querySelector(".simpleOrder__button");
+
+HTMLSimpleOrderButton.addEventListener("click", (e) => {
+  const scrollTo = document.querySelector("#stepfour");
+  scrollTo.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+
 //이메일유효성검사
 let HTMLeamilErrorMsg = document.getElementById("emailCheck");
 //회사명인풋

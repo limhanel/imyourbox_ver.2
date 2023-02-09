@@ -43,8 +43,6 @@ HTMLPersonalInfoProcessing.addEventListener("click", (e) => {
 });
 
 document.getElementById("access__tab1").checked = true;
-console.log(document.getElementById("access__tab1").checked);
-
 document.getElementById("access__tab2").checked = personalInfoProcessing;
 
 console.log(termsOfService);
