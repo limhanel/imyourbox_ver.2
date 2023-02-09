@@ -7,6 +7,7 @@ let simpleOrderObj = {
   customer_manager_name: "",
   customer_phone: "",
   customer_memo: "",
+  isAgreePersonalInfo: false,
 };
 
 console.log("들어가나??");
@@ -63,6 +64,12 @@ input_simple_customer_memo.addEventListener("input", (e) => {
   simpleOrderObj.customer_memo = e.target.value;
 });
 
+const simpleOrder_checkbox = document.querySelector("#simpleOrder__permission");
+
+simpleOrder_checkbox.addEventListener("change", (e) => {
+  simpleOrderObj.isAgreePersonalInfo = e.target.checked;
+});
+
 const HTMLcallSimpleOrderBtn = document.querySelector(".callSimpleOrderBtn");
 
 HTMLcallSimpleOrderBtn.addEventListener("click", () => {
@@ -85,6 +92,16 @@ HTMLcallSimpleOrderBtn.addEventListener("click", () => {
     Swal.fire({
       icon: "warning",
       text: `이메일 형식이 올바르지않습니다.`,
+      confirmButtonText: "확인",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        return;
+      }
+    });
+  } else if (!simpleOrderObj.isAgreePersonalInfo) {
+    Swal.fire({
+      icon: "warning",
+      text: `개인정보 수집 및 이용목적에 동의해주세요.`,
       confirmButtonText: "확인",
     }).then((result) => {
       if (result.isConfirmed) {

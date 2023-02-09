@@ -75,6 +75,8 @@ const priceSectionIndex = new PriceSectionIndex();
 //stepOne
 
 const clothMap = {
+  healthFood: "건강기능식품",
+  dogSupplies: "애견용품",
   clothes: "의류",
   stuff: "잡화",
   beauty: "뷰티",

@@ -403,6 +403,22 @@ input[type=checkbox] span {
 }
 
 /*--index 디자인 css--*/
+:root {
+  --syboml__color: #ff9948;
+  --background_color_one: #fff;
+  --font_color: #ffa63f;
+  --font_stepbar_color: #6d6d6d;
+  --font_text_color: #474747;
+  --color_step_eclispe: #fff3d2;
+  --color_range_bar: #ffc671;
+  --color_divider: #ffd18c;
+  --color_category_description: #666666;
+  --color_button_deactive: #ffffff;
+  --color__white: #ffffff;
+  --color__tesxt: #23232;
+  --color__checked: #f18b24;
+}
+
 .test {
   font-size: 150px;
 }
@@ -625,4 +641,21 @@ p.strong {
   .cont5 img {
     padding: 10%;
   }
+}
+input[type=checkbox]:checked {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  content: "hello";
+  background: center var(--font_color) url("https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/checkicon.png") no-repeat;
+}
+
+#simpleOrder__permission {
+  cursor: pointer;
+}
+
+.check {
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */
