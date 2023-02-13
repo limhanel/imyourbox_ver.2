@@ -1,6 +1,7 @@
 import Swal from "sweetalert2";
 import { validateEmail } from "./lib/validation/validate";
 import { orderInfo } from "./lib/api/order_info";
+import kakoChatBtn from "./lib/chat/kakaochat";
 let simpleOrderObj = {
   customer_company: "",
   customer_email: "",
@@ -9,6 +10,8 @@ let simpleOrderObj = {
   customer_memo: "",
   isAgreePersonalInfo: false,
 };
+
+kakoChatBtn();
 
 //심플견적으로 바로가기
 const HTMLSimpleOrderButton = document.querySelector(".simpleOrder__button");
