@@ -402,6 +402,16 @@ input[type=checkbox] span {
   background-color: #ffe0d7;
 }
 
+#kakao-talk-channel-chat-button {
+  position: fixed;
+  /* top: 80vh;
+  right: 5vw; */
+  right: 1.2rem;
+  bottom: 6.25rem;
+  cursor: pointer;
+  z-index: 5000;
+}
+
 /*--service 디자인 css--*/
 p,
 span {
@@ -561,7 +571,7 @@ span.strong {
     margin-bottom: 40px;
   }
   .item_02 p,
-.item_02 span {
+  .item_02 span {
     width: 100%;
   }
   .item_02 img {

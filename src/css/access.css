@@ -402,6 +402,16 @@ input[type=checkbox] span {
   background-color: #ffe0d7;
 }
 
+#kakao-talk-channel-chat-button {
+  position: fixed;
+  /* top: 80vh;
+  right: 5vw; */
+  right: 1.2rem;
+  bottom: 6.25rem;
+  cursor: pointer;
+  z-index: 5000;
+}
+
 /*--access 디자인 css--*/
 #container input {
   display: none;
@@ -478,7 +488,7 @@ p.extrabold {
     font-size: 17px;
   }
   #access__content1,
-#access__content2 {
+  #access__content2 {
     padding: 40px 20px;
   }
 }/*# sourceMappingURL=access.css.map */

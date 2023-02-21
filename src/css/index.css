@@ -402,6 +402,16 @@ input[type=checkbox] span {
   background-color: #ffe0d7;
 }
 
+#kakao-talk-channel-chat-button {
+  position: fixed;
+  /* top: 80vh;
+  right: 5vw; */
+  right: 1.2rem;
+  bottom: 6.25rem;
+  cursor: pointer;
+  z-index: 5000;
+}
+
 /*--index 디자인 css--*/
 :root {
   --syboml__color: #ff9948;
@@ -520,7 +530,7 @@ p.strong {
 
 /* Slideshow container */
 .slideshow-container {
-  width: 100vw;
+  width: 100%;
 }
 .slideshow-container::after {
   content: "";
@@ -528,10 +538,13 @@ p.strong {
   clear: both;
 }
 .slideshow-container img {
-  width: 100vw;
+  width: 100%;
   height: 800px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.slideshow-container .main-slider {
+  max-height: 800px;
 }
 .slideshow-container .cont--inner {
   position: relative;
@@ -574,15 +587,6 @@ p.strong {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 @keyframes fade {
   from {

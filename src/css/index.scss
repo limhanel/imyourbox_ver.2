@@ -131,11 +131,14 @@ p.strong {
   &::after {
     @include float-clear;
   }
-  width: 100vw;
+  width: 100%;
   img {
-    width: 100vw;
+    width: 100%;
     height: 800px;
     object-fit: cover;
+  }
+  .main-slider {
+    max-height: 800px;
   }
   .cont--inner {
     position: relative;

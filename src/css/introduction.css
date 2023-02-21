@@ -402,6 +402,16 @@ input[type=checkbox] span {
   background-color: #ffe0d7;
 }
 
+#kakao-talk-channel-chat-button {
+  position: fixed;
+  /* top: 80vh;
+  right: 5vw; */
+  right: 1.2rem;
+  bottom: 6.25rem;
+  cursor: pointer;
+  z-index: 5000;
+}
+
 /*--intriduction 디자인 css--*/
 .cont1 .history-background {
   background-size: contain;

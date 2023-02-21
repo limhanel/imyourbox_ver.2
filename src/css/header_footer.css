@@ -402,6 +402,16 @@ input[type=checkbox] span {
   background-color: #ffe0d7;
 }
 
+#kakao-talk-channel-chat-button {
+  position: fixed;
+  /* top: 80vh;
+  right: 5vw; */
+  right: 1.2rem;
+  bottom: 6.25rem;
+  cursor: pointer;
+  z-index: 5000;
+}
+
 /*--index 디자인 css--*/
 /*----헤더영역 세팅---*/
 #header {
@@ -627,27 +637,30 @@ footer .contact-text2 .service-download {
   footer ul {
     text-align: center;
   }
-  footer ul::after {
+  footer ul.use {
+    display: inline-block;
+  }
+  footer ul.sns {
+    width: 170px;
+    margin-left: calc(50vw - 120px);
+    margin-top: 20px;
+  }
+  footer ul.sns::after {
     content: "";
     display: block;
     clear: both;
   }
-  footer ul.use {
-    width: 350px;
-    float: initial;
-    display: table;
-    margin: auto;
-  }
-  footer ul.sns {
-    margin-top: 20px;
-    float: initial;
-    display: table;
-    margin: 20px auto auto auto;
-    width: 200px;
+  footer ul.sns li a:hover {
+    color: #fff;
   }
   footer ul li {
-    width: 33%;
-    margin: 0;
+    float: left;
+    margin: 0 15px;
+  }
+  footer ul li::after {
+    content: "";
+    display: block;
+    clear: both;
   }
 }
 /*--------- PC 반응형 --------*/

@@ -93,9 +93,7 @@
                         <li class="gnb-menu">
                             <a href="employment.html">채용정보</a>
                         </li>
-                        <li class="button button-type1">
-                            <a href="http://222.231.61.51/" target="_blank">WMS</a>
-                        </li>
+                      
                      
                     </ul>
 
@@ -123,9 +121,7 @@
                             <li>
                                 <a href="employment.html">채용정보</a>
                             </li>
-                            <li>
-                                <a href="http://222.231.61.51/" target="_blank">WMS</a>
-                            </li>
+                         
                            
                         </ul>
 
@@ -165,7 +161,15 @@
                             <h4>2023</h4>
                             <ol>
                                 <li>
-                                    <span>01</span>1,400평 규모 의왕센터 오픈
+                                    <span>03</span>1,400평 규모 의왕센터 오픈
+                                </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4>2022</h4>
+                            <ol>
+                                <li>
+                                    <span>04</span>(주)아임유어박스 벤처기업 인증
                                 </li>
                             </ol>
                         </div>
@@ -234,23 +238,23 @@
                         <div class="item_02 contact-text1"><span class="strong">문의메일</span>imurbox@imyourbox.com</div>
                     </div>
                     <div class="flexbox_02">
-                        <div id="daumRoughmapContainer1676264831599" class="root_daum_roughmap root_daum_roughmap_landing item_02"></div>
+                        <div id="map" class="root_daum_roughmap root_daum_roughmap_landing item_02" style="width:49%;height:350px;"></div>
                         <div class="item_02 contact-height">
                             <p class="strong">아임유어박스 본사</p>
                             <p>[08505] 서울 금천구 디지털로 121, 1511호 (가산동, 에이스가산타워)</p>
                         </div>
                     </div>
                     <div class="flexbox_02">
-                        <div id="daumRoughmapContainer1671521486051" class="root_daum_roughmap root_daum_roughmap_landing item_02"></div>
+                        <div id="map2" class="root_daum_roughmap root_daum_roughmap_landing item_02" style="width:49%;height:350px;"></div>
                         <div class="item_02 contact-height">
                             <p class="strong">의왕센터</p>
                             <p class="gray-text">약 1,400평</p>
-                            <p>경기도 의왕시 오봉산단3로 60 </p>
+                            <p>경기 의왕시 삼동 715 </p>
                             <p></p>
                         </div>
                     </div>
                     <div class="flexbox_02">
-                        <div id="daumRoughmapContainer1671679392134" class="root_daum_roughmap root_daum_roughmap_landing item_02"></div>
+                        <div id="map3" class="root_daum_roughmap root_daum_roughmap_landing item_02" style="width:49%;height:350px;"></div>
                         <div class="item_02 contact-height">
                             <p class="strong">곤지암센터</p>
                             <p class="gray-text">약 2,000평</p>
@@ -259,7 +263,7 @@
                         </div>
                     </div>
                     <div class="flexbox_02">
-                        <div id="daumRoughmapContainer1671679441718" class="root_daum_roughmap root_daum_roughmap_landing item_02"></div>
+                        <div id="map4" class="root_daum_roughmap root_daum_roughmap_landing item_02" style="width:49%;height:350px;"></div>
                         <div class="item_02 contact-height">
                             <p class="strong">세종센터</p>
                             <p class="gray-text">약 1,000평</p>
@@ -267,6 +271,7 @@
                             <p></p>
                         </div>
                     </div>
+                  
 
                 </div>
             </div>
@@ -379,32 +384,208 @@ data-shape="pc"
 data-support-multiple-densities="true"
 ></div>
     </body>
-    <script charset="UTF-8">
-        new daum.roughmap.Lander({
-            "timestamp": "1671521486051",
-            "key": "2d4fi",
-        }).render();
+<script type="text/javascript">
+    function dis() {
+        if ($('.sidebar').css('display') == 'none') {
+            $('.sidebar').show();
+        } else {
+            $('.sidebar').hide();
+        }
+    }
+</script>
+<script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=sfjnqs2bo0"></script>
+<script>
+    var mapOptions = {
+        center: new naver.maps.LatLng(37.47748159999992, 126.88340789999975),
+        zoomControl:true,
+        zoomControlOptions: {
+            position:3,
+        },
+        zoom: 16
+    };
+
+    var map = new naver.maps.Map('map', mapOptions);
+
+
+    var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.47611339999994, 126.88008999999971),
+            map: map
+        });
+
+        var contentString = [
+        '<div class="iw_inner" style="width: 374px; border-radius: 8px; padding: 12px; text-align: left; background-color: #fff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); ">' ,
+             '<div style="color: #6B7684; display: flex;"> '  ,
+            '<img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/map-image01.jpg" style="width: 132px; height: 138px; margin-right:12px;" alt="파스토 용인1센터" class="thumb">',
+            '<div style="font-size: 13px; line-height: 20.8px; letter-spacing: -0.4px; font-weight: 400;">',      	
+                '<div style="color: #ff7a22; font-size: 16px; font-weight: 700;">아임유어박스 본사</div>',
+                '<div style="color: #4E5968; font-size: 14px; font-weight: 700; margin: 4px 0 8px 0;">3PL/풀필먼트</div>',
+              ' 3PL,풀필먼트를 전문으로 물류센터를 운영하고있으며, 의왕,곤지암,세종에 물류센터를 두고있습니다.',
+               ' </div>' ,
+               ' </div>',
+               ' </div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    disableAnchor:true,
+    borderColor:"#00ff0000",
+    backgroundColor:"#00ff0000",
+    borderWidth: 0
+});
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+infowindow.open(map, marker);
+    </script>
+<!-- 의왕센터 -->
+<script>
+    var mapOptions = {
+        center: new naver.maps.LatLng(37.33096479999993, 126.95598729999976),
+        zoomControl:true,
+        zoomControlOptions: {
+            position:3,
+        },
+        zoom: 16
+    };
+
+    var map = new naver.maps.Map('map2', mapOptions);
+
+
+    var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.33096479999993, 126.95598729999976),
+            map: map
+        });
+
+        var contentString = [
+        '<div class="iw_inner" style="width: 374px; border-radius: 8px; padding: 12px; text-align: left; background-color: #fff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); ">' ,
+             '<div style="color: #6B7684; display: flex;"> '  ,
+            '<img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/map-image02.jpg" style="width: 132px; height: 138px; margin-right:12px;" alt="파스토 용인1센터" class="thumb">',
+            '<div style="font-size: 13px; line-height: 20.8px; letter-spacing: -0.4px; font-weight: 400;">',      	
+                '<div style="color: #ff7a22; font-size: 16px; font-weight: 700;">의왕센터 </div>',
+                '<div style="color: #4E5968; font-size: 14px; font-weight: 700; margin: 4px 0 8px 0;">3PL/풀필먼트</div>',
+              '약 1,400평 규모의 물류센터로, 수원광명고속도로 인근에 위치하고 있어 서울까지 30분 내로 진입이 가능한 접근성이 좋은 센터입니다',
+               ' </div>' ,
+               ' </div>',
+               ' </div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    disableAnchor:true,
+    borderColor:"#00ff0000",
+    backgroundColor:"#00ff0000",
+    borderWidth: 0
+});
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+infowindow.open(map, marker);
     </script>
 
-    <script charset="UTF-8">
-        new daum.roughmap.Lander({
-            "timestamp": "1676264831599",
-            "key": "2dq2f",
-        }).render();
-    </script>
+    <!-- 곤지암센터 -->
+<script>
+    var mapOptions = {
+        center: new naver.maps.LatLng(37.313009399999935, 127.34115839999973),
+        zoomControl:true,
+        zoomControlOptions: {
+            position:3,
+        },
+        zoom: 16
+    };
 
-    <script charset="UTF-8">
-        new daum.roughmap.Lander({
-            "timestamp": "1671679392134",
-            "key": "2d59f",
-        }).render();
-    </script>
+    var map = new naver.maps.Map('map3', mapOptions);
 
-    <script charset="UTF-8">
-        new daum.roughmap.Lander({
-            "timestamp": "1671679441718",
-            "key": "2d59h",
-        }).render();
+
+    var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.313009399999935, 127.34115839999973),
+            map: map
+        });
+
+        var contentString = [
+        '<div class="iw_inner" style="width: 374px; border-radius: 8px; padding: 12px; text-align: left; background-color: #fff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); ">' ,
+             '<div style="color: #6B7684; display: flex;"> '  ,
+            '<img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/map-image04.jpg" style="width: 132px; height: 138px; margin-right:12px;" alt="파스토 용인1센터" class="thumb">',
+            '<div style="font-size: 13px; line-height: 20.8px; letter-spacing: -0.4px; font-weight: 400;">',      	
+                '<div style="color: #ff7a22; font-size: 16px; font-weight: 700;">곤지암센터 </div>',
+                '<div style="color: #4E5968; font-size: 14px; font-weight: 700; margin: 4px 0 8px 0;">3PL/풀필먼트</div>',
+              '약 2,000평 규모의 물류센터로, 서울에서 1시간 내로 진입이 가능한 곳에 위치하고 있고 중부고속도로에서 1km 거리로 교통이 매우 용이한 곳에 위치하고 있습니다',
+               ' </div>' ,
+               ' </div>',
+               ' </div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    disableAnchor:true,
+    borderColor:"#00ff0000",
+    backgroundColor:"#00ff0000",
+    borderWidth: 0
+});
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+infowindow.open(map, marker);
+    </script>
+    
+        <!-- 세종센터 -->
+<script>
+    var mapOptions = {
+        center: new naver.maps.LatLng(36.57372299999993, 127.22992169999972),
+        zoomControl:true,
+        zoomControlOptions: {
+            position:3,
+        },
+        zoom: 16
+    };
+
+    var map = new naver.maps.Map('map4', mapOptions);
+
+
+    var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(36.57372299999993, 127.22992169999972),
+            map: map
+        });
+
+        var contentString = [
+        '<div class="iw_inner" style="width: 374px; border-radius: 8px; padding: 12px; text-align: left; background-color: #fff; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25); ">' ,
+             '<div style="color: #6B7684; display: flex;"> '  ,
+            '<img src="https://imyourbox.s3.ap-northeast-2.amazonaws.com/imyourbox_images/map-image03.jpg" style="width: 132px; height: 138px; margin-right:12px;" alt="파스토 용인1센터" class="thumb">',
+            '<div style="font-size: 13px; line-height: 20.8px; letter-spacing: -0.4px; font-weight: 400;">',      	
+                '<div style="color: #ff7a22; font-size: 16px; font-weight: 700;">세종센터 </div>',
+                '<div style="color: #4E5968; font-size: 14px; font-weight: 700; margin: 4px 0 8px 0;">3PL/풀필먼트</div>',
+              '약 1,000평 규모의 물류센터로, 세종시에 위치하고 있어 수도권과 충정권의 접근이 모두 용이한 위치에 있으며 서울까지 1시간 반 내로 진입이 가능합니다',
+               ' </div>' ,
+               ' </div>',
+               ' </div>'
+    ].join('');
+
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString,
+    disableAnchor:true,
+    borderColor:"#00ff0000",
+    backgroundColor:"#00ff0000",
+    borderWidth: 0
+});
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+infowindow.open(map, marker);
     </script>
 
 
